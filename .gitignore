@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.Python
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Large files (exclude from repo)
+ecorag_data/chroma/
+ecorag_data/pdfs/
+~/.cache/ecorag_models/
+*.npy
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Node (if using npm)
+node_modules/
+package-lock.json
+
+# Temp files
+*.tmp
+*.bak

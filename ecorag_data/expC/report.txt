@@ -1,0 +1,525 @@
+EcoRAG Experiment C - scores (frozen gold = primary). Outliers (pre-registered rule): ['Q03', 'Q17']
+
+====================================================================================================
+POOLED (27)  [Q01, Q02, Q03, Q04, Q05, Q06, Q07, Q08, Q09, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18, Q19, Q20, Q21, Q22, Q23, Q24, Q25, Q26, Q27]
+   S1 labels (suff/partial/insuff)                                          14/4/9 of 27
+   S1 share sufficient                                                      14/27 = 52%
+   S1 unit retrieval recall                                                 35/45 = 78%
+   S2-gen pooled                                                            32/35 = 91%
+   S2-gen per-question avg                                                  16.00/18 = 0.89
+   S2-e2e pooled                                                            35/55 = 64%
+   S2-e2e per-question avg                                                  16.83/27 = 0.62
+   S3a justified/partial/not (n answering)                                  10/7/5 (n=22)
+   S3a mean score                                                           13.50/22 = 0.61
+   S3b justified/partial/not (n answering)                                  14/3/5 (n=22)
+   S3b mean score                                                           15.50/22 = 0.70
+   S4 calibration accuracy                                                  19/27 = 70%
+   S4 correct | sufficient (FULL)                                           14/14 = 100%
+   S4 correct | partial (PARTIAL+GAP)                                       1/4 = 25%
+   S4 abstention recall | insufficient                                      4/9 = 44%
+   S4 false abstention | sufficient                                         0/14 = 0%
+   S4 matrix                                                                {'sufficient->FULL': 14, 'insufficient->ABSTAIN': 4, 'insufficient->FULL': 5, 'partial->FULL': 2, 'partial->ABSTAIN': 1, 'partial->PARTIAL+GAP': 1}
+   S5 over-reach claims / factual claims                                    9/86 = 10%
+   S5 answering questions with >=1 over-reach                               6/22 = 27%
+   S5 by type                                                               {'O2': 5, 'O3': 3, 'O4': 1}
+   S6 covered units with a supporting cited chunk                           30/35 = 86%
+   S6 mean distinct origins per covered unit                                30.00/35 = 0.86
+   S6 dependent multi-citations                                             2
+   S6 false corroborations                                                  0
+   taxonomy retrieval                                                       10/55 = 18%
+   taxonomy calibration                                                     4/55 = 7%
+   taxonomy generation                                                      3/55 = 5%
+   taxonomy citation                                                        5/55 = 9%
+   taxonomy correct                                                         33/55 = 60%
+   CIT verifier: cited / factual claims                                     81/82 = 99%
+   CIT verifier: misattributed / cited                                      10/81 = 12%
+   CIT verifier: potentially supported / cited                              68/81 = 84%
+   CIT manual: cited claims                                                 85
+   CIT manual: supported (incl. minor distortion) / cited                   65/85 = 76%
+   CIT manual: misattributed / cited                                        11/85 = 13%
+   CIT manual: unsupported / cited                                          9/85 = 11%
+   CIT manual: partially supported / cited                                  0/85 = 0%
+   CIT manual: incorrect (misattributed+unsupported) / cited                20/85 = 24%
+   CIT manual: incorrect rate, per-question avg                             7.22/22 = 0.33
+   DESC answer content fully correct (S4 ok, S3b ok, no over-reach, all top-5 units covered) 18/27 = 67%
+   DESC ... and every citation correct                                      12/27 = 44%
+====================================================================================================
+EXCLUDING LENGTH OUTLIERS ['Q03', 'Q17'] (secondary)  [Q01, Q02, Q04, Q05, Q06, Q07, Q08, Q09, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q18, Q19, Q20, Q21, Q22, Q23, Q24, Q25, Q26, Q27]
+   S1 labels (suff/partial/insuff)                                          13/4/8 of 25
+   S1 share sufficient                                                      13/25 = 52%
+   S1 unit retrieval recall                                                 32/41 = 78%
+   S2-gen pooled                                                            29/32 = 91%
+   S2-gen per-question avg                                                  15.00/17 = 0.88
+   S2-e2e pooled                                                            32/50 = 64%
+   S2-e2e per-question avg                                                  15.83/25 = 0.63
+   S3a justified/partial/not (n answering)                                  10/6/4 (n=20)
+   S3a mean score                                                           13.00/20 = 0.65
+   S3b justified/partial/not (n answering)                                  13/3/4 (n=20)
+   S3b mean score                                                           14.50/20 = 0.72
+   S4 calibration accuracy                                                  18/25 = 72%
+   S4 correct | sufficient (FULL)                                           13/13 = 100%
+   S4 correct | partial (PARTIAL+GAP)                                       1/4 = 25%
+   S4 abstention recall | insufficient                                      4/8 = 50%
+   S4 false abstention | sufficient                                         0/13 = 0%
+   S4 matrix                                                                {'sufficient->FULL': 13, 'insufficient->ABSTAIN': 4, 'insufficient->FULL': 4, 'partial->FULL': 2, 'partial->ABSTAIN': 1, 'partial->PARTIAL+GAP': 1}
+   S5 over-reach claims / factual claims                                    8/56 = 14%
+   S5 answering questions with >=1 over-reach                               5/20 = 25%
+   S5 by type                                                               {'O2': 5, 'O3': 3}
+   S6 covered units with a supporting cited chunk                           27/32 = 84%
+   S6 mean distinct origins per covered unit                                27.00/32 = 0.84
+   S6 dependent multi-citations                                             2
+   S6 false corroborations                                                  0
+   taxonomy retrieval                                                       9/50 = 18%
+   taxonomy calibration                                                     3/50 = 6%
+   taxonomy generation                                                      3/50 = 6%
+   taxonomy citation                                                        5/50 = 10%
+   taxonomy correct                                                         30/50 = 60%
+   CIT verifier: cited / factual claims                                     52/52 = 100%
+   CIT verifier: misattributed / cited                                      8/52 = 15%
+   CIT verifier: potentially supported / cited                              42/52 = 81%
+   CIT manual: cited claims                                                 56
+   CIT manual: supported (incl. minor distortion) / cited                   39/56 = 70%
+   CIT manual: misattributed / cited                                        9/56 = 16%
+   CIT manual: unsupported / cited                                          8/56 = 14%
+   CIT manual: partially supported / cited                                  0/56 = 0%
+   CIT manual: incorrect (misattributed+unsupported) / cited                17/56 = 30%
+   CIT manual: incorrect rate, per-question avg                             7.02/20 = 0.35
+   DESC answer content fully correct (S4 ok, S3b ok, no over-reach, all top-5 units covered) 17/25 = 68%
+   DESC ... and every citation correct                                      12/25 = 48%
+====================================================================================================
+GOLD = sufficient  [Q01, Q02, Q03, Q04, Q05, Q07, Q08, Q09, Q11, Q12, Q13, Q25, Q26, Q27]
+   S1 labels (suff/partial/insuff)                                          14/0/0 of 14
+   S1 share sufficient                                                      14/14 = 100%
+   S1 unit retrieval recall                                                 29/29 = 100%
+   S2-gen pooled                                                            27/29 = 93%
+   S2-gen per-question avg                                                  13.00/14 = 0.93
+   S2-e2e pooled                                                            27/29 = 93%
+   S2-e2e per-question avg                                                  13.00/14 = 0.93
+   S3a justified/partial/not (n answering)                                  7/4/3 (n=14)
+   S3a mean score                                                           9.00/14 = 0.64
+   S3b justified/partial/not (n answering)                                  13/1/0 (n=14)
+   S3b mean score                                                           13.50/14 = 0.96
+   S4 calibration accuracy                                                  14/14 = 100%
+   S4 correct | sufficient (FULL)                                           14/14 = 100%
+   S4 correct | partial (PARTIAL+GAP)                                       0/0 = n/a
+   S4 abstention recall | insufficient                                      0/0 = n/a
+   S4 false abstention | sufficient                                         0/14 = 0%
+   S4 matrix                                                                {'sufficient->FULL': 14}
+   S5 over-reach claims / factual claims                                    4/57 = 7%
+   S5 answering questions with >=1 over-reach                               1/14 = 7%
+   S5 by type                                                               {'O2': 2, 'O3': 2}
+   S6 covered units with a supporting cited chunk                           22/27 = 81%
+   S6 mean distinct origins per covered unit                                22.00/27 = 0.81
+   S6 dependent multi-citations                                             2
+   S6 false corroborations                                                  0
+   taxonomy retrieval                                                       0/29 = 0%
+   taxonomy calibration                                                     0/29 = 0%
+   taxonomy generation                                                      2/29 = 7%
+   taxonomy citation                                                        5/29 = 17%
+   taxonomy correct                                                         22/29 = 76%
+   CIT verifier: cited / factual claims                                     54/55 = 98%
+   CIT verifier: misattributed / cited                                      8/54 = 15%
+   CIT verifier: potentially supported / cited                              45/54 = 83%
+   CIT manual: cited claims                                                 56
+   CIT manual: supported (incl. minor distortion) / cited                   42/56 = 75%
+   CIT manual: misattributed / cited                                        10/56 = 18%
+   CIT manual: unsupported / cited                                          4/56 = 7%
+   CIT manual: partially supported / cited                                  0/56 = 0%
+   CIT manual: incorrect (misattributed+unsupported) / cited                14/56 = 25%
+   CIT manual: incorrect rate, per-question avg                             4.99/14 = 0.36
+   DESC answer content fully correct (S4 ok, S3b ok, no over-reach, all top-5 units covered) 13/14 = 93%
+   DESC ... and every citation correct                                      7/14 = 50%
+====================================================================================================
+GOLD = partial  [Q14, Q15, Q16, Q19]
+   S1 labels (suff/partial/insuff)                                          0/4/0 of 4
+   S1 share sufficient                                                      0/4 = 0%
+   S1 unit retrieval recall                                                 6/12 = 50%
+   S2-gen pooled                                                            5/6 = 83%
+   S2-gen per-question avg                                                  3.00/4 = 0.75
+   S2-e2e pooled                                                            5/15 = 33%
+   S2-e2e per-question avg                                                  1.33/4 = 0.33
+   S3a justified/partial/not (n answering)                                  1/2/0 (n=3)
+   S3a mean score                                                           2.00/3 = 0.67
+   S3b justified/partial/not (n answering)                                  1/2/0 (n=3)
+   S3b mean score                                                           2.00/3 = 0.67
+   S4 calibration accuracy                                                  1/4 = 25%
+   S4 correct | sufficient (FULL)                                           0/0 = n/a
+   S4 correct | partial (PARTIAL+GAP)                                       1/4 = 25%
+   S4 abstention recall | insufficient                                      0/0 = n/a
+   S4 false abstention | sufficient                                         0/0 = n/a
+   S4 matrix                                                                {'partial->FULL': 2, 'partial->ABSTAIN': 1, 'partial->PARTIAL+GAP': 1}
+   S5 over-reach claims / factual claims                                    2/10 = 20%
+   S5 answering questions with >=1 over-reach                               2/3 = 67%
+   S5 by type                                                               {'O3': 1, 'O2': 1}
+   S6 covered units with a supporting cited chunk                           5/5 = 100%
+   S6 mean distinct origins per covered unit                                5.00/5 = 1.00
+   S6 dependent multi-citations                                             0
+   S6 false corroborations                                                  0
+   taxonomy retrieval                                                       6/15 = 40%
+   taxonomy calibration                                                     1/15 = 7%
+   taxonomy generation                                                      1/15 = 7%
+   taxonomy citation                                                        0/15 = 0%
+   taxonomy correct                                                         7/15 = 47%
+   CIT verifier: cited / factual claims                                     9/9 = 100%
+   CIT verifier: misattributed / cited                                      1/9 = 11%
+   CIT verifier: potentially supported / cited                              7/9 = 78%
+   CIT manual: cited claims                                                 10
+   CIT manual: supported (incl. minor distortion) / cited                   8/10 = 80%
+   CIT manual: misattributed / cited                                        0/10 = 0%
+   CIT manual: unsupported / cited                                          2/10 = 20%
+   CIT manual: partially supported / cited                                  0/10 = 0%
+   CIT manual: incorrect (misattributed+unsupported) / cited                2/10 = 20%
+   CIT manual: incorrect rate, per-question avg                             0.64/3 = 0.21
+   DESC answer content fully correct (S4 ok, S3b ok, no over-reach, all top-5 units covered) 1/4 = 25%
+   DESC ... and every citation correct                                      1/4 = 25%
+====================================================================================================
+GOLD = insufficient  [Q06, Q10, Q17, Q18, Q20, Q21, Q22, Q23, Q24]
+   S1 labels (suff/partial/insuff)                                          0/0/9 of 9
+   S1 share sufficient                                                      0/9 = 0%
+   S1 unit retrieval recall                                                 0/4 = 0%
+   S2-gen pooled                                                            0/0 = n/a
+   S2-gen per-question avg                                                  n/a
+   S2-e2e pooled                                                            3/11 = 27%
+   S2-e2e per-question avg                                                  2.50/9 = 0.28
+   S3a justified/partial/not (n answering)                                  2/1/2 (n=5)
+   S3a mean score                                                           2.50/5 = 0.50
+   S3b justified/partial/not (n answering)                                  0/0/5 (n=5)
+   S3b mean score                                                           0.00/5 = 0.00
+   S4 calibration accuracy                                                  4/9 = 44%
+   S4 correct | sufficient (FULL)                                           0/0 = n/a
+   S4 correct | partial (PARTIAL+GAP)                                       0/0 = n/a
+   S4 abstention recall | insufficient                                      4/9 = 44%
+   S4 false abstention | sufficient                                         0/0 = n/a
+   S4 matrix                                                                {'insufficient->ABSTAIN': 4, 'insufficient->FULL': 5}
+   S5 over-reach claims / factual claims                                    3/19 = 16%
+   S5 answering questions with >=1 over-reach                               3/5 = 60%
+   S5 by type                                                               {'O4': 1, 'O2': 2}
+   S6 covered units with a supporting cited chunk                           3/3 = 100%
+   S6 mean distinct origins per covered unit                                3.00/3 = 1.00
+   S6 dependent multi-citations                                             0
+   S6 false corroborations                                                  0
+   taxonomy retrieval                                                       4/11 = 36%
+   taxonomy calibration                                                     3/11 = 27%
+   taxonomy generation                                                      0/11 = 0%
+   taxonomy citation                                                        0/11 = 0%
+   taxonomy correct                                                         4/11 = 36%
+   CIT verifier: cited / factual claims                                     18/18 = 100%
+   CIT verifier: misattributed / cited                                      1/18 = 6%
+   CIT verifier: potentially supported / cited                              16/18 = 89%
+   CIT manual: cited claims                                                 19
+   CIT manual: supported (incl. minor distortion) / cited                   15/19 = 79%
+   CIT manual: misattributed / cited                                        1/19 = 5%
+   CIT manual: unsupported / cited                                          3/19 = 16%
+   CIT manual: partially supported / cited                                  0/19 = 0%
+   CIT manual: incorrect (misattributed+unsupported) / cited                4/19 = 21%
+   CIT manual: incorrect rate, per-question avg                             1.59/5 = 0.32
+   DESC answer content fully correct (S4 ok, S3b ok, no over-reach, all top-5 units covered) 4/9 = 44%
+   DESC ... and every citation correct                                      4/9 = 44%
+====================================================================================================
+TYPE a (single chunk)  [Q05, Q07, Q08, Q09, Q10, Q11]
+   S1 labels (suff/partial/insuff)                                          5/0/1 of 6
+   S1 share sufficient                                                      5/6 = 83%
+   S1 unit retrieval recall                                                 9/10 = 90%
+   S2-gen pooled                                                            9/9 = 100%
+   S2-gen per-question avg                                                  5.00/5 = 1.00
+   S2-e2e pooled                                                            10/10 = 100%
+   S2-e2e per-question avg                                                  6.00/6 = 1.00
+   S3a justified/partial/not (n answering)                                  6/0/0 (n=6)
+   S3a mean score                                                           6.00/6 = 1.00
+   S3b justified/partial/not (n answering)                                  5/0/1 (n=6)
+   S3b mean score                                                           5.00/6 = 0.83
+   S4 calibration accuracy                                                  5/6 = 83%
+   S4 correct | sufficient (FULL)                                           5/5 = 100%
+   S4 correct | partial (PARTIAL+GAP)                                       0/0 = n/a
+   S4 abstention recall | insufficient                                      0/1 = 0%
+   S4 false abstention | sufficient                                         0/5 = 0%
+   S4 matrix                                                                {'sufficient->FULL': 5, 'insufficient->FULL': 1}
+   S5 over-reach claims / factual claims                                    0/13 = 0%
+   S5 answering questions with >=1 over-reach                               0/6 = 0%
+   S5 by type                                                               {}
+   S6 covered units with a supporting cited chunk                           10/10 = 100%
+   S6 mean distinct origins per covered unit                                10.00/10 = 1.00
+   S6 dependent multi-citations                                             2
+   S6 false corroborations                                                  0
+   taxonomy retrieval                                                       1/10 = 10%
+   taxonomy calibration                                                     0/10 = 0%
+   taxonomy generation                                                      0/10 = 0%
+   taxonomy citation                                                        0/10 = 0%
+   taxonomy correct                                                         9/10 = 90%
+   CIT verifier: cited / factual claims                                     11/11 = 100%
+   CIT verifier: misattributed / cited                                      0/11 = 0%
+   CIT verifier: potentially supported / cited                              11/11 = 100%
+   CIT manual: cited claims                                                 13
+   CIT manual: supported (incl. minor distortion) / cited                   13/13 = 100%
+   CIT manual: misattributed / cited                                        0/13 = 0%
+   CIT manual: unsupported / cited                                          0/13 = 0%
+   CIT manual: partially supported / cited                                  0/13 = 0%
+   CIT manual: incorrect (misattributed+unsupported) / cited                0/13 = 0%
+   CIT manual: incorrect rate, per-question avg                             0.00/6 = 0.00
+   DESC answer content fully correct (S4 ok, S3b ok, no over-reach, all top-5 units covered) 5/6 = 83%
+   DESC ... and every citation correct                                      5/6 = 83%
+====================================================================================================
+TYPE b (multi-chunk)  [Q03, Q04, Q12, Q13, Q14]
+   S1 labels (suff/partial/insuff)                                          4/1/0 of 5
+   S1 share sufficient                                                      4/5 = 80%
+   S1 unit retrieval recall                                                 15/21 = 71%
+   S2-gen pooled                                                            13/15 = 87%
+   S2-gen per-question avg                                                  4.00/5 = 0.80
+   S2-e2e pooled                                                            13/21 = 62%
+   S2-e2e per-question avg                                                  3.33/5 = 0.67
+   S3a justified/partial/not (n answering)                                  1/4/0 (n=5)
+   S3a mean score                                                           3.00/5 = 0.60
+   S3b justified/partial/not (n answering)                                  3/2/0 (n=5)
+   S3b mean score                                                           4.00/5 = 0.80
+   S4 calibration accuracy                                                  4/5 = 80%
+   S4 correct | sufficient (FULL)                                           4/4 = 100%
+   S4 correct | partial (PARTIAL+GAP)                                       0/1 = 0%
+   S4 abstention recall | insufficient                                      0/0 = n/a
+   S4 false abstention | sufficient                                         0/4 = 0%
+   S4 matrix                                                                {'sufficient->FULL': 4, 'partial->FULL': 1}
+   S5 over-reach claims / factual claims                                    5/47 = 11%
+   S5 answering questions with >=1 over-reach                               2/5 = 40%
+   S5 by type                                                               {'O2': 2, 'O3': 3}
+   S6 covered units with a supporting cited chunk                           12/13 = 92%
+   S6 mean distinct origins per covered unit                                12.00/13 = 0.92
+   S6 dependent multi-citations                                             0
+   S6 false corroborations                                                  0
+   taxonomy retrieval                                                       6/21 = 29%
+   taxonomy calibration                                                     0/21 = 0%
+   taxonomy generation                                                      2/21 = 10%
+   taxonomy citation                                                        1/21 = 5%
+   taxonomy correct                                                         12/21 = 57%
+   CIT verifier: cited / factual claims                                     45/46 = 98%
+   CIT verifier: misattributed / cited                                      3/45 = 7%
+   CIT verifier: potentially supported / cited                              40/45 = 89%
+   CIT manual: cited claims                                                 46
+   CIT manual: supported (incl. minor distortion) / cited                   36/46 = 78%
+   CIT manual: misattributed / cited                                        5/46 = 11%
+   CIT manual: unsupported / cited                                          5/46 = 11%
+   CIT manual: partially supported / cited                                  0/46 = 0%
+   CIT manual: incorrect (misattributed+unsupported) / cited                10/46 = 22%
+   CIT manual: incorrect rate, per-question avg                             1.13/5 = 0.23
+   DESC answer content fully correct (S4 ok, S3b ok, no over-reach, all top-5 units covered) 3/5 = 60%
+   DESC ... and every citation correct                                      1/5 = 20%
+====================================================================================================
+TYPE c (partially answerable)  [Q15, Q16, Q17, Q18, Q19]
+   S1 labels (suff/partial/insuff)                                          0/3/2 of 5
+   S1 share sufficient                                                      0/5 = 0%
+   S1 unit retrieval recall                                                 3/5 = 60%
+   S2-gen pooled                                                            2/3 = 67%
+   S2-gen per-question avg                                                  2.00/3 = 0.67
+   S2-e2e pooled                                                            3/10 = 30%
+   S2-e2e per-question avg                                                  1.50/5 = 0.30
+   S3a justified/partial/not (n answering)                                  1/2/1 (n=4)
+   S3a mean score                                                           2.00/4 = 0.50
+   S3b justified/partial/not (n answering)                                  1/1/2 (n=4)
+   S3b mean score                                                           1.50/4 = 0.38
+   S4 calibration accuracy                                                  1/5 = 20%
+   S4 correct | sufficient (FULL)                                           0/0 = n/a
+   S4 correct | partial (PARTIAL+GAP)                                       1/3 = 33%
+   S4 abstention recall | insufficient                                      0/2 = 0%
+   S4 false abstention | sufficient                                         0/0 = n/a
+   S4 matrix                                                                {'partial->ABSTAIN': 1, 'partial->FULL': 1, 'insufficient->FULL': 2, 'partial->PARTIAL+GAP': 1}
+   S5 over-reach claims / factual claims                                    3/16 = 19%
+   S5 answering questions with >=1 over-reach                               3/4 = 75%
+   S5 by type                                                               {'O2': 2, 'O4': 1}
+   S6 covered units with a supporting cited chunk                           3/3 = 100%
+   S6 mean distinct origins per covered unit                                3.00/3 = 1.00
+   S6 dependent multi-citations                                             0
+   S6 false corroborations                                                  0
+   taxonomy retrieval                                                       2/10 = 20%
+   taxonomy calibration                                                     3/10 = 30%
+   taxonomy generation                                                      1/10 = 10%
+   taxonomy citation                                                        0/10 = 0%
+   taxonomy correct                                                         4/10 = 40%
+   CIT verifier: cited / factual claims                                     16/16 = 100%
+   CIT verifier: misattributed / cited                                      1/16 = 6%
+   CIT verifier: potentially supported / cited                              14/16 = 88%
+   CIT manual: cited claims                                                 16
+   CIT manual: supported (incl. minor distortion) / cited                   13/16 = 81%
+   CIT manual: misattributed / cited                                        0/16 = 0%
+   CIT manual: unsupported / cited                                          3/16 = 19%
+   CIT manual: partially supported / cited                                  0/16 = 0%
+   CIT manual: incorrect (misattributed+unsupported) / cited                3/16 = 19%
+   CIT manual: incorrect rate, per-question avg                             1.09/4 = 0.27
+   DESC answer content fully correct (S4 ok, S3b ok, no over-reach, all top-5 units covered) 1/5 = 20%
+   DESC ... and every citation correct                                      1/5 = 20%
+====================================================================================================
+TYPE d (unanswerable)  [Q06, Q20, Q21, Q22, Q23]
+   S1 labels (suff/partial/insuff)                                          0/0/5 of 5
+   S1 share sufficient                                                      0/5 = 0%
+   S1 unit retrieval recall                                                 0/0 = n/a
+   S2-gen pooled                                                            0/0 = n/a
+   S2-gen per-question avg                                                  n/a
+   S2-e2e pooled                                                            1/5 = 20%
+   S2-e2e per-question avg                                                  1.00/5 = 0.20
+   S3a justified/partial/not (n answering)                                  1/0/0 (n=1)
+   S3a mean score                                                           1.00/1 = 1.00
+   S3b justified/partial/not (n answering)                                  0/0/1 (n=1)
+   S3b mean score                                                           0.00/1 = 0.00
+   S4 calibration accuracy                                                  4/5 = 80%
+   S4 correct | sufficient (FULL)                                           0/0 = n/a
+   S4 correct | partial (PARTIAL+GAP)                                       0/0 = n/a
+   S4 abstention recall | insufficient                                      4/5 = 80%
+   S4 false abstention | sufficient                                         0/0 = n/a
+   S4 matrix                                                                {'insufficient->ABSTAIN': 4, 'insufficient->FULL': 1}
+   S5 over-reach claims / factual claims                                    0/1 = 0%
+   S5 answering questions with >=1 over-reach                               0/1 = 0%
+   S5 by type                                                               {}
+   S6 covered units with a supporting cited chunk                           1/1 = 100%
+   S6 mean distinct origins per covered unit                                1.00/1 = 1.00
+   S6 dependent multi-citations                                             0
+   S6 false corroborations                                                  0
+   taxonomy retrieval                                                       0/5 = 0%
+   taxonomy calibration                                                     1/5 = 20%
+   taxonomy generation                                                      0/5 = 0%
+   taxonomy citation                                                        0/5 = 0%
+   taxonomy correct                                                         4/5 = 80%
+   CIT verifier: cited / factual claims                                     0/0 = n/a
+   CIT verifier: misattributed / cited                                      0/0 = n/a
+   CIT verifier: potentially supported / cited                              0/0 = n/a
+   CIT manual: cited claims                                                 1
+   CIT manual: supported (incl. minor distortion) / cited                   1/1 = 100%
+   CIT manual: misattributed / cited                                        0/1 = 0%
+   CIT manual: unsupported / cited                                          0/1 = 0%
+   CIT manual: partially supported / cited                                  0/1 = 0%
+   CIT manual: incorrect (misattributed+unsupported) / cited                0/1 = 0%
+   CIT manual: incorrect rate, per-question avg                             0.00/1 = 0.00
+   DESC answer content fully correct (S4 ok, S3b ok, no over-reach, all top-5 units covered) 4/5 = 80%
+   DESC ... and every citation correct                                      4/5 = 80%
+====================================================================================================
+TYPE e (dependent-source)  [Q01, Q02, Q24, Q25, Q26, Q27]
+   S1 labels (suff/partial/insuff)                                          5/0/1 of 6
+   S1 share sufficient                                                      5/6 = 83%
+   S1 unit retrieval recall                                                 8/9 = 89%
+   S2-gen pooled                                                            8/8 = 100%
+   S2-gen per-question avg                                                  5.00/5 = 1.00
+   S2-e2e pooled                                                            8/9 = 89%
+   S2-e2e per-question avg                                                  5.00/6 = 0.83
+   S3a justified/partial/not (n answering)                                  1/1/4 (n=6)
+   S3a mean score                                                           1.50/6 = 0.25
+   S3b justified/partial/not (n answering)                                  5/0/1 (n=6)
+   S3b mean score                                                           5.00/6 = 0.83
+   S4 calibration accuracy                                                  5/6 = 83%
+   S4 correct | sufficient (FULL)                                           5/5 = 100%
+   S4 correct | partial (PARTIAL+GAP)                                       0/0 = n/a
+   S4 abstention recall | insufficient                                      0/1 = 0%
+   S4 false abstention | sufficient                                         0/5 = 0%
+   S4 matrix                                                                {'sufficient->FULL': 5, 'insufficient->FULL': 1}
+   S5 over-reach claims / factual claims                                    1/9 = 11%
+   S5 answering questions with >=1 over-reach                               1/6 = 17%
+   S5 by type                                                               {'O2': 1}
+   S6 covered units with a supporting cited chunk                           4/8 = 50%
+   S6 mean distinct origins per covered unit                                4.00/8 = 0.50
+   S6 dependent multi-citations                                             0
+   S6 false corroborations                                                  0
+   taxonomy retrieval                                                       1/9 = 11%
+   taxonomy calibration                                                     0/9 = 0%
+   taxonomy generation                                                      0/9 = 0%
+   taxonomy citation                                                        4/9 = 44%
+   taxonomy correct                                                         4/9 = 44%
+   CIT verifier: cited / factual claims                                     9/9 = 100%
+   CIT verifier: misattributed / cited                                      6/9 = 67%
+   CIT verifier: potentially supported / cited                              3/9 = 33%
+   CIT manual: cited claims                                                 9
+   CIT manual: supported (incl. minor distortion) / cited                   2/9 = 22%
+   CIT manual: misattributed / cited                                        6/9 = 67%
+   CIT manual: unsupported / cited                                          1/9 = 11%
+   CIT manual: partially supported / cited                                  0/9 = 0%
+   CIT manual: incorrect (misattributed+unsupported) / cited                7/9 = 78%
+   CIT manual: incorrect rate, per-question avg                             5.00/6 = 0.83
+   DESC answer content fully correct (S4 ok, S3b ok, no over-reach, all top-5 units covered) 5/6 = 83%
+   DESC ... and every citation correct                                      1/6 = 17%
+====================================================================================================
+CONTINUITY Q01-Q06  [Q01, Q02, Q03, Q04, Q05, Q06]
+   S1 labels (suff/partial/insuff)                                          5/0/1 of 6
+   S1 share sufficient                                                      5/6 = 83%
+   S1 unit retrieval recall                                                 12/12 = 100%
+   S2-gen pooled                                                            12/12 = 100%
+   S2-gen per-question avg                                                  5.00/5 = 1.00
+   S2-e2e pooled                                                            12/13 = 92%
+   S2-e2e per-question avg                                                  5.00/6 = 0.83
+   S3a justified/partial/not (n answering)                                  1/3/1 (n=5)
+   S3a mean score                                                           2.50/5 = 0.50
+   S3b justified/partial/not (n answering)                                  5/0/0 (n=5)
+   S3b mean score                                                           5.00/5 = 1.00
+   S4 calibration accuracy                                                  6/6 = 100%
+   S4 correct | sufficient (FULL)                                           5/5 = 100%
+   S4 correct | partial (PARTIAL+GAP)                                       0/0 = n/a
+   S4 abstention recall | insufficient                                      1/1 = 100%
+   S4 false abstention | sufficient                                         0/5 = 0%
+   S4 matrix                                                                {'sufficient->FULL': 5, 'insufficient->ABSTAIN': 1}
+   S5 over-reach claims / factual claims                                    0/32 = 0%
+   S5 answering questions with >=1 over-reach                               0/5 = 0%
+   S5 by type                                                               {}
+   S6 covered units with a supporting cited chunk                           9/12 = 75%
+   S6 mean distinct origins per covered unit                                9.00/12 = 0.75
+   S6 dependent multi-citations                                             2
+   S6 false corroborations                                                  0
+   taxonomy retrieval                                                       0/13 = 0%
+   taxonomy calibration                                                     0/13 = 0%
+   taxonomy generation                                                      0/13 = 0%
+   taxonomy citation                                                        3/13 = 23%
+   taxonomy correct                                                         10/13 = 77%
+   CIT verifier: cited / factual claims                                     31/32 = 97%
+   CIT verifier: misattributed / cited                                      6/31 = 19%
+   CIT verifier: potentially supported / cited                              25/31 = 81%
+   CIT manual: cited claims                                                 31
+   CIT manual: supported (incl. minor distortion) / cited                   24/31 = 77%
+   CIT manual: misattributed / cited                                        7/31 = 23%
+   CIT manual: unsupported / cited                                          0/31 = 0%
+   CIT manual: partially supported / cited                                  0/31 = 0%
+   CIT manual: incorrect (misattributed+unsupported) / cited                7/31 = 23%
+   CIT manual: incorrect rate, per-question avg                             2.36/5 = 0.47
+   DESC answer content fully correct (S4 ok, S3b ok, no over-reach, all top-5 units covered) 6/6 = 100%
+   DESC ... and every citation correct                                      2/6 = 33%
+====================================================================================================
+POOLED (27) - erratum labels  [Q01, Q02, Q03, Q04, Q05, Q06, Q07, Q08, Q09, Q10, Q11, Q12, Q13, Q14, Q15, Q16, Q17, Q18, Q19, Q20, Q21, Q22, Q23, Q24, Q25, Q26, Q27]
+   S1 labels (suff/partial/insuff)                                          16/5/6 of 27
+   S1 share sufficient                                                      16/27 = 59%
+   S1 unit retrieval recall                                                 38/46 = 83%
+   S2-gen pooled                                                            35/38 = 92%
+   S2-gen per-question avg                                                  19.00/21 = 0.90
+   S2-e2e pooled                                                            35/55 = 64%
+   S2-e2e per-question avg                                                  16.83/27 = 0.62
+   S3a justified/partial/not (n answering)                                  10/7/5 (n=22)
+   S3a mean score                                                           13.50/22 = 0.61
+   S3b justified/partial/not (n answering)                                  16/4/2 (n=22)
+   S3b mean score                                                           18.00/22 = 0.82
+   S4 calibration accuracy                                                  21/27 = 78%
+   S4 correct | sufficient (FULL)                                           16/16 = 100%
+   S4 correct | partial (PARTIAL+GAP)                                       1/5 = 20%
+   S4 abstention recall | insufficient                                      4/6 = 67%
+   S4 false abstention | sufficient                                         0/16 = 0%
+   S4 matrix                                                                {'sufficient->FULL': 16, 'insufficient->ABSTAIN': 4, 'partial->FULL': 3, 'partial->ABSTAIN': 1, 'insufficient->FULL': 2, 'partial->PARTIAL+GAP': 1}
+   S5 over-reach claims / factual claims                                    9/86 = 10%
+   S5 answering questions with >=1 over-reach                               6/22 = 27%
+   S5 by type                                                               {'O2': 5, 'O3': 3, 'O4': 1}
+   S6 covered units with a supporting cited chunk                           30/35 = 86%
+   S6 mean distinct origins per covered unit                                30.00/35 = 0.86
+   S6 dependent multi-citations                                             2
+   S6 false corroborations                                                  0
+   taxonomy retrieval                                                       8/55 = 15%
+   taxonomy calibration                                                     3/55 = 5%
+   taxonomy generation                                                      3/55 = 5%
+   taxonomy citation                                                        5/55 = 9%
+   taxonomy correct                                                         36/55 = 65%
+   CIT verifier: cited / factual claims                                     81/82 = 99%
+   CIT verifier: misattributed / cited                                      10/81 = 12%
+   CIT verifier: potentially supported / cited                              68/81 = 84%
+   CIT manual: cited claims                                                 85
+   CIT manual: supported (incl. minor distortion) / cited                   65/85 = 76%
+   CIT manual: misattributed / cited                                        11/85 = 13%
+   CIT manual: unsupported / cited                                          9/85 = 11%
+   CIT manual: partially supported / cited                                  0/85 = 0%
+   CIT manual: incorrect (misattributed+unsupported) / cited                20/85 = 24%
+   CIT manual: incorrect rate, per-question avg                             7.22/22 = 0.33
+   DESC answer content fully correct (S4 ok, S3b ok, no over-reach, all top-5 units covered) 20/27 = 74%
+   DESC ... and every citation correct                                      14/27 = 52%
+
+====================================================================================================
+EXPERIMENT B vs C (same 6 answers, byte-identical)
+   B verifier: cited/factual 31/32, misattributed/cited 6/31
+   C verifier: 31/32 = 97%, misattributed/cited 6/31 = 19%
+   B manual: misattributed/cited 7/31
+   C manual: misattributed/cited 7/31 = 23%

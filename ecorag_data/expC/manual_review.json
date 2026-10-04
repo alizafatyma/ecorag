@@ -1,0 +1,1856 @@
+{
+  "reviewer": "single reviewer (Claude); no second review completed",
+  "decisions": {
+    "A1": "added citation status 'unsupported' (manual-review stage decision, user-approved)",
+    "A2": "bare-value lines counted as factual claims: Q08 c1, Q08 c2, Q14 c2, Q22 c1"
+  },
+  "problems": [],
+  "claims": [
+    {
+      "qid": "Q01",
+      "claim_id": 1,
+      "claim": "Agriculture is the largest source of global anthropogenic methane emissions, accounting for almost 42 per cent in 2020 [4].",
+      "cited": [
+        4
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "misattributed",
+      "manual_status": "misattributed",
+      "evidence": "sentence verbatim from [5] ('almost 42 per cent in 2020'); cited [4] says only '42 per cent', no 2020 (= Exp B)",
+      "a2_line": false
+    },
+    {
+      "qid": "Q02",
+      "claim_id": 1,
+      "claim": "The Methane Alert and Response System (MARS) sent over 5,000 alerts by February 2026 [2].",
+      "cited": [
+        2
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "misattributed",
+      "manual_status": "misattributed",
+      "evidence": "5,000 only in [1][3]; cited [2]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q02",
+      "claim_id": 2,
+      "claim": "The global response rate reached only 12 per cent in 2025 [2].",
+      "cited": [
+        2
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "misattributed",
+      "manual_status": "misattributed",
+      "evidence": "12 per cent only in [1][3]; cited [2]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q03",
+      "claim_id": 1,
+      "claim": "The grid cannot keep pace with rising electricity demand, leading to lengthening connection queues and competition for scarce grid capacity [2].",
+      "cited": [
+        2
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "Exp B manual review: verbatim/close to cited source",
+      "a2_line": false
+    },
+    {
+      "qid": "Q03",
+      "claim_id": 2,
+      "claim": "New housing and industrial development compete with data centers and generation projects for grid capacity [2].",
+      "cited": [
+        2
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "Exp B manual review: verbatim/close to cited source",
+      "a2_line": false
+    },
+    {
+      "qid": "Q03",
+      "claim_id": 3,
+      "claim": "Service disruption may occur if left unaddressed [2].",
+      "cited": [
+        2
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "Exp B manual review: verbatim/close to cited source",
+      "a2_line": false
+    },
+    {
+      "qid": "Q03",
+      "claim_id": 4,
+      "claim": "Stability is a concern due to the displacement of synchronous generators by converter-connected resources [2].",
+      "cited": [
+        2
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "Exp B manual review: verbatim/close to cited source",
+      "a2_line": false
+    },
+    {
+      "qid": "Q03",
+      "claim_id": 5,
+      "claim": "Converter-connected resources reduce traditional stabilizing properties like inertia, voltage support, fault current contribution, and damping [2].",
+      "cited": [
+        2
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "Exp B manual review: verbatim/close to cited source",
+      "a2_line": false
+    },
+    {
+      "qid": "Q03",
+      "claim_id": 6,
+      "claim": "Faster-moving and harder-to-observe variables include stability, voltage support, and damping [2].",
+      "cited": [
+        2
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "Exp B manual review: verbatim/close to cited source",
+      "a2_line": false
+    },
+    {
+      "qid": "Q03",
+      "claim_id": 7,
+      "claim": "AI-based tools' performance depends heavily on the quality of data and models they rely on [2].",
+      "cited": [
+        2
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "Exp B manual review: verbatim/close to cited source",
+      "a2_line": false
+    },
+    {
+      "qid": "Q03",
+      "claim_id": 8,
+      "claim": "The grid must now cope with distributed energy resources such as rooftop solar, batteries, EVs, and flexible demand [3].",
+      "cited": [
+        3
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "Exp B manual review: verbatim/close to cited source",
+      "a2_line": false
+    },
+    {
+      "qid": "Q03",
+      "claim_id": 9,
+      "claim": "Large inverter-based power sources and vast data centers represent a new, more concentrated form of generation and demand [3].",
+      "cited": [
+        3
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "Exp B manual review: verbatim/close to cited source",
+      "a2_line": false
+    },
+    {
+      "qid": "Q03",
+      "claim_id": 10,
+      "claim": "Sharp peaks can produce challenges for voltage management, transformer loading, feeder capacity, and protection settings [3].",
+      "cited": [
+        3
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "Exp B manual review: verbatim/close to cited source",
+      "a2_line": false
+    },
+    {
+      "qid": "Q03",
+      "claim_id": 11,
+      "claim": "The grid is transforming from unidirectional systems to systems with dynamic two-way flows [3].",
+      "cited": [
+        3
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "Exp B manual review: verbatim/close to cited source",
+      "a2_line": false
+    },
+    {
+      "qid": "Q03",
+      "claim_id": 12,
+      "claim": "Voltage management, transformer loading, feeder capacity, and protection settings are new challenges created by these changes [3].",
+      "cited": [
+        3
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "Exp B manual review: verbatim/close to cited source",
+      "a2_line": false
+    },
+    {
+      "qid": "Q03",
+      "claim_id": 13,
+      "claim": "The grid must now manage conditions that are faster-moving and harder to observe and model than thermal limits [2].",
+      "cited": [
+        2
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "Exp B manual review: verbatim/close to cited source",
+      "a2_line": false
+    },
+    {
+      "qid": "Q03",
+      "claim_id": 14,
+      "claim": "The grid faces new challenges at both the distribution and transmission levels [3].",
+      "cited": [
+        3
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "Exp B manual review: verbatim/close to cited source",
+      "a2_line": false
+    },
+    {
+      "qid": "Q03",
+      "claim_id": 17,
+      "claim": "Decisions in long-term planning and connection studies include what to build, defer, or connect, and where to locate (investment focus) [5].",
+      "cited": [
+        5
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "Exp B manual review: verbatim/close to cited source",
+      "a2_line": false
+    },
+    {
+      "qid": "Q03",
+      "claim_id": 18,
+      "claim": "Forecast error on variable demand and supply, and unplanned outages, are uncertainties in operational planning [5].",
+      "cited": [
+        5
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "Exp B manual review: verbatim/close to cited source",
+      "a2_line": false
+    },
+    {
+      "qid": "Q03",
+      "claim_id": 15,
+      "claim": "The grid must now manage evolving real-time conditions and instantaneous disturbances [2].",
+      "cited": [
+        2
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "misattributed",
+      "manual_status": "misattributed",
+      "evidence": "'evolving real-time conditions' only in table [5]; cited [2]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q03",
+      "claim_id": 16,
+      "claim": "Evolving real-time conditions and instantaneous disturbances are uncertainties in operational planning [2].",
+      "cited": [
+        2
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "misattributed",
+      "manual_status": "misattributed",
+      "evidence": "'instantaneous disturbances' only in table [5]; cited [2]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q04",
+      "claim_id": 1,
+      "claim": "A 1 percentage point reduction in the cost of capital can lead to a reduction of USD 150 billion in average annual financing costs in the NZE Scenario between 2024 and 2050 [1].",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "USD 150 bn in [1]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q04",
+      "claim_id": 2,
+      "claim": "A 2 percentage point reduction in the cost of capital could almost double this reduction to USD 300 billion per year [1].",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "USD 300 bn in [1]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q04",
+      "claim_id": 3,
+      "claim": "Bringing down the cost of capital requires addressing risks across various parts of the energy economy, including different business models, scales of projects, and prevalent risks in different sectors [2].",
+      "cited": [
+        2
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "'different business models' [2]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q04",
+      "claim_id": 4,
+      "claim": "It is essential to dig into the features of different parts of the energy sector to examine their specific elements, business models, and risks [2].",
+      "cited": [
+        2
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "'dig into the features' [2]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q04",
+      "claim_id": 5,
+      "claim": "Risks that push up the cost of capital extend well beyond the energy sector, highlighting the need for a broad effort to create the conditions that will allow all countries to benefit from participation in the new clean energy economy [3].",
+      "cited": [
+        3
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "'extend well beyond the energy sector' [3]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q04",
+      "claim_id": 6,
+      "claim": "Mobilising private finance at the scale needed will require at least a tripling in international concessional funds to help improve the risk-return profile of clean energy projects across the electricity, end-use, and low-emission-fuel sectors [5].",
+      "cited": [
+        5
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "'tripling in international concessional funds' [5]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q04",
+      "claim_id": 7,
+      "claim": "Lowering the cost of capital can substantially bring down the overall cost of transitions and reduce the costs paid by consumers [1].",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "misattributed",
+      "evidence": "'costs paid by consumers' verbatim from [5]; cited [1] (verifier missed)",
+      "a2_line": false
+    },
+    {
+      "qid": "Q04",
+      "claim_id": 8,
+      "claim": "Better risk management through strong policy frameworks and regulation as well as enhanced deployment of de-risking instruments are key [1].",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "misattributed",
+      "manual_status": "misattributed",
+      "evidence": "'de-risking instruments' verbatim from [5]; cited [1]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q05",
+      "claim_id": 1,
+      "claim": "For steel, the near-zero emissions threshold ranges from 400-50 kg CO2-eq per tonne of crude steel, depending on the scrap share. [3][4]",
+      "cited": [
+        3,
+        4
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "400-50 kg in [4], values in [3]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q05",
+      "claim_id": 2,
+      "claim": "For cement, the near-zero emissions threshold ranges from 125-40 kg CO2-eq per tonne of cement, depending on the clinker ratio. [3][4]",
+      "cited": [
+        3,
+        4
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "125-40 kg in [4], values in [3]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q07",
+      "claim_id": 1,
+      "claim": "Up to 330 GW of new supply, storage and demand could connect to existing networks [1][2].",
+      "cited": [
+        1,
+        2
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "330 GW in [1]; [2] over-cited",
+      "a2_line": false
+    },
+    {
+      "qid": "Q07",
+      "claim_id": 2,
+      "claim": "Connecting this volume through network expansion would require around USD 100 billion of investment [1].",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "USD 100 billion in [1]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q08",
+      "claim_id": 1,
+      "claim": "12% [1]",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "framing",
+      "verifier_status": "framing",
+      "manual_status": "supported",
+      "evidence": "A2 bare value: '12% of global electricity supply in 2023' [1]",
+      "a2_line": true
+    },
+    {
+      "qid": "Q08",
+      "claim_id": 2,
+      "claim": "40% [1]",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "framing",
+      "verifier_status": "framing",
+      "manual_status": "supported",
+      "evidence": "A2 bare value: 'rise to 40% by 2030' [1]",
+      "a2_line": true
+    },
+    {
+      "qid": "Q09",
+      "claim_id": 1,
+      "claim": "The IEA’s Manufacturing and Trade (MaT) Model was first developed for the 2024 edition of Energy Technology Perspectives (ETP) (IEA, 2024a) [2].",
+      "cited": [
+        2
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "'(IEA, 2024a)' in [2]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q09",
+      "claim_id": 2,
+      "claim": "The MaT Model covers six key clean energy technology supply chains: solar photovoltaics (PV), wind turbines, electric cars, batteries, electrolysers, and heat pumps [2].",
+      "cited": [
+        2
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "six chains in [2]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q10",
+      "claim_id": 1,
+      "claim": "California hosts a few major clusters, such as the Bay Area around San Francisco [1].",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "Bay Area cluster in [1]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q10",
+      "claim_id": 2,
+      "claim": "Combined, the Bay Area around San Francisco represents 11.1% of the country's solar online job postings [1].",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "'11.1% of the country's solar online job postings' [1]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q10",
+      "claim_id": 3,
+      "claim": "Therefore, California accounts for almost one-fourth of the US online solar vacancies between 2019 and 2024 [1].",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "'almost onefourth of the US online solar vacancies between 2019 and 2024' [1]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q11",
+      "claim_id": 1,
+      "claim": "The review was conducted by the International Energy Agency (IEA) alongside peer experts from Spain and Finland [1].",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "'Spain and Finland' [1]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q11",
+      "claim_id": 2,
+      "claim": "The review team visited Norway in November 2025 [1].",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "'November 2025' [1]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q12",
+      "claim_id": 1,
+      "claim": "Concessional finance is crucial for mobilizing private capital in developing economies, helping to overcome barriers to clean energy investment [1].",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "[1]: concessional support helps remove barriers, mobilise capital",
+      "a2_line": false
+    },
+    {
+      "qid": "Q12",
+      "claim_id": 2,
+      "claim": "Concessional finance is vital for methane mitigation, especially in developing economies where upfront costs and capacity constraints can delay adoption of technologies [2].",
+      "cited": [
+        2
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "[2]: 'tax credits and concessional finance are important in developing economies, where upfront costs...'",
+      "a2_line": false
+    },
+    {
+      "qid": "Q12",
+      "claim_id": 3,
+      "claim": "Concessional finance can help lower the cost of capital for clean energy transitions, potentially saving billions in annual financing costs [4].",
+      "cited": [
+        4
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported_minor_distortion",
+      "evidence": "[4]: lowering cost of capital saves ~USD 150 bn; link to concessional finance is an inference",
+      "a2_line": false
+    },
+    {
+      "qid": "Q12",
+      "claim_id": 4,
+      "claim": "Concessional finance plays a significant role in supporting the development and commercialization of new and innovative technologies, such as the Enteric Fermentation Research and Development Accelerator [2].",
+      "cited": [
+        2
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "unsupported",
+      "evidence": "[2]: accelerator was 'jointly launched' joint funding, not concessional finance",
+      "a2_line": false
+    },
+    {
+      "qid": "Q12",
+      "claim_id": 5,
+      "claim": "Concessional finance is essential for ensuring that funding reaches the local level, particularly in sectors like waste management where local governments need adequate and sustained financing [2].",
+      "cited": [
+        2
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "unsupported",
+      "evidence": "[2]: 'ensuring funding reaches the local level' is about funding generally, not concessional finance",
+      "a2_line": false
+    },
+    {
+      "qid": "Q12",
+      "claim_id": 6,
+      "claim": "Concessional finance helps to bridge capacity gaps in emerging economies seeking technology transfer and financial support [2].",
+      "cited": [
+        2
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "misattributed",
+      "evidence": "'seek technology transfer and concessional finance' only in [5]; cited [2] (verifier missed)",
+      "a2_line": false
+    },
+    {
+      "qid": "Q12",
+      "claim_id": 7,
+      "claim": "Concessional finance is critical for scaling up methane mitigation efforts, aligning with broader climate strategies and delivering significant near-term climate wins [3].",
+      "cited": [
+        3
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "partially_supported",
+      "manual_status": "unsupported",
+      "evidence": "[3]: 'near-term climate win' refers to methane action, not concessional finance",
+      "a2_line": false
+    },
+    {
+      "qid": "Q12",
+      "claim_id": 8,
+      "claim": "Concessional finance is necessary to achieve deep, sustained reductions in methane emissions, combining with energy system transformations and demand-side changes [3].",
+      "cited": [
+        3
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "unsupported",
+      "evidence": "[3]: 53% reduction via controls + system change; no statement that concessional finance is necessary",
+      "a2_line": false
+    },
+    {
+      "qid": "Q13",
+      "claim_id": 1,
+      "claim": "Europe's electricity demand is expected to increase by over 80% from 2022 to 2050 [1].",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "'over 80% in Europe' [1]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q13",
+      "claim_id": 2,
+      "claim": "India's electricity demand is expected to increase by more than 2.5 times from 2022 to 2050 [1].",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "'2.5 times in India' [1]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q13",
+      "claim_id": 3,
+      "claim": "Indonesia's electricity demand is expected to increase by more than 3 times from 2022 to 2050 [1].",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "'3 times in Indonesia' [1]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q13",
+      "claim_id": 4,
+      "claim": "Grid capacity must increase by at least 30% by 2035 to meet expected growth in electricity demand [4].",
+      "cited": [
+        4
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "'at least 30%' [4]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q13",
+      "claim_id": 5,
+      "claim": "At least 1 700 GW of advanced-stage renewable projects and 600 GW of utility-scale batteries were awaiting connection in 2025 [4].",
+      "cited": [
+        4
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "'1 700 GW ... 600 GW' [4]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q14",
+      "claim_id": 1,
+      "claim": "Nine priority actions are set out in the document [1].",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "'nine priority actions' [1]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q14",
+      "claim_id": 2,
+      "claim": "These actions are to be delivered by 2030 [1].",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "framing",
+      "verifier_status": "framing",
+      "manual_status": "supported",
+      "evidence": "A2 bare claim: actions delivered by 2030 [1]",
+      "a2_line": true
+    },
+    {
+      "qid": "Q14",
+      "claim_id": 3,
+      "claim": "They cover three sectors: fossil fuels, agriculture, and waste [1].",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "fossil fuel, agriculture and waste sectors [1]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q14",
+      "claim_id": 4,
+      "claim": "The fossil fuels sector includes fixing leaks and eliminating routine flaring and cold venting [2].",
+      "cited": [
+        2
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "'Fix leaks' [2]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q14",
+      "claim_id": 5,
+      "claim": "The agriculture sector involves halving per-capita food waste and reforming incentives and redirecting finance and subsidies [5].",
+      "cited": [
+        5
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "'food waste', 'Reform incentives' [5]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q14",
+      "claim_id": 6,
+      "claim": "The waste sector aims to improve waste management practices [1].",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "unsupported",
+      "manual_status": "unsupported",
+      "evidence": "'improve waste management practices' not in [1] or any top-5 source",
+      "a2_line": false
+    },
+    {
+      "qid": "Q14",
+      "claim_id": 7,
+      "claim": "The actions are endorsed by the Secretary-General [1].",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "'the Secretary-General is endorsing nine priority actions' [1]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q16",
+      "claim_id": 1,
+      "claim": "Global clean energy investment in 2023 was USD 1.8 trillion [1].",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "'USD 1.8 trillion in 2023' [1]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q16",
+      "claim_id": 2,
+      "claim": "In 2024, clean energy investment in Africa was USD 270 billion [3].",
+      "cited": [
+        3
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "misattributed",
+      "manual_status": "unsupported",
+      "evidence": "[3] says 'USD 270 billion invested in clean energy in EMDE in 2023', not Africa 2024",
+      "a2_line": false
+    },
+    {
+      "qid": "Q17",
+      "claim_id": 1,
+      "claim": "The global electricity demand in 2050 is more than double its 2022 level [4].",
+      "cited": [
+        4
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "'global electricity demand in 2050 is more than double its 2022 level' [4]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q17",
+      "claim_id": 2,
+      "claim": "Household electricity prices are expected to rise due to increased demand and the need for flexibility resources [4].",
+      "cited": [
+        4
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "partially_supported",
+      "manual_status": "unsupported",
+      "evidence": "no source mentions household prices",
+      "a2_line": false
+    },
+    {
+      "qid": "Q17",
+      "claim_id": 3,
+      "claim": "Short-term flexibility needs rise by about 50% by 2030 and double by 2050 [5].",
+      "cited": [
+        5
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "flexibility/peak-demand statements present in cited source (word-level match, verifier supported)",
+      "a2_line": false
+    },
+    {
+      "qid": "Q17",
+      "claim_id": 4,
+      "claim": "The share of wind and solar PV-based electricity generation has grown enough that they significantly increase the need for additional flexibility [5].",
+      "cited": [
+        5
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "flexibility/peak-demand statements present in cited source (word-level match, verifier supported)",
+      "a2_line": false
+    },
+    {
+      "qid": "Q17",
+      "claim_id": 5,
+      "claim": "Solar PV is responsible for most of the increase in short-term flexibility needs until 2050 [5].",
+      "cited": [
+        5
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "flexibility/peak-demand statements present in cited source (word-level match, verifier supported)",
+      "a2_line": false
+    },
+    {
+      "qid": "Q17",
+      "claim_id": 6,
+      "claim": "Over longer timescales, flexibility requirements are driven by phenomena exhibiting longer cycles than solar PV output [5].",
+      "cited": [
+        5
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "flexibility/peak-demand statements present in cited source (word-level match, verifier supported)",
+      "a2_line": false
+    },
+    {
+      "qid": "Q17",
+      "claim_id": 7,
+      "claim": "Variations in electricity demand driven by higher heating loads in winter and greater cooling needs in summer are the primary drivers of seasonal flexibility needs today [3].",
+      "cited": [
+        3
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "flexibility/peak-demand statements present in cited source (word-level match, verifier supported)",
+      "a2_line": false
+    },
+    {
+      "qid": "Q17",
+      "claim_id": 8,
+      "claim": "By 2030, the share of wind and solar PV in the electricity mix has grown enough to significantly increase the need for additional flexibility [5].",
+      "cited": [
+        5
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "flexibility/peak-demand statements present in cited source (word-level match, verifier supported)",
+      "a2_line": false
+    },
+    {
+      "qid": "Q17",
+      "claim_id": 9,
+      "claim": "In 2050, the seasonal variability of wind is responsible for nearly all the seasonal flexibility requirements [5].",
+      "cited": [
+        5
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "flexibility/peak-demand statements present in cited source (word-level match, verifier supported)",
+      "a2_line": false
+    },
+    {
+      "qid": "Q17",
+      "claim_id": 10,
+      "claim": "The role of thermal shifts from bulk generation to flexibility provision and to ensure security of supply at peak demand [1].",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "flexibility/peak-demand statements present in cited source (word-level match, verifier supported)",
+      "a2_line": false
+    },
+    {
+      "qid": "Q17",
+      "claim_id": 11,
+      "claim": "Unmanaged peak demand increases by 88% to 2050, with two-thirds of the increase coming from EV charging [1].",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "flexibility/peak-demand statements present in cited source (word-level match, verifier supported)",
+      "a2_line": false
+    },
+    {
+      "qid": "Q18",
+      "claim_id": 1,
+      "claim": "In Austria, heat pump online job postings made up 0.029% of total online job postings [1].",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "'Austria (0.029%)' [1]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q18",
+      "claim_id": 2,
+      "claim": "The average salary advertised in heat pump online job postings in Austria was USD 36 800 [5].",
+      "cited": [
+        5
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "unsupported",
+      "evidence": "[5] 'German Professionals (USD 36 800)', not Austria",
+      "a2_line": false
+    },
+    {
+      "qid": "Q19",
+      "claim_id": 1,
+      "claim": "Grid congestion cost USD 12 billion in the United States in 2024 [2].",
+      "cited": [
+        2
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "'USD 12 billion in the United States' [2]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q22",
+      "claim_id": 1,
+      "claim": "8500000 [1]",
+      "cited": [
+        1
+      ],
+      "verifier_kind": "framing",
+      "verifier_status": "framing",
+      "manual_status": "supported",
+      "evidence": "A2 bare value: '8.5 million people' in [1]",
+      "a2_line": true
+    },
+    {
+      "qid": "Q24",
+      "claim_id": 1,
+      "claim": "By 2050, methane emissions could be reduced to 164 Mt per year, 53 per cent reduction below 2020 levels [4].",
+      "cited": [
+        4
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "misattributed",
+      "manual_status": "misattributed",
+      "evidence": "'164 Mt per year in 2050, 53 per cent' only in [2]; cited [4]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q24",
+      "claim_id": 2,
+      "claim": "Reducing methane emissions could avoid a 2.3 to 2.5°C rise above pre-industrial levels over the course of this century [4].",
+      "cited": [
+        4
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "unsupported",
+      "evidence": "[4]: 'a 2.3-2.5°C rise ... even if current NDCs are implemented' is projected warming, not avoided warming",
+      "a2_line": false
+    },
+    {
+      "qid": "Q25",
+      "claim_id": 1,
+      "claim": "The combined total annual cost for mitigation measures in the industry would be USD 98 billion [4].",
+      "cited": [
+        4
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "'USD 98 billion' [4]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q25",
+      "claim_id": 2,
+      "claim": "When accounting for the value of recovered gas, this is equivalent to just 2–4 per cent of the sector’s USD 2.4 trillion net income in 2023 [4].",
+      "cited": [
+        4
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence": "'two to four per cent of the sector's USD 2.4 trillion net income in 2023' [4]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q26",
+      "claim_id": 1,
+      "claim": "Atmospheric methane concentrations reached about 1,942 parts per billion in 2024 [4].",
+      "cited": [
+        4
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "misattributed",
+      "manual_status": "misattributed",
+      "evidence": "'1,942 parts per billion' only in [2][3]; cited [4]",
+      "a2_line": false
+    },
+    {
+      "qid": "Q27",
+      "claim_id": 1,
+      "claim": "If all countries matched Norway’s methane emission intensity standards, global methane emissions from oil and gas operations could fall by roughly 90 per cent [2].",
+      "cited": [
+        2
+      ],
+      "verifier_kind": "factual",
+      "verifier_status": "misattributed",
+      "manual_status": "misattributed",
+      "evidence": "'roughly 90 per cent' only in [1][5]; cited [2]",
+      "a2_line": false
+    }
+  ],
+  "questions": {
+    "Q01": {
+      "behaviour": "FULL",
+      "S3a": "partial",
+      "S3b": "justified",
+      "overreach": [],
+      "manual_factual_claims": 1,
+      "units": {
+        "U1": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        },
+        "U2": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        }
+      },
+      "note": "Unit facts (largest source, 42%) are in cited [4]; the claim's 'almost ... in 2020' is only in [5]."
+    },
+    "Q02": {
+      "behaviour": "FULL",
+      "S3a": "not",
+      "S3b": "justified",
+      "overreach": [],
+      "manual_factual_claims": 2,
+      "units": {
+        "U1": {
+          "covered": true,
+          "failure": "citation",
+          "s6": {
+            "cited_chunks": 0,
+            "distinct_origins": 0,
+            "false_corroboration": false
+          }
+        },
+        "U2": {
+          "covered": true,
+          "failure": "citation",
+          "s6": {
+            "cited_chunks": 0,
+            "distinct_origins": 0,
+            "false_corroboration": false
+          }
+        }
+      },
+      "note": "Figures and dates exact ('by February 2026', '12 per cent in 2025'); cited [2] contains neither."
+    },
+    "Q03": {
+      "behaviour": "FULL",
+      "S3a": "partial",
+      "S3b": "justified",
+      "overreach": [],
+      "manual_factual_claims": 19,
+      "units": {
+        "U1": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        },
+        "U2": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        },
+        "U3": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        }
+      },
+      "note": "Queues and stability in cited [2]; two-way flows in cited [3]; c15-c16 misattributed; c19 truncated, uncited."
+    },
+    "Q04": {
+      "behaviour": "FULL",
+      "S3a": "partial",
+      "S3b": "justified",
+      "overreach": [],
+      "manual_factual_claims": 8,
+      "units": {
+        "U1": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        },
+        "U2": {
+          "covered": true,
+          "failure": "citation",
+          "s6": {
+            "cited_chunks": 0,
+            "distinct_origins": 0,
+            "false_corroboration": false
+          }
+        },
+        "U3": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        }
+      },
+      "note": "U2 (policy/de-risking) stated but cited [1]; the text is in [5]."
+    },
+    "Q05": {
+      "behaviour": "FULL",
+      "S3a": "justified",
+      "S3b": "justified",
+      "overreach": [],
+      "manual_factual_claims": 2,
+      "units": {
+        "U1": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 2,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        },
+        "U2": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 2,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        }
+      },
+      "note": "Both thresholds exact; [3][4] are the same report (dependent multi-citation)."
+    },
+    "Q06": {
+      "behaviour": "ABSTAIN",
+      "S3a": "n/a",
+      "S3b": "n/a",
+      "overreach": [],
+      "manual_factual_claims": 0,
+      "units": {
+        "U1": {
+          "covered": false,
+          "failure": "correct",
+          "s6": null
+        }
+      },
+      "note": "Correct abstention; abstention line carries [5] (format)."
+    },
+    "Q07": {
+      "behaviour": "FULL",
+      "S3a": "justified",
+      "S3b": "justified",
+      "overreach": [],
+      "manual_factual_claims": 2,
+      "units": {
+        "U1": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        },
+        "U2": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        }
+      },
+      "note": "Fully answered from [1]."
+    },
+    "Q08": {
+      "behaviour": "FULL",
+      "S3a": "justified",
+      "S3b": "justified",
+      "overreach": [],
+      "manual_factual_claims": 2,
+      "units": {
+        "U1": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        },
+        "U2": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        }
+      },
+      "note": "Bare values in question order; both in [1]."
+    },
+    "Q09": {
+      "behaviour": "FULL",
+      "S3a": "justified",
+      "S3b": "justified",
+      "overreach": [],
+      "manual_factual_claims": 2,
+      "units": {
+        "U1": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        }
+      },
+      "note": "Six supply chains listed exactly."
+    },
+    "Q10": {
+      "behaviour": "FULL",
+      "S3a": "justified",
+      "S3b": "not",
+      "overreach": [],
+      "manual_factual_claims": 3,
+      "units": {
+        "U1": {
+          "covered": true,
+          "failure": "retrieval",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        }
+      },
+      "note": "Answer is supported by cited [1]. FROZEN gold says not retrieved (erratum): S3b set by the 'insufficient -> not justified' rule; taxonomy priority 1 = retrieval failure."
+    },
+    "Q11": {
+      "behaviour": "FULL",
+      "S3a": "justified",
+      "S3b": "justified",
+      "overreach": [],
+      "manual_factual_claims": 2,
+      "units": {
+        "U1": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        },
+        "U2": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        }
+      },
+      "note": "Fully answered from [1]."
+    },
+    "Q12": {
+      "behaviour": "FULL",
+      "S3a": "partial",
+      "S3b": "partial",
+      "overreach": [
+        {
+          "claim_id": 4,
+          "type": "O2",
+          "note": "joint funding presented as concessional finance"
+        },
+        {
+          "claim_id": 5,
+          "type": "O2",
+          "note": "general funding presented as concessional finance"
+        },
+        {
+          "claim_id": 7,
+          "type": "O3",
+          "note": "unsupported generalisation"
+        },
+        {
+          "claim_id": 8,
+          "type": "O3",
+          "note": "unsupported generalisation"
+        }
+      ],
+      "manual_factual_claims": 8,
+      "units": {
+        "U1": {
+          "covered": false,
+          "failure": "generation",
+          "s6": null
+        },
+        "U2": {
+          "covered": false,
+          "failure": "generation",
+          "s6": null
+        }
+      },
+      "note": "Never states U1 ('tripling', USD 90-110 bn) or U2 ('scale up highly concessional donor funding'); binary coverage applied."
+    },
+    "Q13": {
+      "behaviour": "FULL",
+      "S3a": "justified",
+      "S3b": "justified",
+      "overreach": [],
+      "manual_factual_claims": 5,
+      "units": {
+        "U1": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        },
+        "U2": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        },
+        "U3": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        },
+        "U4": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        }
+      },
+      "note": "All four figures correct and correctly cited."
+    },
+    "Q14": {
+      "behaviour": "FULL",
+      "S3a": "partial",
+      "S3b": "partial",
+      "overreach": [
+        {
+          "claim_id": 6,
+          "type": "O3",
+          "note": "unsupported generalisation about the waste sector"
+        }
+      ],
+      "manual_factual_claims": 7,
+      "units": {
+        "A1": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        },
+        "A2": {
+          "covered": false,
+          "failure": "retrieval",
+          "s6": null
+        },
+        "A3": {
+          "covered": false,
+          "failure": "retrieval",
+          "s6": null
+        },
+        "A4": {
+          "covered": false,
+          "failure": "retrieval",
+          "s6": null
+        },
+        "A5": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        },
+        "A6": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        },
+        "A7": {
+          "covered": false,
+          "failure": "retrieval",
+          "s6": null
+        },
+        "A8": {
+          "covered": false,
+          "failure": "retrieval",
+          "s6": null
+        },
+        "A9": {
+          "covered": false,
+          "failure": "retrieval",
+          "s6": null
+        }
+      },
+      "note": "Gives 3 of 9 actions, states no gap (gold partial -> expected PARTIAL+GAP)."
+    },
+    "Q15": {
+      "behaviour": "ABSTAIN",
+      "S3a": "n/a",
+      "S3b": "n/a",
+      "overreach": [],
+      "manual_factual_claims": 0,
+      "units": {
+        "U1": {
+          "covered": false,
+          "failure": "generation",
+          "s6": null
+        },
+        "U2": {
+          "covered": false,
+          "failure": "correct",
+          "s6": null
+        }
+      },
+      "note": "Only an aluminium gap line (cited [1]); omits the steel threshold that is in the top-5."
+    },
+    "Q16": {
+      "behaviour": "FULL",
+      "S3a": "partial",
+      "S3b": "partial",
+      "overreach": [
+        {
+          "claim_id": 2,
+          "type": "O2",
+          "note": "EMDE 2023 figure presented as Africa 2024"
+        }
+      ],
+      "manual_factual_claims": 2,
+      "units": {
+        "U1": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        },
+        "U2": {
+          "covered": false,
+          "failure": "calibration",
+          "s6": null
+        }
+      },
+      "note": "Answers the missing part with a substituted figure."
+    },
+    "Q17": {
+      "behaviour": "FULL",
+      "S3a": "not",
+      "S3b": "not",
+      "overreach": [
+        {
+          "claim_id": 2,
+          "type": "O4",
+          "note": "household price rise not in any source"
+        }
+      ],
+      "manual_factual_claims": 11,
+      "units": {
+        "U1": {
+          "covered": false,
+          "failure": "retrieval",
+          "s6": null
+        },
+        "U2": {
+          "covered": false,
+          "failure": "calibration",
+          "s6": null
+        }
+      },
+      "note": "Gives global (not Europe) demand and flexibility facts; asserts household price rise. 11 lines (> 8)."
+    },
+    "Q18": {
+      "behaviour": "FULL",
+      "S3a": "partial",
+      "S3b": "not",
+      "overreach": [
+        {
+          "claim_id": 2,
+          "type": "O2",
+          "note": "German salary presented as Austrian"
+        }
+      ],
+      "manual_factual_claims": 2,
+      "units": {
+        "U1": {
+          "covered": true,
+          "failure": "retrieval",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        },
+        "U2": {
+          "covered": false,
+          "failure": "calibration",
+          "s6": null
+        }
+      },
+      "note": "U1 correct and cited (FROZEN gold says not retrieved: erratum); salary substituted."
+    },
+    "Q19": {
+      "behaviour": "PARTIAL+GAP",
+      "S3a": "justified",
+      "S3b": "justified",
+      "overreach": [],
+      "manual_factual_claims": 1,
+      "units": {
+        "U1": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        },
+        "U2": {
+          "covered": false,
+          "failure": "correct",
+          "s6": null
+        }
+      },
+      "note": "US figure plus explicit Japan gap line (gap line carries [2], format)."
+    },
+    "Q20": {
+      "behaviour": "ABSTAIN",
+      "S3a": "n/a",
+      "S3b": "n/a",
+      "overreach": [],
+      "manual_factual_claims": 0,
+      "units": {
+        "U1": {
+          "covered": false,
+          "failure": "correct",
+          "s6": null
+        }
+      },
+      "note": "Correct abstention (line carries [2])."
+    },
+    "Q21": {
+      "behaviour": "ABSTAIN",
+      "S3a": "n/a",
+      "S3b": "n/a",
+      "overreach": [],
+      "manual_factual_claims": 0,
+      "units": {
+        "U1": {
+          "covered": false,
+          "failure": "correct",
+          "s6": null
+        }
+      },
+      "note": "Correct abstention (line carries [1])."
+    },
+    "Q22": {
+      "behaviour": "FULL",
+      "S3a": "justified",
+      "S3b": "not",
+      "overreach": [],
+      "manual_factual_claims": 1,
+      "units": {
+        "U1": {
+          "covered": true,
+          "failure": "calibration",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        }
+      },
+      "note": "Supported by cited [1]. FROZEN gold says absent (erratum): S3b rule and taxonomy priority 2 applied literally."
+    },
+    "Q23": {
+      "behaviour": "ABSTAIN",
+      "S3a": "n/a",
+      "S3b": "n/a",
+      "overreach": [],
+      "manual_factual_claims": 0,
+      "units": {
+        "U1": {
+          "covered": false,
+          "failure": "correct",
+          "s6": null
+        }
+      },
+      "note": "Correct abstention (line carries [2])."
+    },
+    "Q24": {
+      "behaviour": "FULL",
+      "S3a": "not",
+      "S3b": "not",
+      "overreach": [
+        {
+          "claim_id": 2,
+          "type": "O2",
+          "note": "projected warming presented as avoided warming"
+        }
+      ],
+      "manual_factual_claims": 2,
+      "units": {
+        "U1": {
+          "covered": false,
+          "failure": "retrieval",
+          "s6": null
+        }
+      },
+      "note": "Avoided-warming figure not retrieved; answers with other facts."
+    },
+    "Q25": {
+      "behaviour": "FULL",
+      "S3a": "justified",
+      "S3b": "justified",
+      "overreach": [],
+      "manual_factual_claims": 2,
+      "units": {
+        "U1": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        },
+        "U2": {
+          "covered": true,
+          "failure": "correct",
+          "s6": {
+            "cited_chunks": 1,
+            "distinct_origins": 1,
+            "false_corroboration": false
+          }
+        }
+      },
+      "note": "Both units correct; GMSR origin via cited [4]."
+    },
+    "Q26": {
+      "behaviour": "FULL",
+      "S3a": "not",
+      "S3b": "justified",
+      "overreach": [],
+      "manual_factual_claims": 1,
+      "units": {
+        "U1": {
+          "covered": true,
+          "failure": "citation",
+          "s6": {
+            "cited_chunks": 0,
+            "distinct_origins": 0,
+            "false_corroboration": false
+          }
+        }
+      },
+      "note": "Correct fact, wrong source."
+    },
+    "Q27": {
+      "behaviour": "FULL",
+      "S3a": "not",
+      "S3b": "justified",
+      "overreach": [],
+      "manual_factual_claims": 1,
+      "units": {
+        "U1": {
+          "covered": true,
+          "failure": "citation",
+          "s6": {
+            "cited_chunks": 0,
+            "distinct_origins": 0,
+            "false_corroboration": false
+          }
+        }
+      },
+      "note": "Correct fact, wrong source."
+    }
+  }
+}

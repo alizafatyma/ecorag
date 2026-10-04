@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoRAG - Environmental RAG System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-primary: #2d5016;
+            --color-secondary: #52b788;
+            --color-accent: #95d5b2;
+            --color-light: #d8f3dc;
+            --color-lighter: #e8f5e9;
+            --color-text: #1b263b;
+            --color-text-light: #495057;
+            --color-success: #2d6a4f;
+            --color-warning: #d4a574;
+            --color-error: #d62828;
+            --color-border: #52b788;
+            --color-white: #ffffff;
+            --color-bg: #f8fdf7;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-lighter) 100%);
+            color: var(--color-text);
+            min-height: 100vh;
+            padding: 0;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: var(--color-white);
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(45, 80, 22, 0.15);
+            border-bottom: 3px solid var(--color-accent);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .logo-icon {
+            font-size: 32px;
+        }
+
+        .tagline {
+            font-size: 12px;
+            opacity: 0.9;
+            margin-top: 4px;
+        }
+
+        .experiment-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--color-white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(45, 80, 22, 0.1);
+            border-left: 4px solid var(--color-secondary);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(45, 80, 22, 0.15);
+        }
+
+        .card h2 {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card-icon {
+            font-size: 24px;
+        }
+
+        /* Input Section */
+        .input-section {
+            grid-column: 1 / -1;
+        }
+
+        .input-area {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        input[type="text"],
+        textarea {
+            flex: 1;
+            padding: 12px 16px;
+            border: 2px solid var(--color-light);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 14px;
+            transition: border-color 0.2s;
+            background: var(--color-lighter);
+        }
+
+        input[type="text"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--color-secondary);
+            background: var(--color-white);
+        }
+
+        textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        /* Button */
+        button {
+            padding: 12px 32px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: var(--color-white);
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(45, 80, 22, 0.2);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(45, 80, 22, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Loading Spinner */
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 3px solid var(--color-light);
+            border-top-color: var(--color-secondary);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-right: 8px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Results */
+        .results-section {
+            grid-column: 1 / -1;
+        }
+
+        .result-card {
+            background: var(--color-lighter);
+            border-left: 4px solid var(--color-success);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .answer-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--color-text);
+            margin-bottom: 1rem;
+        }
+
+        .citations {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--color-border);
+        }
+
+        .citations h3 {
+            color: var(--color-primary);
+            font-size: 14px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .citation {
+            background: var(--color-white);
+            padding: 12px;
+            border-left: 3px solid var(--color-accent);
+            margin-bottom: 10px;
+            border-radius: 4px;
+            font-size: 13px;
+            line-height: 1.5;
+            color: var(--color-text-light);
+        }
+
+        .citation-source {
+            color: var(--color-secondary);
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        /* Metrics Grid */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .metric {
+            background: linear-gradient(135deg, var(--color-light) 0%, var(--color-lighter) 100%);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--color-border);
+        }
+
+        .metric-value {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            font-size: 12px;
+            color: var(--color-text-light);
+            text-transform: uppercase;
+        }
+
+        /* Demo Questions */
+        .demo-questions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .demo-btn {
+            background: var(--color-lighter);
+            border: 2px solid var(--color-secondary);
+            color: var(--color-primary);
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 600;
+        }
+
+        .demo-btn:hover {
+            background: var(--color-secondary);
+            color: var(--color-white);
+            transform: translateY(-2px);
+        }
+
+        /* Stats */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .stat {
+            background: var(--color-lighter);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--color-secondary);
+        }
+
+        .stat-number {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--color-primary);
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--color-text-light);
+            margin-top: 4px;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: var(--color-light);
+            border-left: 4px solid var(--color-secondary);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .info-box strong {
+            color: var(--color-primary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-primary);
+            color: var(--color-white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            font-size: 12px;
+        }
+
+        footer a {
+            color: var(--color-accent);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .input-area {
+                flex-direction: column;
+            }
+
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--color-light);
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--color-text-light);
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s;
+            box-shadow: none;
+            margin-bottom: -2px;
+        }
+
+        .tab-btn.active {
+            color: var(--color-primary);
+            border-bottom-color: var(--color-secondary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div>
+                <div class="logo">
+                    <span class="logo-icon">🌿</span>
+                    <div>
+                        <div>EcoRAG</div>
+                        <div class="tagline">Environmental RAG System</div>
+                    </div>
+                </div>
+            </div>
+            <div class="experiment-badge">Experiment C - Demo</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Interactive Query Section -->
+        <div class="card input-section">
+            <h2><span class="card-icon">💬</span> Ask EcoRAG</h2>
+            <div class="input-area">
+                <textarea id="question" placeholder="Ask about environmental sustainability, climate action, energy, or green jobs..."></textarea>
+            </div>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <button id="askBtn" onclick="askQuestion()">
+                    <span>Ask</span>
+                </button>
+                <button style="background: var(--color-accent); color: var(--color-primary);" onclick="showDemoQuestions()">
+                    Try Demo Questions
+                </button>
+            </div>
+
+            <div id="demoQuestions" style="display: none; margin-top: 1rem;">
+                <p style="font-size: 13px; color: var(--color-text-light); margin-bottom: 1rem;">✨ Click any question to try:</p>
+                <div class="demo-questions">
+                    <button class="demo-btn" onclick="loadQuestion('What is being done to reduce methane emissions by 2030?')">Methane Emissions</button>
+                    <button class="demo-btn" onclick="loadQuestion('How many jobs are in renewable energy?')">Green Jobs</button>
+                    <button class="demo-btn" onclick="loadQuestion('What is steel decarbonization?')">Steel & Cement</button>
+                    <button class="demo-btn" onclick="loadQuestion('What is the role of critical minerals?')">Critical Minerals</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div id="results" class="card results-section" style="display: none;">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="switchTab('answer')">Answer</button>
+                <button class="tab-btn" onclick="switchTab('evidence')">Evidence</button>
+                <button class="tab-btn" onclick="switchTab('metrics')">Metrics</button>
+            </div>
+
+            <!-- Answer Tab -->
+            <div id="answer-tab" class="tab-content active">
+                <div id="answerContent"></div>
+            </div>
+
+            <!-- Evidence Tab -->
+            <div id="evidence-tab" class="tab-content">
+                <div id="evidenceContent"></div>
+            </div>
+
+            <!-- Metrics Tab -->
+            <div id="metrics-tab" class="tab-content">
+                <div id="metricsContent"></div>
+            </div>
+        </div>
+
+        <!-- Overview Cards -->
+        <div class="content-grid">
+            <!-- Key Findings Card -->
+            <div class="card">
+                <h2><span class="card-icon">📊</span> Key Findings</h2>
+                <div class="info-box">
+                    <strong>✅ What Works:</strong><br/>
+                    Perfect answers when evidence exists (100% on sufficient data)
+                </div>
+                <div class="info-box">
+                    <strong>❌ Main Issue:</strong><br/>
+                    Over-answers when evidence is missing (56% when should abstain)
+                </div>
+                <div class="info-box">
+                    <strong>🔗 Secondary Issue:</strong><br/>
+                    Wrong citations in multi-source questions (78% error)
+                </div>
+            </div>
+
+            <!-- Performance Card -->
+            <div class="card">
+                <h2><span class="card-icon">📈</span> Performance</h2>
+                <div class="stats-row">
+                    <div class="stat">
+                        <div class="stat-number">70%</div>
+                        <div class="stat-label">Calibration Accuracy</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">91%</div>
+                        <div class="stat-label">Evidence Coverage</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">76%</div>
+                        <div class="stat-label">Citation Correct</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">27</div>
+                        <div class="stat-label">Questions Tested</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Card -->
+            <div class="card">
+                <h2><span class="card-icon">ℹ️</span> About This System</h2>
+                <p style="font-size: 13px; line-height: 1.6; color: var(--color-text-light);">
+                    <strong>EcoRAG</strong> is a Retrieval-Augmented Generation (RAG) system trained on
+                    environmental sustainability documents. It combines semantic search (BGE embeddings),
+                    vector retrieval (Chroma), and language generation (Qwen2.5) to answer questions
+                    about green energy, climate action, and environmental policy.
+                    <br/><br/>
+                    <strong>Experiment C</strong> evaluates the system's ability to ground answers in
+                    retrieved evidence and provide correct citations.
+                </p>
+            </div>
+
+            <!-- Resources Card -->
+            <div class="card">
+                <h2><span class="card-icon">📚</span> Resources</h2>
+                <p style="font-size: 13px; line-height: 1.8;">
+                    📄 <a href="#" style="color: var(--color-secondary); text-decoration: none;">Full Report PDF</a><br/>
+                    📊 <a href="#" style="color: var(--color-secondary); text-decoration: none;">Research Summary</a><br/>
+                    💻 <a href="#" style="color: var(--color-secondary); text-decoration: none;">GitHub Repository</a><br/>
+                    📖 <a href="#" style="color: var(--color-secondary); text-decoration: none;">Experiment Details</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>🌿 EcoRAG | Experiment C: Evidence Sufficiency & Citation Evaluation</p>
+        <p style="margin-top: 0.5rem;">Single-reviewer evaluation of 27 environmental questions</p>
+        <p style="margin-top: 0.5rem; font-size: 11px;">Generated: 2026-10-04 | <a href="#">GitHub</a> | <a href="#">Report</a></p>
+    </footer>
+
+    <script>
+        // Demo data (sample results)
+        const demoResults = {
+            "methane": {
+                question: "What is being done to reduce methane emissions by 2030?",
+                answer: "Multiple international initiatives are underway to reduce methane emissions by 2030. The UN Secretary General's call to action on methane emphasizes rapid deployment of proven solutions, including improved oil and gas practices, coal mine methane capture, and agricultural methane reduction. These actions aim to deliver measurable emission reductions within this decade.",
+                citations: [
+                    { source: "UN SG Call-Action Methane by 2030", text: "Actions to be delivered by 2030 include..." },
+                    { source: "GMSR 2025", text: "Methane reduction strategies across sectors..." }
+                ],
+                confidence: 0.85
+            },
+            "jobs": {
+                question: "How many jobs are in renewable energy?",
+                answer: "The renewable energy sector has created substantial employment opportunities globally. According to recent mapping studies, green and digital energy jobs have grown significantly, with particular concentrations in solar installation, wind energy, energy efficiency retrofitting, and grid modernization roles.",
+                citations: [
+                    { source: "Mapping Green & Digital Energy Jobs", text: "Job statistics and employment trends..." }
+                ],
+                confidence: 0.72
+            }
+        };
+
+        function askQuestion() {
+            const question = document.getElementById('question').value.trim();
+            if (!question) {
+                alert('Please enter a question');
+                return;
+            }
+
+            const btn = document.getElementById('askBtn');
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner"></span>Processing...';
+
+            // Simulate API call delay
+            setTimeout(() => {
+                showResults(demoResults.methane);
+                btn.disabled = false;
+                btn.innerHTML = 'Ask';
+            }, 1500);
+        }
+
+        function loadQuestion(q) {
+            document.getElementById('question').value = q;
+            document.getElementById('demoQuestions').style.display = 'none';
+            askQuestion();
+        }
+
+        function showDemoQuestions() {
+            const demoDiv = document.getElementById('demoQuestions');
+            demoDiv.style.display = demoDiv.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function showResults(result) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.style.display = 'block';
+
+            // Answer tab
+            document.getElementById('answerContent').innerHTML = `
+                <div class="result-card">
+                    <div class="answer-text">${result.answer}</div>
+                    <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--color-text-light);">
+                        <span>Confidence: </span>
+                        <div style="width: 100px; height: 8px; background: var(--color-light); border-radius: 4px; overflow: hidden;">
+                            <div style="width: ${result.confidence * 100}%; height: 100%; background: var(--color-secondary);"></div>
+                        </div>
+                        <span>${(result.confidence * 100).toFixed(0)}%</span>
+                    </div>
+                    <div class="citations">
+                        <h3>🔗 Sources & Citations</h3>
+                        ${result.citations.map(c => `
+                            <div class="citation">
+                                <div class="citation-source">${c.source}</div>
+                                <div>${c.text}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+
+            // Evidence tab
+            document.getElementById('evidenceContent').innerHTML = `
+                <div class="info-box">
+                    <strong>Retrieved Evidence:</strong><br/>
+                    Top 5 most relevant passages from the knowledge base were used to generate this answer.
+                </div>
+                <div class="stats-row">
+                    <div class="stat">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Retrieved Chunks</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">78%</div>
+                        <div class="stat-label">Relevance Score</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Sources Used</div>
+                    </div>
+                </div>
+            `;
+
+            // Metrics tab
+            document.getElementById('metricsContent').innerHTML = `
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <div class="metric-value">✅</div>
+                        <div class="metric-label">Citation Present</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">91%</div>
+                        <div class="metric-label">Evidence Coverage</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">0.85</div>
+                        <div class="metric-label">Confidence Score</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">✓</div>
+                        <div class="metric-label">Grounded</div>
+                    </div>
+                </div>
+
+                <div class="info-box" style="margin-top: 1rem;">
+                    <strong>System Metrics:</strong><br/>
+                    <strong>S1 - Retrieval:</strong> Required evidence was in top-5<br/>
+                    <strong>S2 - Coverage:</strong> 91% of retrieved evidence used<br/>
+                    <strong>S3 - Justification:</strong> Claims supported by citations<br/>
+                    <strong>S4 - Calibration:</strong> Appropriate confidence level
+                </div>
+            `;
+
+            resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function switchTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected tab
+            document.getElementById(tabName + '-tab').classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        // Allow Enter key to submit
+        document.getElementById('question').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && e.ctrlKey) {
+                askQuestion();
+            }
+        });
+    </script>
+</body>
+</html>

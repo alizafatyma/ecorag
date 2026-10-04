@@ -1,0 +1,168 @@
+Q01 [e] What share of global anthropogenic methane emissions comes from agriculture?
+   retrieval sufficiency: SUFFICIENT  (required units in top-5: 2/2; retrieval failures: 0; absent from corpus: 0)  -> expected: full answer
+   U1 req | Agriculture is the largest source of anthropogenic methane emissions | top-5 [1, 2, 4, 5] | origin: GMSR 2025 | UN SG chunk restates GMSR (footnote [67])
+   U2 req | It accounts for about 42% of the global total (GMSR: almost 42 per cent in 2020) | top-5 [2, 4, 5] | origin: GMSR 2025 | 3 chunks: 2 GMSR + 1 UN SG restating GMSR -> 1 independent origin
+   U3 opt | 146 Mt per year (2020) | top-5 [2] | origin: GMSR 2025 | single chunk
+   boundary: Supports agriculture ~42% (2020) of anthropogenic methane. One GMSR chunk says 'biogenic' for the same figure; the UN SG chunk gives 42% without a year. All repeats trace to GMSR 2025: one origin, not corroboration.
+
+Q02 [e] How many alerts did the Methane Alert and Response System send, and how often do operators respond?
+   retrieval sufficiency: SUFFICIENT  (required units in top-5: 2/2; retrieval failures: 0; absent from corpus: 0)  -> expected: full answer
+   U1 req | MARS had sent over 5,000 alerts by February 2026 (cumulative) | top-5 [1, 3] | origin: IMEO/UNEP MARS data | 2 UN SG chunks (same report) -> 1 origin
+   U2 req | Global response rate was 12% in 2025 (up from 1% in 2024) | top-5 [1, 3] | origin: IMEO/UNEP MARS data | 2 UN SG chunks (same report) -> 1 origin
+   U3 opt | Response rates grew nearly tenfold since the end of 2024 | top-5 [2] | origin: IMEO/UNEP MARS data | GMSR
+   boundary: 5,000 is cumulative to February 2026, not a 2025 figure. 12% is a global response rate for 2025, not a share of all alerts. No per-operator or per-country rates beyond 'only 11 countries above 70%'.
+
+Q03 [b] What are the main challenges in modernising electricity grids?
+   retrieval sufficiency: SUFFICIENT  (required units in top-5: 3/3; retrieval failures: 0; absent from corpus: 0)  -> expected: full answer
+   U1 req | Demand growth outpaces grid expansion: connection queues, competition for scarce capacity, service disruption | top-5 [2] | origin: IEA Modernising Grids | single document
+   U2 req | Stability / system strength as converter-connected resources displace synchronous generators | top-5 [2] | origin: IEA Modernising Grids | single document
+   U3 req | Distributed resources and two-way flows create voltage, transformer loading, feeder and protection challenges | top-5 [3] | origin: IEA Modernising Grids | single document
+   boundary: Challenges are qualitative in the top-5; no quantified costs (e.g. congestion costs, 330 GW) are retrieved.
+
+Q04 [b] How can the cost of capital for clean energy projects in emerging and developing economies be reduced?
+   retrieval sufficiency: SUFFICIENT  (required units in top-5: 3/3; retrieval failures: 0; absent from corpus: 0)  -> expected: full answer
+   U1 req | At least a tripling of international concessional funds (USD 90-110 billion a year) to improve risk-return | top-5 [5] | origin: IEA Reducing the Cost of Capital | single chunk
+   U2 req | Better risk management: strong policy frameworks and regulation, and de-risking instruments | top-5 [5] | origin: IEA Reducing the Cost of Capital | single chunk
+   U3 req | Address sector-specific risks (different business models, project scales, prevalent risks) | top-5 [2] | origin: IEA Reducing the Cost of Capital | single chunk
+   U4 opt | A 1 percentage point reduction saves about USD 150 billion a year (impact, not a 'how') | top-5 [1, 5] | origin: IEA Reducing the Cost of Capital | 2 chunks, same report
+   boundary: Top-5 supports the 'how' (concessional funds, policy/regulation, de-risking, sector-specific risks) and the size of the benefit. It does not give country-specific measures.
+
+Q05 [a] How are near-zero emissions steel and cement defined?
+   retrieval sufficiency: SUFFICIENT  (required units in top-5: 2/2; retrieval failures: 0; absent from corpus: 0)  -> expected: full answer
+   U1 req | Steel: 400-50 kg CO2-eq per tonne of crude steel, depending on scrap share | top-5 [3, 4] | origin: IEA near-zero definitions | exec summary restates section 3 (same report)
+   U2 req | Cement: 125-40 kg CO2-eq per tonne of cement, depending on clinker ratio | top-5 [3, 4] | origin: IEA near-zero definitions | exec summary restates section 3 (same report)
+   boundary: Supports the IEA-derived near-zero thresholds and that they slide with scrap share / clinker ratio.
+
+Q06 [d] How many electric cars were sold in India in 2023?
+   retrieval sufficiency: INSUFFICIENT  (required units in top-5: 0/1; retrieval failures: 0; absent from corpus: 1)  -> expected: abstain (state the sources do not contain enough information)
+   U1 req | Number of electric cars sold in India in 2023 | ABSENT from corpus | origin: - | -
+   boundary: Top-5: US EV/battery job postings, Norway EV update, India industrial policy list. No Indian EV sales figure.
+
+Q07 [a] How much additional generation, storage and demand could connect to existing grids through more efficient use of networks, and what would connecting the same volume through network expansion cost?
+   retrieval sufficiency: SUFFICIENT  (required units in top-5: 2/2; retrieval failures: 0; absent from corpus: 0)  -> expected: full answer
+   U1 req | Up to 330 GW of additional generation, storage and demand | top-5 [1] | origin: IEA Modernising Grids | single chunk
+   U2 req | Connecting the same volume via expansion would need around USD 100 billion of investment | top-5 [1] | origin: IEA Modernising Grids | single chunk
+   boundary: Fully answered by one chunk.
+
+Q08 [a] What share of global electricity supply came from wind and solar PV in 2023, and what share do they reach by 2030 on the path to net zero emissions?
+   retrieval sufficiency: SUFFICIENT  (required units in top-5: 2/2; retrieval failures: 0; absent from corpus: 0)  -> expected: full answer
+   U1 req | Wind and solar PV were 12% of global electricity supply in 2023 | top-5 [1] | origin: IEA Seasonal Variability | single chunk
+   U2 req | They rise to 40% by 2030 on the path to net zero | top-5 [1] | origin: IEA Seasonal Variability | single chunk
+   boundary: Another chunk gives a different metric (EMDE share 6% in 2022 -> 23% by 2035, STEPS): not the global figure.
+
+Q09 [a] Which clean energy technology supply chains are covered by the IEA's Manufacturing and Trade Model?
+   retrieval sufficiency: SUFFICIENT  (required units in top-5: 1/1; retrieval failures: 0; absent from corpus: 0)  -> expected: full answer
+   U1 req | Six supply chains: solar PV, wind turbines, electric cars, batteries, electrolysers, heat pumps | top-5 [2] | origin: IEA MaT documentation | single chunk
+   boundary: A retrieved chunk notes ETP-2024 also modelled aluminium, steel and ammonia in the same framework; those are not among the six clean energy technology supply chains.
+
+Q10 [a] What share of solar-related online job postings in the United States is concentrated in California?
+   retrieval sufficiency: INSUFFICIENT  (required units in top-5: 0/1; retrieval failures: 1; absent from corpus: 0)  -> expected: abstain (state the sources do not contain enough information)
+   U1 req | 25% of US solar online job postings are in California | NOT RETRIEVED (in corpus: ['mappinggreenanddigitalenergyjobs::0007']) | origin: IEA Mapping Jobs | -
+   boundary: Top-5 says California, Texas and Florida have the most solar vacancies, without a share. The 25% figure is in the executive summary chunk, which was not retrieved (retrieval failure).
+
+Q11 [a] Which countries provided peer experts for the IEA's critical minerals review of Norway, and when did the review team visit Norway?
+   retrieval sufficiency: SUFFICIENT  (required units in top-5: 2/2; retrieval failures: 0; absent from corpus: 0)  -> expected: full answer
+   U1 req | Peer experts from Spain and Finland | top-5 [1] | origin: IEA CMR Norway | single chunk
+   U2 req | The review team visited Norway in November 2025 | top-5 [1] | origin: IEA CMR Norway | single chunk
+   boundary: Fully answered by one chunk.
+
+Q12 [b] What role does concessional finance play in cutting methane emissions and in clean energy investment in developing economies?
+   retrieval sufficiency: SUFFICIENT  (required units in top-5: 2/2; retrieval failures: 0; absent from corpus: 0)  -> expected: full answer
+   U1 req | Clean energy: at least a tripling of international concessional funds (USD 90-110 bn/yr) to improve risk-return and mobilise private capital | top-5 [1, 4] | origin: IEA Reducing the Cost of Capital | 2 chunks, same report
+   U2 req | Methane: grants and highly concessional donor funding should scale up and coordinate to fill gaps | top-5 [2] | origin: UN SG call to action | single chunk
+   U3 opt | Emerging economies seek technology transfer and concessional finance to bridge capacity gaps | top-5 [5] | origin: GMSR 2025 | single chunk
+   boundary: Two separate literatures: IEA (clean energy, quantified) and UNEP/UN (methane, qualitative). No single figure for methane-specific concessional finance is retrieved.
+
+Q13 [b] How fast is electricity demand expected to grow in Europe, India and Indonesia, and how much must grid capacity expand globally by 2035?
+   retrieval sufficiency: SUFFICIENT  (required units in top-5: 4/4; retrieval failures: 0; absent from corpus: 0)  -> expected: full answer
+   U1 req | Europe: electricity demand +80% or more, 2022-2050 | top-5 [1] | origin: IEA Seasonal Variability | single chunk
+   U2 req | India: more than 2.5 times | top-5 [1] | origin: IEA Seasonal Variability | single chunk
+   U3 req | Indonesia: 3 times | top-5 [1] | origin: IEA Seasonal Variability | single chunk
+   U4 req | Global grid capacity must increase by at least 30% by 2035 (25 million km of lines) | top-5 [4] | origin: IEA Modernising Grids | single chunk
+   boundary: Demand figures are 2022-2050 (Seasonal Variability); grid figure is to 2035 (Modernising Grids): different reports and horizons, which should not be merged into one timeline.
+
+Q14 [b] What are the nine priority actions in the UN Secretary-General's call to action on methane?
+   retrieval sufficiency: PARTIAL  (required units in top-5: 3/9; retrieval failures: 6; absent from corpus: 0)  -> expected: answer the supported part and state the gap
+   A1 req | Action 1: Fix leaks and eliminate routine flaring and cold venting | top-5 [2] | origin: UN SG call to action | -
+   A2 req | Action 2: Make methane measurable, reportable and verifiable | NOT RETRIEVED (in corpus: ['unsg-call-action-methane-by-2030-epublication::0012', 'unsg-call-action-methane-by-2030-epublication::0037']) | origin: UN SG call to action | -
+   A3 req | Action 3: Science-based global methane standard / near-zero-methane marketplace | NOT RETRIEVED (in corpus: ['unsg-call-action-methane-by-2030-epublication::0013', 'unsg-call-action-methane-by-2030-epublication::0039']) | origin: UN SG call to action | -
+   A4 req | Action 4: Produce food more efficiently with less methane | NOT RETRIEVED (in corpus: ['unsg-call-action-methane-by-2030-epublication::0014', 'unsg-call-action-methane-by-2030-epublication::0044']) | origin: UN SG call to action | -
+   A5 req | Action 5: Halve per-capita food waste and reduce food loss | top-5 [5] | origin: UN SG call to action | -
+   A6 req | Action 6: Reform incentives and redirect finance and subsidies | top-5 [5] | origin: UN SG call to action | -
+   A7 req | Action 7: Phase out open dumping and uncontrolled landfills | NOT RETRIEVED (in corpus: ['unsg-call-action-methane-by-2030-epublication::0016', 'unsg-call-action-methane-by-2030-epublication::0049']) | origin: UN SG call to action | -
+   A8 req | Action 8: Capture methane from waste and wastewater | NOT RETRIEVED (in corpus: ['unsg-call-action-methane-by-2030-epublication::0017', 'unsg-call-action-methane-by-2030-epublication::0051']) | origin: UN SG call to action | -
+   A9 req | Action 9: Build circular, low-methane urban waste systems | NOT RETRIEVED (in corpus: ['unsg-call-action-methane-by-2030-epublication::0017', 'unsg-call-action-methane-by-2030-epublication::0052']) | origin: UN SG call to action | -
+   boundary: Top-5 contains only Actions 1, 5 and 6 (+ general text). Six actions are in the corpus but not retrieved.
+
+Q15 [c] What are the near-zero emissions thresholds for steel and for aluminium?
+   retrieval sufficiency: PARTIAL  (required units in top-5: 1/2; retrieval failures: 0; absent from corpus: 1)  -> expected: answer the supported part and state the gap
+   U1 req | Steel near-zero threshold 400-50 kg CO2-eq/t crude steel, by scrap share | top-5 [1, 3] | origin: IEA near-zero definitions | same report
+   U2 req | Aluminium near-zero threshold | ABSENT from corpus | origin: - | -
+   boundary: Steel supported; another retrieved proposal gives 380-400 kg CO2-eq/t hot-rolled steel by 2045 (different proposal and metric). Nothing on aluminium anywhere in the corpus.
+
+Q16 [c] What was global clean energy investment in 2023, and how much was spent on clean energy in Africa in 2024?
+   retrieval sufficiency: PARTIAL  (required units in top-5: 1/2; retrieval failures: 0; absent from corpus: 1)  -> expected: answer the supported part and state the gap
+   U1 req | Global clean energy investment reached about USD 1.8 trillion in 2023 | top-5 [1] | origin: IEA Reducing the Cost of Capital | single chunk
+   U2 req | Clean energy spending in Africa in 2024 | ABSENT from corpus | origin: - | -
+   boundary: 2024 Africa figure absent from the corpus. The corpus has a 2023 Africa figure (USD 35 billion) but it was not retrieved; presenting a 2023 figure as 2024 would be a date/scope error.
+
+Q17 [c] By how much will electricity demand in Europe grow by 2050, and how much will household electricity prices rise?
+   retrieval sufficiency: INSUFFICIENT  (required units in top-5: 0/2; retrieval failures: 1; absent from corpus: 1)  -> expected: abstain (state the sources do not contain enough information)
+   U1 req | Europe electricity demand +80% or more, 2022-2050 | NOT RETRIEVED (in corpus: ['managingtheseasonalvariabilityofelectricitydemandandsupply::0004']) | origin: IEA Seasonal Variability | -
+   U2 req | Rise in household electricity prices | ABSENT from corpus | origin: - | -
+   boundary: Top-5 gives Europe flexibility needs (+50% by 2030, doubling by 2050), not demand growth: using it as demand growth would be over-reach. Household prices appear nowhere in the corpus.
+
+Q18 [c] What share of online job postings in Austria related to heat pumps, and what average salary did those heat pump postings advertise?
+   retrieval sufficiency: INSUFFICIENT  (required units in top-5: 0/2; retrieval failures: 1; absent from corpus: 1)  -> expected: abstain (state the sources do not contain enough information)
+   U1 req | Heat pump OJPs reached about 0.03% of all online postings in Austria | NOT RETRIEVED (in corpus: ['mappinggreenanddigitalenergyjobs::0005', 'mappinggreenanddigitalenergyjobs::0006']) | origin: IEA Mapping Jobs | -
+   U2 req | Average advertised salary of Austrian heat pump postings | ABSENT from corpus | origin: - | -
+   boundary: Top-5 states that salary information on heat pump OJPs is very scarce; that supports saying the salary is not available. A Europe-wide solar salary range exists in the corpus but is for solar, not heat pumps.
+
+Q19 [c] How much did grid congestion cost in the United States in 2024, and how much did it cost in Japan?
+   retrieval sufficiency: PARTIAL  (required units in top-5: 1/2; retrieval failures: 0; absent from corpus: 1)  -> expected: answer the supported part and state the gap
+   U1 req | Grid congestion cost USD 12 billion in the United States in 2024 | top-5 [1, 2] | origin: IEA Modernising Grids | 2 chunks, same report
+   U2 req | Grid congestion cost in Japan | ABSENT from corpus | origin: - | -
+   boundary: US supported (EU EUR 4.3 billion also given). Nothing on Japan.
+
+Q20 [d] How many tonnes of lithium did Norway produce in 2024?
+   retrieval sufficiency: INSUFFICIENT  (required units in top-5: 0/1; retrieval failures: 0; absent from corpus: 1)  -> expected: abstain (state the sources do not contain enough information)
+   U1 req | Norway's lithium production in 2024 (tonnes) | ABSENT from corpus | origin: - | -
+   boundary: Top-5 lists lithium among critical raw materials; no production data.
+
+Q21 [d] What was the average wholesale electricity price in Indonesia in 2023?
+   retrieval sufficiency: INSUFFICIENT  (required units in top-5: 0/1; retrieval failures: 0; absent from corpus: 1)  -> expected: abstain (state the sources do not contain enough information)
+   U1 req | Average wholesale electricity price in Indonesia in 2023 | ABSENT from corpus | origin: - | -
+   boundary: Top-5 covers Indonesia's power system evolution; no wholesale price.
+
+Q22 [d] How many people work in the global electricity grid sector?
+   retrieval sufficiency: INSUFFICIENT  (required units in top-5: 0/1; retrieval failures: 0; absent from corpus: 1)  -> expected: abstain (state the sources do not contain enough information)
+   U1 req | Number of people working in the global grid sector | ABSENT from corpus | origin: - | -
+   boundary: Top-5 describes skills shortages, an ageing workforce and job postings; no headcount.
+
+Q23 [d] What is the cost of carbon capture for cement plants in US dollars per tonne of CO2?
+   retrieval sufficiency: INSUFFICIENT  (required units in top-5: 0/1; retrieval failures: 0; absent from corpus: 1)  -> expected: abstain (state the sources do not contain enough information)
+   U1 req | Cost of carbon capture for cement plants (USD per tonne CO2) | ABSENT from corpus | origin: - | -
+   boundary: Top-5 has CCUS definitions only; no cost.
+
+Q24 [e] How much warming would cutting methane emissions avoid by 2050?
+   retrieval sufficiency: INSUFFICIENT  (required units in top-5: 0/1; retrieval failures: 1; absent from corpus: 0)  -> expected: abstain (state the sources do not contain enough information)
+   U1 req | About 0.1-0.2°C of warming avoided by 2050 | NOT RETRIEVED (in corpus: ['unsg-call-action-methane-by-2030-epublication::0004', 'unsg-call-action-methane-by-2030-epublication::0025']) | origin: GMSR 2025 / CCAC | UN SG restates in 3 chunks (footnotes [26,27])
+   boundary: Top-5 has overshoot context only (1.5°C, a 2.3-2.5°C projected rise). The avoided-warming figure is in the corpus but not retrieved (retrieval failure). Any number given would be over-reach.
+
+Q25 [e] What would methane mitigation in the fossil fuel industry cost each year, and how does that compare with the sector's income?
+   retrieval sufficiency: SUFFICIENT  (required units in top-5: 2/2; retrieval failures: 0; absent from corpus: 0)  -> expected: full answer
+   U1 req | About USD 98 billion a year (accounting for the value of recovered gas) | top-5 [1, 3, 4] | origin: GMSR 2025 | 3 chunks: GMSR + 2 UN SG chunks restating GMSR (footnote [23]) -> 1 independent origin
+   U2 req | Equal to 2-4% of the sector's USD 2.4 trillion net income in 2023 | top-5 [1, 3, 4] | origin: GMSR 2025 | as U1
+   U3 opt | IEA's lower estimate: about USD 52 billion a year for a 75% reduction (~2% of net income) | top-5 [1, 4] | origin: IEA Global Methane Tracker | restated in 2 UN SG chunks (footnote [24]) -> 1 origin, independent of GMSR
+   boundary: Two different estimates with different scope (GMSR net cost of all measures; IEA cost of a 75% cut by 2030). Citing GMSR and the UN SG restatement of it is not independent corroboration.
+
+Q26 [e] What was the atmospheric concentration of methane in 2024?
+   retrieval sufficiency: SUFFICIENT  (required units in top-5: 1/1; retrieval failures: 0; absent from corpus: 0)  -> expected: full answer
+   U1 req | About 1,942 parts per billion in 2024 | top-5 [2, 3] | origin: WMO State of the Global Climate 2025 | 2 UN SG chunks restating WMO -> 1 origin
+   U2 opt | Roughly 266% above pre-industrial levels | top-5 [2, 3] | origin: WMO State of the Global Climate 2025 | as U1
+   boundary: One origin (WMO) repeated twice in the UN report; GMSR chunks retrieved do not give the 2024 concentration.
+
+Q27 [e] How much would oil and gas methane emissions fall if all countries matched Norway's methane emissions intensity?
+   retrieval sufficiency: SUFFICIENT  (required units in top-5: 1/1; retrieval failures: 0; absent from corpus: 0)  -> expected: full answer
+   U1 req | Oil and gas methane emissions could fall by roughly 90% | top-5 [1, 5] | origin: IEA (via UN SG) | the SAME sentence in 2 chunks (chunk overlap) -> 1 origin, not 2 sources
+   boundary: Retrieved wording is 'roughly 90 per cent' (executive summary). The report's chapter says 'over 90 per cent' (not retrieved).

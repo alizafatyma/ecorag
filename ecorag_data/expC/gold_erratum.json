@@ -1,0 +1,49 @@
+{
+  "created_at": "2026-10-04 17:44:25",
+  "status": "post-hoc; gold.json is NOT modified. Primary scoring uses the frozen gold; these corrections are reported only as a separate sensitivity analysis.",
+  "how_found": "Q10 and Q18 were noticed while manually reviewing model answers that contained figures the gold marked as not retrieved; this triggered a systematic audit of every 'corpus'/'absent' unit against its top-5 with broader, wording-independent patterns, which also found Q22. All other non-top-5 units were confirmed.",
+  "cause": "Gold locate patterns matched one specific wording (e.g. '25%') and missed equivalent wording in other chunks ('almost onefourth', '0.029%', '8.5 million people').",
+  "corrections": [
+    {
+      "qid": "Q10",
+      "unit": "U1",
+      "frozen_status": "corpus",
+      "corrected_status": "top5",
+      "evidence": "top-5 [1] mappinggreenanddigitalenergyjobs::0096: 'As a whole, California accounted for almost onefourth of the US online solar vacancies'",
+      "frozen_sufficiency": "insufficient",
+      "corrected_sufficiency": "sufficient"
+    },
+    {
+      "qid": "Q18",
+      "unit": "U1",
+      "frozen_status": "corpus",
+      "corrected_status": "top5",
+      "evidence": "top-5 [1] mappinggreenanddigitalenergyjobs::0044: 'Austria (0.029%), Switzerland (0.024%) ...'",
+      "frozen_sufficiency": "insufficient",
+      "corrected_sufficiency": "partial",
+      "note": "U2 (Austrian heat pump salary) remains absent: the USD 36 800 in [5] is for German heat pump Professionals."
+    },
+    {
+      "qid": "Q22",
+      "unit": "U1",
+      "frozen_status": "absent",
+      "corrected_status": "top5",
+      "evidence": "top-5 [1] modernisinggridsintheageofelectricity::0150: 'Power grids already employ around 8.5 million people globally'",
+      "frozen_sufficiency": "insufficient",
+      "corrected_sufficiency": "sufficient"
+    }
+  ],
+  "confirmed_unchanged": [
+    "Q06 U1",
+    "Q14 A2-A4, A7-A9",
+    "Q15 U2",
+    "Q16 U2",
+    "Q17 U1, U2",
+    "Q18 U2",
+    "Q19 U2",
+    "Q20 U1",
+    "Q21 U1",
+    "Q23 U1",
+    "Q24 U1"
+  ]
+}

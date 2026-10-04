@@ -1,0 +1,1874 @@
+{
+  "created_at": "2026-10-03 23:04:11",
+  "rule": "Built from the frozen questions, frozen top-5 snapshot and corpus only - before any Experiment C generation.",
+  "questions": [
+    {
+      "id": "Q01",
+      "category": "e",
+      "category_name": "dependent-source case",
+      "question": "What share of global anthropogenic methane emissions comes from agriculture?",
+      "top5": [
+        "gmsr-2025::0038",
+        "gmsr-2025::0163",
+        "gmsr-2025::0191",
+        "unsg-call-action-methane-by-2030-epublication::0043",
+        "gmsr-2025::0161"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "Agriculture is the largest source of anthropogenic methane emissions",
+          "required": true,
+          "status": "top5",
+          "locate": "largest source of (global )?(anthropogenic|biogenic) methane|biggest single contributor to anthropogenic methane",
+          "answer": [
+            "largest|biggest"
+          ],
+          "origin": "GMSR 2025",
+          "dependency": "UN SG chunk restates GMSR (footnote [67])",
+          "support_top5": [
+            1,
+            2,
+            4,
+            5
+          ],
+          "support_top5_chunks": [
+            "gmsr-2025::0038",
+            "gmsr-2025::0163",
+            "unsg-call-action-methane-by-2030-epublication::0043",
+            "gmsr-2025::0161"
+          ],
+          "corpus_chunks_not_retrieved": [
+            "gmsr-2025::0121",
+            "unsg-call-action-methane-by-2030-epublication::0007"
+          ],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "U2",
+          "text": "It accounts for about 42% of the global total (GMSR: almost 42 per cent in 2020)",
+          "required": true,
+          "status": "top5",
+          "locate": "42 per cent",
+          "answer": [
+            "\\b42\\b"
+          ],
+          "origin": "GMSR 2025",
+          "dependency": "3 chunks: 2 GMSR + 1 UN SG restating GMSR -> 1 independent origin",
+          "support_top5": [
+            2,
+            4,
+            5
+          ],
+          "support_top5_chunks": [
+            "gmsr-2025::0163",
+            "unsg-call-action-methane-by-2030-epublication::0043",
+            "gmsr-2025::0161"
+          ],
+          "corpus_chunks_not_retrieved": [
+            "gmsr-2025::0028",
+            "gmsr-2025::0047",
+            "gmsr-2025::0051",
+            "gmsr-2025::0125",
+            "unsg-call-action-methane-by-2030-epublication::0003",
+            "unsg-call-action-methane-by-2030-epublication::0022"
+          ],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "U3",
+          "text": "146 Mt per year (2020)",
+          "required": false,
+          "status": "top5",
+          "locate": "146 Mt",
+          "answer": [
+            "146"
+          ],
+          "origin": "GMSR 2025",
+          "dependency": "single chunk",
+          "support_top5": [
+            2
+          ],
+          "support_top5_chunks": [
+            "gmsr-2025::0163"
+          ],
+          "corpus_chunks_not_retrieved": [
+            "gmsr-2025::0051"
+          ],
+          "independent_origins_top5": 1
+        }
+      ],
+      "required_units": 2,
+      "required_units_in_top5": 2,
+      "required_units_retrieval_failure": 0,
+      "required_units_absent_from_corpus": 0,
+      "retrieval_sufficiency": "sufficient",
+      "expected_behaviour": "full answer",
+      "evidence_boundary": "Supports agriculture ~42% (2020) of anthropogenic methane. One GMSR chunk says 'biogenic' for the same figure; the UN SG chunk gives 42% without a year. All repeats trace to GMSR 2025: one origin, not corroboration."
+    },
+    {
+      "id": "Q02",
+      "category": "e",
+      "category_name": "dependent-source case",
+      "question": "How many alerts did the Methane Alert and Response System send, and how often do operators respond?",
+      "top5": [
+        "unsg-call-action-methane-by-2030-epublication::0031",
+        "gmsr-2025::0194",
+        "unsg-call-action-methane-by-2030-epublication::0006",
+        "unsg-call-action-methane-by-2030-epublication::0032",
+        "unsg-call-action-methane-by-2030-epublication::0011"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "MARS had sent over 5,000 alerts by February 2026 (cumulative)",
+          "required": true,
+          "status": "top5",
+          "locate": "5,000 alerts",
+          "answer": [
+            "5[,.]?000"
+          ],
+          "origin": "IMEO/UNEP MARS data",
+          "dependency": "2 UN SG chunks (same report) -> 1 origin",
+          "support_top5": [
+            1,
+            3
+          ],
+          "support_top5_chunks": [
+            "unsg-call-action-methane-by-2030-epublication::0031",
+            "unsg-call-action-methane-by-2030-epublication::0006"
+          ],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "U2",
+          "text": "Global response rate was 12% in 2025 (up from 1% in 2024)",
+          "required": true,
+          "status": "top5",
+          "locate": "12 per cent",
+          "answer": [
+            "\\b12\\s*(per ?cent|%)"
+          ],
+          "origin": "IMEO/UNEP MARS data",
+          "dependency": "2 UN SG chunks (same report) -> 1 origin",
+          "support_top5": [
+            1,
+            3
+          ],
+          "support_top5_chunks": [
+            "unsg-call-action-methane-by-2030-epublication::0031",
+            "unsg-call-action-methane-by-2030-epublication::0006"
+          ],
+          "corpus_chunks_not_retrieved": [
+            "gmsr-2025::0054"
+          ],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "U3",
+          "text": "Response rates grew nearly tenfold since the end of 2024",
+          "required": false,
+          "status": "top5",
+          "locate": "nearly tenfold",
+          "answer": [
+            "tenfold|ten-fold|10.fold"
+          ],
+          "origin": "IMEO/UNEP MARS data",
+          "dependency": "GMSR",
+          "support_top5": [
+            2
+          ],
+          "support_top5_chunks": [
+            "gmsr-2025::0194"
+          ],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 1
+        }
+      ],
+      "required_units": 2,
+      "required_units_in_top5": 2,
+      "required_units_retrieval_failure": 0,
+      "required_units_absent_from_corpus": 0,
+      "retrieval_sufficiency": "sufficient",
+      "expected_behaviour": "full answer",
+      "evidence_boundary": "5,000 is cumulative to February 2026, not a 2025 figure. 12% is a global response rate for 2025, not a share of all alerts. No per-operator or per-country rates beyond 'only 11 countries above 70%'."
+    },
+    {
+      "id": "Q03",
+      "category": "b",
+      "category_name": "requires several chunks/documents",
+      "question": "What are the main challenges in modernising electricity grids?",
+      "top5": [
+        "modernisinggridsintheageofelectricity::0033",
+        "modernisinggridsintheageofelectricity::0015",
+        "modernisinggridsintheageofelectricity::0014",
+        "modernisinggridsintheageofelectricity::0013",
+        "modernisinggridsintheageofelectricity::0027"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "Demand growth outpaces grid expansion: connection queues, competition for scarce capacity, service disruption",
+          "required": true,
+          "status": "top5",
+          "locate": "connection queues",
+          "answer": [
+            "queue|keep pace|congestion|expansion"
+          ],
+          "origin": "IEA Modernising Grids",
+          "dependency": "single document",
+          "support_top5": [
+            2
+          ],
+          "support_top5_chunks": [
+            "modernisinggridsintheageofelectricity::0015"
+          ],
+          "corpus_chunks_not_retrieved": [
+            "modernisinggridsintheageofelectricity::0016",
+            "modernisinggridsintheageofelectricity::0107",
+            "modernisinggridsintheageofelectricity::0111",
+            "modernisinggridsintheageofelectricity::0154",
+            "modernisinggridsintheageofelectricity::0169"
+          ],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "U2",
+          "text": "Stability / system strength as converter-connected resources displace synchronous generators",
+          "required": true,
+          "status": "top5",
+          "locate": "converter-connected resources displace synchronous generators",
+          "answer": [
+            "stabil|system strength|inertia|converter"
+          ],
+          "origin": "IEA Modernising Grids",
+          "dependency": "single document",
+          "support_top5": [
+            2
+          ],
+          "support_top5_chunks": [
+            "modernisinggridsintheageofelectricity::0015"
+          ],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "U3",
+          "text": "Distributed resources and two-way flows create voltage, transformer loading, feeder and protection challenges",
+          "required": true,
+          "status": "top5",
+          "locate": "two-way flows",
+          "answer": [
+            "two-way|bidirectional|distributed|rooftop"
+          ],
+          "origin": "IEA Modernising Grids",
+          "dependency": "single document",
+          "support_top5": [
+            3
+          ],
+          "support_top5_chunks": [
+            "modernisinggridsintheageofelectricity::0014"
+          ],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 1
+        }
+      ],
+      "required_units": 3,
+      "required_units_in_top5": 3,
+      "required_units_retrieval_failure": 0,
+      "required_units_absent_from_corpus": 0,
+      "retrieval_sufficiency": "sufficient",
+      "expected_behaviour": "full answer",
+      "evidence_boundary": "Challenges are qualitative in the top-5; no quantified costs (e.g. congestion costs, 330 GW) are retrieved."
+    },
+    {
+      "id": "Q04",
+      "category": "b",
+      "category_name": "requires several chunks/documents",
+      "question": "How can the cost of capital for clean energy projects in emerging and developing economies be reduced?",
+      "top5": [
+        "reducingthecostofcapital::0043",
+        "reducingthecostofcapital::0059",
+        "reducingthecostofcapital::0018",
+        "reducingthecostofcapital::0005",
+        "reducingthecostofcapital::0016"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "At least a tripling of international concessional funds (USD 90-110 billion a year) to improve risk-return",
+          "required": true,
+          "status": "top5",
+          "locate": "tripling in international concessional funds",
+          "answer": [
+            "concessional"
+          ],
+          "origin": "IEA Reducing the Cost of Capital",
+          "dependency": "single chunk",
+          "support_top5": [
+            5
+          ],
+          "support_top5_chunks": [
+            "reducingthecostofcapital::0016"
+          ],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "U2",
+          "text": "Better risk management: strong policy frameworks and regulation, and de-risking instruments",
+          "required": true,
+          "status": "top5",
+          "locate": "de-risking instruments",
+          "answer": [
+            "de-risk|risk management|policy framework|regulat"
+          ],
+          "origin": "IEA Reducing the Cost of Capital",
+          "dependency": "single chunk",
+          "support_top5": [
+            5
+          ],
+          "support_top5_chunks": [
+            "reducingthecostofcapital::0016"
+          ],
+          "corpus_chunks_not_retrieved": [
+            "gmsr-2025::0151"
+          ],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "U3",
+          "text": "Address sector-specific risks (different business models, project scales, prevalent risks)",
+          "required": true,
+          "status": "top5",
+          "locate": "different business models",
+          "answer": [
+            "sector|business model|off-taker|transmission"
+          ],
+          "origin": "IEA Reducing the Cost of Capital",
+          "dependency": "single chunk",
+          "support_top5": [
+            2
+          ],
+          "support_top5_chunks": [
+            "reducingthecostofcapital::0059"
+          ],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "U4",
+          "text": "A 1 percentage point reduction saves about USD 150 billion a year (impact, not a 'how')",
+          "required": false,
+          "status": "top5",
+          "locate": "150 billion",
+          "answer": [
+            "150 billion"
+          ],
+          "origin": "IEA Reducing the Cost of Capital",
+          "dependency": "2 chunks, same report",
+          "support_top5": [
+            1,
+            5
+          ],
+          "support_top5_chunks": [
+            "reducingthecostofcapital::0043",
+            "reducingthecostofcapital::0016"
+          ],
+          "corpus_chunks_not_retrieved": [
+            "gmsr-2025::0126",
+            "reducingthecostofcapital::0010",
+            "reducingthecostofcapital::0011",
+            "unsg-call-action-methane-by-2030-epublication::0005",
+            "unsg-call-action-methane-by-2030-epublication::0034"
+          ],
+          "independent_origins_top5": 1
+        }
+      ],
+      "required_units": 3,
+      "required_units_in_top5": 3,
+      "required_units_retrieval_failure": 0,
+      "required_units_absent_from_corpus": 0,
+      "retrieval_sufficiency": "sufficient",
+      "expected_behaviour": "full answer",
+      "evidence_boundary": "Top-5 supports the 'how' (concessional funds, policy/regulation, de-risking, sector-specific risks) and the size of the benefit. It does not give country-specific measures."
+    },
+    {
+      "id": "Q05",
+      "category": "a",
+      "category_name": "answerable from one chunk",
+      "question": "How are near-zero emissions steel and cement defined?",
+      "top5": [
+        "definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0016",
+        "definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0003",
+        "definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0023",
+        "definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0005",
+        "definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0008"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "Steel: 400-50 kg CO2-eq per tonne of crude steel, depending on scrap share",
+          "required": true,
+          "status": "top5",
+          "locate": "400-50 kg|100% iron: 400 kg",
+          "answer": [
+            "400"
+          ],
+          "origin": "IEA near-zero definitions",
+          "dependency": "exec summary restates section 3 (same report)",
+          "support_top5": [
+            3,
+            4
+          ],
+          "support_top5_chunks": [
+            "definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0023",
+            "definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0005"
+          ],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "U2",
+          "text": "Cement: 125-40 kg CO2-eq per tonne of cement, depending on clinker ratio",
+          "required": true,
+          "status": "top5",
+          "locate": "125-40 kg|100% clinker: 125 kg",
+          "answer": [
+            "125"
+          ],
+          "origin": "IEA near-zero definitions",
+          "dependency": "exec summary restates section 3 (same report)",
+          "support_top5": [
+            3,
+            4
+          ],
+          "support_top5_chunks": [
+            "definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0023",
+            "definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0005"
+          ],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 1
+        }
+      ],
+      "required_units": 2,
+      "required_units_in_top5": 2,
+      "required_units_retrieval_failure": 0,
+      "required_units_absent_from_corpus": 0,
+      "retrieval_sufficiency": "sufficient",
+      "expected_behaviour": "full answer",
+      "evidence_boundary": "Supports the IEA-derived near-zero thresholds and that they slide with scrap share / clinker ratio."
+    },
+    {
+      "id": "Q06",
+      "category": "d",
+      "category_name": "on-topic but unanswerable",
+      "question": "How many electric cars were sold in India in 2023?",
+      "top5": [
+        "mappinggreenanddigitalenergyjobs::0057",
+        "mappinggreenanddigitalenergyjobs::0083",
+        "mappinggreenanddigitalenergyjobs::0056",
+        "criticalmineralsreviewofnorway2026::0073",
+        "manufacturingandtrademodeldocumentation2026::0032"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "Number of electric cars sold in India in 2023",
+          "required": true,
+          "status": "absent",
+          "locate": "India[^.]{0,120}(electric car|EV)[^.]{0,80}(sold|sales)|(electric car|EV) sales[^.]{0,80}India",
+          "answer": [
+            "\\d"
+          ],
+          "origin": "-",
+          "dependency": "-",
+          "support_top5": [],
+          "support_top5_chunks": [],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 0
+        }
+      ],
+      "required_units": 1,
+      "required_units_in_top5": 0,
+      "required_units_retrieval_failure": 0,
+      "required_units_absent_from_corpus": 1,
+      "retrieval_sufficiency": "insufficient",
+      "expected_behaviour": "abstain (state the sources do not contain enough information)",
+      "evidence_boundary": "Top-5: US EV/battery job postings, Norway EV update, India industrial policy list. No Indian EV sales figure."
+    },
+    {
+      "id": "Q07",
+      "category": "a",
+      "category_name": "answerable from one chunk",
+      "question": "How much additional generation, storage and demand could connect to existing grids through more efficient use of networks, and what would connecting the same volume through network expansion cost?",
+      "top5": [
+        "modernisinggridsintheageofelectricity::0008",
+        "modernisinggridsintheageofelectricity::0007",
+        "modernisinggridsintheageofelectricity::0006",
+        "modernisinggridsintheageofelectricity::0016",
+        "modernisinggridsintheageofelectricity::0017"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "Up to 330 GW of additional generation, storage and demand",
+          "required": true,
+          "status": "top5",
+          "locate": "330 GW",
+          "answer": [
+            "330"
+          ],
+          "origin": "IEA Modernising Grids",
+          "dependency": "single chunk",
+          "support_top5": [
+            1
+          ],
+          "support_top5_chunks": [
+            "modernisinggridsintheageofelectricity::0008"
+          ],
+          "corpus_chunks_not_retrieved": [
+            "modernisinggridsintheageofelectricity::0106",
+            "modernisinggridsintheageofelectricity::0109"
+          ],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "U2",
+          "text": "Connecting the same volume via expansion would need around USD 100 billion of investment",
+          "required": true,
+          "status": "top5",
+          "locate": "USD 100 billion",
+          "answer": [
+            "100 billion"
+          ],
+          "origin": "IEA Modernising Grids",
+          "dependency": "single chunk",
+          "support_top5": [
+            1
+          ],
+          "support_top5_chunks": [
+            "modernisinggridsintheageofelectricity::0008"
+          ],
+          "corpus_chunks_not_retrieved": [
+            "modernisinggridsintheageofelectricity::0106",
+            "reducingthecostofcapital::0048"
+          ],
+          "independent_origins_top5": 1
+        }
+      ],
+      "required_units": 2,
+      "required_units_in_top5": 2,
+      "required_units_retrieval_failure": 0,
+      "required_units_absent_from_corpus": 0,
+      "retrieval_sufficiency": "sufficient",
+      "expected_behaviour": "full answer",
+      "evidence_boundary": "Fully answered by one chunk."
+    },
+    {
+      "id": "Q08",
+      "category": "a",
+      "category_name": "answerable from one chunk",
+      "question": "What share of global electricity supply came from wind and solar PV in 2023, and what share do they reach by 2030 on the path to net zero emissions?",
+      "top5": [
+        "managingtheseasonalvariabilityofelectricitydemandandsupply::0002",
+        "reducingthecostofcapital::0063",
+        "managingtheseasonalvariabilityofelectricitydemandandsupply::0078",
+        "reducingthecostofcapital::0081",
+        "managingtheseasonalvariabilityofelectricitydemandandsupply::0059"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "Wind and solar PV were 12% of global electricity supply in 2023",
+          "required": true,
+          "status": "top5",
+          "locate": "12% of global electricity supply",
+          "answer": [
+            "\\b12\\s*(%|per ?cent)"
+          ],
+          "origin": "IEA Seasonal Variability",
+          "dependency": "single chunk",
+          "support_top5": [
+            1
+          ],
+          "support_top5_chunks": [
+            "managingtheseasonalvariabilityofelectricitydemandandsupply::0002"
+          ],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "U2",
+          "text": "They rise to 40% by 2030 on the path to net zero",
+          "required": true,
+          "status": "top5",
+          "locate": "rise to 40% by 2030",
+          "answer": [
+            "\\b40\\s*(%|per ?cent)"
+          ],
+          "origin": "IEA Seasonal Variability",
+          "dependency": "single chunk",
+          "support_top5": [
+            1
+          ],
+          "support_top5_chunks": [
+            "managingtheseasonalvariabilityofelectricitydemandandsupply::0002"
+          ],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 1
+        }
+      ],
+      "required_units": 2,
+      "required_units_in_top5": 2,
+      "required_units_retrieval_failure": 0,
+      "required_units_absent_from_corpus": 0,
+      "retrieval_sufficiency": "sufficient",
+      "expected_behaviour": "full answer",
+      "evidence_boundary": "Another chunk gives a different metric (EMDE share 6% in 2022 -> 23% by 2035, STEPS): not the global figure."
+    },
+    {
+      "id": "Q09",
+      "category": "a",
+      "category_name": "answerable from one chunk",
+      "question": "Which clean energy technology supply chains are covered by the IEA's Manufacturing and Trade Model?",
+      "top5": [
+        "manufacturingandtrademodeldocumentation2026::0004",
+        "manufacturingandtrademodeldocumentation2026::0001",
+        "manufacturingandtrademodeldocumentation2026::0071",
+        "manufacturingandtrademodeldocumentation2026::0031",
+        "manufacturingandtrademodeldocumentation2026::0032"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "Six supply chains: solar PV, wind turbines, electric cars, batteries, electrolysers, heat pumps",
+          "required": true,
+          "status": "top5",
+          "locate": "six key clean energy technology supply chains",
+          "answer": [
+            "solar",
+            "wind",
+            "electric car|\\bEVs?\\b",
+            "batter",
+            "electrolys",
+            "heat pump"
+          ],
+          "origin": "IEA MaT documentation",
+          "dependency": "single chunk",
+          "support_top5": [
+            2
+          ],
+          "support_top5_chunks": [
+            "manufacturingandtrademodeldocumentation2026::0001"
+          ],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 1
+        }
+      ],
+      "required_units": 1,
+      "required_units_in_top5": 1,
+      "required_units_retrieval_failure": 0,
+      "required_units_absent_from_corpus": 0,
+      "retrieval_sufficiency": "sufficient",
+      "expected_behaviour": "full answer",
+      "evidence_boundary": "A retrieved chunk notes ETP-2024 also modelled aluminium, steel and ammonia in the same framework; those are not among the six clean energy technology supply chains."
+    },
+    {
+      "id": "Q10",
+      "category": "a",
+      "category_name": "answerable from one chunk",
+      "question": "What share of solar-related online job postings in the United States is concentrated in California?",
+      "top5": [
+        "mappinggreenanddigitalenergyjobs::0096",
+        "mappinggreenanddigitalenergyjobs::0097",
+        "mappinggreenanddigitalenergyjobs::0014",
+        "mappinggreenanddigitalenergyjobs::0023",
+        "mappinggreenanddigitalenergyjobs::0098"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "25% of US solar online job postings are in California",
+          "required": true,
+          "status": "corpus",
+          "locate": "California \\(25% of solar",
+          "answer": [
+            "\\b25\\s*(%|per ?cent)"
+          ],
+          "origin": "IEA Mapping Jobs",
+          "dependency": "-",
+          "support_top5": [],
+          "support_top5_chunks": [],
+          "corpus_chunks_not_retrieved": [
+            "mappinggreenanddigitalenergyjobs::0007"
+          ],
+          "independent_origins_top5": 0
+        }
+      ],
+      "required_units": 1,
+      "required_units_in_top5": 0,
+      "required_units_retrieval_failure": 1,
+      "required_units_absent_from_corpus": 0,
+      "retrieval_sufficiency": "insufficient",
+      "expected_behaviour": "abstain (state the sources do not contain enough information)",
+      "evidence_boundary": "Top-5 says California, Texas and Florida have the most solar vacancies, without a share. The 25% figure is in the executive summary chunk, which was not retrieved (retrieval failure)."
+    },
+    {
+      "id": "Q11",
+      "category": "a",
+      "category_name": "answerable from one chunk",
+      "question": "Which countries provided peer experts for the IEA's critical minerals review of Norway, and when did the review team visit Norway?",
+      "top5": [
+        "criticalmineralsreviewofnorway2026::0003",
+        "criticalmineralsreviewofnorway2026::0004",
+        "criticalmineralsreviewofnorway2026::0001",
+        "criticalmineralsreviewofnorway2026::0076",
+        "criticalmineralsreviewofnorway2026::0032"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "Peer experts from Spain and Finland",
+          "required": true,
+          "status": "top5",
+          "locate": "Spain and Finland",
+          "answer": [
+            "Spain",
+            "Finland"
+          ],
+          "origin": "IEA CMR Norway",
+          "dependency": "single chunk",
+          "support_top5": [
+            1
+          ],
+          "support_top5_chunks": [
+            "criticalmineralsreviewofnorway2026::0003"
+          ],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "U2",
+          "text": "The review team visited Norway in November 2025",
+          "required": true,
+          "status": "top5",
+          "locate": "November 2025",
+          "answer": [
+            "November 2025"
+          ],
+          "origin": "IEA CMR Norway",
+          "dependency": "single chunk",
+          "support_top5": [
+            1
+          ],
+          "support_top5_chunks": [
+            "criticalmineralsreviewofnorway2026::0003"
+          ],
+          "corpus_chunks_not_retrieved": [
+            "criticalmineralsreviewofnorway2026::0002",
+            "criticalmineralsreviewofnorway2026::0051",
+            "manufacturingandtrademodeldocumentation2026::0023"
+          ],
+          "independent_origins_top5": 1
+        }
+      ],
+      "required_units": 2,
+      "required_units_in_top5": 2,
+      "required_units_retrieval_failure": 0,
+      "required_units_absent_from_corpus": 0,
+      "retrieval_sufficiency": "sufficient",
+      "expected_behaviour": "full answer",
+      "evidence_boundary": "Fully answered by one chunk."
+    },
+    {
+      "id": "Q12",
+      "category": "b",
+      "category_name": "requires several chunks/documents",
+      "question": "What role does concessional finance play in cutting methane emissions and in clean energy investment in developing economies?",
+      "top5": [
+        "reducingthecostofcapital::0010",
+        "unsg-call-action-methane-by-2030-epublication::0054",
+        "gmsr-2025::0239",
+        "reducingthecostofcapital::0016",
+        "gmsr-2025::0126"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "Clean energy: at least a tripling of international concessional funds (USD 90-110 bn/yr) to improve risk-return and mobilise private capital",
+          "required": true,
+          "status": "top5",
+          "locate": "tripling in international concessional funds|tripling of concessional funding",
+          "answer": [
+            "concessional",
+            "tripl"
+          ],
+          "origin": "IEA Reducing the Cost of Capital",
+          "dependency": "2 chunks, same report",
+          "support_top5": [
+            1,
+            4
+          ],
+          "support_top5_chunks": [
+            "reducingthecostofcapital::0010",
+            "reducingthecostofcapital::0016"
+          ],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "U2",
+          "text": "Methane: grants and highly concessional donor funding should scale up and coordinate to fill gaps",
+          "required": true,
+          "status": "top5",
+          "locate": "highly concessional donor funding",
+          "answer": [
+            "methane|grant|donor"
+          ],
+          "origin": "UN SG call to action",
+          "dependency": "single chunk",
+          "support_top5": [
+            2
+          ],
+          "support_top5_chunks": [
+            "unsg-call-action-methane-by-2030-epublication::0054"
+          ],
+          "corpus_chunks_not_retrieved": [
+            "gmsr-2025::0233"
+          ],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "U3",
+          "text": "Emerging economies seek technology transfer and concessional finance to bridge capacity gaps",
+          "required": false,
+          "status": "top5",
+          "locate": "seek technology transfer and concessional finance",
+          "answer": [
+            "technology transfer|capacity gap"
+          ],
+          "origin": "GMSR 2025",
+          "dependency": "single chunk",
+          "support_top5": [
+            5
+          ],
+          "support_top5_chunks": [
+            "gmsr-2025::0126"
+          ],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 1
+        }
+      ],
+      "required_units": 2,
+      "required_units_in_top5": 2,
+      "required_units_retrieval_failure": 0,
+      "required_units_absent_from_corpus": 0,
+      "retrieval_sufficiency": "sufficient",
+      "expected_behaviour": "full answer",
+      "evidence_boundary": "Two separate literatures: IEA (clean energy, quantified) and UNEP/UN (methane, qualitative). No single figure for methane-specific concessional finance is retrieved."
+    },
+    {
+      "id": "Q13",
+      "category": "b",
+      "category_name": "requires several chunks/documents",
+      "question": "How fast is electricity demand expected to grow in Europe, India and Indonesia, and how much must grid capacity expand globally by 2035?",
+      "top5": [
+        "managingtheseasonalvariabilityofelectricitydemandandsupply::0004",
+        "managingtheseasonalvariabilityofelectricitydemandandsupply::0065",
+        "managingtheseasonalvariabilityofelectricitydemandandsupply::0002",
+        "modernisinggridsintheageofelectricity::0006",
+        "managingtheseasonalvariabilityofelectricitydemandandsupply::0067"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "Europe: electricity demand +80% or more, 2022-2050",
+          "required": true,
+          "status": "top5",
+          "locate": "over 80% in Europe",
+          "answer": [
+            "\\b80\\s*(%|per ?cent)"
+          ],
+          "origin": "IEA Seasonal Variability",
+          "dependency": "single chunk",
+          "support_top5": [
+            1
+          ],
+          "support_top5_chunks": [
+            "managingtheseasonalvariabilityofelectricitydemandandsupply::0004"
+          ],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "U2",
+          "text": "India: more than 2.5 times",
+          "required": true,
+          "status": "top5",
+          "locate": "2\\.5 times in India",
+          "answer": [
+            "2\\.5"
+          ],
+          "origin": "IEA Seasonal Variability",
+          "dependency": "single chunk",
+          "support_top5": [
+            1
+          ],
+          "support_top5_chunks": [
+            "managingtheseasonalvariabilityofelectricitydemandandsupply::0004"
+          ],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "U3",
+          "text": "Indonesia: 3 times",
+          "required": true,
+          "status": "top5",
+          "locate": "3 times in Indonesia",
+          "answer": [
+            "\\b(3|three)\\s*times|threefold"
+          ],
+          "origin": "IEA Seasonal Variability",
+          "dependency": "single chunk",
+          "support_top5": [
+            1
+          ],
+          "support_top5_chunks": [
+            "managingtheseasonalvariabilityofelectricitydemandandsupply::0004"
+          ],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "U4",
+          "text": "Global grid capacity must increase by at least 30% by 2035 (25 million km of lines)",
+          "required": true,
+          "status": "top5",
+          "locate": "at least 30%",
+          "answer": [
+            "\\b30\\s*(%|per ?cent)"
+          ],
+          "origin": "IEA Modernising Grids",
+          "dependency": "single chunk",
+          "support_top5": [
+            4
+          ],
+          "support_top5_chunks": [
+            "modernisinggridsintheageofelectricity::0006"
+          ],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 1
+        }
+      ],
+      "required_units": 4,
+      "required_units_in_top5": 4,
+      "required_units_retrieval_failure": 0,
+      "required_units_absent_from_corpus": 0,
+      "retrieval_sufficiency": "sufficient",
+      "expected_behaviour": "full answer",
+      "evidence_boundary": "Demand figures are 2022-2050 (Seasonal Variability); grid figure is to 2035 (Modernising Grids): different reports and horizons, which should not be merged into one timeline."
+    },
+    {
+      "id": "Q14",
+      "category": "b",
+      "category_name": "requires several chunks/documents",
+      "question": "What are the nine priority actions in the UN Secretary-General's call to action on methane?",
+      "top5": [
+        "unsg-call-action-methane-by-2030-epublication::0029",
+        "unsg-call-action-methane-by-2030-epublication::0011",
+        "unsg-call-action-methane-by-2030-epublication::0058",
+        "unsg-call-action-methane-by-2030-epublication::0010",
+        "unsg-call-action-methane-by-2030-epublication::0015"
+      ],
+      "units": [
+        {
+          "id": "A1",
+          "text": "Action 1: Fix leaks and eliminate routine flaring and cold venting",
+          "required": true,
+          "status": "top5",
+          "locate": "Fix leaks",
+          "answer": [
+            "leak"
+          ],
+          "origin": "UN SG call to action",
+          "dependency": "-",
+          "support_top5": [
+            2
+          ],
+          "support_top5_chunks": [
+            "unsg-call-action-methane-by-2030-epublication::0011"
+          ],
+          "corpus_chunks_not_retrieved": [
+            "unsg-call-action-methane-by-2030-epublication::0030"
+          ],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "A2",
+          "text": "Action 2: Make methane measurable, reportable and verifiable",
+          "required": true,
+          "status": "corpus",
+          "locate": "measurable, reportable and verifiable",
+          "answer": [
+            "measurable|reportable|verifiable"
+          ],
+          "origin": "UN SG call to action",
+          "dependency": "-",
+          "support_top5": [],
+          "support_top5_chunks": [],
+          "corpus_chunks_not_retrieved": [
+            "unsg-call-action-methane-by-2030-epublication::0012",
+            "unsg-call-action-methane-by-2030-epublication::0037"
+          ],
+          "independent_origins_top5": 0
+        },
+        {
+          "id": "A3",
+          "text": "Action 3: Science-based global methane standard / near-zero-methane marketplace",
+          "required": true,
+          "status": "corpus",
+          "locate": "science.based global methane standard",
+          "answer": [
+            "standard|marketplace"
+          ],
+          "origin": "UN SG call to action",
+          "dependency": "-",
+          "support_top5": [],
+          "support_top5_chunks": [],
+          "corpus_chunks_not_retrieved": [
+            "unsg-call-action-methane-by-2030-epublication::0013",
+            "unsg-call-action-methane-by-2030-epublication::0039"
+          ],
+          "independent_origins_top5": 0
+        },
+        {
+          "id": "A4",
+          "text": "Action 4: Produce food more efficiently with less methane",
+          "required": true,
+          "status": "corpus",
+          "locate": "Produce food more efficiently",
+          "answer": [
+            "food more efficiently|livestock|rice"
+          ],
+          "origin": "UN SG call to action",
+          "dependency": "-",
+          "support_top5": [],
+          "support_top5_chunks": [],
+          "corpus_chunks_not_retrieved": [
+            "unsg-call-action-methane-by-2030-epublication::0014",
+            "unsg-call-action-methane-by-2030-epublication::0044"
+          ],
+          "independent_origins_top5": 0
+        },
+        {
+          "id": "A5",
+          "text": "Action 5: Halve per-capita food waste and reduce food loss",
+          "required": true,
+          "status": "top5",
+          "locate": "Halve per.capita food waste",
+          "answer": [
+            "food waste|food loss"
+          ],
+          "origin": "UN SG call to action",
+          "dependency": "-",
+          "support_top5": [
+            5
+          ],
+          "support_top5_chunks": [
+            "unsg-call-action-methane-by-2030-epublication::0015"
+          ],
+          "corpus_chunks_not_retrieved": [
+            "unsg-call-action-methane-by-2030-epublication::0046"
+          ],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "A6",
+          "text": "Action 6: Reform incentives and redirect finance and subsidies",
+          "required": true,
+          "status": "top5",
+          "locate": "Reform incentives",
+          "answer": [
+            "incentive|subsid"
+          ],
+          "origin": "UN SG call to action",
+          "dependency": "-",
+          "support_top5": [
+            5
+          ],
+          "support_top5_chunks": [
+            "unsg-call-action-methane-by-2030-epublication::0015"
+          ],
+          "corpus_chunks_not_retrieved": [
+            "unsg-call-action-methane-by-2030-epublication::0047"
+          ],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "A7",
+          "text": "Action 7: Phase out open dumping and uncontrolled landfills",
+          "required": true,
+          "status": "corpus",
+          "locate": "open dumping",
+          "answer": [
+            "dumping|landfill"
+          ],
+          "origin": "UN SG call to action",
+          "dependency": "-",
+          "support_top5": [],
+          "support_top5_chunks": [],
+          "corpus_chunks_not_retrieved": [
+            "unsg-call-action-methane-by-2030-epublication::0016",
+            "unsg-call-action-methane-by-2030-epublication::0049"
+          ],
+          "independent_origins_top5": 0
+        },
+        {
+          "id": "A8",
+          "text": "Action 8: Capture methane from waste and wastewater",
+          "required": true,
+          "status": "corpus",
+          "locate": "Capture methane from waste",
+          "answer": [
+            "wastewater|capture methane from waste"
+          ],
+          "origin": "UN SG call to action",
+          "dependency": "-",
+          "support_top5": [],
+          "support_top5_chunks": [],
+          "corpus_chunks_not_retrieved": [
+            "unsg-call-action-methane-by-2030-epublication::0017",
+            "unsg-call-action-methane-by-2030-epublication::0051"
+          ],
+          "independent_origins_top5": 0
+        },
+        {
+          "id": "A9",
+          "text": "Action 9: Build circular, low-methane urban waste systems",
+          "required": true,
+          "status": "corpus",
+          "locate": "circular, low.methane urban waste",
+          "answer": [
+            "circular"
+          ],
+          "origin": "UN SG call to action",
+          "dependency": "-",
+          "support_top5": [],
+          "support_top5_chunks": [],
+          "corpus_chunks_not_retrieved": [
+            "unsg-call-action-methane-by-2030-epublication::0017",
+            "unsg-call-action-methane-by-2030-epublication::0052"
+          ],
+          "independent_origins_top5": 0
+        }
+      ],
+      "required_units": 9,
+      "required_units_in_top5": 3,
+      "required_units_retrieval_failure": 6,
+      "required_units_absent_from_corpus": 0,
+      "retrieval_sufficiency": "partial",
+      "expected_behaviour": "answer the supported part and state the gap",
+      "evidence_boundary": "Top-5 contains only Actions 1, 5 and 6 (+ general text). Six actions are in the corpus but not retrieved."
+    },
+    {
+      "id": "Q15",
+      "category": "c",
+      "category_name": "partially answerable",
+      "question": "What are the near-zero emissions thresholds for steel and for aluminium?",
+      "top5": [
+        "definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0005",
+        "definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0025",
+        "definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0023",
+        "definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0024",
+        "definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0016"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "Steel near-zero threshold 400-50 kg CO2-eq/t crude steel, by scrap share",
+          "required": true,
+          "status": "top5",
+          "locate": "400-50 kg|100% iron: 400 kg",
+          "answer": [
+            "400"
+          ],
+          "origin": "IEA near-zero definitions",
+          "dependency": "same report",
+          "support_top5": [
+            1,
+            3
+          ],
+          "support_top5_chunks": [
+            "definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0005",
+            "definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0023"
+          ],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "U2",
+          "text": "Aluminium near-zero threshold",
+          "required": true,
+          "status": "absent",
+          "locate": "alumin[^.]{0,80}(threshold|near-zero)|(threshold|near-zero)[^.]{0,80}alumin",
+          "answer": [
+            "alumin[^.]*\\d"
+          ],
+          "origin": "-",
+          "dependency": "-",
+          "support_top5": [],
+          "support_top5_chunks": [],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 0
+        }
+      ],
+      "required_units": 2,
+      "required_units_in_top5": 1,
+      "required_units_retrieval_failure": 0,
+      "required_units_absent_from_corpus": 1,
+      "retrieval_sufficiency": "partial",
+      "expected_behaviour": "answer the supported part and state the gap",
+      "evidence_boundary": "Steel supported; another retrieved proposal gives 380-400 kg CO2-eq/t hot-rolled steel by 2045 (different proposal and metric). Nothing on aluminium anywhere in the corpus."
+    },
+    {
+      "id": "Q16",
+      "category": "c",
+      "category_name": "partially answerable",
+      "question": "What was global clean energy investment in 2023, and how much was spent on clean energy in Africa in 2024?",
+      "top5": [
+        "reducingthecostofcapital::0017",
+        "manufacturingandtrademodeldocumentation2026::0033",
+        "reducingthecostofcapital::0020",
+        "reducingthecostofcapital::0028",
+        "manufacturingandtrademodeldocumentation2026::0034"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "Global clean energy investment reached about USD 1.8 trillion in 2023",
+          "required": true,
+          "status": "top5",
+          "locate": "USD 1\\.8 trillion in 2023",
+          "answer": [
+            "1\\.8 trillion"
+          ],
+          "origin": "IEA Reducing the Cost of Capital",
+          "dependency": "single chunk",
+          "support_top5": [
+            1
+          ],
+          "support_top5_chunks": [
+            "reducingthecostofcapital::0017"
+          ],
+          "corpus_chunks_not_retrieved": [
+            "reducingthecostofcapital::0005"
+          ],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "U2",
+          "text": "Clean energy spending in Africa in 2024",
+          "required": true,
+          "status": "absent",
+          "locate": "Africa[^.]{0,120}2024|2024[^.]{0,120}Africa",
+          "answer": [
+            "Africa[^.]*\\d"
+          ],
+          "origin": "-",
+          "dependency": "-",
+          "support_top5": [],
+          "support_top5_chunks": [],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 0
+        }
+      ],
+      "required_units": 2,
+      "required_units_in_top5": 1,
+      "required_units_retrieval_failure": 0,
+      "required_units_absent_from_corpus": 1,
+      "retrieval_sufficiency": "partial",
+      "expected_behaviour": "answer the supported part and state the gap",
+      "evidence_boundary": "2024 Africa figure absent from the corpus. The corpus has a 2023 Africa figure (USD 35 billion) but it was not retrieved; presenting a 2023 figure as 2024 would be a date/scope error."
+    },
+    {
+      "id": "Q17",
+      "category": "c",
+      "category_name": "partially answerable",
+      "question": "By how much will electricity demand in Europe grow by 2050, and how much will household electricity prices rise?",
+      "top5": [
+        "managingtheseasonalvariabilityofelectricitydemandandsupply::0024",
+        "managingtheseasonalvariabilityofelectricitydemandandsupply::0027",
+        "managingtheseasonalvariabilityofelectricitydemandandsupply::0026",
+        "managingtheseasonalvariabilityofelectricitydemandandsupply::0011",
+        "managingtheseasonalvariabilityofelectricitydemandandsupply::0031"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "Europe electricity demand +80% or more, 2022-2050",
+          "required": true,
+          "status": "corpus",
+          "locate": "over 80% in Europe",
+          "answer": [
+            "\\b80\\s*(%|per ?cent)"
+          ],
+          "origin": "IEA Seasonal Variability",
+          "dependency": "-",
+          "support_top5": [],
+          "support_top5_chunks": [],
+          "corpus_chunks_not_retrieved": [
+            "managingtheseasonalvariabilityofelectricitydemandandsupply::0004"
+          ],
+          "independent_origins_top5": 0
+        },
+        {
+          "id": "U2",
+          "text": "Rise in household electricity prices",
+          "required": true,
+          "status": "absent",
+          "locate": "household[^.]{0,60}\\b(electricity )?(prices?|bills?|tariffs?)\\b",
+          "answer": [
+            "household[^.]*\\d"
+          ],
+          "origin": "-",
+          "dependency": "-",
+          "support_top5": [],
+          "support_top5_chunks": [],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 0
+        }
+      ],
+      "required_units": 2,
+      "required_units_in_top5": 0,
+      "required_units_retrieval_failure": 1,
+      "required_units_absent_from_corpus": 1,
+      "retrieval_sufficiency": "insufficient",
+      "expected_behaviour": "abstain (state the sources do not contain enough information)",
+      "evidence_boundary": "Top-5 gives Europe flexibility needs (+50% by 2030, doubling by 2050), not demand growth: using it as demand growth would be over-reach. Household prices appear nowhere in the corpus."
+    },
+    {
+      "id": "Q18",
+      "category": "c",
+      "category_name": "partially answerable",
+      "question": "What share of online job postings in Austria related to heat pumps, and what average salary did those heat pump postings advertise?",
+      "top5": [
+        "mappinggreenanddigitalenergyjobs::0044",
+        "mappinggreenanddigitalenergyjobs::0049",
+        "mappinggreenanddigitalenergyjobs::0048",
+        "mappinggreenanddigitalenergyjobs::0043",
+        "mappinggreenanddigitalenergyjobs::0050"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "Heat pump OJPs reached about 0.03% of all online postings in Austria",
+          "required": true,
+          "status": "corpus",
+          "locate": "0\\.03% of the total online postings in Austria",
+          "answer": [
+            "0\\.03"
+          ],
+          "origin": "IEA Mapping Jobs",
+          "dependency": "-",
+          "support_top5": [],
+          "support_top5_chunks": [],
+          "corpus_chunks_not_retrieved": [
+            "mappinggreenanddigitalenergyjobs::0005",
+            "mappinggreenanddigitalenergyjobs::0006"
+          ],
+          "independent_origins_top5": 0
+        },
+        {
+          "id": "U2",
+          "text": "Average advertised salary of Austrian heat pump postings",
+          "required": true,
+          "status": "absent",
+          "locate": "Austria[^.]{0,120}heat pump[^.]{0,120}salar",
+          "answer": [
+            "(USD|EUR|€|\\$)\\s?\\d"
+          ],
+          "origin": "-",
+          "dependency": "-",
+          "support_top5": [],
+          "support_top5_chunks": [],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 0
+        }
+      ],
+      "required_units": 2,
+      "required_units_in_top5": 0,
+      "required_units_retrieval_failure": 1,
+      "required_units_absent_from_corpus": 1,
+      "retrieval_sufficiency": "insufficient",
+      "expected_behaviour": "abstain (state the sources do not contain enough information)",
+      "evidence_boundary": "Top-5 states that salary information on heat pump OJPs is very scarce; that supports saying the salary is not available. A Europe-wide solar salary range exists in the corpus but is for solar, not heat pumps."
+    },
+    {
+      "id": "Q19",
+      "category": "c",
+      "category_name": "partially answerable",
+      "question": "How much did grid congestion cost in the United States in 2024, and how much did it cost in Japan?",
+      "top5": [
+        "modernisinggridsintheageofelectricity::0016",
+        "modernisinggridsintheageofelectricity::0006",
+        "reducingthecostofcapital::0085",
+        "modernisinggridsintheageofelectricity::0066",
+        "mappinggreenanddigitalenergyjobs::0094"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "Grid congestion cost USD 12 billion in the United States in 2024",
+          "required": true,
+          "status": "top5",
+          "locate": "USD 12 billion",
+          "answer": [
+            "12 billion"
+          ],
+          "origin": "IEA Modernising Grids",
+          "dependency": "2 chunks, same report",
+          "support_top5": [
+            1,
+            2
+          ],
+          "support_top5_chunks": [
+            "modernisinggridsintheageofelectricity::0016",
+            "modernisinggridsintheageofelectricity::0006"
+          ],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "U2",
+          "text": "Grid congestion cost in Japan",
+          "required": true,
+          "status": "absent",
+          "locate": "Japan[^.]{0,120}congestion|congestion[^.]{0,120}Japan",
+          "answer": [
+            "Japan[^.]*\\d"
+          ],
+          "origin": "-",
+          "dependency": "-",
+          "support_top5": [],
+          "support_top5_chunks": [],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 0
+        }
+      ],
+      "required_units": 2,
+      "required_units_in_top5": 1,
+      "required_units_retrieval_failure": 0,
+      "required_units_absent_from_corpus": 1,
+      "retrieval_sufficiency": "partial",
+      "expected_behaviour": "answer the supported part and state the gap",
+      "evidence_boundary": "US supported (EU EUR 4.3 billion also given). Nothing on Japan."
+    },
+    {
+      "id": "Q20",
+      "category": "d",
+      "category_name": "on-topic but unanswerable",
+      "question": "How many tonnes of lithium did Norway produce in 2024?",
+      "top5": [
+        "criticalmineralsreviewofnorway2026::0003",
+        "criticalmineralsreviewofnorway2026::0051",
+        "criticalmineralsreviewofnorway2026::0058",
+        "criticalmineralsreviewofnorway2026::0060",
+        "criticalmineralsreviewofnorway2026::0059"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "Norway's lithium production in 2024 (tonnes)",
+          "required": true,
+          "status": "absent",
+          "locate": "lithium[^.]{0,100}(produc|tonnes|output)[^.]{0,60}Norway|Norway[^.]{0,100}lithium[^.]{0,60}(produc|tonnes)",
+          "answer": [
+            "\\d[\\d,.]*\\s*(tonnes|t\\b|kt)"
+          ],
+          "origin": "-",
+          "dependency": "-",
+          "support_top5": [],
+          "support_top5_chunks": [],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 0
+        }
+      ],
+      "required_units": 1,
+      "required_units_in_top5": 0,
+      "required_units_retrieval_failure": 0,
+      "required_units_absent_from_corpus": 1,
+      "retrieval_sufficiency": "insufficient",
+      "expected_behaviour": "abstain (state the sources do not contain enough information)",
+      "evidence_boundary": "Top-5 lists lithium among critical raw materials; no production data."
+    },
+    {
+      "id": "Q21",
+      "category": "d",
+      "category_name": "on-topic but unanswerable",
+      "question": "What was the average wholesale electricity price in Indonesia in 2023?",
+      "top5": [
+        "managingtheseasonalvariabilityofelectricitydemandandsupply::0065",
+        "managingtheseasonalvariabilityofelectricitydemandandsupply::0063",
+        "managingtheseasonalvariabilityofelectricitydemandandsupply::0067",
+        "managingtheseasonalvariabilityofelectricitydemandandsupply::0064",
+        "managingtheseasonalvariabilityofelectricitydemandandsupply::0072"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "Average wholesale electricity price in Indonesia in 2023",
+          "required": true,
+          "status": "absent",
+          "locate": "Indonesia[^.]{0,120}wholesale|wholesale[^.]{0,120}Indonesia",
+          "answer": [
+            "(USD|\\$)\\s?\\d|/MWh|per MWh"
+          ],
+          "origin": "-",
+          "dependency": "-",
+          "support_top5": [],
+          "support_top5_chunks": [],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 0
+        }
+      ],
+      "required_units": 1,
+      "required_units_in_top5": 0,
+      "required_units_retrieval_failure": 0,
+      "required_units_absent_from_corpus": 1,
+      "retrieval_sufficiency": "insufficient",
+      "expected_behaviour": "abstain (state the sources do not contain enough information)",
+      "evidence_boundary": "Top-5 covers Indonesia's power system evolution; no wholesale price."
+    },
+    {
+      "id": "Q22",
+      "category": "d",
+      "category_name": "on-topic but unanswerable",
+      "question": "How many people work in the global electricity grid sector?",
+      "top5": [
+        "modernisinggridsintheageofelectricity::0150",
+        "mappinggreenanddigitalenergyjobs::0118",
+        "mappinggreenanddigitalenergyjobs::0019",
+        "mappinggreenanddigitalenergyjobs::0117",
+        "modernisinggridsintheageofelectricity::0064"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "Number of people working in the global grid sector",
+          "required": true,
+          "status": "absent",
+          "locate": "(million|thousand)[^.]{0,40}(workers|employees)[^.]{0,60}grid|grid[^.]{0,60}(million|thousand)[^.]{0,20}(workers|employees)",
+          "answer": [
+            "\\d[\\d,.]*\\s*(million|thousand)?\\s*(people|workers|employees)"
+          ],
+          "origin": "-",
+          "dependency": "-",
+          "support_top5": [],
+          "support_top5_chunks": [],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 0
+        }
+      ],
+      "required_units": 1,
+      "required_units_in_top5": 0,
+      "required_units_retrieval_failure": 0,
+      "required_units_absent_from_corpus": 1,
+      "retrieval_sufficiency": "insufficient",
+      "expected_behaviour": "abstain (state the sources do not contain enough information)",
+      "evidence_boundary": "Top-5 describes skills shortages, an ageing workforce and job postings; no headcount."
+    },
+    {
+      "id": "Q23",
+      "category": "d",
+      "category_name": "on-topic but unanswerable",
+      "question": "What is the cost of carbon capture for cement plants in US dollars per tonne of CO2?",
+      "top5": [
+        "gmsr-2025::0029",
+        "reducingthecostofcapital::0136",
+        "reducingthecostofcapital::0137",
+        "gmsr-2025::0072",
+        "definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0005"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "Cost of carbon capture for cement plants (USD per tonne CO2)",
+          "required": true,
+          "status": "absent",
+          "locate": "(carbon capture|CCS|CCUS)[^.]{0,120}(USD|cost)[^.]{0,40}(tonne|t CO2)",
+          "answer": [
+            "(USD|\\$)\\s?\\d[^.]*(tonne|/t)"
+          ],
+          "origin": "-",
+          "dependency": "-",
+          "support_top5": [],
+          "support_top5_chunks": [],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 0
+        }
+      ],
+      "required_units": 1,
+      "required_units_in_top5": 0,
+      "required_units_retrieval_failure": 0,
+      "required_units_absent_from_corpus": 1,
+      "retrieval_sufficiency": "insufficient",
+      "expected_behaviour": "abstain (state the sources do not contain enough information)",
+      "evidence_boundary": "Top-5 has CCUS definitions only; no cost."
+    },
+    {
+      "id": "Q24",
+      "category": "e",
+      "category_name": "dependent-source case",
+      "question": "How much warming would cutting methane emissions avoid by 2050?",
+      "top5": [
+        "unsg-call-action-methane-by-2030-epublication::0003",
+        "gmsr-2025::0027",
+        "unsg-call-action-methane-by-2030-epublication::0020",
+        "unsg-call-action-methane-by-2030-epublication::0018",
+        "unsg-call-action-methane-by-2030-epublication::0019"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "About 0.1-0.2°C of warming avoided by 2050",
+          "required": true,
+          "status": "corpus",
+          "locate": "0\\.1\\W0\\.2",
+          "answer": [
+            "0\\.1\\W0\\.2"
+          ],
+          "origin": "GMSR 2025 / CCAC",
+          "dependency": "UN SG restates in 3 chunks (footnotes [26,27])",
+          "support_top5": [],
+          "support_top5_chunks": [],
+          "corpus_chunks_not_retrieved": [
+            "unsg-call-action-methane-by-2030-epublication::0004",
+            "unsg-call-action-methane-by-2030-epublication::0025",
+            "unsg-call-action-methane-by-2030-epublication::0059"
+          ],
+          "independent_origins_top5": 0
+        }
+      ],
+      "required_units": 1,
+      "required_units_in_top5": 0,
+      "required_units_retrieval_failure": 1,
+      "required_units_absent_from_corpus": 0,
+      "retrieval_sufficiency": "insufficient",
+      "expected_behaviour": "abstain (state the sources do not contain enough information)",
+      "evidence_boundary": "Top-5 has overshoot context only (1.5°C, a 2.3-2.5°C projected rise). The avoided-warming figure is in the corpus but not retrieved (retrieval failure). Any number given would be over-reach."
+    },
+    {
+      "id": "Q25",
+      "category": "e",
+      "category_name": "dependent-source case",
+      "question": "What would methane mitigation in the fossil fuel industry cost each year, and how does that compare with the sector's income?",
+      "top5": [
+        "unsg-call-action-methane-by-2030-epublication::0024",
+        "gmsr-2025::0123",
+        "gmsr-2025::0034",
+        "unsg-call-action-methane-by-2030-epublication::0007",
+        "unsg-call-action-methane-by-2030-epublication::0023"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "About USD 98 billion a year (accounting for the value of recovered gas)",
+          "required": true,
+          "status": "top5",
+          "locate": "98 billion",
+          "answer": [
+            "98 billion"
+          ],
+          "origin": "GMSR 2025",
+          "dependency": "3 chunks: GMSR + 2 UN SG chunks restating GMSR (footnote [23]) -> 1 independent origin",
+          "support_top5": [
+            1,
+            3,
+            4
+          ],
+          "support_top5_chunks": [
+            "unsg-call-action-methane-by-2030-epublication::0024",
+            "gmsr-2025::0034",
+            "unsg-call-action-methane-by-2030-epublication::0007"
+          ],
+          "corpus_chunks_not_retrieved": [
+            "gmsr-2025::0072",
+            "gmsr-2025::0222"
+          ],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "U2",
+          "text": "Equal to 2-4% of the sector's USD 2.4 trillion net income in 2023",
+          "required": true,
+          "status": "top5",
+          "locate": "2.4 per cent|two to four per cent|2–4 per cent",
+          "answer": [
+            "\\b2\\W4\\s*(%|per ?cent)|two to four"
+          ],
+          "origin": "GMSR 2025",
+          "dependency": "as U1",
+          "support_top5": [
+            1,
+            3,
+            4
+          ],
+          "support_top5_chunks": [
+            "unsg-call-action-methane-by-2030-epublication::0024",
+            "gmsr-2025::0034",
+            "unsg-call-action-methane-by-2030-epublication::0007"
+          ],
+          "corpus_chunks_not_retrieved": [
+            "gmsr-2025::0121",
+            "gmsr-2025::0222"
+          ],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "U3",
+          "text": "IEA's lower estimate: about USD 52 billion a year for a 75% reduction (~2% of net income)",
+          "required": false,
+          "status": "top5",
+          "locate": "52 billion",
+          "answer": [
+            "52 billion"
+          ],
+          "origin": "IEA Global Methane Tracker",
+          "dependency": "restated in 2 UN SG chunks (footnote [24]) -> 1 origin, independent of GMSR",
+          "support_top5": [
+            1,
+            4
+          ],
+          "support_top5_chunks": [
+            "unsg-call-action-methane-by-2030-epublication::0024",
+            "unsg-call-action-methane-by-2030-epublication::0007"
+          ],
+          "corpus_chunks_not_retrieved": [
+            "gmsr-2025::0222"
+          ],
+          "independent_origins_top5": 1
+        }
+      ],
+      "required_units": 2,
+      "required_units_in_top5": 2,
+      "required_units_retrieval_failure": 0,
+      "required_units_absent_from_corpus": 0,
+      "retrieval_sufficiency": "sufficient",
+      "expected_behaviour": "full answer",
+      "evidence_boundary": "Two different estimates with different scope (GMSR net cost of all measures; IEA cost of a 75% cut by 2030). Citing GMSR and the UN SG restatement of it is not independent corroboration."
+    },
+    {
+      "id": "Q26",
+      "category": "e",
+      "category_name": "dependent-source case",
+      "question": "What was the atmospheric concentration of methane in 2024?",
+      "top5": [
+        "gmsr-2025::0191",
+        "unsg-call-action-methane-by-2030-epublication::0019",
+        "unsg-call-action-methane-by-2030-epublication::0003",
+        "gmsr-2025::0044",
+        "gmsr-2025::0027"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "About 1,942 parts per billion in 2024",
+          "required": true,
+          "status": "top5",
+          "locate": "1,942 parts per billion",
+          "answer": [
+            "1[,.]?942"
+          ],
+          "origin": "WMO State of the Global Climate 2025",
+          "dependency": "2 UN SG chunks restating WMO -> 1 origin",
+          "support_top5": [
+            2,
+            3
+          ],
+          "support_top5_chunks": [
+            "unsg-call-action-methane-by-2030-epublication::0019",
+            "unsg-call-action-methane-by-2030-epublication::0003"
+          ],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 1
+        },
+        {
+          "id": "U2",
+          "text": "Roughly 266% above pre-industrial levels",
+          "required": false,
+          "status": "top5",
+          "locate": "266 per cent",
+          "answer": [
+            "266"
+          ],
+          "origin": "WMO State of the Global Climate 2025",
+          "dependency": "as U1",
+          "support_top5": [
+            2,
+            3
+          ],
+          "support_top5_chunks": [
+            "unsg-call-action-methane-by-2030-epublication::0019",
+            "unsg-call-action-methane-by-2030-epublication::0003"
+          ],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 1
+        }
+      ],
+      "required_units": 1,
+      "required_units_in_top5": 1,
+      "required_units_retrieval_failure": 0,
+      "required_units_absent_from_corpus": 0,
+      "retrieval_sufficiency": "sufficient",
+      "expected_behaviour": "full answer",
+      "evidence_boundary": "One origin (WMO) repeated twice in the UN report; GMSR chunks retrieved do not give the 2024 concentration."
+    },
+    {
+      "id": "Q27",
+      "category": "e",
+      "category_name": "dependent-source case",
+      "question": "How much would oil and gas methane emissions fall if all countries matched Norway's methane emissions intensity?",
+      "top5": [
+        "unsg-call-action-methane-by-2030-epublication::0007",
+        "gmsr-2025::0028",
+        "unsg-call-action-methane-by-2030-epublication::0023",
+        "unsg-call-action-methane-by-2030-epublication::0005",
+        "unsg-call-action-methane-by-2030-epublication::0006"
+      ],
+      "units": [
+        {
+          "id": "U1",
+          "text": "Oil and gas methane emissions could fall by roughly 90%",
+          "required": true,
+          "status": "top5",
+          "locate": "roughly 90 per cent",
+          "answer": [
+            "\\b90\\s*(%|per ?cent)"
+          ],
+          "origin": "IEA (via UN SG)",
+          "dependency": "the SAME sentence in 2 chunks (chunk overlap) -> 1 origin, not 2 sources",
+          "support_top5": [
+            1,
+            5
+          ],
+          "support_top5_chunks": [
+            "unsg-call-action-methane-by-2030-epublication::0007",
+            "unsg-call-action-methane-by-2030-epublication::0006"
+          ],
+          "corpus_chunks_not_retrieved": [],
+          "independent_origins_top5": 1
+        }
+      ],
+      "required_units": 1,
+      "required_units_in_top5": 1,
+      "required_units_retrieval_failure": 0,
+      "required_units_absent_from_corpus": 0,
+      "retrieval_sufficiency": "sufficient",
+      "expected_behaviour": "full answer",
+      "evidence_boundary": "Retrieved wording is 'roughly 90 per cent' (executive summary). The report's chapter says 'over 90 per cent' (not retrieved)."
+    }
+  ]
+}

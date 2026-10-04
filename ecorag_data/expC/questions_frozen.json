@@ -1,0 +1,202 @@
+{
+  "frozen_at": "2026-10-03 22:58:20",
+  "categories": {
+    "a": "answerable from one chunk",
+    "b": "requires several chunks/documents",
+    "c": "partially answerable",
+    "d": "on-topic but unanswerable",
+    "e": "dependent-source case"
+  },
+  "rule": "Question texts written before retrieval was run for any new question; not to be changed after freezing.",
+  "questions": [
+    {
+      "id": "Q01",
+      "category": "e",
+      "category_name": "dependent-source case",
+      "question": "What share of global anthropogenic methane emissions comes from agriculture?",
+      "design_note": "continuity Q1"
+    },
+    {
+      "id": "Q02",
+      "category": "e",
+      "category_name": "dependent-source case",
+      "question": "How many alerts did the Methane Alert and Response System send, and how often do operators respond?",
+      "design_note": "continuity Q2"
+    },
+    {
+      "id": "Q03",
+      "category": "b",
+      "category_name": "requires several chunks/documents",
+      "question": "What are the main challenges in modernising electricity grids?",
+      "design_note": "continuity Q3"
+    },
+    {
+      "id": "Q04",
+      "category": "b",
+      "category_name": "requires several chunks/documents",
+      "question": "How can the cost of capital for clean energy projects in emerging and developing economies be reduced?",
+      "design_note": "continuity Q4"
+    },
+    {
+      "id": "Q05",
+      "category": "a",
+      "category_name": "answerable from one chunk",
+      "question": "How are near-zero emissions steel and cement defined?",
+      "design_note": "continuity Q5"
+    },
+    {
+      "id": "Q06",
+      "category": "d",
+      "category_name": "on-topic but unanswerable",
+      "question": "How many electric cars were sold in India in 2023?",
+      "design_note": "continuity Q6"
+    },
+    {
+      "id": "Q07",
+      "category": "a",
+      "category_name": "answerable from one chunk",
+      "question": "How much additional generation, storage and demand could connect to existing grids through more efficient use of networks, and what would connecting the same volume through network expansion cost?",
+      "design_note": ""
+    },
+    {
+      "id": "Q08",
+      "category": "a",
+      "category_name": "answerable from one chunk",
+      "question": "What share of global electricity supply came from wind and solar PV in 2023, and what share do they reach by 2030 on the path to net zero emissions?",
+      "design_note": ""
+    },
+    {
+      "id": "Q09",
+      "category": "a",
+      "category_name": "answerable from one chunk",
+      "question": "Which clean energy technology supply chains are covered by the IEA's Manufacturing and Trade Model?",
+      "design_note": ""
+    },
+    {
+      "id": "Q10",
+      "category": "a",
+      "category_name": "answerable from one chunk",
+      "question": "What share of solar-related online job postings in the United States is concentrated in California?",
+      "design_note": ""
+    },
+    {
+      "id": "Q11",
+      "category": "a",
+      "category_name": "answerable from one chunk",
+      "question": "Which countries provided peer experts for the IEA's critical minerals review of Norway, and when did the review team visit Norway?",
+      "design_note": ""
+    },
+    {
+      "id": "Q12",
+      "category": "b",
+      "category_name": "requires several chunks/documents",
+      "question": "What role does concessional finance play in cutting methane emissions and in clean energy investment in developing economies?",
+      "design_note": ""
+    },
+    {
+      "id": "Q13",
+      "category": "b",
+      "category_name": "requires several chunks/documents",
+      "question": "How fast is electricity demand expected to grow in Europe, India and Indonesia, and how much must grid capacity expand globally by 2035?",
+      "design_note": ""
+    },
+    {
+      "id": "Q14",
+      "category": "b",
+      "category_name": "requires several chunks/documents",
+      "question": "What are the nine priority actions in the UN Secretary-General's call to action on methane?",
+      "design_note": ""
+    },
+    {
+      "id": "Q15",
+      "category": "c",
+      "category_name": "partially answerable",
+      "question": "What are the near-zero emissions thresholds for steel and for aluminium?",
+      "design_note": "aluminium threshold not in corpus"
+    },
+    {
+      "id": "Q16",
+      "category": "c",
+      "category_name": "partially answerable",
+      "question": "What was global clean energy investment in 2023, and how much was spent on clean energy in Africa in 2024?",
+      "design_note": "Africa 2024 not in corpus (only 2023)"
+    },
+    {
+      "id": "Q17",
+      "category": "c",
+      "category_name": "partially answerable",
+      "question": "By how much will electricity demand in Europe grow by 2050, and how much will household electricity prices rise?",
+      "design_note": "household prices not in corpus"
+    },
+    {
+      "id": "Q18",
+      "category": "c",
+      "category_name": "partially answerable",
+      "question": "What share of online job postings in Austria related to heat pumps, and what average salary did those heat pump postings advertise?",
+      "design_note": "Austria heat-pump salary not in corpus"
+    },
+    {
+      "id": "Q19",
+      "category": "c",
+      "category_name": "partially answerable",
+      "question": "How much did grid congestion cost in the United States in 2024, and how much did it cost in Japan?",
+      "design_note": "Japan not in corpus"
+    },
+    {
+      "id": "Q20",
+      "category": "d",
+      "category_name": "on-topic but unanswerable",
+      "question": "How many tonnes of lithium did Norway produce in 2024?",
+      "design_note": "not in corpus"
+    },
+    {
+      "id": "Q21",
+      "category": "d",
+      "category_name": "on-topic but unanswerable",
+      "question": "What was the average wholesale electricity price in Indonesia in 2023?",
+      "design_note": "not in corpus"
+    },
+    {
+      "id": "Q22",
+      "category": "d",
+      "category_name": "on-topic but unanswerable",
+      "question": "How many people work in the global electricity grid sector?",
+      "design_note": "not in corpus"
+    },
+    {
+      "id": "Q23",
+      "category": "d",
+      "category_name": "on-topic but unanswerable",
+      "question": "What is the cost of carbon capture for cement plants in US dollars per tonne of CO2?",
+      "design_note": "not in corpus"
+    },
+    {
+      "id": "Q24",
+      "category": "e",
+      "category_name": "dependent-source case",
+      "question": "How much warming would cutting methane emissions avoid by 2050?",
+      "design_note": ""
+    },
+    {
+      "id": "Q25",
+      "category": "e",
+      "category_name": "dependent-source case",
+      "question": "What would methane mitigation in the fossil fuel industry cost each year, and how does that compare with the sector's income?",
+      "design_note": ""
+    },
+    {
+      "id": "Q26",
+      "category": "e",
+      "category_name": "dependent-source case",
+      "question": "What was the atmospheric concentration of methane in 2024?",
+      "design_note": ""
+    },
+    {
+      "id": "Q27",
+      "category": "e",
+      "category_name": "dependent-source case",
+      "question": "How much would oil and gas methane emissions fall if all countries matched Norway's methane emissions intensity?",
+      "design_note": ""
+    }
+  ]
+}

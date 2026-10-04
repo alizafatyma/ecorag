@@ -1,0 +1,7 @@
+2026-10-03 22:58:20  questions_frozen.json  sha256=34e586a6f54a535aa93c0ef838ff0cd33c09ef86746b21e599a37a28fddee28a  (27 questions, before any Experiment C retrieval)
+2026-10-03 22:59:18  retrieval_snapshot.json  sha256=a3e7c1d919b513dc23a38a1bca2d0a858106022b78c5ccf2e715a55a0b01ef6d  (top-5 per question, before gold labelling)
+2026-10-03 23:04:11  gold.json  sha256=4c6cc8b48e1938febd27b27c99f6ae82c274e7a1dd905777bb71344cd5730437  (validated, before any generation)
+2026-10-03 23:05:25  rubric.md  sha256=3f9602ef43fda83ec22e74ad95a19e9edd6c94134416f144612264154ff9c641  (before any generation)
+2026-10-03 23:05:25  metrics_spec.md  sha256=d0443c80b86c2266fda0a733cc92e77d66db704ed08cb1367fcea76d7d463867  (before any generation)
+2026-10-04 17:44:25  gold_erratum.json  sha256=0f5e0b70906ef84db48dbc220f08895b114268dc269304b648084482357d7df9  (POST-HOC, found during manual review; gold.json unchanged)
+2026-10-04 17:44:45  NOTE: hashes for the three .json files above are of their content with LF line endings (files on disk use Windows CRLF). Verified unchanged at this time: CRLF->LF content matches every logged hash; last-modified times equal freeze times.
