@@ -4,7 +4,7 @@
     {
       "name": "EcoRAG API",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["ecorag_api_production.py"],
+      "runtimeArgs": ["app.py"],
       "port": 5000,
       "autoPort": false
     }
