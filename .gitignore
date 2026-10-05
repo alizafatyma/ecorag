@@ -21,8 +21,6 @@ ENV/
 .DS_Store
 
 # Large files (exclude from repo)
-ecorag_data/chroma/
-ecorag_data/pdfs/
 ~/.cache/ecorag_models/
 *.npy
 
