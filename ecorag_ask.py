@@ -41,10 +41,11 @@ manifest = None
 client = None
 collection = None
 embedder = None
+QUERY_PREFIX = None
 
 def _ensure_loaded():
     """Load Chroma and embedder on first use (lazy initialization)"""
-    global manifest, client, collection, embedder
+    global manifest, client, collection, embedder, QUERY_PREFIX
     if collection is not None:
         return
     manifest = json.loads((DATA_DIR / "embeddings" / "manifest.json").read_text(encoding="utf-8"))
@@ -56,8 +57,6 @@ def _ensure_loaded():
     embedder = SentenceTransformer(manifest["model"])
     print(f"Chroma collection '{COLLECTION_NAME}': {collection.count()} chunks | "
           f"query embeddings: {manifest['model']} ({manifest['embedding_dimension']} dims)")
-
-QUERY_PREFIX = None  # Will be set by _ensure_loaded()
 
 
 # --- 3. Small helpers for readable source labels ---
