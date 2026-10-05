@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoRAG - Environmental RAG System</title>
+    <title>EcoRAG — Environmental research, grounded in sources</title>
     <style>
         * {
             margin: 0;
@@ -18,24 +18,16 @@
             --color-light: #d8f3dc;
             --color-lighter: #e8f5e9;
             --color-text: #1b263b;
-            --color-text-light: #495057;
-            --color-success: #2d6a4f;
-            --color-warning: #d4a574;
-            --color-error: #d62828;
-            --color-border: #52b788;
             --color-white: #ffffff;
-            --color-bg: #f8fdf7;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-lighter) 100%);
+            background: linear-gradient(135deg, var(--color-lighter) 0%, var(--color-lighter) 100%);
             color: var(--color-text);
             min-height: 100vh;
-            padding: 0;
         }
 
-        /* Header */
         header {
             background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
             color: var(--color-white);
@@ -44,86 +36,23 @@
             border-bottom: 3px solid var(--color-accent);
         }
 
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .logo-icon {
-            font-size: 32px;
-        }
-
-        .tagline {
-            font-size: 12px;
-            opacity: 0.9;
-            margin-top: 4px;
-        }
-
-        .experiment-badge {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        /* Main Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
         }
 
-        .content-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        /* Card Styles */
         .card {
             background: var(--color-white);
             border-radius: 12px;
             padding: 2rem;
             box-shadow: 0 2px 8px rgba(45, 80, 22, 0.1);
             border-left: 4px solid var(--color-secondary);
-            transition: transform 0.2s, box-shadow 0.2s;
+            margin-bottom: 1.5rem;
         }
 
-        .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 16px rgba(45, 80, 22, 0.15);
-        }
-
-        .card h2 {
-            color: var(--color-primary);
-            margin-bottom: 1rem;
-            font-size: 18px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .card-icon {
-            font-size: 24px;
-        }
-
-        /* Input Section */
-        .input-section {
-            grid-column: 1 / -1;
-        }
+        h1 { font-size: 32px; margin-bottom: 0.5rem; }
+        h2 { color: var(--color-primary); font-size: 18px; margin-bottom: 1rem; }
 
         .input-area {
             display: flex;
@@ -131,7 +60,6 @@
             margin-bottom: 1rem;
         }
 
-        input[type="text"],
         textarea {
             flex: 1;
             padding: 12px 16px;
@@ -139,23 +67,16 @@
             border-radius: 8px;
             font-family: inherit;
             font-size: 14px;
-            transition: border-color 0.2s;
             background: var(--color-lighter);
+            min-height: 80px;
         }
 
-        input[type="text"]:focus,
         textarea:focus {
             outline: none;
             border-color: var(--color-secondary);
             background: var(--color-white);
         }
 
-        textarea {
-            min-height: 80px;
-            resize: vertical;
-        }
-
-        /* Button */
         button {
             padding: 12px 32px;
             background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
@@ -165,8 +86,9 @@
             font-size: 14px;
             font-weight: 600;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
             box-shadow: 0 2px 8px rgba(45, 80, 22, 0.2);
+            transition: all 0.2s;
+            height: fit-content;
         }
 
         button:hover {
@@ -174,16 +96,11 @@
             box-shadow: 0 4px 12px rgba(45, 80, 22, 0.3);
         }
 
-        button:active {
-            transform: translateY(0);
-        }
-
         button:disabled {
             opacity: 0.5;
             cursor: not-allowed;
         }
 
-        /* Loading Spinner */
         .spinner {
             display: inline-block;
             width: 16px;
@@ -199,142 +116,50 @@
             to { transform: rotate(360deg); }
         }
 
-        /* Results */
-        .results-section {
-            grid-column: 1 / -1;
+        .error {
+            background: #ffebee;
+            border-left-color: #d32f2f;
+            color: #c62828;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
         }
 
-        .result-card {
+        .success {
             background: var(--color-lighter);
-            border-left: 4px solid var(--color-success);
-            padding: 1.5rem;
+            border-left-color: var(--color-secondary);
+            padding: 1rem;
             border-radius: 8px;
-            margin-bottom: 1.5rem;
+            margin: 1rem 0;
         }
 
         .answer-text {
             font-size: 16px;
             line-height: 1.6;
-            color: var(--color-text);
             margin-bottom: 1rem;
         }
 
         .citations {
             margin-top: 1.5rem;
             padding-top: 1.5rem;
-            border-top: 2px solid var(--color-border);
-        }
-
-        .citations h3 {
-            color: var(--color-primary);
-            font-size: 14px;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            border-top: 2px solid var(--color-secondary);
         }
 
         .citation {
-            background: var(--color-white);
+            background: var(--color-lighter);
             padding: 12px;
             border-left: 3px solid var(--color-accent);
             margin-bottom: 10px;
             border-radius: 4px;
             font-size: 13px;
-            line-height: 1.5;
-            color: var(--color-text-light);
         }
 
-        .citation-source {
-            color: var(--color-secondary);
-            font-weight: 600;
+        .status {
             font-size: 12px;
-            text-transform: uppercase;
-            margin-bottom: 4px;
-        }
-
-        /* Metrics Grid */
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
+            color: #666;
             margin-top: 1rem;
         }
 
-        .metric {
-            background: linear-gradient(135deg, var(--color-light) 0%, var(--color-lighter) 100%);
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-            border: 1px solid var(--color-border);
-        }
-
-        .metric-value {
-            font-size: 28px;
-            font-weight: bold;
-            color: var(--color-primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .metric-label {
-            font-size: 12px;
-            color: var(--color-text-light);
-            text-transform: uppercase;
-        }
-
-        /* Demo Questions */
-        .demo-questions {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-
-        .demo-btn {
-            background: var(--color-lighter);
-            border: 2px solid var(--color-secondary);
-            color: var(--color-primary);
-            padding: 12px 16px;
-            border-radius: 8px;
-            font-size: 13px;
-            cursor: pointer;
-            transition: all 0.2s;
-            font-weight: 600;
-        }
-
-        .demo-btn:hover {
-            background: var(--color-secondary);
-            color: var(--color-white);
-            transform: translateY(-2px);
-        }
-
-        /* Stats */
-        .stats-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .stat {
-            background: var(--color-lighter);
-            padding: 1rem;
-            border-radius: 8px;
-            border-left: 3px solid var(--color-secondary);
-        }
-
-        .stat-number {
-            font-size: 22px;
-            font-weight: bold;
-            color: var(--color-primary);
-        }
-
-        .stat-label {
-            font-size: 12px;
-            color: var(--color-text-light);
-            margin-top: 4px;
-        }
-
-        /* Info Box */
         .info-box {
             background: var(--color-light);
             border-left: 4px solid var(--color-secondary);
@@ -342,14 +167,8 @@
             border-radius: 8px;
             margin: 1rem 0;
             font-size: 13px;
-            line-height: 1.6;
         }
 
-        .info-box strong {
-            color: var(--color-primary);
-        }
-
-        /* Footer */
         footer {
             background: var(--color-primary);
             color: var(--color-white);
@@ -359,289 +178,300 @@
             font-size: 12px;
         }
 
-        footer a {
-            color: var(--color-accent);
-            text-decoration: none;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-            }
-
-            .input-area {
-                flex-direction: column;
-            }
-
-            .metrics-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        /* Tabs */
-        .tabs {
+        .hero {
             display: flex;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid var(--color-light);
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 2rem;
         }
 
-        .tab-btn {
-            background: none;
-            border: none;
-            padding: 12px 20px;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--color-text-light);
-            cursor: pointer;
-            border-bottom: 3px solid transparent;
-            transition: all 0.2s;
+        .hero-copy {
+            max-width: 720px;
+            margin-top: 0.75rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .eyebrow, .metric-label, .system-label {
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-size: 10px;
+            color: #617468;
+            font-weight: 700;
+        }
+
+        .eyebrow { color: #d8e39a; }
+
+        .header-badge {
+            flex: 0 0 auto;
+            border: 1px solid rgba(255,255,255,.25);
+            border-radius: 999px;
+            padding: 0.65rem 1rem;
+            color: #f1f4e9;
+            font-size: 12px;
+        }
+
+        .examples {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .example-button {
+            width: auto;
+            padding: 0.55rem 0.85rem;
+            border: 1px solid #d4ddcf;
+            border-radius: 999px;
+            background: #f7faf5;
+            color: #35533f;
+            font-size: 12px;
             box-shadow: none;
-            margin-bottom: -2px;
         }
 
-        .tab-btn.active {
-            color: var(--color-primary);
-            border-bottom-color: var(--color-secondary);
+        .example-button:hover { background: #eaf2e7; box-shadow: none; }
+
+        .question-meta {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-top: 0.7rem;
+            color: #68756c;
+            font-size: 12px;
         }
 
-        .tab-content {
-            display: none;
+        .system-stats {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.75rem;
+            margin: 1.25rem 0;
         }
 
-        .tab-content.active {
+        .metric-card {
+            padding: 1rem;
+            border: 1px solid #e0e8dc;
+            border-radius: 8px;
+            background: #f8fbf7;
+        }
+
+        .metric-value {
             display: block;
+            margin-top: 0.35rem;
+            color: var(--color-primary);
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        .system-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+            padding: 1rem 0;
+            border-top: 1px solid #e4e9e1;
+            border-bottom: 1px solid #e4e9e1;
+        }
+
+        .system-value {
+            display: block;
+            margin-top: 0.35rem;
+            overflow-wrap: anywhere;
+            color: #263a30;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .system-note {
+            display: block;
+            margin-top: 0.25rem;
+            color: #68756c;
+            font-size: 11px;
+        }
+
+        .source-list {
+            display: grid;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+            list-style: none;
+        }
+
+        .source-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 0.8rem;
+            border: 1px solid #e5e9e2;
+            border-radius: 7px;
+            background: #fbfcfa;
+        }
+
+        .source-title { display: block; color: #30483a; font-weight: 600; }
+        .source-file { display: block; margin-top: 0.25rem; color: #768177; font-size: 11px; overflow-wrap: anywhere; }
+        .source-chunks { flex: 0 0 auto; color: #69766d; font-size: 11px; }
+        .status-ready { color: #2d6a43; font-weight: 700; }
+        .status-error { color: #b3261e; font-weight: 700; }
+
+        @media (max-width: 680px) {
+            header { padding: 1.25rem 0; }
+            .container { padding: 1.25rem; }
+            .hero { display: block; }
+            .header-badge { display: inline-block; margin-top: 1rem; }
+            .input-area { flex-direction: column; }
+            .input-area button { width: 100%; }
+            .system-stats, .system-grid { grid-template-columns: 1fr 1fr; }
+            h1 { font-size: 28px; }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <div class="header-content">
+        <div class="container hero">
             <div>
-                <div class="logo">
-                    <span class="logo-icon">🌿</span>
-                    <div>
-                        <div>EcoRAG</div>
-                        <div class="tagline">Environmental RAG System</div>
-                    </div>
-                </div>
+                <p class="eyebrow">EcoRAG · Environmental evidence</p>
+                <h1>Research, with its sources.</h1>
+                <p class="hero-copy">Ask a question about sustainability research. EcoRAG searches the indexed reports and returns an answer you can verify against the source.</p>
             </div>
-            <div class="experiment-badge">Experiment C - Demo</div>
+            <div class="header-badge">Every answer traced to evidence</div>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <div class="container">
-        <!-- Interactive Query Section -->
-        <div class="card input-section">
-            <h2><span class="card-icon">💬</span> Ask EcoRAG</h2>
-            <form id="questionForm" style="display: contents;">
+    <main class="container">
+        <section class="card">
+            <h2>Ask a research question</h2>
+            <form id="questionForm">
                 <div class="input-area">
-                    <textarea id="question" placeholder="Ask about environmental sustainability, climate action, energy, or green jobs..."></textarea>
+                    <textarea id="question" maxlength="2000" placeholder="What would you like to understand about methane, green jobs, energy systems, or another indexed topic?"></textarea>
+                    <button id="askBtn" type="submit" disabled>Ask EcoRAG</button>
                 </div>
-                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                    <button id="askBtn" type="submit">
-                        <span>Ask</span>
-                    </button>
-                <button type="button" style="background: var(--color-accent); color: var(--color-primary);" onclick="showDemoQuestions()">
-                    Try Demo Questions
-                </button>
-            </div>
+                <div class="question-meta">
+                    <span id="questionCount">0 / 2,000 characters</span>
+                    <span>Ctrl + Enter to submit · first answer may take longer while the model loads</span>
+                </div>
             </form>
-
-            <div id="demoQuestions" style="display: none; margin-top: 1rem;">
-                <p style="font-size: 13px; color: var(--color-text-light); margin-bottom: 1rem;">✨ Click any question to try:</p>
-                <div class="demo-questions">
-                    <button class="demo-btn" onclick="loadQuestion('What is being done to reduce methane emissions by 2030?')">Methane Emissions</button>
-                    <button class="demo-btn" onclick="loadQuestion('How many jobs are in renewable energy?')">Green Jobs</button>
-                    <button class="demo-btn" onclick="loadQuestion('What is steel decarbonization?')">Steel & Cement</button>
-                    <button class="demo-btn" onclick="loadQuestion('What is the role of critical minerals?')">Critical Minerals</button>
-                </div>
+            <div class="examples" aria-label="Example questions">
+                <button class="example-button" type="button" onclick="useExampleQuestion('What strategies reduce methane emissions?')">Methane reduction</button>
+                <button class="example-button" type="button" onclick="useExampleQuestion('How are green jobs defined in the reports?')">Green jobs</button>
+                <button class="example-button" type="button" onclick="useExampleQuestion('What does grid modernization involve?')">Grid modernization</button>
             </div>
-        </div>
+            <div class="status" id="status" aria-live="polite"></div>
+        </section>
 
-        <!-- Results -->
-        <div id="results" class="card results-section" style="display: none;">
-            <div class="tabs">
-                <button class="tab-btn active" onclick="switchTab('answer')">Answer</button>
-                <button class="tab-btn" onclick="switchTab('evidence')">Evidence</button>
-                <button class="tab-btn" onclick="switchTab('metrics')">Metrics</button>
+        <section id="results" class="card" style="display: none;" aria-live="polite">
+            <h2>Answer and evidence</h2>
+            <div id="answerContent"></div>
+        </section>
+
+        <section class="card">
+            <h2>Live system information</h2>
+            <p id="systemDescription">Loading the current EcoRAG configuration…</p>
+            <div class="system-stats">
+                <div class="metric-card"><span class="metric-label">Source documents</span><span class="metric-value" id="documentCount">—</span></div>
+                <div class="metric-card"><span class="metric-label">Indexed passages</span><span class="metric-value" id="chunkCount">—</span></div>
             </div>
-
-            <!-- Answer Tab -->
-            <div id="answer-tab" class="tab-content active">
-                <div id="answerContent"></div>
+            <div class="system-grid">
+                <div><span class="system-label">Language model</span><span class="system-value" id="modelName">Loading…</span><span class="system-note" id="modelState"></span></div>
+                <div><span class="system-label">Embedding model</span><span class="system-value" id="embeddingModel">Loading…</span><span class="system-note" id="embeddingDimension"></span></div>
+                <div><span class="system-label">Runtime</span><span class="system-value" id="runtimeDevice">—</span></div>
+                <div><span class="system-label">Index database</span><span class="system-value" id="databaseName">—</span></div>
             </div>
-
-            <!-- Evidence Tab -->
-            <div id="evidence-tab" class="tab-content">
-                <div id="evidenceContent"></div>
+            <h2 style="margin-top: 1.5rem;">Indexed source documents</h2>
+            <ul id="documentList" class="source-list"><li>Loading source documents…</li></ul>
+            <div class="info-box" style="margin-top: 1.25rem;">
+                <strong>API host:</strong> <code id="apiUrl"></code><br>
+                <strong>Connection:</strong> <span id="connectionStatus">Checking…</span>
             </div>
+        </section>
+    </main>
 
-            <!-- Metrics Tab -->
-            <div id="metrics-tab" class="tab-content">
-                <div id="metricsContent"></div>
-            </div>
-        </div>
-
-        <!-- Overview Cards -->
-        <div class="content-grid">
-            <!-- Key Findings Card -->
-            <div class="card">
-                <h2><span class="card-icon">📊</span> Key Findings</h2>
-                <div class="info-box">
-                    <strong>✅ What Works:</strong><br/>
-                    Perfect answers when evidence exists (100% on sufficient data)
-                </div>
-                <div class="info-box">
-                    <strong>❌ Main Issue:</strong><br/>
-                    Over-answers when evidence is missing (56% when should abstain)
-                </div>
-                <div class="info-box">
-                    <strong>🔗 Secondary Issue:</strong><br/>
-                    Wrong citations in multi-source questions (78% error)
-                </div>
-            </div>
-
-            <!-- Performance Card -->
-            <div class="card">
-                <h2><span class="card-icon">📈</span> Performance</h2>
-                <div class="stats-row">
-                    <div class="stat">
-                        <div class="stat-number">70%</div>
-                        <div class="stat-label">Calibration Accuracy</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">91%</div>
-                        <div class="stat-label">Evidence Coverage</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">76%</div>
-                        <div class="stat-label">Citation Correct</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">27</div>
-                        <div class="stat-label">Questions Tested</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- About Card -->
-            <div class="card">
-                <h2><span class="card-icon">ℹ️</span> About This System</h2>
-                <p style="font-size: 13px; line-height: 1.6; color: var(--color-text-light);">
-                    <strong>EcoRAG</strong> is a Retrieval-Augmented Generation (RAG) system trained on
-                    environmental sustainability documents. It combines semantic search (BGE embeddings),
-                    vector retrieval (Chroma), and language generation (Qwen2.5) to answer questions
-                    about green energy, climate action, and environmental policy.
-                    <br/><br/>
-                    <strong>Experiment C</strong> evaluates the system's ability to ground answers in
-                    retrieved evidence and provide correct citations.
-                </p>
-            </div>
-
-            <!-- Resources Card -->
-            <div class="card">
-                <h2><span class="card-icon">📚</span> Resources</h2>
-                <p style="font-size: 13px; line-height: 1.8;">
-                    📄 <a href="#" style="color: var(--color-secondary); text-decoration: none;">Full Report PDF</a><br/>
-                    📊 <a href="#" style="color: var(--color-secondary); text-decoration: none;">Research Summary</a><br/>
-                    💻 <a href="#" style="color: var(--color-secondary); text-decoration: none;">GitHub Repository</a><br/>
-                    📖 <a href="#" style="color: var(--color-secondary); text-decoration: none;">Experiment Details</a>
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
     <footer>
-        <p>🌿 EcoRAG | Experiment C: Evidence Sufficiency & Citation Evaluation</p>
-        <p style="margin-top: 0.5rem;">Single-reviewer evaluation of 27 environmental questions</p>
-        <p style="margin-top: 0.5rem; font-size: 11px;">Generated: 2026-10-04 | <a href="#">GitHub</a> | <a href="#">Report</a></p>
+        <p>EcoRAG · Environmental research answers grounded in indexed source documents</p>
+        <p style="margin-top: 0.5rem;">System values and source counts are loaded from the live API.</p>
     </footer>
 
     <script>
-        // Demo data (sample results for different questions)
-        const demoResults = {
-            "methane": {
-                question: "What is being done to reduce methane emissions by 2030?",
-                answer: "Multiple international initiatives are underway to reduce methane emissions by 2030. The UN Secretary General's call to action on methane emphasizes rapid deployment of proven solutions, including improved oil and gas practices, coal mine methane capture, and agricultural methane reduction. These actions aim to deliver measurable emission reductions within this decade.",
-                citations: [
-                    { source: "UN SG Call-Action Methane by 2030", text: "Actions to be delivered by 2030 include rapid deployment of proven solutions" },
-                    { source: "GMSR 2025", text: "Methane reduction strategies across sectors including agriculture and energy" }
-                ],
-                confidence: 0.85
-            },
-            "jobs": {
-                question: "How many jobs are in renewable energy?",
-                answer: "The renewable energy sector has created substantial employment opportunities globally. According to recent mapping studies, green and digital energy jobs have grown significantly, with particular concentrations in solar installation, wind energy, energy efficiency retrofitting, and grid modernization roles. The transition to clean energy is generating millions of new jobs worldwide.",
-                citations: [
-                    { source: "Mapping Green & Digital Energy Jobs", text: "Employment trends show significant growth in renewable energy sectors" },
-                    { source: "GMSR 2025", text: "Job creation through green energy transition initiatives" }
-                ],
-                confidence: 0.72
-            },
-            "steel": {
-                question: "What is steel decarbonization?",
-                answer: "Steel decarbonization refers to processes and technologies that reduce greenhouse gas emissions from steel production. This includes transitioning to electric arc furnaces powered by renewable electricity, using hydrogen-based reduction instead of carbon-based methods, and improving energy efficiency in production processes. The goal is to achieve near-zero emissions steel production by 2050.",
-                citations: [
-                    { source: "Definitions for Low-Emissions Steel/Cement", text: "Near-zero emissions steel production methodologies and measurement standards" },
-                    { source: "GMSR 2025", text: "Steel industry decarbonization pathways and technology adoption" }
-                ],
-                confidence: 0.78
-            },
-            "minerals": {
-                question: "What is the role of critical minerals?",
-                answer: "Critical minerals are essential elements required for clean energy technologies, including lithium, cobalt, and rare earth elements used in batteries, solar panels, and wind turbines. The transition to renewable energy depends heavily on securing stable supply chains for these minerals. Strategic mining and recycling of critical minerals are key to enabling global decarbonization efforts.",
-                citations: [
-                    { source: "Critical Minerals Review of Norway 2026", text: "Role of critical minerals in clean energy infrastructure and supply chain security" },
-                    { source: "GMSR 2025", text: "Mineral requirements for renewable energy deployment at scale" }
-                ],
-                confidence: 0.80
-            },
-            "grid": {
-                question: "How should grids be modernized for electricity?",
-                answer: "Modern grids require smart technologies to manage variable renewable energy sources, including advanced forecasting, real-time demand management, and energy storage systems. Grid modernization involves upgrading infrastructure for bidirectional power flow, integrating distributed generation, and using digital controls to balance supply and demand dynamically. This enables reliable and efficient delivery of clean electricity.",
-                citations: [
-                    { source: "Modernising Grids in the Age of Electricity", text: "Smart grid technologies and infrastructure modernization requirements" },
-                    { source: "Managing Seasonal Variability of Electricity", text: "Solutions for balancing variable renewable energy through grid optimization" }
-                ],
-                confidence: 0.76
+        const API_URL = '/api/ask';
+
+        window.addEventListener('load', () => {
+            document.getElementById('apiUrl').textContent = window.location.origin;
+            document.getElementById('questionForm').addEventListener('submit', askQuestion);
+            document.getElementById('question').addEventListener('input', updateQuestionCount);
+            updateQuestionCount();
+            checkConnection();
+            loadSystemInfo();
+        });
+
+        function updateQuestionCount() {
+            const question = document.getElementById('question');
+            document.getElementById('questionCount').textContent = `${question.value.length.toLocaleString()} / 2,000 characters`;
+            document.getElementById('askBtn').disabled = !question.value.trim();
+        }
+
+        function useExampleQuestion(value) {
+            document.getElementById('question').value = value;
+            updateQuestionCount();
+            document.getElementById('question').focus();
+        }
+
+        async function checkConnection() {
+            const status = document.getElementById('connectionStatus');
+            try {
+                const response = await fetch('/api/health');
+                if (!response.ok) throw new Error(`Health check returned ${response.status}`);
+                const health = await response.json();
+                status.textContent = health.ecorag_ready ? 'Ready for questions' : 'API online · retrieval not ready';
+                status.className = health.ecorag_ready ? 'status-ready' : 'status-error';
+            } catch (error) {
+                status.textContent = 'Unavailable · could not reach the API';
+                status.className = 'status-error';
             }
-        };
+        }
 
-        function getMatchingResult(question) {
-            const q = question.toLowerCase();
+        async function loadSystemInfo() {
+            try {
+                const response = await fetch('/api/info');
+                if (!response.ok) throw new Error(`System information returned ${response.status}`);
+                const info = await response.json();
+                document.getElementById('systemDescription').textContent = info.description || 'EcoRAG system information';
+                document.getElementById('documentCount').textContent = Number(info.document_count ?? 0).toLocaleString();
+                document.getElementById('chunkCount').textContent = Number(info.chunk_count ?? 0).toLocaleString();
+                document.getElementById('modelName').textContent = info.model || 'Not reported';
+                document.getElementById('modelState').textContent = `${info.model_loaded ? 'Loaded' : 'Loads on first question'}${info.device ? ` · ${info.device}` : ''}`;
+                document.getElementById('embeddingModel').textContent = info.embedding_model || 'Not reported';
+                document.getElementById('embeddingDimension').textContent = info.embedding_dimension ? `${info.embedding_dimension} dimensions` : 'Dimension unavailable';
+                document.getElementById('runtimeDevice').textContent = info.device || 'Not reported';
+                document.getElementById('databaseName').textContent = info.database || 'Not reported';
 
-            // Try to match question to demo results
-            if (q.includes('methane') || q.includes('emissions') || q.includes('2030')) {
-                return demoResults.methane;
-            } else if (q.includes('job') || q.includes('employment') || q.includes('renewable energy')) {
-                return demoResults.jobs;
-            } else if (q.includes('steel') || q.includes('decarbonization') || q.includes('cement')) {
-                return demoResults.steel;
-            } else if (q.includes('mineral') || q.includes('critical') || q.includes('lithium') || q.includes('cobalt')) {
-                return demoResults.minerals;
-            } else if (q.includes('grid') || q.includes('electricity') || q.includes('power')) {
-                return demoResults.grid;
-            } else {
-                // If no match, return a generic response
-                return {
-                    question: question,
-                    answer: "This is a demo of the EcoRAG system. The actual system would connect to your knowledge base and retrieve relevant information. Try asking about: methane emissions, green jobs, steel decarbonization, critical minerals, or grid modernization.",
-                    citations: [
-                        { source: "Demo Mode", text: "This is demonstration content. Connect to a real backend for actual answers." }
-                    ],
-                    confidence: 0.50
-                };
+                const list = document.getElementById('documentList');
+                list.replaceChildren();
+                const documents = Array.isArray(info.documents) ? info.documents : [];
+                if (!documents.length) {
+                    const empty = document.createElement('li');
+                    empty.textContent = 'No source documents are currently listed in the index.';
+                    list.appendChild(empty);
+                    return;
+                }
+                for (const documentInfo of documents) {
+                    const item = document.createElement('li');
+                    item.className = 'source-item';
+                    const details = document.createElement('div');
+                    const title = document.createElement('span');
+                    title.className = 'source-title';
+                    title.textContent = documentInfo.title || documentInfo.source_filename || 'Untitled source';
+                    const filename = document.createElement('span');
+                    filename.className = 'source-file';
+                    filename.textContent = documentInfo.source_filename || '';
+                    details.append(title, filename);
+                    const count = document.createElement('span');
+                    count.className = 'source-chunks';
+                    count.textContent = `${Number(documentInfo.chunk_count ?? 0).toLocaleString()} passages`;
+                    item.append(details, count);
+                    list.appendChild(item);
+                }
+            } catch (error) {
+                document.getElementById('systemDescription').textContent = 'Live system information is temporarily unavailable.';
+                document.getElementById('documentList').replaceChildren();
+                const item = document.createElement('li');
+                item.textContent = 'Could not load the indexed source list.';
+                document.getElementById('documentList').appendChild(item);
             }
         }
 
@@ -654,158 +484,84 @@
             const status = document.getElementById('status');
             btn.disabled = true;
             btn.innerHTML = '<span class="spinner"></span>Searching sources…';
-            status.textContent = 'Retrieving evidence...';
+            status.textContent = 'Retrieving evidence. The first answer may take longer while the model loads.';
             status.style.color = '#52665a';
 
             try {
-                const response = await fetch('/api/ask', {
+                const response = await fetch(API_URL, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ question })
                 });
                 const data = await response.json();
                 if (!response.ok || data.error) throw new Error(data.error || `Request failed (${response.status})`);
-                showResults({
-                    question: data.question,
-                    answer: data.answer,
-                    citations: data.citations || [],
-                    confidence: data.confidence || 0.75
-                });
+                showResults(data);
                 const citationCount = Array.isArray(data.citations) ? data.citations.length : 0;
                 status.textContent = `Answer returned with ${citationCount} source ${citationCount === 1 ? 'citation' : 'citations'}.`;
                 status.style.color = '#2d5016';
+                void loadSystemInfo();
             } catch (error) {
-                status.textContent = 'The question could not be answered. Make sure the API is running: python ecorag_api_production.py';
+                showError(error instanceof Error ? error.message : 'Could not connect to the EcoRAG API.');
+                status.textContent = 'The question could not be answered.';
                 status.style.color = '#b3261e';
             } finally {
-                btn.innerHTML = 'Ask';
+                btn.innerHTML = 'Ask EcoRAG';
                 btn.disabled = !document.getElementById('question').value.trim();
             }
         }
 
-        function loadQuestion(q) {
-            document.getElementById('question').value = q;
-            document.getElementById('demoQuestions').style.display = 'none';
-            askQuestion();
+        function showError(message) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.style.display = 'block';
+            resultsDiv.innerHTML = `
+                <h2>Error</h2>
+                <div class="error">
+                    <strong>Connection Error:</strong><br/>
+                    ${escapeHtml(message)}<br/><br/>
+                </div>
+            `;
+            resultsDiv.scrollIntoView({ behavior: 'smooth' });
         }
 
-        function showDemoQuestions() {
-            const demoDiv = document.getElementById('demoQuestions');
-            demoDiv.style.display = demoDiv.style.display === 'none' ? 'block' : 'none';
+        function escapeHtml(value) {
+            return String(value ?? '').replace(/[&<>"']/g, (char) => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;'
+            })[char]);
         }
 
         function showResults(result) {
             const resultsDiv = document.getElementById('results');
             resultsDiv.style.display = 'block';
 
-            // Answer tab
-            document.getElementById('answerContent').innerHTML = `
-                <div class="result-card">
-                    <div class="answer-text">${result.answer}</div>
-                    <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--color-text-light);">
-                        <span>Confidence: </span>
-                        <div style="width: 100px; height: 8px; background: var(--color-light); border-radius: 4px; overflow: hidden;">
-                            <div style="width: ${result.confidence * 100}%; height: 100%; background: var(--color-secondary);"></div>
+            const citations = Array.isArray(result.citations) ? result.citations : [];
+            resultsDiv.innerHTML = `
+                <h2>Answer from EcoRAG</h2>
+                <div class="answer-text">${escapeHtml(result.answer)}</div>
+                <p class="status">Generated by ${escapeHtml(result.model || 'EcoRAG')} · ${citations.length} source ${citations.length === 1 ? 'citation' : 'citations'}</p>
+                <div class="citations">
+                    <h3 style="color: var(--color-primary); margin-bottom: 0.5rem;">Sources and citations</h3>
+                    ${citations.length ? citations.map(c => `
+                        <div class="citation">
+                            <strong>${escapeHtml(c.source || c.document || 'Source document')}</strong><br/>
+                            ${escapeHtml(c.text || '')}
+                            ${(c.document || c.section || c.pages) ? `<p class="status">${[c.document, c.section ? `Section: ${c.section}` : '', c.pages ? `Pages: ${c.pages}` : ''].filter(Boolean).map(escapeHtml).join(' · ')}</p>` : ''}
                         </div>
-                        <span>${(result.confidence * 100).toFixed(0)}%</span>
-                    </div>
-                    <div class="citations">
-                        <h3>🔗 Sources & Citations</h3>
-                        ${result.citations.map(c => `
-                            <div class="citation">
-                                <div class="citation-source">${c.source}</div>
-                                <div>${c.text}</div>
-                            </div>
-                        `).join('')}
-                    </div>
+                    `).join('') : '<p>No source citations were returned for this answer.</p>'}
                 </div>
             `;
 
-            // Evidence tab
-            document.getElementById('evidenceContent').innerHTML = `
-                <div class="info-box">
-                    <strong>Retrieved Evidence:</strong><br/>
-                    Top 5 most relevant passages from the knowledge base were used to generate this answer.
-                </div>
-                <div class="stats-row">
-                    <div class="stat">
-                        <div class="stat-number">5</div>
-                        <div class="stat-label">Retrieved Chunks</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">78%</div>
-                        <div class="stat-label">Relevance Score</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">2</div>
-                        <div class="stat-label">Sources Used</div>
-                    </div>
-                </div>
-            `;
-
-            // Metrics tab
-            document.getElementById('metricsContent').innerHTML = `
-                <div class="metrics-grid">
-                    <div class="metric">
-                        <div class="metric-value">✅</div>
-                        <div class="metric-label">Citation Present</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-value">91%</div>
-                        <div class="metric-label">Evidence Coverage</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-value">0.85</div>
-                        <div class="metric-label">Confidence Score</div>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-value">✓</div>
-                        <div class="metric-label">Grounded</div>
-                    </div>
-                </div>
-
-                <div class="info-box" style="margin-top: 1rem;">
-                    <strong>System Metrics:</strong><br/>
-                    <strong>S1 - Retrieval:</strong> Required evidence was in top-5<br/>
-                    <strong>S2 - Coverage:</strong> 91% of retrieved evidence used<br/>
-                    <strong>S3 - Justification:</strong> Claims supported by citations<br/>
-                    <strong>S4 - Calibration:</strong> Appropriate confidence level
-                </div>
-            `;
-
-            resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            resultsDiv.scrollIntoView({ behavior: 'smooth' });
         }
 
-        function switchTab(tabName) {
-            // Hide all tabs
-            document.querySelectorAll('.tab-content').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-
-            // Show selected tab
-            document.getElementById(tabName + '-tab').classList.add('active');
-            event.target.classList.add('active');
-        }
-
-        // Attach form submit listener
-        window.addEventListener('load', () => {
-            document.getElementById('questionForm').addEventListener('submit', askQuestion);
-            document.getElementById('askBtn').disabled = true;
-        });
-
-        // Allow Ctrl+Enter to submit
         document.getElementById('question').addEventListener('keydown', (e) => {
             if (e.key === 'Enter' && e.ctrlKey) {
-                document.getElementById('questionForm').dispatchEvent(new Event('submit'));
+                e.preventDefault();
+                document.getElementById('questionForm').requestSubmit();
             }
-        });
-
-        // Enable button only when question has text
-        document.getElementById('question').addEventListener('input', () => {
-            document.getElementById('askBtn').disabled = !document.getElementById('question').value.trim();
         });
     </script>
 </body>
