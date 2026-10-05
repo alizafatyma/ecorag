@@ -29,7 +29,7 @@ CORS(app)
 def serve_frontend():
     """Serve the interactive web interface"""
     try:
-        return send_file('ecorag_frontend_live.html')
+        return send_file('ecorag_frontend.html')
     except:
         return '''
         <!DOCTYPE html>
