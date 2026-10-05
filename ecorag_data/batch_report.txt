@@ -1,0 +1,82 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Found 9 PDF(s) in ecorag_data\pdfs/
+
+[1/9] CriticalMineralsReviewofNorway2026.pdf
+[2/9] Definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies.pdf
+[3/9] GMSR_2025.pdf
+[4/9] ManagingtheSeasonalVariabilityofElectricityDemandandSupply.pdf
+[5/9] ManufacturingandTradeModelDocumentation2026.pdf
+[6/9] MappingGreenandDigitalEnergyJobs.pdf
+[7/9] ModernisingGridsintheAgeofElectricity.pdf
+[8/9] ReducingtheCostofCapital.pdf
+[9/9] unsg_call-action-methane_by-2030-epublication.pdf
+
+==============================================================================
+EcoRAG BATCH CHUNKING REPORT
+==============================================================================
+
+CriticalMineralsReviewofNorway2026.pdf  ->  chunked
+   document_id: criticalmineralsreviewofnorway2026
+   title:       Critical Minerals Review of Norway 2026
+   pages 52 | chunks 79 {'front_matter': 2, 'content': 71, 'table': 6}
+   tokens min/avg/max 78/283/422 | > 512: 0 | mid-sentence: 0 | multi-page: 35 | footnotes: 0
+
+Definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies.pdf  ->  chunked
+   document_id: definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies
+   title:       Definitions for Near-Zero and Low-Emissions Steel and Cement
+   pages 34 | chunks 55 {'front_matter': 3, 'content': 45, 'table': 1, 'references': 6}
+   tokens min/avg/max 63/289/429 | > 512: 0 | mid-sentence: 0 | multi-page: 22 | footnotes: 10
+
+GMSR_2025.pdf  ->  chunked
+   document_id: gmsr-2025
+   title:       GLOBAL METHANE STATUS REPORT 2025
+   pages 147 | chunks 320 {'front_matter': 11, 'table': 34, 'content': 196, 'references': 79}
+   tokens min/avg/max 19/306/449 | > 512: 0 | mid-sentence: 0 | multi-page: 79 | footnotes: 31
+
+ManagingtheSeasonalVariabilityofElectricityDemandandSupply.pdf  ->  chunked
+   document_id: managingtheseasonalvariabilityofelectricitydemandandsupply
+   title:       Managing the Seasonal Variability of Electricity Demand and Supply
+   pages 94 | chunks 104 {'front_matter': 2, 'content': 100, 'references': 2}
+   tokens min/avg/max 53/301/429 | > 512: 0 | mid-sentence: 1 | multi-page: 57 | footnotes: 2
+
+ManufacturingandTradeModelDocumentation2026.pdf  ->  chunked
+   document_id: manufacturingandtrademodeldocumentation2026
+   title:       Manufacturing and Trade Model Documentation 2026
+   pages 43 | chunks 73 {'front_matter': 2, 'content': 53, 'table': 17, 'references': 1}
+   tokens min/avg/max 58/292/427 | > 512: 0 | mid-sentence: 6 | multi-page: 24 | footnotes: 6
+
+MappingGreenandDigitalEnergyJobs.pdf  ->  chunked
+   document_id: mappinggreenanddigitalenergyjobs
+   title:       Mapping Green and Digital Energy Jobs
+   pages 130 | chunks 193 {'front_matter': 6, 'content': 136, 'table': 49, 'references': 2}
+   tokens min/avg/max 41/244/443 | > 512: 0 | mid-sentence: 2 | multi-page: 54 | footnotes: 5
+
+ModernisingGridsintheAgeofElectricity.pdf  ->  chunked
+   document_id: modernisinggridsintheageofelectricity
+   title:       Modernising Grids in the Age of Electricity
+   pages 94 | chunks 185 {'front_matter': 7, 'content': 152, 'table': 23, 'references': 3}
+   tokens min/avg/max 72/259/434 | > 512: 0 | mid-sentence: 4 | multi-page: 43 | footnotes: 12
+
+ReducingtheCostofCapital.pdf  ->  chunked
+   document_id: reducingthecostofcapital
+   title:       Reducing the Cost of Capital
+   pages 89 | chunks 166 {'front_matter': 5, 'content': 142, 'table': 7, 'references': 12}
+   tokens min/avg/max 18/282/433 | > 512: 0 | mid-sentence: 1 | multi-page: 82 | footnotes: 5
+
+unsg_call-action-methane_by-2030-epublication.pdf  ->  chunked
+   document_id: unsg-call-action-methane-by-2030-epublication
+   title:       The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030
+   pages 28 | chunks 67 {'front_matter': 3, 'content': 55, 'table': 2, 'references': 7}
+   tokens min/avg/max 48/283/453 | > 512: 0 | mid-sentence: 0 | multi-page: 12 | footnotes: 99
+
+------------------------------------------------------------------------------
+PDFs found:                 9
+Documents in the dataset:   9  (9 chunked now, 0 unchanged)
+Failed / skipped PDFs:      0
+Total chunks:               1242  {'front_matter': 41, 'content': 950, 'table': 139, 'references': 112}
+Tokens per chunk:           min 18, avg 282, max 453
+Chunks > 512 tokens:         0
+IDs globally unique:        YES
+
+Per-document chunk files:   ecorag_data\chunks/
+Combined JSON file:         ecorag_data\all_chunks.json

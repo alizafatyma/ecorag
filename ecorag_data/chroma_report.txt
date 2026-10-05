@@ -1,0 +1,108 @@
+Loaded 1242 records and (1242, 384) embeddings (BAAI/bge-small-en-v1.5, 9 documents)
+Added 1242 chunks to collection 'ecorag_knowledge_base' in ecorag_data\chroma/
+
+======================================================================
+EcoRAG CHROMA BUILD REPORT
+======================================================================
+Database:    ecorag_data\chroma/   collection: ecorag_knowledge_base
+Count:       1242 (expected 1242); after reopening: 1242
+Distance:    cosine   |   embedding model: BAAI/bge-small-en-v1.5 (384 dims)
+  [OK] count matches (1 per chunk)
+  [OK] stored IDs unique and complete
+  [OK] known IDs retrievable
+  [OK] documents and metadata present
+  [OK] stored vectors = saved embeddings
+  [OK] reopened database count matches
+Known IDs retrieved:
+  criticalmineralsreviewofnorway2026::0000  | Critical Minerals Review of Norway 2026 | pages 2 | front_matter
+  manufacturingandtrademodeldocumentation2026::0063  | Manufacturing and Trade Model Documentation 2 | pages 38 | content
+  unsg-call-action-methane-by-2030-epublication::0066  | The Secretary‑General’s call to action on met | pages 26 | references
+
+======================================================================
+RETRIEVAL TESTS (top results, no LLM)
+======================================================================
+
+Q: What share of global anthropogenic methane emissions comes from agriculture?
+  1. gmsr-2025::0038   similarity 0.850 (distance 0.150)
+     GLOBAL METHANE STATUS REPORT 2025 | Executive Summary › The Agricultural Sector | pages 24,25 | content
+     "The Agricultural Sector The agricultural sector is the largest source of anthropogenic methane emissions. Emissions vary by region, with the G20+ group of countries responsible for 61 per cent of agri..."
+  2. gmsr-2025::0163   similarity 0.844 (distance 0.156)
+     GLOBAL METHANE STATUS REPORT 2025 | Global Outlook of Methane Policies and Measures › 3.5.1.1 Agricultural methane emissions: status, trends and mitigation opportunities | pages 86,87 | content
+     "3.5.1.1 Agricultural methane emissions: status, trends and mitigation opportunities In 2020, agriculture was the largest source of global biogenic methane emissions, responsible for 146 Mt per year or..."
+  3. gmsr-2025::0191   similarity 0.831 (distance 0.169)
+     GLOBAL METHANE STATUS REPORT 2025 | Observed Emissions and the Role of Empirical Data › 4.2.1 Global atmospheric methane concentrations | pages 100 | table
+     "|Major anthropogenic source|2030 methane emissions Mt/yr| |---|---| |Livestock and manure|117 [114–124]| |Rice|32 [29–37]| |Landfills and Wastewater|71 [60–84]| |Coal mining|41 [38–43]| |Oil and gas|7..."
+  4. unsg-call-action-methane-by-2030-epublication::0043   similarity 0.825 (distance 0.175)
+     The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030 | 5. Three sectors, nine actions by 2030 › 5.2 METHANE MITIGATION ACTIONS IN THE AGRICULTURE SECTOR | pages 21 | content
+     "5.2 METHANE MITIGATION ACTIONS IN THE AGRICULTURE SECTOR The agriculture sector is the biggest single contributor to anthropogenic methane emissions, accounting for 42 per cent of the global total. An..."
+  5. gmsr-2025::0161   similarity 0.816 (distance 0.184)
+     GLOBAL METHANE STATUS REPORT 2025 | Global Outlook of Methane Policies and Measures › 3.5 The agriculture sector / Key messages | pages 85 | content
+     "3.5 The agriculture sector Key messages - ‣ Agriculture is the largest source of global anthropogenic methane emissions, accounting for almost 42 per cent in 2020, with livestock and rice cultivation ..."
+
+Q: How many methane alerts did the satellite-based Methane Alert and Response System send, and how often do operators respond?
+  1. gmsr-2025::0194   similarity 0.791 (distance 0.209)
+     GLOBAL METHANE STATUS REPORT 2025 | Observed Emissions and the Role of Empirical Data › 4.3 Successful implementation of measurement-based monitoring / 4.3.1 The International Methane Emissions Observatory’s Methane Alert and Response System | pages 101 | content
+     "4.3 Successful implementation of measurement-based monitoring 4.3.1 The International Methane Emissions Observatory’s Methane Alert and Response System Satellites provide an important measurement-base..."
+  2. unsg-call-action-methane-by-2030-epublication::0031   similarity 0.783 (distance 0.217)
+     The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030 | 5. Three sectors, nine actions by 2030 › Deploy and respond to measurement, monitoring and detection technologies | pages 15 | content
+     "Full implementation of the Maximum Technically Feasible Reduction (MTFR) scenario, aligned with the GMP target, could reduce emissions by 78 per cent in 2030 compared to 2030 projected emissions under..."
+  3. unsg-call-action-methane-by-2030-epublication::0006   similarity 0.732 (distance 0.268)
+     The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030 | Executive summary | pages 5 | content
+     "Reducing methane from coal mining represents an important and often overlooked opportunity to deliver significant emission reductions in the near term. At the same time, a methane data revolution is t..."
+  4. unsg-call-action-methane-by-2030-epublication::0032   similarity 0.723 (distance 0.277)
+     The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030 | 5. Three sectors, nine actions by 2030 › Box 2 Positive impacts of responding to MARS | pages 16 | content
+     "Box 2 Positive impacts of responding to MARS In Algeria and Nigeria, MARS notifications and engagement led to direct action from governments and oil and gas companies. In Algeria, the annual avoided e..."
+  5. unsg-call-action-methane-by-2030-epublication::0038   similarity 0.691 (distance 0.309)
+     The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030 | 5. Three sectors, nine actions by 2030 › Box 3 Industry and data | pages 19 | content
+     "Box 3 Industry and data Due to the voluntary nature of global agreements, fossil fuel operators and private data providers retain close control over many of the inputs necessary for methane accounting..."
+
+Q: What are the main challenges in modernising electricity grids?
+  1. modernisinggridsintheageofelectricity::0033   similarity 0.810 (distance 0.190)
+     Modernising Grids in the Age of Electricity | Chapter 1. The need for modern grids › What this report sets out to answer | pages 20 | content
+     "What this report sets out to answer This chapter has set out the challenge and the opportunity: electricity demand is rising rapidly, grid expansion alone cannot keep pace, meaningful untapped capacit..."
+  2. modernisinggridsintheageofelectricity::0015   similarity 0.809 (distance 0.191)
+     Modernising Grids in the Age of Electricity | Chapter 1. The need for modern grids › Demand growth and the need for grid expansion to 2035 in the Current Policies Scenario | pages 12 | content
+     "Chapter 1. The need for modern grids Demand growth and the need for grid expansion to 2035 in the Current Policies Scenario Sources: IEA (2026), Electricity; IEA (2025), World Energy Outlook. Where th..."
+  3. modernisinggridsintheageofelectricity::0014   similarity 0.807 (distance 0.193)
+     Modernising Grids in the Age of Electricity | Chapter 1. The need for modern grids › Grids in the Age of Electricity | pages 11,12 | content
+     "Grids in the Age of Electricity The grid is the critical enabling infrastructure on which the energy transition depends for security, decarbonisation and affordability, as economies around the world i..."
+  4. modernisinggridsintheageofelectricity::0013   similarity 0.806 (distance 0.194)
+     Modernising Grids in the Age of Electricity | Chapter 1. The need for modern grids | pages 11 | content
+     "Chapter 1. The need for modern grids Chapter 1. The need for modern grids This chapter sets the scene: it explains why, as electricity demand is rising faster than grids can be expanded, this creates ..."
+  5. modernisinggridsintheageofelectricity::0027   similarity 0.798 (distance 0.202)
+     Modernising Grids in the Age of Electricity | Chapter 1. The need for modern grids › Making better use of the grid across planning and operational timeframes | pages 18 | table
+     "Making better use of the grid across planning and operational timeframes ||Long-term planning and connection studies|Operational planning (from weeks ahead to day-ahead)|Real-time operation| |---|---|..."
+
+Q: How can the cost of capital for clean energy projects in emerging and developing economies be reduced?
+  1. reducingthecostofcapital::0043   similarity 0.835 (distance 0.165)
+     Reducing the Cost of Capital | 1.2 The cost of capital › Box 1.5 ⊳ What difference would a lower cost of capital make for the overall cost of EMDE energy transitions? | pages 26,27 | content
+     "Box 1.5 ⊳ What difference would a lower cost of capital make for the overall cost of EMDE energy transitions? Efforts to reduce the cost of capital for clean energy projects in EMDE can facilitate the..."
+  2. reducingthecostofcapital::0059   similarity 0.829 (distance 0.171)
+     Reducing the Cost of Capital | 2.1 Introduction | pages 34 | content
+     "2.1 Introduction Reducing the cost of capital for clean energy projects in emerging market and developing economies (EMDE) will mean addressing risks across various parts of the energy economy, for pr..."
+  3. reducingthecostofcapital::0018   similarity 0.821 (distance 0.179)
+     Reducing the Cost of Capital | 1.1 The clean energy investment gap | pages 13 | content
+     "“Building on the IEA-IFC report to the Summit on “Scaling up Private Finance for Clean Energy in Emerging and Developing Countries”, the IEA should make recommendations on how to bring down the cost o..."
+  4. reducingthecostofcapital::0005   similarity 0.820 (distance 0.180)
+     Reducing the Cost of Capital | Executive summary | pages 7 | content
+     "Executive summary Clean energy investment in most emerging and developing economies has yet to take off: A high cost of capital is a major reason why How emerging market and developing economies (EMDE..."
+  5. reducingthecostofcapital::0016   similarity 0.820 (distance 0.180)
+     Reducing the Cost of Capital | Chapter 1: Unlocking clean energy investment › SUMMARY | pages 11 | content
+     "- Mobilising private finance at the scale needed will require at least a tripling in international concessional funds to help improve the risk return profile of clean energy projects across the electr..."
+
+Q: How are near-zero emissions steel and cement defined?
+  1. definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0016   similarity 0.869 (distance 0.131)
+     Definitions for Near-Zero and Low-Emissions Steel and Cement | 2. Principles for definitions › Principles for near-zero emissions definitions | pages 14 | content
+     "- Globally consistent. The emissions threshold applies regardless of where the steel or cement is produced or consumed. This enables clear communication and a consistent signal across global markets. ..."
+  2. definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0001   similarity 0.862 (distance 0.138)
+     Definitions for Near-Zero and Low-Emissions Steel and Cement | Acknowledgements | pages 3 | front_matter
+     "Acknowledgements Definitions for near-zero and low-emissions steel and cement, and underlying emissions measurement methodologies: Summary of emerging understandings was prepared by the Energy Technol..."
+  3. definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0003   similarity 0.862 (distance 0.138)
+     Definitions for Near-Zero and Low-Emissions Steel and Cement | Executive Summary › Definitions can provide a common language to help accelerate the net zero transition in industry | pages 6 | content
+     "Executive Summary Definitions can provide a common language to help accelerate the net zero transition in industry A common global understanding on definitions for near-zero emissions and low-emission..."
+  4. definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0023   similarity 0.862 (distance 0.138)
+     Definitions for Near-Zero and Low-Emissions Steel and Cement | 3. Emerging common ground on near-zero emissions definitions | pages 17,18 | content
+     "3. Emerging common ground on near-zero emissions definitions The IEA Secretariat has defined near-zero emissions thresholds with the aforementioned principles as a guide. These were recognised in the ..."
+  5. definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0005   similarity 0.859 (distance 0.141)
+     Definitions for Near-Zero and Low-Emissions Steel and Cement | Executive Summary › Common understanding is emerging on principles for definitions and near-zero emissions thresholds | pages 7 | content
+     "A strong global common understanding is emerging around near-zero emissions threshold values for steel and cement among major proposals to date. In 2022, the IEA Secretariat derived near-zero emission..."

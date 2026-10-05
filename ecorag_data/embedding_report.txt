@@ -1,0 +1,40 @@
+
+======================================================================
+EcoRAG EMBEDDING REPORT
+======================================================================
+Model:                        BAAI/bge-small-en-v1.5
+Model maximum input length:   512 tokens
+Documents processed:          9
+Chunks processed:             1242
+Chunks per document:
+     79  criticalmineralsreviewofnorway2026  (CriticalMineralsReviewofNorway2026.pdf)
+     55  definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies  (Definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies.pdf)
+    320  gmsr-2025  (GMSR_2025.pdf)
+    104  managingtheseasonalvariabilityofelectricitydemandandsupply  (ManagingtheSeasonalVariabilityofElectricityDemandandSupply.pdf)
+     73  manufacturingandtrademodeldocumentation2026  (ManufacturingandTradeModelDocumentation2026.pdf)
+    193  mappinggreenanddigitalenergyjobs  (MappingGreenandDigitalEnergyJobs.pdf)
+    185  modernisinggridsintheageofelectricity  (ModernisingGridsintheAgeofElectricity.pdf)
+    166  reducingthecostofcapital  (ReducingtheCostofCapital.pdf)
+     67  unsg-call-action-methane-by-2030-epublication  (unsg_call-action-methane_by-2030-epublication.pdf)
+Chunk types:                  {'front_matter': 41, 'content': 950, 'table': 139, 'references': 112}
+Embedding dimension:          384
+Embedding array shape:        (1242, 384)  (dtype float32)
+Tokens per chunk:             min 20, avg 284, max 455
+Chunks exceeding the limit:   0
+Missing/invalid embeddings:   0
+IDs globally unique:          YES (1242 unique IDs for 1242 chunks)
+Rows <-> metadata aligned:    YES (re-embedded rows [0, 621, 1241] match the saved vectors)
+
+Example record:
+  row 20  id: criticalmineralsreviewofnorway2026::0020
+  Critical Minerals Review of Norway 2026 | Governance and policy › Prioritisation and recommendations for permitting process for mining projects / Decision body: | pages [18, 19] | content
+  text: Prioritisation and recommendations for permitting process for mining projects
+
+Decision body:
+
+Directorate of Mining with the Commissioner of Mines at Svalbard (under Minerals Act)
+
+Municipalities (un...
+  embedding[:8]: [-0.0234, 0.0091, -0.0112, -0.0339, 0.0023, 0.0285, -0.025, -0.0444]
+
+Saved to ecorag_data\embeddings/: embeddings.npy, records.jsonl, manifest.json

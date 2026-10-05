@@ -1,0 +1,131 @@
+EcoRAG – Experiment B: FINAL REPORT (model size, prompt held fixed)
+(supersedes the draft rag_experiment_B_comparison.txt, which is kept unchanged for the record)
+
+RESEARCH QUESTION
+Does a larger model improve citation correctness and factual completeness, or does it mainly improve citation
+coverage while attribution errors remain?
+
+DESIGN
+Runs compared: v2 (1.5B, v2 prompt) · v3 = Experiment A (1.5B, v3 prompt) · v3-3B = Experiment B (3B, v3 prompt).
+Experiment B changed ONLY the model (Qwen2.5-1.5B-Instruct -> Qwen2.5-3B-Instruct). Held constant and verified:
+6 questions; top-5 retrieved chunks (ids, texts and full v3 prompt identical to Experiment A for all 6 questions;
+chunk ids identical across v2, v3 and v3-3B); evidence format; greedy decoding, bf16, CPU, max 400 new tokens;
+ecorag_ask.py and ecorag_verify.py (fingerprints unchanged); scoring method.
+
+METRIC FAMILIES (kept separate, never combined into one score)
+1 Citation coverage      - is a citation present on a factual claim?
+2 Citation correctness   - does the cited passage support that claim?  Two measurements:
+    2a Verifier (V)       deterministic, unchanged; "supported" = key numbers + >=60% content words in the cited
+                          source = POTENTIALLY supported (word level, not meaning)
+    2b Manual review (M)  every cited claim checked by hand; each decision recorded with an evidence phrase that is
+                          searched in all 5 sources (rag_manual_review.json, ecorag_manual_review.py)
+3 Factual accuracy & key-fact completeness - required facts present (same checklist as every run); date/scope errors
+4 Abstention             - does the model decline when the evidence does not cover the question (Q6)?
+5 Format compliance      - citation format, 8-line limit, 400-token cut-off (rules of the v3 prompt)
+6 Evidence sufficiency   - does the retrieved evidence collectively justify the answer?  NOT MEASURED (Experiment C)
+
+RESULTS (rebuilt from the raw answer files by ecorag_compare_runs.py; the unchanged verifier re-run on the raw
+answers reproduces every stored verification file exactly)
+
+                                             v2           v3        v3-3B
+  model / prompt                        1.5B / v2    1.5B / v3     3B / v3
+1 CITATION COVERAGE
+  factual claims                             21           15           32
+  claims with a citation             3/21 (14%)  14/15 (93%)  31/32 (97%)
+  uncited, a source matches                  17            1            1
+  uncited, matching no source                 1            0            0
+2a CITATION CORRECTNESS - VERIFIER
+  potentially supported                       2            6           25
+  partially supported                         0            1            0
+  misattributed                               1            7            6
+  misattributed / cited               1/3 (33%)   7/14 (50%)   6/31 (19%)
+  ... excluding Q3                   1/1 (100%)   6/10 (60%)   4/13 (31%)
+2b CITATION CORRECTNESS - MANUAL REVIEW
+  supported                                   1            5           24
+  supported, minor distortion                 1            1            0
+  partially supported                         0            1            0
+  misattributed                               1            7            7
+  misattributed / cited               1/3 (33%)   7/14 (50%)   7/31 (23%)
+  ... excluding Q3                   1/1 (100%)   6/10 (60%)   5/13 (38%)
+  per-question average, Q1-Q5 (each question weighted equally)   50% (n=2)   60%   47%
+3 FACTUAL ACCURACY & KEY-FACT COMPLETENESS
+  Q1-Q5 with complete key facts             4/5          2/5          5/5
+  claims with date/scope mismatch             1            1            0
+4 ABSTENTION
+  Q6 abstained (out of scope)               yes           NO          yes
+5 FORMAT COMPLIANCE
+  non-standard citation format                3            0            0
+  answers over 8 lines (v3 rule)              0            0            1
+  answers cut off at 400 tokens               0            0            1
+6 EVIDENCE SUFFICIENCY                     not measured - Experiment C
+
+MANUAL-REVIEW CORRECTION (explicit; the verifier output is preserved unchanged)
+  v3-3B: verifier 6 misattributions -> manual review 7 misattributions
+         = 19% -> 23% of cited claims overall; 31% -> 38% excluding Q3.
+  The one disagreement: Q4 claim 7 "Lowering the cost of capital can substantially bring down the overall cost of
+  transitions and reduce the costs paid by consumers [1]" is verbatim from source [5]; the verifier marked it
+  supported because [1] shares 80% of the claim's topic words. Manual review agreed with the verifier on all other
+  47 cited claims across the three runs. (v2 and v3: verifier and manual counts identical; manual review adds two
+  "minor distortion" labels the verifier cannot detect.)
+
+Q3 CAVEAT (prominent)
+  The 3B answer to Q3 produced 19 of its 32 claims: it ignored the 8-line limit, repeated itself (lines 10 and 12
+  state the same thing) and was cut off at 400 tokens (last line incomplete). Its mostly correct lines lower the
+  pooled misattribution rate. Read the overall, excluding-Q3 AND per-question rows together:
+  pooled 50% -> 23%, excluding Q3 60% -> 38%, per-question average 60% -> 47% (1.5B v3 -> 3B v3, manual review).
+
+CONCRETE ATTRIBUTION ERRORS (citation present != citation correct)
+  Q1  v2  "...146 Mt per year or nearly 42%... According to SOURCE [1]"   146 Mt only in [2]; 42% in [2][4][5]
+      v3  "...almost 42 per cent in 2020, with livestock and rice cultivation as the primary drivers. [1]"
+          sentence is verbatim from [5]
+      3B  "...accounting for almost 42 per cent in 2020 [4]"   verbatim from [5]; [4] says only "42 per cent"
+          -> misattributed in every run (v1, v2, v3, 3B).
+  Q2  v3  "MARS sent over 5,000 alerts across 33 countries in 2025. [2]" / "...approximately 12% of the alerts
+          received. [2]"   5,000 and 12% only in [1][3]; also "in 2025" vs source "By February 2026"
+      3B  "...sent over 5,000 alerts by February 2026 [2]" / "The global response rate reached only 12 per cent
+          in 2025 [2]"   wording and dates now exact, but still cited [2]; the figures are only in [1][3]
+          -> both models cite [2] for both figures.
+  Q4  v3  "Narrowing the gap of the cost of capital ... energy-sector-specific interventions ... [3]"  verbatim from [1]
+      3B  "...reduce the costs paid by consumers [1]" and "Better risk management through strong policy frameworks
+          and regulation as well as enhanced deployment of de-risking instruments are key [1]"  both verbatim from [5]
+
+WHAT IMPROVED WITH 3B
+  - Citation correctness: misattribution down on every view (pooled 50%->23%, excl. Q3 60%->38%, per-question 60%->47%).
+  - Key-fact completeness 2/5 -> 5/5: Q5 thresholds (400-50 / 125-40 kg CO2-eq/t, cited [3][4]); Q4 now answers "how"
+    (tripling of concessional funds, policy/regulation, de-risking instruments).
+  - Date/scope: Q2 "by February 2026" and "12 per cent in 2025", exactly as in the sources.
+  - Abstention restored on Q6.
+PERSISTED
+  - Q1 and Q2 misattributed by both models; content from [5] credited to [1] in Q4.
+NEW REGRESSIONS (3B)
+  - Q3: 8-line limit ignored, near-duplicate lines, truncated at 400 tokens.
+  - Q6: the (correct) abstention line carries an unnecessary citation [5].
+
+ANSWER TO THE RESEARCH QUESTION (on this 6-question test set)
+  Coverage is NOT what the larger model changed: the v3 prompt had already raised coverage to 93% on 1.5B
+  (Experiment A), and 93% coverage came with 50% misattribution. The 3B model improved citation correctness and,
+  most clearly, factual completeness (2/5 -> 5/5), abstention and date accuracy. But attribution errors remain
+  substantial: 23% of cited claims overall, 38% excluding Q3, 47% averaged per question; Q1 and Q2 are wrong for
+  both models. So: a real improvement in correctness and completeness, with attribution still far from reliable.
+
+LIMITATIONS
+  - Only 6 questions (5 answerable, 1 unanswerable): rates are indicative; one claim changes a rate by 3-8 points.
+  - Q3 is unusually long and repetitive in the 3B run and dominates the pooled claim counts.
+  - Manual review was required: the verifier missed a misattribution (shared topic words) and cannot see meaning
+    distortions; manual review was done by one reviewer (no second rater).
+  - Experiment B tests citation correctness per claim, not evidence sufficiency.
+  - The key-fact checklist is a fixed regex list written for these 6 questions.
+  - CPU runs; runtime figures are not comparable across runs (different free memory).
+
+INTEGRITY
+  - ecorag_ask.py and ecorag_verify.py: fingerprints unchanged through Experiment B.
+  - v2 raw results byte-identical to fingerprints taken before the verifier existed.
+  - All raw outputs of Experiments A and B unmodified since their runs (last-modified times = run times).
+  - Only documented change: an erratum appended to rag_experiment_A_comparison.txt (v3 key facts 3/5 -> 2/5).
+  - v3 Q4/Q5 records were rebuilt from the debug log (labelled in the file); Q6 run separately.
+
+FILES
+  rag_v3-3b_results_q1_q3.json, rag_v3-3b_results_q4_q6.json, rag_v3-3b_output.txt   raw 3B outputs
+  rag_v3-3b_citation_verification.json/.txt                                           verifier output (unchanged)
+  rag_manual_review.json  (+ ecorag_manual_review.py)                                 manual decisions with evidence
+  rag_comparison_table.txt (+ ecorag_compare_runs.py)                                 table rebuilt from raw files

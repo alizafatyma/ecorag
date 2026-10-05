@@ -1,0 +1,69 @@
+EcoRAG – Experiment B: model size (Qwen2.5-1.5B -> Qwen2.5-3B), v3 prompt held fixed
+
+Held constant (verified): the 6 questions; top-5 retrieved chunks (ids, texts and the full v3 prompt identical to
+Experiment A for all 6 questions); evidence format; v3 prompt; greedy decoding, bf16 on CPU, max 400 new tokens;
+ecorag_ask.py and ecorag_verify.py (file fingerprints unchanged before/after the run); scoring method.
+Changed: only the model. Hardware: Intel Core Ultra 7 155H CPU, 15.5 GB RAM (Chrome closed, ~6.9 GB free), on AC power.
+
+WHAT IS MEASURED: citation correctness ("does the cited passage support the claim?"), per claim, by the same
+deterministic verifier. NOT measured here: evidence sufficiency ("does the retrieved evidence collectively justify
+the conclusion?") - that is Experiment C. "Supported" = key numbers + >=60% content words in the cited source
+= POTENTIALLY supported (word-level), confirmed by a manual check below.
+
+SIDE BY SIDE (same verifier, same metrics)
+Metric                                  v2 (1.5B)   v3 (1.5B, Exp A)   v3 (3B, Exp B)
+Factual claims                              21             15                 32
+Claims with a citation                   3 (14%)        14 (93%)           31 (97%)
+Potentially supported (cited)                2              6                 25
+Partially supported                          0              1                  0
+Misattributed                                1              7                  6
+Share of cited claims misattributed        33%            50%                19%
+  ... excluding Q3 (see caveat)           100% (1/1)     60% (6/10)         31% (4/13)
+Uncited but a source matches                17              1                  1 (the truncated last line)
+Uncited and matching no source               1              0                  0
+Claims with date/scope mismatch              1              1                  0
+Non-standard citation format                 3              0                  0
+Q6 (out of scope) abstained                yes             NO                yes
+Q1-Q5 with complete key facts              4/5            2/5*               5/5
+Answers over the 8-line limit                0              0                  1 (Q3: 19 lines)
+Answers cut off at 400 tokens                0              0                  1 (Q3)
+* corrected: Experiment A's summary said 3/5; the same mechanical checklist gives 2/5 (Q3 also missed "digital tools / AI").
+
+Per question (cited / potentially supported / misattributed):
+        Q1      Q2      Q3        Q4      Q5      Q6
+v2     1/0/1   0/0/0   2/2/0     0/0/0   0/0/0   abstained
+v3     1/0/1   2/0/2   4/2/1     4/3/1   2/1/1   1/0/1 (no abstention)
+v3-3B  1/0/1   2/0/2   18/16/2   8/7/1   2/2/0   abstained
+
+CAVEAT - Q3 dominates the 3B totals: 19 of its 32 claims, because it ignored the 8-line limit, repeated itself
+(e.g. lines 10 and 12 state the same thing) and hit the 400-token cap. Compare excluding Q3: misattribution
+60% (1.5B) -> 31% (3B).
+
+MANUAL CHECK of 3B "supported" claims: 24 of 25 genuinely supported. 1 verifier miss: Q4 "Lowering the cost of
+capital ... reduce the costs paid by consumers [1]" is verbatim from [5], not [1] (shared topic words gave [1] 80%
+coverage). Manually corrected: 24 supported, 7 misattributed (23% of cited; 38% excluding Q3).
+
+IMPROVED with 3B
+- Misattribution rate roughly halved (50% -> 19%; 60% -> 31% excluding Q3).
+- Q6 abstention restored ("The provided sources do not contain enough information about electric cars sold
+  in India in 2023.") - although the line carries an unnecessary [5].
+- Key facts 2/5 -> 5/5: Q5 thresholds back (400-50 / 125-40 kg CO2-eq/t, correctly cited [3][4]); Q4 now gives the
+  actual "how" (tripling of concessional funds [5], policy/regulation and de-risking instruments).
+- Q2 date/scope error fixed: "by February 2026" and "12 per cent in 2025", exactly as in the sources.
+
+PERSISTED
+- Q1 misattributed in every run (v1-v3-3B): the 3B sentence is copied verbatim from [5] but cited [4].
+- Q2 misattributed in both v3 runs: 5,000 and 12% are only in [1][3], both models cite [2].
+- Content from source [5] attributed to [1] in Q4 (2 lines).
+
+NEW REGRESSIONS (3B)
+- Format: Q3 ignored the 8-line limit (19 lines), near-duplicate lines, truncated last line (uncited).
+- Spurious citation on the abstention line (Q6 "[5]").
+
+Runtime (s): 1.5B v3 280/394/348/372/413/326; 3B 344/308/378/484/471/414. (Not a fair speed comparison:
+the 1.5B runs had ~2 GB free RAM and heavy paging; the 3B run had ~6.9 GB free.)
+
+CONCLUSION
+Model size helps substantially on this test set: fewer misattributions, correct abstention, complete key facts and
+no date distortion. It does not eliminate misattribution (Q1 and Q2 fail for both models, ~1 in 5 cited claims
+still wrong) and introduces verbosity/format violations. Small test set (6 questions): indicative, not precise.

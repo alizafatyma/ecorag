@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoRAG Test</title>
+    <style>
+        body { font-family: Arial; margin: 2rem; background: #e8f5e9; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border-radius: 8px; }
+        h1 { color: #2d5016; }
+        textarea { width: 100%; padding: 12px; font-size: 14px; border: 2px solid #52b788; border-radius: 4px; min-height: 80px; }
+        button { padding: 10px 20px; background: #52b788; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; }
+        button:hover { background: #2d5016; }
+        button:disabled { opacity: 0.5; cursor: not-allowed; }
+        .answer { margin-top: 2rem; padding: 1rem; background: #e8f5e9; border-left: 4px solid #52b788; border-radius: 4px; }
+        .error { background: #ffebee; border-left: 4px solid red; color: #c62828; padding: 1rem; margin-top: 1rem; border-radius: 4px; }
+        .loading { color: #666; font-style: italic; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌿 EcoRAG - Test Version</h1>
+
+        <textarea id="q" placeholder="Ask a question..."></textarea><br/><br/>
+        <button onclick="test()">Ask</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function test() {
+            const q = document.getElementById('q').value.trim();
+            if (!q) {
+                alert('Enter a question');
+                return;
+            }
+
+            const btn = event.target;
+            const result = document.getElementById('result');
+            btn.disabled = true;
+            result.innerHTML = '<div class="loading">Asking...</div>';
+
+            console.log('Fetching from:', window.location.origin + '/api/ask');
+
+            fetch(window.location.origin + '/api/ask', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ question: q })
+            })
+            .then(r => {
+                console.log('Response status:', r.status);
+                return r.json();
+            })
+            .then(data => {
+                console.log('Response data:', data);
+                if (data.error) {
+                    result.innerHTML = '<div class="error"><strong>Error:</strong> ' + data.error + '</div>';
+                } else {
+                    let citations = '';
+                    if (data.citations && data.citations.length > 0) {
+                        citations = '<h3>Sources:</h3>';
+                        data.citations.forEach((c, i) => {
+                            citations += `<div style="margin: 0.5rem 0; padding: 0.5rem; background: white; border-radius: 4px;">
+                                <strong>[${i+1}] ${c.source}</strong><br/>
+                                ${c.text}
+                            </div>`;
+                        });
+                    }
+                    result.innerHTML = `<div class="answer">
+                        <h2>Answer</h2>
+                        <p>${data.answer}</p>
+                        ${citations}
+                    </div>`;
+                }
+            })
+            .catch(err => {
+                console.error('Error:', err);
+                result.innerHTML = '<div class="error"><strong>Connection Error:</strong> ' + err.message +
+                    '<br/><br/>Make sure backend is running:<br/><code>python ecorag_api_production.py</code></div>';
+            })
+            .finally(() => {
+                btn.disabled = false;
+            });
+        }
+
+        // Test API on load
+        console.log('Page loaded. API should be at:', window.location.origin + '/api/ask');
+    </script>
+</body>
+</html>

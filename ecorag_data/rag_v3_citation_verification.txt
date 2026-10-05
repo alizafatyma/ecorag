@@ -1,0 +1,132 @@
+==========================================================================================
+Q: What share of global anthropogenic methane emissions comes from agriculture?
+------------------------------------------------------------------------------------------
+ANSWER (unchanged):
+- Agriculture is the largest source of global anthropogenic methane emissions, accounting for almost 42 per cent in 2020, with livestock and rice cultivation as the primary drivers. [1]
+------------------------------------------------------------------------------------------
+[MISATTRIBUTED] claim 1: Agriculture is the largest source of global anthropogenic methane emissions, accounting for almost 42 per cent in 2020, with livestock and rice cultivation as the primary drivers. [1]
+    cited: [1]   sources that match: [2, 5]   word coverage: {1: 0.57, 2: 0.79, 3: 0.29, 4: 0.5, 5: 1.0}
+    numbers -> sources: 42->[2, 4, 5], 2020->[1, 2, 5]
+    PROBLEM: '42' is not in cited source [1] but is in [2, 4, 5]
+------------------------------------------------------------------------------------------
+SUMMARY: 1 factual claims | 1 cited | 0 supported | 0 partial | 1 misattributed | 0 cited-but-unsupported | 0 uncited (0 matching a source, 0 matching none) | 0 claim(s) with date/scope mismatch (0 figures) | abstained: False
+==========================================================================================
+Q: How many alerts did the Methane Alert and Response System send, and how often do operators respond?
+------------------------------------------------------------------------------------------
+ANSWER (unchanged):
+- The Methane Alert and Response System (MARS) sent over 5,000 alerts across 33 countries in 2025. [2]
+- Operators responded to approximately 12% of the alerts received. [2]
+------------------------------------------------------------------------------------------
+[MISATTRIBUTED] claim 1: The Methane Alert and Response System (MARS) sent over 5,000 alerts across 33 countries in 2025. [2]
+    cited: [2]   sources that match: [3]   word coverage: {1: 0.75, 2: 0.75, 3: 1.0, 4: 0.62, 5: 0.5}
+    numbers -> sources: 5000->[1, 3], 33->[3], 2025->[1, 3, 4]
+    PROBLEM: '5000' is not in cited source [2] but is in [1, 3]; '33' is not in cited source [2] but is in [3]; '2025' is not in cited source [2] but is in [1, 3, 4]; date/scope: claim says ['in 2025'] for '5000', source [1] says ['By February 2026']; date/scope: claim says ['in 2025'] for '33', source [3] says ['By February 2026']
+[MISATTRIBUTED] claim 2: Operators responded to approximately 12% of the alerts received. [2]
+    cited: [2]   sources that match: [1]   word coverage: {1: 0.4, 2: 0.2, 3: 0.2, 4: 0.2, 5: 0.2}
+    numbers -> sources: 12->[1, 3]
+    PROBLEM: '12' is not in cited source [2] but is in [1, 3]
+------------------------------------------------------------------------------------------
+SUMMARY: 2 factual claims | 2 cited | 0 supported | 0 partial | 2 misattributed | 0 cited-but-unsupported | 0 uncited (0 matching a source, 0 matching none) | 1 claim(s) with date/scope mismatch (2 figures) | abstained: False
+==========================================================================================
+Q: What are the main challenges in modernising electricity grids?
+------------------------------------------------------------------------------------------
+ANSWER (unchanged):
+- The increasing demand for electricity leads to longer connection queues and competition for scarce grid capacity, potentially leading to service disruptions [1].
+- Stability issues arise due to the need to balance thermal limits and maintain sufficient system strength, especially with the integration of converter-connected resources [2].
+- Diverse distributed energy resources and large inverter-based power sources create new challenges for voltage management, transformer loading, feeder capacity, and protection settings [3].
+- New forms of generation and demand, like rooftop solar, batteries, EVs, and data centres, turn grids from unidirectional systems into dynamic two-way flows, complicating voltage management and other aspects of grid operation [3].
+------------------------------------------------------------------------------------------
+[MISATTRIBUTED] claim 1: The increasing demand for electricity leads to longer connection queues and competition for scarce grid capacity, potentially leading to service disruptions [1].
+    cited: [1]   sources that match: [2]   word coverage: {1: 0.29, 2: 0.64, 3: 0.29, 4: 0.21, 5: 0.21}
+    PROBLEM: cited [1] does not match; best matching source is 2
+[PARTIAL] claim 2: Stability issues arise due to the need to balance thermal limits and maintain sufficient system strength, especially with the integration of converter-connected resources [2].
+    cited: [2]   sources that match: [2]   word coverage: {1: 0.06, 2: 0.53, 3: 0.12, 4: 0.06, 5: 0.18}
+    PROBLEM: only 53% of the claim's words found in cited source
+    (word-level match only: meaning not verified)
+[SUPPORTED] claim 3: Diverse distributed energy resources and large inverter-based power sources create new challenges for voltage management, transformer loading, feeder capacity, and protection settings [3].
+    cited: [3]   sources that match: [3]   word coverage: {1: 0.11, 2: 0.16, 3: 0.95, 4: 0.05, 5: 0.21}
+    (word-level match only: meaning not verified)
+[SUPPORTED] claim 4: New forms of generation and demand, like rooftop solar, batteries, EVs, and data centres, turn grids from unidirectional systems into dynamic two-way flows, complicating voltage management and other aspects of grid operation [3].
+    cited: [3]   sources that match: [3]   word coverage: {1: 0.09, 2: 0.3, 3: 0.83, 4: 0.09, 5: 0.26}
+    (word-level match only: meaning not verified)
+------------------------------------------------------------------------------------------
+SUMMARY: 4 factual claims | 4 cited | 2 supported | 1 partial | 1 misattributed | 0 cited-but-unsupported | 0 uncited (0 matching a source, 0 matching none) | 0 claim(s) with date/scope mismatch (0 figures) | abstained: False
+==========================================================================================
+Q: How can the cost of capital for clean energy projects in emerging and developing economies be reduced?
+------------------------------------------------------------------------------------------
+ANSWER (unchanged):
+- Narrowing the gap of the cost of capital between EMDE and advanced economies by energy-sector-specific interventions can substantially bring down the overall cost of realising sustainable energy at scale [3].
+- A 1 percentage point reduction in the cost of capital in EMDE leads to a reduction of USD 150 billion in average annual financing costs in the NZE Scenario between 2024 and 2050 [1].
+- An even more ambitious lowering by 2 percentage points could almost double this reduction to USD 300 billion per year [1].
+- Bringing down the cost of capital therefore represents a huge opportunity to move countries more quickly down the pathway to a safer and more sustainable energy future [1].
+------------------------------------------------------------------------------------------
+[MISATTRIBUTED] claim 1: Narrowing the gap of the cost of capital between EMDE and advanced economies by energy-sector-specific interventions can substantially bring down the overall cost of realising sustainable energy at scale [3].
+    cited: [3]   sources that match: [1, 2, 4, 5]   word coverage: {1: 1.0, 2: 0.41, 3: 0.29, 4: 0.35, 5: 0.41}
+    PROBLEM: cited [3] does not match; best matching source is 1
+[SUPPORTED] claim 2: A 1 percentage point reduction in the cost of capital in EMDE leads to a reduction of USD 150 billion in average annual financing costs in the NZE Scenario between 2024 and 2050 [1].
+    cited: [1]   sources that match: [1]   word coverage: {1: 1.0, 2: 0.29, 3: 0.29, 4: 0.29, 5: 0.64}
+    numbers -> sources: 150->[1, 5], 2024->[1, 2], 2050->[1, 2, 5]
+[SUPPORTED] claim 3: An even more ambitious lowering by 2 percentage points could almost double this reduction to USD 300 billion per year [1].
+    cited: [1]   sources that match: [1]   word coverage: {1: 1.0, 2: 0.0, 3: 0.0, 4: 0.27, 5: 0.55}
+    numbers -> sources: 300->[1]
+[SUPPORTED] claim 4: Bringing down the cost of capital therefore represents a huge opportunity to move countries more quickly down the pathway to a safer and more sustainable energy future [1].
+    cited: [1]   sources that match: [1, 5]   word coverage: {1: 1.0, 2: 0.2, 3: 0.33, 4: 0.33, 5: 0.4}
+    (word-level match only: meaning not verified)
+------------------------------------------------------------------------------------------
+SUMMARY: 4 factual claims | 4 cited | 3 supported | 0 partial | 1 misattributed | 0 cited-but-unsupported | 0 uncited (0 matching a source, 0 matching none) | 0 claim(s) with date/scope mismatch (0 figures) | abstained: False
+==========================================================================================
+Q: How are near-zero emissions steel and cement defined?
+------------------------------------------------------------------------------------------
+ANSWER (unchanged):
+- Globally consistent. The emissions threshold applies regardless of where the steel or cement is produced or consumed. This enables clear communication and a consistent signal across global markets. [3]
+- Physical. To receive recognition for achieving near-zero emissions, technologies need to be deployed that achieve near-zero emissions levels in physical terms – that is, the emissions for the supply chain of one full tonne of steel or cement together fall at or below the near-zero emissions threshold. [1][3]
+------------------------------------------------------------------------------------------
+[framing] claim 1: Globally consistent.
+[NO CITATION] claim 2: The emissions threshold applies regardless of where the steel or cement is produced or consumed.
+    cited: none   sources that match: [1, 2, 3, 4]   word coverage: {1: 1.0, 2: 0.38, 3: 0.5, 4: 0.5, 5: 0.25}
+    PROBLEM: factual claim has no citation; matching content found in [1, 2, 3, 4]
+[MISATTRIBUTED] claim 3: This enables clear communication and a consistent signal across global markets. [3]
+    cited: [3]   sources that match: [1, 2, 5]   word coverage: {1: 1.0, 2: 0.62, 3: 0.12, 4: 0.25, 5: 0.62}
+    PROBLEM: cited [3] does not match; best matching source is 1
+[framing] claim 4: Physical.
+[SUPPORTED] claim 5: To receive recognition for achieving near-zero emissions, technologies need to be deployed that achieve near-zero emissions levels in physical terms – that is, the emissions for the supply chain of one full tonne of steel or cement together fall at or below the near-zero emissions threshold. [1][3]
+    cited: [1, 3]   sources that match: [1]   word coverage: {1: 1.0, 2: 0.33, 3: 0.33, 4: 0.33, 5: 0.24}
+    (word-level match only: meaning not verified)
+------------------------------------------------------------------------------------------
+SUMMARY: 3 factual claims | 2 cited | 1 supported | 0 partial | 1 misattributed | 0 cited-but-unsupported | 1 uncited (1 matching a source, 0 matching none) | 0 claim(s) with date/scope mismatch (0 figures) | abstained: False
+==========================================================================================
+Q: How many electric cars were sold in India in 2023?
+------------------------------------------------------------------------------------------
+ANSWER (unchanged):
+- According to the Indian government's press information bureau, the national green hydrogen mission was launched in 2023 [4].
+------------------------------------------------------------------------------------------
+[MISATTRIBUTED] claim 1: According to the Indian government's press information bureau, the national green hydrogen mission was launched in 2023 [4].
+    cited: [4]   sources that match: [5]   word coverage: {1: 0.0, 2: 0.0, 3: 0.1, 4: 0.0, 5: 0.7}
+    numbers -> sources: 2023->[1, 2, 3, 5]
+    PROBLEM: '2023' is not in cited source [4] but is in [1, 2, 3, 5]
+------------------------------------------------------------------------------------------
+SUMMARY: 1 factual claims | 1 cited | 0 supported | 0 partial | 1 misattributed | 0 cited-but-unsupported | 0 uncited (0 matching a source, 0 matching none) | 0 claim(s) with date/scope mismatch (0 figures) | abstained: False
+
+==========================================================================================
+TOTALS (v3 answers, Qwen2.5-1.5B-Instruct)
+==========================================================================================
+Q    claims  cited  suppor.  partial  misattr.  unsup.  uncited  date  format  abstained
+Q1        1      1        0        0         1       0        0     0       0  False
+Q2        2      2        0        0         2       0        0     1       0  False
+Q3        4      4        2        1         1       0        0     0       0  False
+Q4        4      4        3        0         1       0        0     0       0  False
+Q5        3      2        1        0         1       0        1     0       0  False
+Q6        1      1        0        0         1       0        0     0       0  False
+ALL      15     14        6        1         7       0        1     1       0
+Uncited claims matching a source: 1 | uncited claims matching no source: 0 | 'date' = claims with a date/scope mismatch (2 figures)
+
+Thresholds: supported >= 60% word coverage + all key numbers in cited source; partial >= 35%; passages of up to 3 sentences; numbers < 10 ignored.
+
+LIMITATIONS:
+ - Support is judged by key numbers and shared content words, not by meaning: a paraphrase that changes the meaning (e.g. '12% of these alerts' vs '12 per cent global response rate in 2025') can pass.
+ - Distortions without numbers or dates (e.g. 'competition among energy sources' vs 'housing and industry competing with data centres for grid capacity') are not detected.
+ - Numbers below 10 are ignored for attribution because they occur in almost every source.
+ - Heavy paraphrases of a correct fact can score as partial/no match (false negatives).
+ - When all sources come from the same report, shared topic words (e.g. 'cost of capital', 'clean energy') raise word coverage for any on-topic sentence, so a generic sentence can appear to match a source.
+ - Date checks only catch a figure whose year differs from every source sentence containing that figure.
+ - Whether the answer actually answers the question (e.g. 'why' instead of 'how') is out of scope.

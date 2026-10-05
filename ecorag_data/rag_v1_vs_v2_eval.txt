@@ -1,0 +1,170 @@
+
+==========================================================================================
+Q1: What share of global anthropogenic methane emissions comes from agriculture?
+
+  v1 (old prompt):
+   ANSWER: According to SOURCE 1, agriculture is the largest source of global anthropogenic methane emissions, responsible for 146 Mt per year or almost 42% of the global total in 2020.
+   runtime 296s | 29 words
+   key fact YES  42% / 42 per cent
+   key fact YES  146 Mt (optional)
+   citations used: [1]  (written as SOURCE n)
+      number '146'        -> WRONG SOURCE (cited [1], found in [2])
+      number '2020'       -> in cited source
+      number '42'         -> WRONG SOURCE (cited [1], found in [2, 4, 5])
+
+  v2 (fixed prompt):
+   ANSWER: According to SOURCE [1], the agricultural sector is the largest source of anthropogenic methane emissions globally, responsible for 146 Mt per year or nearly 42% of the global total in 2020.
+   runtime 178s | 31 words
+   key fact YES  42% / 42 per cent
+   key fact YES  146 Mt (optional)
+   citations used: [1]
+      number '146'        -> WRONG SOURCE (cited [1], found in [2])
+      number '2020'       -> in cited source
+      number '42'         -> WRONG SOURCE (cited [1], found in [2, 4, 5])
+
+==========================================================================================
+Q2: How many alerts did the Methane Alert and Response System send, and how often do operators respond?
+
+  v1 (old prompt):
+   ANSWER: According to SOURCE 1, the Methane Alert and Response System (MARS) integrated data from 35 satellite instruments to provide rapid alerts on major methane emission events directly to governments and operators. As of February 2026, MARS had sent over 5,000 alerts about major events. However, the global response rate remained low; only 11 countries had a response rate from operators and governments of over 70 percent. Additionally, the response rates grew nearly tenfold since the end of 2024, reflecting increasing engagement and action based on satellite data.
+   runtime 378s | 87 words
+   key fact YES  5,000 alerts
+   key fact no   12 per cent response rate (2025)
+   key fact no   1 per cent in 2024 (optional)
+   citations used: [1]  (written as SOURCE n)
+      number '35'         -> in cited source
+      number '2026'       -> UNCITED
+      number '5,000'      -> UNCITED
+      number '11'         -> UNCITED
+      number '70'         -> UNCITED
+      number '2024'       -> UNCITED
+
+  v2 (fixed prompt):
+   ANSWER: According to the sources, the Methane Alert and Response System (MARS) sent over 5,000 alerts across 33 countries in 2025. Operators responded to approximately 12% of these alerts.
+   runtime 194s | 28 words
+   key fact YES  5,000 alerts
+   key fact YES  12 per cent response rate (2025)
+   key fact no   1 per cent in 2024 (optional)
+   citations used: NONE
+      number '2025'       -> UNCITED
+      number '33'         -> UNCITED
+      number '5,000'      -> UNCITED
+      number '12'         -> UNCITED
+
+==========================================================================================
+Q3: What are the main challenges in modernising electricity grids?
+
+  v1 (old prompt):
+   ANSWER: The main challenges in modernising electricity grids include:
+           
+           1. **Electricity Demand Growth**: Rapidly increasing electricity demand outpaces grid expansion capabilities, leading to issues such as longer connection queues, competition among different types of energy sources, and potential service disruptions.
+           
+           2. **System Stability**: Operators must ensure stable flow of electricity while maintaining sufficient system strength to handle disturbances. Digital tools and AI are increasingly used to support grid operations, requiring high-quality data and robust models to manage complex dynamics.
+           
+           3. **Distributed Energy Resources**: The rise of distributed energy resources like rooftop solar, batteries, EVs, and flexible demand poses new challenges in managing voltage, transformer loading, feeder capacity, and protection settings due to dynamic two-way flows and concentrated forms of generation and demand.
+           
+           These challenges highlight the necessity for innovative solutions and technological advancements to effectively modernise and enhance the efficiency and resilience of electricity grids.
+   runtime 390s | 144 words
+   key fact YES  demand outpacing grid expansion / queues
+   key fact YES  distributed resources / two-way flows
+   key fact YES  digital tools / AI
+   citations used: NONE
+
+  v2 (fixed prompt):
+   ANSWER: The main challenges in modernising electricity grids include:
+           
+           1. **Electricity Demand Growth**: Electricity demand is rising rapidly, leading to increased strain on existing grid infrastructure. According to Document [2], where the grid cannot keep pace, the consequences are well documented, including lengthening connection queues, competition among different types of energy sources, and risks of service disruptions.
+           
+           2. **Thermal Limits and System Strength**: Traditional grid design relies on thermal limits to manage flow within the network. However, as converter-connected resources displace synchronous generators, some stabilizing properties previously provided by synchronous machines, such as inertia, voltage support, fault current contribution, and damping, become less reliable. This raises the importance of high-quality data and validated models for managing these variables effectively.
+           
+           3. **Digital Tools and AI Applications**: Digitalization and the integration of advanced technologies like AI are crucial for capturing untapped capacity in existing networks. Document [3] highlights that distributed energy resources, such as rooftop solar, batteries, EVs, and flexible demand, create new challenges for voltage management, transformer loading, feeder capacity, and protection settings. Additionally, AI-based tools are increasingly used to support grid operations, emphasizing the need for robust data and models to ensure their performance.
+           
+           These challenges underscore the necessity for innovative solutions to modernize and enhance the efficiency of electricity grids, addressing issues related to demand growth, thermal limitations, and the integration of emerging technologies.
+   runtime 268s | 224 words
+   key fact YES  demand outpacing grid expansion / queues
+   key fact YES  distributed resources / two-way flows
+   key fact YES  digital tools / AI
+   citations used: [2, 3]
+
+==========================================================================================
+Q4: How can the cost of capital for clean energy projects in emerging and developing economies be reduced?
+
+  v1 (old prompt):
+   ANSWER: To reduce the cost of capital for clean energy projects in emerging and developing economies (EMDE), efforts must address risks across various parts of the energy economy, including those related to utility-scale solar and wind, transmission and distribution grids, energy efficiency in buildings, electric mobility, low-emissions fuels, and utility-scale hydro. These sectors vary significantly in terms of investment size and the predominant risks faced by investors. By narrowing the gap in the cost of capital between EMDE and advanced economies, substantial reductions in overall clean energy financing costs can be achieved. Specifically, a 1 percentage point reduction in the cost of capital in EMDE can lead to a reduction of USD 150 billion in average annual financing costs over the period from 2024 to 2050, representing a 10-20% decrease in the cost of capital relative to current values. This reduction is partly attributed to the large weight that the cost of capital has in the total investment of solar PV and wind, which makes up 22% of the investment needs of the Net Zero Emissions by 2050 scenario. Additionally, investments in energy efficiency in buildings, which are generally financed by households or real estate developers, face significant challenges such as the lack of incentives due to subsidies, absence of building codes, or weak financing models. To achieve this goal, it is crucial to understand the unique characteristics of each sector and develop tailored strategies to mitigate risks and enhance the attractiveness of clean energy projects.
+   runtime 463s | 245 words
+   key fact no   tripling of concessional funds
+   key fact no   policy/regulation & de-risking
+   key fact YES  sector-specific risks
+   key fact YES  1 pp -> USD 150 bn
+   citations used: NONE
+      number '1'          -> UNCITED
+      number '10'         -> UNCITED
+      number '150'        -> UNCITED
+      number '20'         -> UNCITED
+      number '2024'       -> UNCITED
+      number '2050'       -> UNCITED
+      number '2050'       -> UNCITED
+      number '22'         -> UNCITED
+
+  v2 (fixed prompt):
+   ANSWER: To reduce the cost of capital for clean energy projects in emerging and developing economies (EMDE), efforts must address risks across various parts of the energy economy, including utility-scale solar and wind, transmission and distribution grids, energy efficiency in buildings, electric mobility, low-emissions fuels, and utility-scale hydro. These sectors vary significantly in terms of investment size and the predominant risks faced by investors. By narrowing the gap between EMDE and advanced economies' cost of capital, substantial reductions in overall clean energy financing costs can be achieved. Specifically, a 1 percentage point reduction in the cost of capital in EMDE can lead to a reduction of USD 150 billion in average annual financing costs in the NZE Scenario between 2024 and 2050. This reduction requires considerable efforts but is achievable and represents a 10-20% decrease in the cost of capital of the different sectors, compared with current values. Additionally, bringing down the cost of capital can facilitate faster transition towards a cleaner and more sustainable energy future.
+   runtime 234s | 166 words
+   key fact no   tripling of concessional funds
+   key fact no   policy/regulation & de-risking
+   key fact YES  sector-specific risks
+   key fact YES  1 pp -> USD 150 bn
+   citations used: NONE
+      number '1'          -> UNCITED
+      number '150'        -> UNCITED
+      number '2024'       -> UNCITED
+      number '2050'       -> UNCITED
+      number '10'         -> UNCITED
+      number '20'         -> UNCITED
+
+==========================================================================================
+Q5: How are near-zero emissions steel and cement defined?
+
+  v1 (old prompt):
+   ANSWER: Near-zero emissions steel and cement are defined based on the following principles:
+           
+           1. **Consistency**: The definitions apply globally regardless of where the steel or cement is produced or consumed, ensuring clear communication and consistency across global markets.
+           
+           2. **Physical Performance**: Technologies must achieve near-zero emissions levels in physical terms—specifically, the total emissions for the supply chain of one full tonne of steel or cement must fall at or below the near-zero emissions threshold.
+           
+           3. **Transparent Boundaries**: The boundaries of emissions included and the accounting methods used must be clearly defined to ensure comparability. Reporting should include details on input materials and indicate how emissions performance compares to typical values.
+           
+           These definitions aim to provide a common language for accelerating the net zero transition in the steel and cement industries, fostering investment and innovation.
+   runtime 184s | 133 words
+   key fact no   steel threshold 400-50 kg CO2-eq/t
+   key fact no   cement threshold 125-40 kg CO2-eq/t
+   key fact no   depends on scrap share / clinker ratio
+   citations used: NONE
+
+  v2 (fixed prompt):
+   ANSWER: Near-zero emissions steel and cement are defined based on the scrap share of metallic inputs for steel and the clinker-to-cement ratio for cement. For steel, the threshold ranges from 400-50 kg CO2-eq per tonne of crude steel, depending on the scrap share. For cement, the threshold ranges from 125-40 kg CO2-eq per tonne of cement, depending on the clinker ratio.
+   runtime 237s | 60 words
+   key fact YES  steel threshold 400-50 kg CO2-eq/t
+   key fact YES  cement threshold 125-40 kg CO2-eq/t
+   key fact YES  depends on scrap share / clinker ratio
+   citations used: NONE
+      number '2'          -> UNCITED
+      number '400'        -> UNCITED
+      number '50'         -> UNCITED
+      number '125'        -> UNCITED
+      number '2'          -> UNCITED
+      number '40'         -> UNCITED
+
+==========================================================================================
+Q6: How many electric cars were sold in India in 2023?
+
+  v1 (old prompt):
+   ANSWER: The provided sources do not contain enough information to answer this.
+   runtime 149s | 11 words
+   key fact YES  abstains
+   citations used: NONE
+
+  v2 (fixed prompt):
+   ANSWER: The provided sources do not contain enough information to answer this.
+   runtime 176s | 11 words
+   key fact YES  abstains
+   citations used: NONE

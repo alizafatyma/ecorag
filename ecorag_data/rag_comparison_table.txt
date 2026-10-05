@@ -1,0 +1,44 @@
+
+                                             v2            v3         v3-3b
+  model                                    1.5B          1.5B            3B
+  prompt                                     v2            v3            v3
+
+CITATION COVERAGE (is a citation present?)
+  factual claims                             21            15            32
+  claims with a citation             3/21 (14%)   14/15 (93%)   31/32 (97%)
+  uncited, a source matches                  17             1             1
+  uncited, matching no source                 1             0             0
+
+CITATION CORRECTNESS - VERIFIER (V, unchanged; 'supported' = word/number match only)
+  V: potentially supported                    2             6            25
+  V: partially supported                      0             1             0
+  V: misattributed                            1             7             6
+  V: misattributed / cited            1/3 (33%)    7/14 (50%)    6/31 (19%)
+  V: ... excluding Q3                1/1 (100%)    6/10 (60%)    4/13 (31%)
+
+CITATION CORRECTNESS - MANUAL REVIEW (M, every cited claim; see rag_manual_review.json)
+  M: supported                                1             5            24
+  M: supported, minor distortion              1             1             0
+  M: partially supported                      0             1             0
+  M: misattributed                            1             7             7
+  M: misattributed / cited            1/3 (33%)    7/14 (50%)    7/31 (23%)
+  M: ... excluding Q3                1/1 (100%)    6/10 (60%)    5/13 (38%)
+
+FACTUAL ACCURACY & KEY-FACT COMPLETENESS
+  Q1-Q5 with complete key facts             4/5           2/5           5/5
+  claims with date/scope mismatch             1             1             0
+
+ABSTENTION
+  Q6 abstained (out of scope)               yes            NO           yes
+
+FORMAT COMPLIANCE
+  non-standard citation format                3             0             0
+  answers over 8 lines                        0             0             1
+  answers cut off at 400 tokens               0             0             1
+
+EVIDENCE SUFFICIENCY (does the retrieved evidence collectively justify the answer?)
+  not measured in these runs - Experiment C
+
+v2: verifier re-run on raw answers reproduces the stored verification file: YES
+v3: verifier re-run on raw answers reproduces the stored verification file: YES
+v3-3b: verifier re-run on raw answers reproduces the stored verification file: YES

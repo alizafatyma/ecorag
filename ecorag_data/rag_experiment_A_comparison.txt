@@ -1,0 +1,56 @@
+EcoRAG – Experiment A: citation-focused answer format (Qwen2.5-1.5B-Instruct, CPU)
+
+Held constant: PDFs, chunks, BGE embeddings, Chroma, retrieval (top-5, content/table), the 6 questions,
+the retrieved evidence (verified identical, chunk-for-chunk and character-for-character), evidence labels [n],
+model, decoding (greedy), and the verifier (ecorag_verify.py logic unchanged; re-verifying v2 gives a
+byte-identical result file).
+Changed: only the answer-generation instructions (PROMPT_VERSION v2 -> v3).
+v3 = one factual claim per line, each line ending with its source number(s) [n], no intro/conclusion,
+max 8 lines, partial-abstention line allowed, plus the v2 rules (only sources, key facts, copy numbers).
+
+VERIFIER TOTALS (same verifier for every run; "supported" = key numbers + >=60% content words found in
+the cited source = POTENTIALLY supported, not semantically proven)
+
+Metric                                   v1 (orig)   v2 (baseline)   v3 (Experiment A)
+Factual claims                               22            21                15
+Claims with a citation                    2 (9%)       3 (14%)          14 (93%)
+Potentially supported (cited)                 1             2           6 (+1 partial)
+Misattributed (cited the wrong source)        1             1                 7
+Share of cited claims misattributed         50%           33%               50%
+Cited but matching no source                  0             0                 0
+Uncited, but a source matches                19            17                1*
+Uncited and matching no source                1             1                 0
+Claims with date/scope mismatch               0             1                 1  (Q2 "in 2025" vs "By February 2026")
+Non-standard citation format                  2             3                 0
+Q6 (out of scope) abstained                 yes           yes                NO
+Q1-Q5 answers with complete key facts       2/5           4/5               3/5  (Q5 lost the numeric thresholds)
+* artefact: Q5's line has 3 sentences with one citation at the end; the verifier attaches it to the last sentence.
+
+Manual check of the 6 "supported" v3 claims: 5 genuinely supported (several verbatim); 1 small distortion
+(Q3: "data centres" listed among causes of two-way flows; the source treats them as concentrated demand).
+
+PER QUESTION (v3)
+Q1  1 claim  cited [1]; "almost 42 per cent ... livestock and rice" is in [5] (42% also [2][4])   -> misattributed
+Q2  2 claims both cited [2]; 5,000 / 33 / 12% are only in [1][3]; "in 2025" date error persists  -> 2 misattributed
+Q3  4 claims [1][2][3][3]: queues/scarce capacity cited [1] but in [2]; [2] and [3] claims correct -> 2 supported, 1 partial, 1 misattributed
+Q4  4 claims: USD 150 bn and USD 300 bn correctly cited [1]; a sentence copied from [1] cited [3] -> 3 supported, 1 misattributed
+    still explains why lowering the cost of capital matters, not how (concessional funds / de-risking in [5] unused)
+Q5  copies the principles list from [1] but cites [3]; the 400-50 / 125-40 kg CO2-eq/t thresholds (in v2) are gone
+Q6  no abstention: "national green hydrogen mission was launched in 2023 [4]" - irrelevant to the question,
+    content from [5], cited [4]
+
+CONCLUSION
+The rigid format fixes citation COVERAGE (14% -> 93%) but not citation ATTRIBUTION: half of the citations point
+to the wrong source. Correctly cited claims rose from 2 to 6 (5 confirmed by hand), misattributions from 1 to 7.
+Side effects: abstention broke on Q6 and Q5 lost its key thresholds; generic closing sentences disappeared.
+The 1.5B model complies with "put a number on every line" but does not reliably bind that number to the
+evidence it used. Next: Experiment B (Qwen2.5-3B, v3 frozen) to measure the model-size effect with the same
+verifier. Caveat: 6 questions is a small test set; rates are indicative, not precise.
+
+Runtime v3 (CPU, s): Q1 280, Q2 394, Q3 348, Q4 372, Q5 413, Q6 326
+Note: Q4/Q5 records were rebuilt from the debug log (rag_v3_output_q4_q6.txt) because that batch hit the
+30-minute tool limit during Q6 before its JSON was written; Q6 was then run on its own.
+
+ERRATUM (added during Experiment B): "Q1-Q5 answers with complete key facts" for v3 (1.5B) is 2/5, not 3/5.
+Using the same mechanical key-fact checklist applied to every run, v3's Q3 answer also misses the
+"digital tools / AI" point. All other Experiment A numbers are unchanged.

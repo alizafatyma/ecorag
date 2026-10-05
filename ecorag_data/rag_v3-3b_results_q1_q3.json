@@ -1,0 +1,1019 @@
+[
+  {
+    "question": "What share of global anthropogenic methane emissions comes from agriculture?",
+    "answer": "- Agriculture is the largest source of global anthropogenic methane emissions, accounting for almost 42 per cent in 2020 [4].",
+    "citations": {
+      "cited": [
+        "[4] The Secretary‑General’s call to action on methane, p. 21"
+      ],
+      "invalid": [],
+      "not_cited": [
+        "[1] Global Methane Status Report 2025, pp. 24–25",
+        "[2] Global Methane Status Report 2025, pp. 86–87",
+        "[3] Global Methane Status Report 2025, p. 100",
+        "[5] Global Methane Status Report 2025, p. 85"
+      ]
+    },
+    "verification": {
+      "summary": {
+        "factual_claims": 1,
+        "with_citation": 1,
+        "supported": 0,
+        "partially_supported": 0,
+        "misattributed": 1,
+        "unsupported_cited": 0,
+        "uncited": 0,
+        "uncited_but_matching_source": 0,
+        "uncited_and_unmatched": 0,
+        "date_scope_mismatches": 0,
+        "date_scope_figures": 0,
+        "non_standard_citation_format": 0,
+        "vague_attribution": 0,
+        "abstained": false
+      },
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "Agriculture is the largest source of global anthropogenic methane emissions, accounting for almost 42 per cent in 2020 [4].",
+          "heading": null,
+          "kind": "factual",
+          "citations": [
+            4
+          ],
+          "invalid_citations": [],
+          "citation_formats": [
+            "[n]"
+          ],
+          "citation_status": "misattributed",
+          "supporting_sources": [
+            2,
+            5
+          ],
+          "key_numbers": {
+            "42": [
+              2,
+              4,
+              5
+            ],
+            "2020": [
+              1,
+              2,
+              5
+            ]
+          },
+          "word_coverage": {
+            "1": 0.67,
+            "2": 0.89,
+            "3": 0.33,
+            "4": 0.78,
+            "5": 1.0
+          },
+          "date_scope_issues": [],
+          "problem": "'2020' is not in cited source [4] but is in [1, 2, 5]",
+          "needs_human_review": false
+        }
+      ]
+    },
+    "sources": [
+      {
+        "n": 1,
+        "chunk_id": "gmsr-2025::0038",
+        "document": "GLOBAL METHANE STATUS REPORT 2025",
+        "section": "Executive Summary › The Agricultural Sector",
+        "chapter": "Executive Summary",
+        "pages": "pp. 24–25",
+        "page_start": 24,
+        "page_end": 25,
+        "content_type": "content",
+        "similarity": 0.85,
+        "distance": 0.15,
+        "label": "[1] Global Methane Status Report 2025, pp. 24–25",
+        "text": "The Agricultural Sector\n\nThe agricultural sector is the largest source of anthropogenic methane emissions. Emissions vary by region, with the G20+ group of countries responsible for 61 per cent of agricultural methane, equivalent to one-quarter of total anthropogenic methane emissions.\n\nAgricultural methane emissions are projected to increase by about 8 per cent by 2030 and around 17 per cent by 2050, compared with 2020 levels. This growth is driven largely by demand for food for a growing global population and the expansion of livestock numbers in Africa and Latin America, and with the non-G20+ regions experiencing the largest increases in emissions. Due to these drivers, even with the implementation of current NDCs and MAPs, emissions from agriculture would still rise by up to 4 per cent by 2030 compared with 2020 levels.\n\nYet, the agricultural sector has the technical potential to reduce emissions by 24 Mt per year by 2030, 8 per cent below 2020 levels in this decade, and 7 per cent by 2050.\n\nLow-cost measures measures could be implemented at a total annual cost of US$2.5 billion, while reducing annual methane emissions by 17 Mt by 2030. This investment amounts to less than 3 per cent of the subsidies governments currently allocate to the sector every year. Repurposing even a small share of these subsidies could significantly help finance methane mitigation.\n\nThere has been a generally positive trend in the development of policies targeting agricultural methane emissions over the past decade, particularly in the areas of animal waste management. This progress has been most notable in Asia-Pacific, Europe and North America, where enabling policy environments and accessible technologies have driven the adoption of measures to reduce emissions from manure. Despite this progress, however, only a small share of GMP participating countries have policies directly addressing key methane sources in the sector."
+      },
+      {
+        "n": 2,
+        "chunk_id": "gmsr-2025::0163",
+        "document": "GLOBAL METHANE STATUS REPORT 2025",
+        "section": "Global Outlook of Methane Policies and Measures › 3.5.1.1 Agricultural methane emissions: status, trends and mitigation opportunities",
+        "chapter": "Global Outlook of Methane Policies and Measures",
+        "pages": "pp. 86–87",
+        "page_start": 86,
+        "page_end": 87,
+        "content_type": "content",
+        "similarity": 0.844,
+        "distance": 0.156,
+        "label": "[2] Global Methane Status Report 2025, pp. 86–87",
+        "text": "3.5.1.1 Agricultural methane emissions: status, trends and mitigation opportunities\n\nIn 2020, agriculture was the largest source of global biogenic methane emissions, responsible for 146 Mt per year or almost 42 per cent of the global total, slightly ahead of the energy sector. Livestock and rice cultivation dominate these emissions, contributing 76 per cent and 21 per cent respectively, while agricultural waste burning accounts for the remaining 3 per cent.\n\nEmissions vary significantly across regions. The G20+ accounts for more than 60 per cent of global agricultural methane emissions, led by India, China, Brazil, the United States of America, and the European Union. Non-G20+ countries, particularly in Africa and South-East Asia, contribute around 45 per cent of their total methane emissions from agriculture.\n\nWithout additional mitigation policies beyond those in place as of December 2024, emissions from agriculture are projected to rise by 7.8 per cent by 2030 and 17 per cent by 2050 compared to 2020 levels. Growth will be primarily driven by expanding livestock herds, especially in Africa and Latin America.\n\nUnder NDCs and MAPs, agricultural methane emissions are projected to stabilize at 2020 levels by 2030, due to the expansion of livestock herds outweighing reductions from rice cultivation and waste burning.\n\nThe GAINS model estimates that fully deploying low-cost mitigation technologies, those costing less than US$1,000 per tonne of methane or US$36 per tonne CO2eq, could reduce agricultural methane emissions by 15 per cent by 2030 compared to projected emissions for the sector under current legislation in the same year. Despite agriculture’s relatively modest role in global methane mitigation potential, around 24 Mt per year, several interventions offer substantial benefits at low or negative costs."
+      },
+      {
+        "n": 3,
+        "chunk_id": "gmsr-2025::0191",
+        "document": "GLOBAL METHANE STATUS REPORT 2025",
+        "section": "Observed Emissions and the Role of Empirical Data › 4.2.1 Global atmospheric methane concentrations",
+        "chapter": "Observed Emissions and the Role of Empirical Data",
+        "pages": "p. 100",
+        "page_start": 100,
+        "page_end": 100,
+        "content_type": "table",
+        "similarity": 0.831,
+        "distance": 0.169,
+        "label": "[3] Global Methane Status Report 2025, p. 100",
+        "text": "|Major anthropogenic source|2030 methane emissions Mt/yr|\n|---|---|\n|Livestock and manure|117 [114–124]|\n|Rice|32 [29–37]|\n|Landfills and Wastewater|71 [60–84]|\n|Coal mining|41 [38–43]|\n|Oil and gas|74 [67–80]|\n|Biomass and biofuel burning|27 [20–41]|"
+      },
+      {
+        "n": 4,
+        "chunk_id": "unsg-call-action-methane-by-2030-epublication::0043",
+        "document": "The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030",
+        "section": "5. Three sectors, nine actions by 2030 › 5.2 METHANE MITIGATION ACTIONS IN THE AGRICULTURE SECTOR",
+        "chapter": "5. Three sectors, nine actions by 2030",
+        "pages": "p. 21",
+        "page_start": 21,
+        "page_end": 21,
+        "content_type": "content",
+        "similarity": 0.825,
+        "distance": 0.175,
+        "label": "[4] The Secretary‑General’s call to action on methane, p. 21",
+        "text": "5.2 METHANE MITIGATION ACTIONS IN THE AGRICULTURE SECTOR\n\nThe agriculture sector is the biggest single contributor to anthropogenic methane emissions, accounting for 42 per cent of the global total. And global food demand continues to rise. Agricultural and fish production is projected to expand by 14 per cent over the next decade. Methane emissions from food systems will increase unless production becomes more efficient. However, the sector has the potential to cut 2030 emissions by eight per cent with simple, low‑cost measures.\n\nReducing agricultural methane is not about producing less food, it is about producing food efficiently and more sustainably with less organic landfill waste. With targeted finance, extension services (activities that provide information, guidance and services to develop the knowledge, skills and practices of farmers) and international support – particularly for smallholder farmers – agricultural methane reductions can drive rural development. A phased approach prioritizing productivity and optimization until 2030 – particularly in developing countries where reduction potential is highest – can unlock near‑term gains while building the trust and evidence base for deeper structural shifts."
+      },
+      {
+        "n": 5,
+        "chunk_id": "gmsr-2025::0161",
+        "document": "GLOBAL METHANE STATUS REPORT 2025",
+        "section": "Global Outlook of Methane Policies and Measures › 3.5 The agriculture sector / Key messages",
+        "chapter": "Global Outlook of Methane Policies and Measures",
+        "pages": "p. 85",
+        "page_start": 85,
+        "page_end": 85,
+        "content_type": "content",
+        "similarity": 0.816,
+        "distance": 0.184,
+        "label": "[5] Global Methane Status Report 2025, p. 85",
+        "text": "3.5 The agriculture sector\n\nKey messages\n\n- ‣ Agriculture is the largest source of global anthropogenic methane emissions, accounting for almost 42 per cent in 2020, with livestock and rice cultivation as the primary drivers. Without additional mitigation, emissions are expected to rise by 8 per cent by 2030 and 17 per cent by 2050, compared to 2020 levels, mainly due to increases in livestock populations in Africa and Latin America.\n\n- ‣ Mitigation ambition in agriculture has increased, but current NDCs and MAPs lack specificity. Only 4 per cent of NDCs include quantified, time-bound agricultural methane reduction targets, and current plans achieve just half of the sector’s full cost-effective mitigation potential.\n\n- ‣ Low-cost mitigation options exist, including improved rice cultivation and bans on agricultural waste burning, especially in Africa and South-East Asia. Livestockrelated options, though costlier, offer significant potential in the Americas and Western Europe.\n\n- ‣ Building climate-resilient livestock systems in smallholder and pastoralist settings can deliver multiple benefits – improving productivity while reducing emissions.\n\n- ‣ Policy coverage remains limited and uneven, with only 2–18 per cent of GMP participating countries having policies directly targeting key sources such as enteric fermentation, rice cultivation, or manure management.\n\n- ‣ Holistic, equity-based policies are needed to avoid unintended consequences, such as shifting emissions to unregulated sources, or increasing food insecurity and rural poverty.\n\n- ‣ Financial, institutional, and technical barriers persist, but redirecting a small share of harmful agricultural subsidies and improving MRV systems could unlock progress and link mitigation to development co-benefits."
+      }
+    ],
+    "prompt": "<|im_start|>system\nYou are EcoRAG, an assistant that answers questions about environmental and sustainability reports.\n\nYou are given numbered SOURCES, labelled [1], [2], [3], and so on.\n\nWrite your answer in this exact format:\n- One factual claim per line. Start each line with \"- \".\n- End EVERY line with the number of the source that states that claim, in square brackets: [2]. If two sources state it, write [2][4].\n- Use only the numbers of the SOURCES you were given.\n- If no source states a claim, do not write that claim.\n- No introduction and no concluding summary: only the claim lines.\n\nExample of the format (made-up content):\n- Wind power capacity doubled between 2015 and 2020 [3].\n- Most of the new capacity was built offshore [1][3].\n\nRules:\n1. Use ONLY information stated in the SOURCES. Do not use your general knowledge, even if you think it is correct.\n2. Cite the source whose text actually states that specific claim. If a number comes from source [4], cite [4]. A source about the same topic is not enough.\n3. Include the specific numbers, thresholds, percentages, dates, or definitions that directly answer the question when those facts are present in the SOURCES.\n4. If the SOURCES do not contain enough information to answer the question, write only this line: \"The provided sources do not contain enough information to answer this.\" If they answer only part of it, add a line: \"- The provided sources do not contain enough information about <the missing part>.\"\n5. If sources disagree, write one line for each side, each with its own citation.\n6. Copy numbers, units, percentages and years exactly as they appear in the SOURCES.\n7. Write at most 8 lines.<|im_end|>\n<|im_start|>user\nSOURCES:\n\n[1]\nDocument: GLOBAL METHANE STATUS REPORT 2025\nSection: Executive Summary › The Agricultural Sector\nPages: pp. 24–25\nChunk ID: gmsr-2025::0038\nTEXT:\nThe Agricultural Sector\n\nThe agricultural sector is the largest source of anthropogenic methane emissions. Emissions vary by region, with the G20+ group of countries responsible for 61 per cent of agricultural methane, equivalent to one-quarter of total anthropogenic methane emissions.\n\nAgricultural methane emissions are projected to increase by about 8 per cent by 2030 and around 17 per cent by 2050, compared with 2020 levels. This growth is driven largely by demand for food for a growing global population and the expansion of livestock numbers in Africa and Latin America, and with the non-G20+ regions experiencing the largest increases in emissions. Due to these drivers, even with the implementation of current NDCs and MAPs, emissions from agriculture would still rise by up to 4 per cent by 2030 compared with 2020 levels.\n\nYet, the agricultural sector has the technical potential to reduce emissions by 24 Mt per year by 2030, 8 per cent below 2020 levels in this decade, and 7 per cent by 2050.\n\nLow-cost measures measures could be implemented at a total annual cost of US$2.5 billion, while reducing annual methane emissions by 17 Mt by 2030. This investment amounts to less than 3 per cent of the subsidies governments currently allocate to the sector every year. Repurposing even a small share of these subsidies could significantly help finance methane mitigation.\n\nThere has been a generally positive trend in the development of policies targeting agricultural methane emissions over the past decade, particularly in the areas of animal waste management. This progress has been most notable in Asia-Pacific, Europe and North America, where enabling policy environments and accessible technologies have driven the adoption of measures to reduce emissions from manure. Despite this progress, however, only a small share of GMP participating countries have policies directly addressing key methane sources in the sector.\n\n[2]\nDocument: GLOBAL METHANE STATUS REPORT 2025\nSection: Global Outlook of Methane Policies and Measures › 3.5.1.1 Agricultural methane emissions: status, trends and mitigation opportunities\nPages: pp. 86–87\nChunk ID: gmsr-2025::0163\nTEXT:\n3.5.1.1 Agricultural methane emissions: status, trends and mitigation opportunities\n\nIn 2020, agriculture was the largest source of global biogenic methane emissions, responsible for 146 Mt per year or almost 42 per cent of the global total, slightly ahead of the energy sector. Livestock and rice cultivation dominate these emissions, contributing 76 per cent and 21 per cent respectively, while agricultural waste burning accounts for the remaining 3 per cent.\n\nEmissions vary significantly across regions. The G20+ accounts for more than 60 per cent of global agricultural methane emissions, led by India, China, Brazil, the United States of America, and the European Union. Non-G20+ countries, particularly in Africa and South-East Asia, contribute around 45 per cent of their total methane emissions from agriculture.\n\nWithout additional mitigation policies beyond those in place as of December 2024, emissions from agriculture are projected to rise by 7.8 per cent by 2030 and 17 per cent by 2050 compared to 2020 levels. Growth will be primarily driven by expanding livestock herds, especially in Africa and Latin America.\n\nUnder NDCs and MAPs, agricultural methane emissions are projected to stabilize at 2020 levels by 2030, due to the expansion of livestock herds outweighing reductions from rice cultivation and waste burning.\n\nThe GAINS model estimates that fully deploying low-cost mitigation technologies, those costing less than US$1,000 per tonne of methane or US$36 per tonne CO2eq, could reduce agricultural methane emissions by 15 per cent by 2030 compared to projected emissions for the sector under current legislation in the same year. Despite agriculture’s relatively modest role in global methane mitigation potential, around 24 Mt per year, several interventions offer substantial benefits at low or negative costs.\n\n[3]\nDocument: GLOBAL METHANE STATUS REPORT 2025\nSection: Observed Emissions and the Role of Empirical Data › 4.2.1 Global atmospheric methane concentrations\nPages: p. 100\nChunk ID: gmsr-2025::0191\nTEXT:\n|Major anthropogenic source|2030 methane emissions Mt/yr|\n|---|---|\n|Livestock and manure|117 [114–124]|\n|Rice|32 [29–37]|\n|Landfills and Wastewater|71 [60–84]|\n|Coal mining|41 [38–43]|\n|Oil and gas|74 [67–80]|\n|Biomass and biofuel burning|27 [20–41]|\n\n[4]\nDocument: The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030\nSection: 5. Three sectors, nine actions by 2030 › 5.2 METHANE MITIGATION ACTIONS IN THE AGRICULTURE SECTOR\nPages: p. 21\nChunk ID: unsg-call-action-methane-by-2030-epublication::0043\nTEXT:\n5.2 METHANE MITIGATION ACTIONS IN THE AGRICULTURE SECTOR\n\nThe agriculture sector is the biggest single contributor to anthropogenic methane emissions, accounting for 42 per cent of the global total. And global food demand continues to rise. Agricultural and fish production is projected to expand by 14 per cent over the next decade. Methane emissions from food systems will increase unless production becomes more efficient. However, the sector has the potential to cut 2030 emissions by eight per cent with simple, low‑cost measures.\n\nReducing agricultural methane is not about producing less food, it is about producing food efficiently and more sustainably with less organic landfill waste. With targeted finance, extension services (activities that provide information, guidance and services to develop the knowledge, skills and practices of farmers) and international support – particularly for smallholder farmers – agricultural methane reductions can drive rural development. A phased approach prioritizing productivity and optimization until 2030 – particularly in developing countries where reduction potential is highest – can unlock near‑term gains while building the trust and evidence base for deeper structural shifts.\n\n[5]\nDocument: GLOBAL METHANE STATUS REPORT 2025\nSection: Global Outlook of Methane Policies and Measures › 3.5 The agriculture sector / Key messages\nPages: p. 85\nChunk ID: gmsr-2025::0161\nTEXT:\n3.5 The agriculture sector\n\nKey messages\n\n- ‣ Agriculture is the largest source of global anthropogenic methane emissions, accounting for almost 42 per cent in 2020, with livestock and rice cultivation as the primary drivers. Without additional mitigation, emissions are expected to rise by 8 per cent by 2030 and 17 per cent by 2050, compared to 2020 levels, mainly due to increases in livestock populations in Africa and Latin America.\n\n- ‣ Mitigation ambition in agriculture has increased, but current NDCs and MAPs lack specificity. Only 4 per cent of NDCs include quantified, time-bound agricultural methane reduction targets, and current plans achieve just half of the sector’s full cost-effective mitigation potential.\n\n- ‣ Low-cost mitigation options exist, including improved rice cultivation and bans on agricultural waste burning, especially in Africa and South-East Asia. Livestockrelated options, though costlier, offer significant potential in the Americas and Western Europe.\n\n- ‣ Building climate-resilient livestock systems in smallholder and pastoralist settings can deliver multiple benefits – improving productivity while reducing emissions.\n\n- ‣ Policy coverage remains limited and uneven, with only 2–18 per cent of GMP participating countries having policies directly targeting key sources such as enteric fermentation, rice cultivation, or manure management.\n\n- ‣ Holistic, equity-based policies are needed to avoid unintended consequences, such as shifting emissions to unregulated sources, or increasing food insecurity and rural poverty.\n\n- ‣ Financial, institutional, and technical barriers persist, but redirecting a small share of harmful agricultural subsidies and improving MRV systems could unlock progress and link mitigation to development co-benefits.\n\nQUESTION: What share of global anthropogenic methane emissions comes from agriculture?\n\nAnswer the question using only the SOURCES above, in the required format: one claim per line, each line ending with the number of the source that states it, in square brackets.<|im_end|>\n<|im_start|>assistant\n",
+    "model": "C:\\Users\\HP\\.cache\\ecorag_models\\Qwen2.5-3B-Instruct",
+    "prompt_version": "v3",
+    "prompt_tokens": 2326,
+    "answer_tokens": 31,
+    "timing": {
+      "retrieval_s": 0.31,
+      "generation_s": 344.4
+    }
+  },
+  {
+    "question": "How many alerts did the Methane Alert and Response System send, and how often do operators respond?",
+    "answer": "- The Methane Alert and Response System (MARS) sent over 5,000 alerts by February 2026 [2].\n- The global response rate reached only 12 per cent in 2025 [2].",
+    "citations": {
+      "cited": [
+        "[2] Global Methane Status Report 2025, p. 101"
+      ],
+      "invalid": [],
+      "not_cited": [
+        "[1] The Secretary‑General’s call to action on methane, p. 15",
+        "[3] The Secretary‑General’s call to action on methane, p. 5",
+        "[4] The Secretary‑General’s call to action on methane, p. 16",
+        "[5] The Secretary‑General’s call to action on methane, p. 7"
+      ]
+    },
+    "verification": {
+      "summary": {
+        "factual_claims": 2,
+        "with_citation": 2,
+        "supported": 0,
+        "partially_supported": 0,
+        "misattributed": 2,
+        "unsupported_cited": 0,
+        "uncited": 0,
+        "uncited_but_matching_source": 0,
+        "uncited_and_unmatched": 0,
+        "date_scope_mismatches": 0,
+        "date_scope_figures": 0,
+        "non_standard_citation_format": 0,
+        "vague_attribution": 0,
+        "abstained": false
+      },
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The Methane Alert and Response System (MARS) sent over 5,000 alerts by February 2026 [2].",
+          "heading": null,
+          "kind": "factual",
+          "citations": [
+            2
+          ],
+          "invalid_citations": [],
+          "citation_formats": [
+            "[n]"
+          ],
+          "citation_status": "misattributed",
+          "supporting_sources": [
+            1,
+            3
+          ],
+          "key_numbers": {
+            "5000": [
+              1,
+              3
+            ],
+            "2026": [
+              1,
+              3
+            ]
+          },
+          "word_coverage": {
+            "1": 1.0,
+            "2": 0.71,
+            "3": 1.0,
+            "4": 0.57,
+            "5": 0.57
+          },
+          "date_scope_issues": [],
+          "problem": "'5000' is not in cited source [2] but is in [1, 3]; '2026' is not in cited source [2] but is in [1, 3]",
+          "needs_human_review": false
+        },
+        {
+          "claim_id": 2,
+          "claim": "The global response rate reached only 12 per cent in 2025 [2].",
+          "heading": null,
+          "kind": "factual",
+          "citations": [
+            2
+          ],
+          "invalid_citations": [],
+          "citation_formats": [
+            "[n]"
+          ],
+          "citation_status": "misattributed",
+          "supporting_sources": [
+            1,
+            3
+          ],
+          "key_numbers": {
+            "12": [
+              1,
+              3
+            ],
+            "2025": [
+              1,
+              3,
+              4
+            ]
+          },
+          "word_coverage": {
+            "1": 0.8,
+            "2": 0.4,
+            "3": 1.0,
+            "4": 0.6,
+            "5": 0.6
+          },
+          "date_scope_issues": [],
+          "problem": "'12' is not in cited source [2] but is in [1, 3]; '2025' is not in cited source [2] but is in [1, 3, 4]",
+          "needs_human_review": false
+        }
+      ]
+    },
+    "sources": [
+      {
+        "n": 1,
+        "chunk_id": "unsg-call-action-methane-by-2030-epublication::0031",
+        "document": "The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030",
+        "section": "5. Three sectors, nine actions by 2030 › Deploy and respond to measurement, monitoring and detection technologies",
+        "chapter": "5. Three sectors, nine actions by 2030",
+        "pages": "p. 15",
+        "page_start": 15,
+        "page_end": 15,
+        "content_type": "content",
+        "similarity": 0.766,
+        "distance": 0.234,
+        "label": "[1] The Secretary‑General’s call to action on methane, p. 15",
+        "text": "Full implementation of the Maximum Technically Feasible Reduction (MTFR) scenario, aligned with the GMP target, could reduce emissions by 78 per cent in 2030 compared to 2030 projected emissions under current legislation.\n\nThere are multiple established and emerging initiatives. For example, the Methane Alert and Response System (MARS), part of UNEP’s International Methane Emissions Observatory (IMEO), integrates data from 35 satellite instruments to provide rapid alerts on major methane emission events directly to governments and operators. By February 2026, MARS had sent over 5,000 alerts about major events. While the global response rate rose from one per cent in 2024 to 12 per cent in 2025, overall engagement remains low. Only 11 countries have a response rate from operators and governments of over 70 per cent. At the same time, around 60 per cent of alerts without a response occur in just four countries: Algeria, Iran, the United States and Turkmenistan."
+      },
+      {
+        "n": 2,
+        "chunk_id": "gmsr-2025::0194",
+        "document": "GLOBAL METHANE STATUS REPORT 2025",
+        "section": "Observed Emissions and the Role of Empirical Data › 4.3 Successful implementation of measurement-based monitoring / 4.3.1 The International Methane Emissions Observatory’s Methane Alert and Response System",
+        "chapter": "Observed Emissions and the Role of Empirical Data",
+        "pages": "p. 101",
+        "page_start": 101,
+        "page_end": 101,
+        "content_type": "content",
+        "similarity": 0.741,
+        "distance": 0.259,
+        "label": "[2] Global Methane Status Report 2025, p. 101",
+        "text": "4.3 Successful implementation of measurement-based monitoring\n\n4.3.1 The International Methane Emissions Observatory’s Methane Alert and Response System\n\nSatellites provide an important measurement-based source of data on methane emissions. While point mappers quantify only the largest emission sources, these data are valuable for quickly identifying major emitters. This enables stakeholders to prioritize mitigation efforts and track progress in reducing methane emissions from super-emitting facilities. UNEP’s IMEO operates the Methane Alert and Response System (MARS), the first global platform integrating data from more than a dozen satellite sensors and providing actionable information on major methane emission events directly to stakeholders.\n\nThe MARS was launched in a pilot phase at the beginning of 2023 and has been fully operational since January 2024. Since its launch, it has detected more than 10,000 methane plumes across various sectors and issued in excess of 2,500 notifications of detections in the oil and gas subsector. To date, 23 countries have designated official focal points to engage directly with IMEO and partners on response, alongside more than 150 members of the OGMP 2.0. The response rates for MARS notifications have grown nearly tenfold since the end of 2024, reflecting growing engagement and action based on satellite data. In 2024, IMEO highlighted a landmark case in Hassi Messaoud, Algeria, where a longstanding methane leak, one of the oldest continuously emitting sources ever recorded, was successfully eliminated. The leak had released an estimated 27,500 tonnes of methane annually, underscoring the transformative potential of satellite-driven climate action."
+      },
+      {
+        "n": 3,
+        "chunk_id": "unsg-call-action-methane-by-2030-epublication::0006",
+        "document": "The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030",
+        "section": "Executive summary",
+        "chapter": "Executive summary",
+        "pages": "p. 5",
+        "page_start": 5,
+        "page_end": 5,
+        "content_type": "content",
+        "similarity": 0.702,
+        "distance": 0.298,
+        "label": "[3] The Secretary‑General’s call to action on methane, p. 5",
+        "text": "Reducing methane from coal mining represents an important and often overlooked opportunity to deliver significant emission reductions in the near term.\n\nAt the same time, a methane data revolution is transforming transparency and accountability. Advances in satellite monitoring, remote sensing and company reporting now make it possible to detect methane emissions in near real time, given available technologies and capabilities. Point‑source imagers in satellites are designed to look at relatively small areas in high detail, with some satellites able to attribute emissions to a specific source within a 50‑metre radius. By February 2026, the UNEP International Methane Emissions Observatory (IMEO) Methane Alert and Response System (MARS) had sent over 5,000 alerts across 33 countries identifying major emissions events. Yet responses remain extremely low. In 2025, the global response rate reached only 12 per cent, leaving the vast majority of detected emission events unresolved. The world can now see methane emissions as they happen. Continued inaction is no longer a matter of uncertainty or lack of information – it is a deliberate choice.\n\nThere are some examples of effective action. Norway banned routine flaring in 1971, imposed a tax on CO₂ and methane emissions from petroleum production and transport in 1991, and increased the tax on flaring and methane emissions in 2017. The country now has one of the lowest methane emissions intensities of upstream oil and gas production in the world. If all countries matched Norway’s methane emission intensity standards, global methane emissions from oil and gas operations could fall by roughly 90 per cent."
+      },
+      {
+        "n": 4,
+        "chunk_id": "unsg-call-action-methane-by-2030-epublication::0032",
+        "document": "The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030",
+        "section": "5. Three sectors, nine actions by 2030 › Box 2 Positive impacts of responding to MARS",
+        "chapter": "5. Three sectors, nine actions by 2030",
+        "pages": "p. 16",
+        "page_start": 16,
+        "page_end": 16,
+        "content_type": "content",
+        "similarity": 0.688,
+        "distance": 0.312,
+        "label": "[4] The Secretary‑General’s call to action on methane, p. 16",
+        "text": "Box 2 Positive impacts of responding to MARS\n\nIn Algeria and Nigeria, MARS notifications and engagement led to direct action from governments and oil and gas companies. In Algeria, the annual avoided emissions are equivalent to 500,000 cars being taken off the road. In Nigeria, a six‑month leak emitted methane equivalent to 400,000 cars being driven for a year. This leak was fixed in under two weeks simply by replacing faulty equipment.\n\nThere is also a growing constellation of point‑source satellites that detect, measure and mitigate methane. Over half the super emitters detected in 2025 were from the oil and gas sector. Waste and other energy sources (coal mines and electricity generation) constituted in equal shares most of the remaining sources.\n\nThe world can now see methane emissions and mitigation as they happen. Governments and companies can and should achieve a response rate to alerts from MARS of at least 80 per cent before 2030. Multilateral Development Banks (MDBs) and international partners must support developing countries with capacity limitations to increase response rates and enable mitigation through technical assistance and targeted finance.\n\nFigure 3 Geographic distribution of methane super emitters detected by satellites, with examples of rates of the largest measurements in 2025\n\nLargest Estimated Emissions Rate (tonnes CH₄ per hour). (Source: UNEP)\n\nThe boundaries and names shown and the designations used on this map do not imply official endorsement or acceptance by the United Nations."
+      },
+      {
+        "n": 5,
+        "chunk_id": "unsg-call-action-methane-by-2030-epublication::0011",
+        "document": "The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030",
+        "section": "Executive summary › FOSSIL FUELS: THE IMMEDIATE PRIORITY / ACTION 1: Fix leaks and eliminate routine flaring and cold venting",
+        "chapter": "Executive summary",
+        "pages": "p. 7",
+        "page_start": 7,
+        "page_end": 7,
+        "content_type": "content",
+        "similarity": 0.678,
+        "distance": 0.322,
+        "label": "[5] The Secretary‑General’s call to action on methane, p. 7",
+        "text": "FOSSIL FUELS: THE IMMEDIATE PRIORITY\n\nAddressing methane emissions from fossil fuels offers the potential for the largest, fastest and most cost‑effective methane reductions this decade. The industry has the means and the responsibility to deliver them. Lasting progress also requires accelerating the global transition away from fossil fuels, which will reduce methane emissions alongside CO₂. By 2030, governments, industry and investors must implement the following actions:\n\nACTION 1: Fix leaks and eliminate routine flaring and cold venting\n\n- Adopt and enforce regulations that ban routine flaring and cold venting and require early leak detection and repair across the entire oil and gas value chain.\n\n- Replace and upgrade high‑emitting equipment.\n\n- Adopt a zero‑tolerance approach to super‑emitter events using satellite monitoring and other detection systems to ensure a rapid response.\n\n- Commit to improving the response rate to methane alerts issued through the UNEP Methane Alert and Response System to at least 80 per cent as a first step towards full response and compliance.\n\n- Make methane mitigation a standard industry practice in coal mining."
+      }
+    ],
+    "prompt": "<|im_start|>system\nYou are EcoRAG, an assistant that answers questions about environmental and sustainability reports.\n\nYou are given numbered SOURCES, labelled [1], [2], [3], and so on.\n\nWrite your answer in this exact format:\n- One factual claim per line. Start each line with \"- \".\n- End EVERY line with the number of the source that states that claim, in square brackets: [2]. If two sources state it, write [2][4].\n- Use only the numbers of the SOURCES you were given.\n- If no source states a claim, do not write that claim.\n- No introduction and no concluding summary: only the claim lines.\n\nExample of the format (made-up content):\n- Wind power capacity doubled between 2015 and 2020 [3].\n- Most of the new capacity was built offshore [1][3].\n\nRules:\n1. Use ONLY information stated in the SOURCES. Do not use your general knowledge, even if you think it is correct.\n2. Cite the source whose text actually states that specific claim. If a number comes from source [4], cite [4]. A source about the same topic is not enough.\n3. Include the specific numbers, thresholds, percentages, dates, or definitions that directly answer the question when those facts are present in the SOURCES.\n4. If the SOURCES do not contain enough information to answer the question, write only this line: \"The provided sources do not contain enough information to answer this.\" If they answer only part of it, add a line: \"- The provided sources do not contain enough information about <the missing part>.\"\n5. If sources disagree, write one line for each side, each with its own citation.\n6. Copy numbers, units, percentages and years exactly as they appear in the SOURCES.\n7. Write at most 8 lines.<|im_end|>\n<|im_start|>user\nSOURCES:\n\n[1]\nDocument: The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030\nSection: 5. Three sectors, nine actions by 2030 › Deploy and respond to measurement, monitoring and detection technologies\nPages: p. 15\nChunk ID: unsg-call-action-methane-by-2030-epublication::0031\nTEXT:\nFull implementation of the Maximum Technically Feasible Reduction (MTFR) scenario, aligned with the GMP target, could reduce emissions by 78 per cent in 2030 compared to 2030 projected emissions under current legislation.\n\nThere are multiple established and emerging initiatives. For example, the Methane Alert and Response System (MARS), part of UNEP’s International Methane Emissions Observatory (IMEO), integrates data from 35 satellite instruments to provide rapid alerts on major methane emission events directly to governments and operators. By February 2026, MARS had sent over 5,000 alerts about major events. While the global response rate rose from one per cent in 2024 to 12 per cent in 2025, overall engagement remains low. Only 11 countries have a response rate from operators and governments of over 70 per cent. At the same time, around 60 per cent of alerts without a response occur in just four countries: Algeria, Iran, the United States and Turkmenistan.\n\n[2]\nDocument: GLOBAL METHANE STATUS REPORT 2025\nSection: Observed Emissions and the Role of Empirical Data › 4.3 Successful implementation of measurement-based monitoring / 4.3.1 The International Methane Emissions Observatory’s Methane Alert and Response System\nPages: p. 101\nChunk ID: gmsr-2025::0194\nTEXT:\n4.3 Successful implementation of measurement-based monitoring\n\n4.3.1 The International Methane Emissions Observatory’s Methane Alert and Response System\n\nSatellites provide an important measurement-based source of data on methane emissions. While point mappers quantify only the largest emission sources, these data are valuable for quickly identifying major emitters. This enables stakeholders to prioritize mitigation efforts and track progress in reducing methane emissions from super-emitting facilities. UNEP’s IMEO operates the Methane Alert and Response System (MARS), the first global platform integrating data from more than a dozen satellite sensors and providing actionable information on major methane emission events directly to stakeholders.\n\nThe MARS was launched in a pilot phase at the beginning of 2023 and has been fully operational since January 2024. Since its launch, it has detected more than 10,000 methane plumes across various sectors and issued in excess of 2,500 notifications of detections in the oil and gas subsector. To date, 23 countries have designated official focal points to engage directly with IMEO and partners on response, alongside more than 150 members of the OGMP 2.0. The response rates for MARS notifications have grown nearly tenfold since the end of 2024, reflecting growing engagement and action based on satellite data. In 2024, IMEO highlighted a landmark case in Hassi Messaoud, Algeria, where a longstanding methane leak, one of the oldest continuously emitting sources ever recorded, was successfully eliminated. The leak had released an estimated 27,500 tonnes of methane annually, underscoring the transformative potential of satellite-driven climate action.\n\n[3]\nDocument: The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030\nSection: Executive summary\nPages: p. 5\nChunk ID: unsg-call-action-methane-by-2030-epublication::0006\nTEXT:\nReducing methane from coal mining represents an important and often overlooked opportunity to deliver significant emission reductions in the near term.\n\nAt the same time, a methane data revolution is transforming transparency and accountability. Advances in satellite monitoring, remote sensing and company reporting now make it possible to detect methane emissions in near real time, given available technologies and capabilities. Point‑source imagers in satellites are designed to look at relatively small areas in high detail, with some satellites able to attribute emissions to a specific source within a 50‑metre radius. By February 2026, the UNEP International Methane Emissions Observatory (IMEO) Methane Alert and Response System (MARS) had sent over 5,000 alerts across 33 countries identifying major emissions events. Yet responses remain extremely low. In 2025, the global response rate reached only 12 per cent, leaving the vast majority of detected emission events unresolved. The world can now see methane emissions as they happen. Continued inaction is no longer a matter of uncertainty or lack of information – it is a deliberate choice.\n\nThere are some examples of effective action. Norway banned routine flaring in 1971, imposed a tax on CO₂ and methane emissions from petroleum production and transport in 1991, and increased the tax on flaring and methane emissions in 2017. The country now has one of the lowest methane emissions intensities of upstream oil and gas production in the world. If all countries matched Norway’s methane emission intensity standards, global methane emissions from oil and gas operations could fall by roughly 90 per cent.\n\n[4]\nDocument: The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030\nSection: 5. Three sectors, nine actions by 2030 › Box 2 Positive impacts of responding to MARS\nPages: p. 16\nChunk ID: unsg-call-action-methane-by-2030-epublication::0032\nTEXT:\nBox 2 Positive impacts of responding to MARS\n\nIn Algeria and Nigeria, MARS notifications and engagement led to direct action from governments and oil and gas companies. In Algeria, the annual avoided emissions are equivalent to 500,000 cars being taken off the road. In Nigeria, a six‑month leak emitted methane equivalent to 400,000 cars being driven for a year. This leak was fixed in under two weeks simply by replacing faulty equipment.\n\nThere is also a growing constellation of point‑source satellites that detect, measure and mitigate methane. Over half the super emitters detected in 2025 were from the oil and gas sector. Waste and other energy sources (coal mines and electricity generation) constituted in equal shares most of the remaining sources.\n\nThe world can now see methane emissions and mitigation as they happen. Governments and companies can and should achieve a response rate to alerts from MARS of at least 80 per cent before 2030. Multilateral Development Banks (MDBs) and international partners must support developing countries with capacity limitations to increase response rates and enable mitigation through technical assistance and targeted finance.\n\nFigure 3 Geographic distribution of methane super emitters detected by satellites, with examples of rates of the largest measurements in 2025\n\nLargest Estimated Emissions Rate (tonnes CH₄ per hour). (Source: UNEP)\n\nThe boundaries and names shown and the designations used on this map do not imply official endorsement or acceptance by the United Nations.\n\n[5]\nDocument: The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030\nSection: Executive summary › FOSSIL FUELS: THE IMMEDIATE PRIORITY / ACTION 1: Fix leaks and eliminate routine flaring and cold venting\nPages: p. 7\nChunk ID: unsg-call-action-methane-by-2030-epublication::0011\nTEXT:\nFOSSIL FUELS: THE IMMEDIATE PRIORITY\n\nAddressing methane emissions from fossil fuels offers the potential for the largest, fastest and most cost‑effective methane reductions this decade. The industry has the means and the responsibility to deliver them. Lasting progress also requires accelerating the global transition away from fossil fuels, which will reduce methane emissions alongside CO₂. By 2030, governments, industry and investors must implement the following actions:\n\nACTION 1: Fix leaks and eliminate routine flaring and cold venting\n\n- Adopt and enforce regulations that ban routine flaring and cold venting and require early leak detection and repair across the entire oil and gas value chain.\n\n- Replace and upgrade high‑emitting equipment.\n\n- Adopt a zero‑tolerance approach to super‑emitter events using satellite monitoring and other detection systems to ensure a rapid response.\n\n- Commit to improving the response rate to methane alerts issued through the UNEP Methane Alert and Response System to at least 80 per cent as a first step towards full response and compliance.\n\n- Make methane mitigation a standard industry practice in coal mining.\n\nQUESTION: How many alerts did the Methane Alert and Response System send, and how often do operators respond?\n\nAnswer the question using only the SOURCES above, in the required format: one claim per line, each line ending with the number of the source that states it, in square brackets.<|im_end|>\n<|im_start|>assistant\n",
+    "model": "C:\\Users\\HP\\.cache\\ecorag_models\\Qwen2.5-3B-Instruct",
+    "prompt_version": "v3",
+    "prompt_tokens": 2343,
+    "answer_tokens": 53,
+    "timing": {
+      "retrieval_s": 0.14,
+      "generation_s": 308.4
+    }
+  },
+  {
+    "question": "What are the main challenges in modernising electricity grids?",
+    "answer": "- The grid cannot keep pace with rising electricity demand, leading to lengthening connection queues and competition for scarce grid capacity [2].\n- New housing and industrial development compete with data centers and generation projects for grid capacity [2].\n- Service disruption may occur if left unaddressed [2].\n- Stability is a concern due to the displacement of synchronous generators by converter-connected resources [2].\n- Converter-connected resources reduce traditional stabilizing properties like inertia, voltage support, fault current contribution, and damping [2].\n- Faster-moving and harder-to-observe variables include stability, voltage support, and damping [2].\n- AI-based tools' performance depends heavily on the quality of data and models they rely on [2].\n- The grid must now cope with distributed energy resources such as rooftop solar, batteries, EVs, and flexible demand [3].\n- Large inverter-based power sources and vast data centers represent a new, more concentrated form of generation and demand [3].\n- Sharp peaks can produce challenges for voltage management, transformer loading, feeder capacity, and protection settings [3].\n- The grid is transforming from unidirectional systems to systems with dynamic two-way flows [3].\n- Voltage management, transformer loading, feeder capacity, and protection settings are new challenges created by these changes [3].\n- The grid must now manage conditions that are faster-moving and harder to observe and model than thermal limits [2].\n- The grid faces new challenges at both the distribution and transmission levels [3].\n- The grid must now manage evolving real-time conditions and instantaneous disturbances [2].\n- Evolving real-time conditions and instantaneous disturbances are uncertainties in operational planning [2].\n- Decisions in long-term planning and connection studies include what to build, defer, or connect, and where to locate (investment focus) [5].\n- Forecast error on variable demand and supply, and unplanned outages, are uncertainties in operational planning [5].\n- From deterministic firm-capacity cases sized to annual minima and maxima,",
+    "citations": {
+      "cited": [
+        "[2] Modernising Grids in the Age of Electricity, p. 12",
+        "[3] Modernising Grids in the Age of Electricity, pp. 11–12",
+        "[5] Modernising Grids in the Age of Electricity, p. 18"
+      ],
+      "invalid": [],
+      "not_cited": [
+        "[1] Modernising Grids in the Age of Electricity, p. 20",
+        "[4] Modernising Grids in the Age of Electricity, p. 11"
+      ]
+    },
+    "verification": {
+      "summary": {
+        "factual_claims": 19,
+        "with_citation": 18,
+        "supported": 16,
+        "partially_supported": 0,
+        "misattributed": 2,
+        "unsupported_cited": 0,
+        "uncited": 1,
+        "uncited_but_matching_source": 1,
+        "uncited_and_unmatched": 0,
+        "date_scope_mismatches": 0,
+        "date_scope_figures": 0,
+        "non_standard_citation_format": 0,
+        "vague_attribution": 0,
+        "abstained": false
+      },
+      "claims": [
+        {
+          "claim_id": 1,
+          "claim": "The grid cannot keep pace with rising electricity demand, leading to lengthening connection queues and competition for scarce grid capacity [2].",
+          "heading": null,
+          "kind": "factual",
+          "citations": [
+            2
+          ],
+          "invalid_citations": [],
+          "citation_formats": [
+            "[n]"
+          ],
+          "citation_status": "supported",
+          "supporting_sources": [
+            1,
+            2
+          ],
+          "key_numbers": {},
+          "word_coverage": {
+            "1": 0.57,
+            "2": 0.79,
+            "3": 0.29,
+            "4": 0.29,
+            "5": 0.29
+          },
+          "date_scope_issues": [],
+          "problem": null,
+          "needs_human_review": true
+        },
+        {
+          "claim_id": 2,
+          "claim": "New housing and industrial development compete with data centers and generation projects for grid capacity [2].",
+          "heading": null,
+          "kind": "factual",
+          "citations": [
+            2
+          ],
+          "invalid_citations": [],
+          "citation_formats": [
+            "[n]"
+          ],
+          "citation_status": "supported",
+          "supporting_sources": [
+            2,
+            3,
+            5
+          ],
+          "key_numbers": {},
+          "word_coverage": {
+            "1": 0.18,
+            "2": 0.91,
+            "3": 0.55,
+            "4": 0.09,
+            "5": 0.36
+          },
+          "date_scope_issues": [],
+          "problem": null,
+          "needs_human_review": true
+        },
+        {
+          "claim_id": 3,
+          "claim": "Service disruption may occur if left unaddressed [2].",
+          "heading": null,
+          "kind": "factual",
+          "citations": [
+            2
+          ],
+          "invalid_citations": [],
+          "citation_formats": [
+            "[n]"
+          ],
+          "citation_status": "supported",
+          "supporting_sources": [
+            2
+          ],
+          "key_numbers": {},
+          "word_coverage": {
+            "1": 0.0,
+            "2": 0.8,
+            "3": 0.0,
+            "4": 0.0,
+            "5": 0.0
+          },
+          "date_scope_issues": [],
+          "problem": null,
+          "needs_human_review": true
+        },
+        {
+          "claim_id": 4,
+          "claim": "Stability is a concern due to the displacement of synchronous generators by converter-connected resources [2].",
+          "heading": null,
+          "kind": "factual",
+          "citations": [
+            2
+          ],
+          "invalid_citations": [],
+          "citation_formats": [
+            "[n]"
+          ],
+          "citation_status": "supported",
+          "supporting_sources": [
+            2
+          ],
+          "key_numbers": {},
+          "word_coverage": {
+            "1": 0.0,
+            "2": 0.67,
+            "3": 0.11,
+            "4": 0.0,
+            "5": 0.11
+          },
+          "date_scope_issues": [],
+          "problem": null,
+          "needs_human_review": true
+        },
+        {
+          "claim_id": 5,
+          "claim": "Converter-connected resources reduce traditional stabilizing properties like inertia, voltage support, fault current contribution, and damping [2].",
+          "heading": null,
+          "kind": "factual",
+          "citations": [
+            2
+          ],
+          "invalid_citations": [],
+          "citation_formats": [
+            "[n]"
+          ],
+          "citation_status": "supported",
+          "supporting_sources": [
+            2
+          ],
+          "key_numbers": {},
+          "word_coverage": {
+            "1": 0.0,
+            "2": 0.8,
+            "3": 0.13,
+            "4": 0.0,
+            "5": 0.13
+          },
+          "date_scope_issues": [],
+          "problem": null,
+          "needs_human_review": true
+        },
+        {
+          "claim_id": 6,
+          "claim": "Faster-moving and harder-to-observe variables include stability, voltage support, and damping [2].",
+          "heading": null,
+          "kind": "factual",
+          "citations": [
+            2
+          ],
+          "invalid_citations": [],
+          "citation_formats": [
+            "[n]"
+          ],
+          "citation_status": "supported",
+          "supporting_sources": [
+            2
+          ],
+          "key_numbers": {},
+          "word_coverage": {
+            "1": 0.0,
+            "2": 0.89,
+            "3": 0.11,
+            "4": 0.11,
+            "5": 0.33
+          },
+          "date_scope_issues": [],
+          "problem": null,
+          "needs_human_review": true
+        },
+        {
+          "claim_id": 7,
+          "claim": "AI-based tools' performance depends heavily on the quality of data and models they rely on [2].",
+          "heading": null,
+          "kind": "factual",
+          "citations": [
+            2
+          ],
+          "invalid_citations": [],
+          "citation_formats": [
+            "[n]"
+          ],
+          "citation_status": "supported",
+          "supporting_sources": [
+            2
+          ],
+          "key_numbers": {},
+          "word_coverage": {
+            "1": 0.11,
+            "2": 1.0,
+            "3": 0.22,
+            "4": 0.0,
+            "5": 0.11
+          },
+          "date_scope_issues": [],
+          "problem": null,
+          "needs_human_review": true
+        },
+        {
+          "claim_id": 8,
+          "claim": "The grid must now cope with distributed energy resources such as rooftop solar, batteries, EVs, and flexible demand [3].",
+          "heading": null,
+          "kind": "factual",
+          "citations": [
+            3
+          ],
+          "invalid_citations": [],
+          "citation_formats": [
+            "[n]"
+          ],
+          "citation_status": "supported",
+          "supporting_sources": [
+            3
+          ],
+          "key_numbers": {},
+          "word_coverage": {
+            "1": 0.17,
+            "2": 0.25,
+            "3": 0.92,
+            "4": 0.17,
+            "5": 0.17
+          },
+          "date_scope_issues": [],
+          "problem": null,
+          "needs_human_review": true
+        },
+        {
+          "claim_id": 9,
+          "claim": "Large inverter-based power sources and vast data centers represent a new, more concentrated form of generation and demand [3].",
+          "heading": null,
+          "kind": "factual",
+          "citations": [
+            3
+          ],
+          "invalid_citations": [],
+          "citation_formats": [
+            "[n]"
+          ],
+          "citation_status": "supported",
+          "supporting_sources": [
+            3
+          ],
+          "key_numbers": {},
+          "word_coverage": {
+            "1": 0.08,
+            "2": 0.31,
+            "3": 0.92,
+            "4": 0.08,
+            "5": 0.31
+          },
+          "date_scope_issues": [],
+          "problem": null,
+          "needs_human_review": true
+        },
+        {
+          "claim_id": 10,
+          "claim": "Sharp peaks can produce challenges for voltage management, transformer loading, feeder capacity, and protection settings [3].",
+          "heading": null,
+          "kind": "factual",
+          "citations": [
+            3
+          ],
+          "invalid_citations": [],
+          "citation_formats": [
+            "[n]"
+          ],
+          "citation_status": "supported",
+          "supporting_sources": [
+            3
+          ],
+          "key_numbers": {},
+          "word_coverage": {
+            "1": 0.17,
+            "2": 0.08,
+            "3": 1.0,
+            "4": 0.0,
+            "5": 0.25
+          },
+          "date_scope_issues": [],
+          "problem": null,
+          "needs_human_review": true
+        },
+        {
+          "claim_id": 11,
+          "claim": "The grid is transforming from unidirectional systems to systems with dynamic two-way flows [3].",
+          "heading": null,
+          "kind": "factual",
+          "citations": [
+            3
+          ],
+          "invalid_citations": [],
+          "citation_formats": [
+            "[n]"
+          ],
+          "citation_status": "supported",
+          "supporting_sources": [
+            2,
+            3,
+            5
+          ],
+          "key_numbers": {},
+          "word_coverage": {
+            "1": 0.14,
+            "2": 0.43,
+            "3": 1.0,
+            "4": 0.14,
+            "5": 0.43
+          },
+          "date_scope_issues": [],
+          "problem": null,
+          "needs_human_review": true
+        },
+        {
+          "claim_id": 12,
+          "claim": "Voltage management, transformer loading, feeder capacity, and protection settings are new challenges created by these changes [3].",
+          "heading": null,
+          "kind": "factual",
+          "citations": [
+            3
+          ],
+          "invalid_citations": [],
+          "citation_formats": [
+            "[n]"
+          ],
+          "citation_status": "supported",
+          "supporting_sources": [
+            3
+          ],
+          "key_numbers": {},
+          "word_coverage": {
+            "1": 0.17,
+            "2": 0.17,
+            "3": 1.0,
+            "4": 0.08,
+            "5": 0.25
+          },
+          "date_scope_issues": [],
+          "problem": null,
+          "needs_human_review": true
+        },
+        {
+          "claim_id": 13,
+          "claim": "The grid must now manage conditions that are faster-moving and harder to observe and model than thermal limits [2].",
+          "heading": null,
+          "kind": "factual",
+          "citations": [
+            2
+          ],
+          "invalid_citations": [],
+          "citation_formats": [
+            "[n]"
+          ],
+          "citation_status": "supported",
+          "supporting_sources": [
+            2,
+            5
+          ],
+          "key_numbers": {},
+          "word_coverage": {
+            "1": 0.18,
+            "2": 0.82,
+            "3": 0.27,
+            "4": 0.18,
+            "5": 0.45
+          },
+          "date_scope_issues": [],
+          "problem": null,
+          "needs_human_review": true
+        },
+        {
+          "claim_id": 14,
+          "claim": "The grid faces new challenges at both the distribution and transmission levels [3].",
+          "heading": null,
+          "kind": "factual",
+          "citations": [
+            3
+          ],
+          "invalid_citations": [],
+          "citation_formats": [
+            "[n]"
+          ],
+          "citation_status": "supported",
+          "supporting_sources": [
+            3
+          ],
+          "key_numbers": {},
+          "word_coverage": {
+            "1": 0.29,
+            "2": 0.29,
+            "3": 0.86,
+            "4": 0.14,
+            "5": 0.14
+          },
+          "date_scope_issues": [],
+          "problem": null,
+          "needs_human_review": true
+        },
+        {
+          "claim_id": 15,
+          "claim": "The grid must now manage evolving real-time conditions and instantaneous disturbances [2].",
+          "heading": null,
+          "kind": "factual",
+          "citations": [
+            2
+          ],
+          "invalid_citations": [],
+          "citation_formats": [
+            "[n]"
+          ],
+          "citation_status": "misattributed",
+          "supporting_sources": [
+            5
+          ],
+          "key_numbers": {},
+          "word_coverage": {
+            "1": 0.22,
+            "2": 0.22,
+            "3": 0.33,
+            "4": 0.11,
+            "5": 0.89
+          },
+          "date_scope_issues": [],
+          "problem": "cited [2] does not match; best matching source is 5",
+          "needs_human_review": false
+        },
+        {
+          "claim_id": 16,
+          "claim": "Evolving real-time conditions and instantaneous disturbances are uncertainties in operational planning [2].",
+          "heading": null,
+          "kind": "factual",
+          "citations": [
+            2
+          ],
+          "invalid_citations": [],
+          "citation_formats": [
+            "[n]"
+          ],
+          "citation_status": "misattributed",
+          "supporting_sources": [
+            5
+          ],
+          "key_numbers": {},
+          "word_coverage": {
+            "1": 0.11,
+            "2": 0.11,
+            "3": 0.11,
+            "4": 0.0,
+            "5": 1.0
+          },
+          "date_scope_issues": [],
+          "problem": "cited [2] does not match; best matching source is 5",
+          "needs_human_review": false
+        },
+        {
+          "claim_id": 17,
+          "claim": "Decisions in long-term planning and connection studies include what to build, defer, or connect, and where to locate (investment focus) [5].",
+          "heading": null,
+          "kind": "factual",
+          "citations": [
+            5
+          ],
+          "invalid_citations": [],
+          "citation_formats": [
+            "[n]"
+          ],
+          "citation_status": "supported",
+          "supporting_sources": [
+            5
+          ],
+          "key_numbers": {},
+          "word_coverage": {
+            "1": 0.0,
+            "2": 0.08,
+            "3": 0.08,
+            "4": 0.0,
+            "5": 0.92
+          },
+          "date_scope_issues": [],
+          "problem": null,
+          "needs_human_review": true
+        },
+        {
+          "claim_id": 18,
+          "claim": "Forecast error on variable demand and supply, and unplanned outages, are uncertainties in operational planning [5].",
+          "heading": null,
+          "kind": "factual",
+          "citations": [
+            5
+          ],
+          "invalid_citations": [],
+          "citation_formats": [
+            "[n]"
+          ],
+          "citation_status": "supported",
+          "supporting_sources": [
+            5
+          ],
+          "key_numbers": {},
+          "word_coverage": {
+            "1": 0.1,
+            "2": 0.1,
+            "3": 0.1,
+            "4": 0.1,
+            "5": 1.0
+          },
+          "date_scope_issues": [],
+          "problem": null,
+          "needs_human_review": true
+        },
+        {
+          "claim_id": 19,
+          "claim": "From deterministic firm-capacity cases sized to annual minima and maxima,",
+          "heading": null,
+          "kind": "factual",
+          "citations": [],
+          "invalid_citations": [],
+          "citation_formats": [],
+          "citation_status": "no_citation",
+          "supporting_sources": [
+            5
+          ],
+          "key_numbers": {},
+          "word_coverage": {
+            "1": 0.12,
+            "2": 0.25,
+            "3": 0.12,
+            "4": 0.0,
+            "5": 1.0
+          },
+          "date_scope_issues": [],
+          "problem": "factual claim has no citation; matching content found in [5]",
+          "needs_human_review": false
+        }
+      ]
+    },
+    "sources": [
+      {
+        "n": 1,
+        "chunk_id": "modernisinggridsintheageofelectricity::0033",
+        "document": "Modernising Grids in the Age of Electricity",
+        "section": "Chapter 1. The need for modern grids › What this report sets out to answer",
+        "chapter": "Chapter 1. The need for modern grids",
+        "pages": "p. 20",
+        "page_start": 20,
+        "page_end": 20,
+        "content_type": "content",
+        "similarity": 0.81,
+        "distance": 0.19,
+        "label": "[1] Modernising Grids in the Age of Electricity, p. 20",
+        "text": "What this report sets out to answer\n\nThis chapter has set out the challenge and the opportunity: electricity demand is rising rapidly, grid expansion alone cannot keep pace, meaningful untapped capacity exists in the networks that are already in place, and there is a suite of digital tools which could help unlock this capacity. The rest of this report examines how these digital tools might be used. Chapter 2 looks at the state of deployment across the digital grid toolkit, including the fuller technology landscape only introduced briefly here. Chapter 3 provides an estimate of the potential gains at the global level and examines the conditions needed to deploy these tools more widely and scale these gains. Finally, Chapter 4 sets out policy recommendations for operators, regulators and governments."
+      },
+      {
+        "n": 2,
+        "chunk_id": "modernisinggridsintheageofelectricity::0015",
+        "document": "Modernising Grids in the Age of Electricity",
+        "section": "Chapter 1. The need for modern grids › Demand growth and the need for grid expansion to 2035 in the Current Policies Scenario",
+        "chapter": "Chapter 1. The need for modern grids",
+        "pages": "p. 12",
+        "page_start": 12,
+        "page_end": 12,
+        "content_type": "content",
+        "similarity": 0.809,
+        "distance": 0.191,
+        "label": "[2] Modernising Grids in the Age of Electricity, p. 12",
+        "text": "Chapter 1. The need for modern grids\n\nDemand growth and the need for grid expansion to 2035 in the Current Policies Scenario\n\nSources: IEA (2026), Electricity; IEA (2025), World Energy Outlook.\n\nWhere the grid cannot keep pace, the consequences are well documented: lengthening connection queues, new housing and industrial development competing with data centres and generation projects for scarce grid capacity, and, in the most severe cases, service disruption. Left unaddressed, these circumstances risk slowing electrification plans just as they need to accelerate, with knock-on costs for competitiveness and climate goals.\n\nStability adds a further dimension to this complexity: operators need to ensure not only that flows stay within the thermal limits, but that the system retains enough strength to ride through disturbances. As converter-connected resources displace synchronous generators, several stabilising properties traditionally provided by synchronous machines, including inertia, voltage support, fault current contribution and damping (collectively known as system strength), come under pressure. Some of these, such as inertia, are inherently linked to rotating mass; others, such as voltage support and damping, can also be delivered by appropriately designed converter-connected resources or dedicated equipment. These variables are faster-moving and harder to observe and model than thermal limits, raising the bar for the quality of data and validation that grid operators need to manage them. This is particularly important as AI-based tools are increasingly used to support grid operations, because their performance depends heavily on the quality of the data and models they rely on."
+      },
+      {
+        "n": 3,
+        "chunk_id": "modernisinggridsintheageofelectricity::0014",
+        "document": "Modernising Grids in the Age of Electricity",
+        "section": "Chapter 1. The need for modern grids › Grids in the Age of Electricity",
+        "chapter": "Chapter 1. The need for modern grids",
+        "pages": "pp. 11–12",
+        "page_start": 11,
+        "page_end": 12,
+        "content_type": "content",
+        "similarity": 0.807,
+        "distance": 0.193,
+        "label": "[3] Modernising Grids in the Age of Electricity, pp. 11–12",
+        "text": "Grids in the Age of Electricity\n\nThe grid is the critical enabling infrastructure on which the energy transition depends for security, decarbonisation and affordability, as economies around the world increasingly rely on electricity. Electrification of end uses is a core pillar of the strategy selected by many jurisdictions to strengthen their energy security and cut emissions, making electricity the backbone of the transition.\n\nDemand for electricity is rising rapidly. Electricity demand has grown at roughly twice the rate of overall energy demand over the past decade, driven in part by electrification, data centres, cooling and industrial growth. This ratio continues to widen, while new renewable generation, often built far from demand centres, is adding further need for transmission. To meet these needs, 25 million kilometres of lines are expected to be added under the IEA’s Current Policy Scenario (CPS), equivalent to boosting grid capacity by 30% by 2035. This is why the current period is termed the Age of Electricity: electricity demand is decoupling from energy demand, and electricity is fast becoming the backbone of the energy system.\n\nThis transformation is also changing the conditions the grid has to cope with, not only how much it carries. Distributed energy resources such as rooftop solar, batteries, electric vehicles (EVs) and flexible demand have turned many grids from unidirectional systems into systems with dynamic two-way flows, while large inverter-based power sources and vast data centres represent a new, more concentrated form of generation and demand. Both trends are increasingly evident at the distribution level as much as at the transmission level, creating new challenges for voltage management, transformer loading, feeder capacity and protection settings, and both can produce sharp peaks that grids historically built for steady, predictable conditions are not designed to absorb without being actively managed."
+      },
+      {
+        "n": 4,
+        "chunk_id": "modernisinggridsintheageofelectricity::0013",
+        "document": "Modernising Grids in the Age of Electricity",
+        "section": "Chapter 1. The need for modern grids",
+        "chapter": "Chapter 1. The need for modern grids",
+        "pages": "p. 11",
+        "page_start": 11,
+        "page_end": 11,
+        "content_type": "content",
+        "similarity": 0.806,
+        "distance": 0.194,
+        "label": "[4] Modernising Grids in the Age of Electricity, p. 11",
+        "text": "Chapter 1. The need for modern grids\n\nChapter 1. The need for modern grids\n\nThis chapter sets the scene: it explains why, as electricity demand is rising faster than grids can be expanded, this creates an opportunity to use existing networks better, and how digitalisation, grid-enhancing technologies and artificial intelligence (AI) can be combined to capture it. It introduces the concepts used throughout the report, a shared toolkit and a framework of three layers of grid optimisation."
+      },
+      {
+        "n": 5,
+        "chunk_id": "modernisinggridsintheageofelectricity::0027",
+        "document": "Modernising Grids in the Age of Electricity",
+        "section": "Chapter 1. The need for modern grids › Making better use of the grid across planning and operational timeframes",
+        "chapter": "Chapter 1. The need for modern grids",
+        "pages": "p. 18",
+        "page_start": 18,
+        "page_end": 18,
+        "content_type": "table",
+        "similarity": 0.798,
+        "distance": 0.202,
+        "label": "[5] Modernising Grids in the Age of Electricity, p. 18",
+        "text": "Making better use of the grid across planning and operational timeframes\n\n||Long-term planning and connection studies|Operational planning (from weeks ahead to day-ahead)|Real-time operation|\n|---|---|---|---|\n|Decisions|What to build, defer or connect, and location (investment focus)|Allocating market capacity between nodes or zones, and developing remedial action plans to manage outages (security focus)|Curative actions to keep the system secure as conditions evolve, including automatic responses faster than any operator can act (operational continuity focus)|\n|Uncertainties|Load growth, generation and grid projects materialising or being delayed, policy shifts, technology maturity, demand flexibility and climate conditions|Forecast error on variable demand and supply, and unplanned outages, against largely known generation schedules|Evolving real-time conditions and instantaneous disturbances|\n|How practice is evolving|From deterministic firm- capacity cases sized to annual minima and maxima, towards finer granularity (some operators already run cases on an hour-by- hour basis) and increasingly probabilistic and stochastic methods that represent variable demand and supply, realistic outages, and the remedial actions and technologies available|From preventive margins held in reserve, towards accounting for the large set of remedial actions already standard in many systems (topology, PST and HVDC setpoints, redispatch and countertrading) to minimise congestion management costs rather than holding conservative headroom in reserve|From fixed seasonal or static limits, towards dynamic limits and pre- planned curative sequences, supported by tools that simulate many events and advise the operator on the best response|"
+      }
+    ],
+    "prompt": "<|im_start|>system\nYou are EcoRAG, an assistant that answers questions about environmental and sustainability reports.\n\nYou are given numbered SOURCES, labelled [1], [2], [3], and so on.\n\nWrite your answer in this exact format:\n- One factual claim per line. Start each line with \"- \".\n- End EVERY line with the number of the source that states that claim, in square brackets: [2]. If two sources state it, write [2][4].\n- Use only the numbers of the SOURCES you were given.\n- If no source states a claim, do not write that claim.\n- No introduction and no concluding summary: only the claim lines.\n\nExample of the format (made-up content):\n- Wind power capacity doubled between 2015 and 2020 [3].\n- Most of the new capacity was built offshore [1][3].\n\nRules:\n1. Use ONLY information stated in the SOURCES. Do not use your general knowledge, even if you think it is correct.\n2. Cite the source whose text actually states that specific claim. If a number comes from source [4], cite [4]. A source about the same topic is not enough.\n3. Include the specific numbers, thresholds, percentages, dates, or definitions that directly answer the question when those facts are present in the SOURCES.\n4. If the SOURCES do not contain enough information to answer the question, write only this line: \"The provided sources do not contain enough information to answer this.\" If they answer only part of it, add a line: \"- The provided sources do not contain enough information about <the missing part>.\"\n5. If sources disagree, write one line for each side, each with its own citation.\n6. Copy numbers, units, percentages and years exactly as they appear in the SOURCES.\n7. Write at most 8 lines.<|im_end|>\n<|im_start|>user\nSOURCES:\n\n[1]\nDocument: Modernising Grids in the Age of Electricity\nSection: Chapter 1. The need for modern grids › What this report sets out to answer\nPages: p. 20\nChunk ID: modernisinggridsintheageofelectricity::0033\nTEXT:\nWhat this report sets out to answer\n\nThis chapter has set out the challenge and the opportunity: electricity demand is rising rapidly, grid expansion alone cannot keep pace, meaningful untapped capacity exists in the networks that are already in place, and there is a suite of digital tools which could help unlock this capacity. The rest of this report examines how these digital tools might be used. Chapter 2 looks at the state of deployment across the digital grid toolkit, including the fuller technology landscape only introduced briefly here. Chapter 3 provides an estimate of the potential gains at the global level and examines the conditions needed to deploy these tools more widely and scale these gains. Finally, Chapter 4 sets out policy recommendations for operators, regulators and governments.\n\n[2]\nDocument: Modernising Grids in the Age of Electricity\nSection: Chapter 1. The need for modern grids › Demand growth and the need for grid expansion to 2035 in the Current Policies Scenario\nPages: p. 12\nChunk ID: modernisinggridsintheageofelectricity::0015\nTEXT:\nChapter 1. The need for modern grids\n\nDemand growth and the need for grid expansion to 2035 in the Current Policies Scenario\n\nSources: IEA (2026), Electricity; IEA (2025), World Energy Outlook.\n\nWhere the grid cannot keep pace, the consequences are well documented: lengthening connection queues, new housing and industrial development competing with data centres and generation projects for scarce grid capacity, and, in the most severe cases, service disruption. Left unaddressed, these circumstances risk slowing electrification plans just as they need to accelerate, with knock-on costs for competitiveness and climate goals.\n\nStability adds a further dimension to this complexity: operators need to ensure not only that flows stay within the thermal limits, but that the system retains enough strength to ride through disturbances. As converter-connected resources displace synchronous generators, several stabilising properties traditionally provided by synchronous machines, including inertia, voltage support, fault current contribution and damping (collectively known as system strength), come under pressure. Some of these, such as inertia, are inherently linked to rotating mass; others, such as voltage support and damping, can also be delivered by appropriately designed converter-connected resources or dedicated equipment. These variables are faster-moving and harder to observe and model than thermal limits, raising the bar for the quality of data and validation that grid operators need to manage them. This is particularly important as AI-based tools are increasingly used to support grid operations, because their performance depends heavily on the quality of the data and models they rely on.\n\n[3]\nDocument: Modernising Grids in the Age of Electricity\nSection: Chapter 1. The need for modern grids › Grids in the Age of Electricity\nPages: pp. 11–12\nChunk ID: modernisinggridsintheageofelectricity::0014\nTEXT:\nGrids in the Age of Electricity\n\nThe grid is the critical enabling infrastructure on which the energy transition depends for security, decarbonisation and affordability, as economies around the world increasingly rely on electricity. Electrification of end uses is a core pillar of the strategy selected by many jurisdictions to strengthen their energy security and cut emissions, making electricity the backbone of the transition.\n\nDemand for electricity is rising rapidly. Electricity demand has grown at roughly twice the rate of overall energy demand over the past decade, driven in part by electrification, data centres, cooling and industrial growth. This ratio continues to widen, while new renewable generation, often built far from demand centres, is adding further need for transmission. To meet these needs, 25 million kilometres of lines are expected to be added under the IEA’s Current Policy Scenario (CPS), equivalent to boosting grid capacity by 30% by 2035. This is why the current period is termed the Age of Electricity: electricity demand is decoupling from energy demand, and electricity is fast becoming the backbone of the energy system.\n\nThis transformation is also changing the conditions the grid has to cope with, not only how much it carries. Distributed energy resources such as rooftop solar, batteries, electric vehicles (EVs) and flexible demand have turned many grids from unidirectional systems into systems with dynamic two-way flows, while large inverter-based power sources and vast data centres represent a new, more concentrated form of generation and demand. Both trends are increasingly evident at the distribution level as much as at the transmission level, creating new challenges for voltage management, transformer loading, feeder capacity and protection settings, and both can produce sharp peaks that grids historically built for steady, predictable conditions are not designed to absorb without being actively managed.\n\n[4]\nDocument: Modernising Grids in the Age of Electricity\nSection: Chapter 1. The need for modern grids\nPages: p. 11\nChunk ID: modernisinggridsintheageofelectricity::0013\nTEXT:\nChapter 1. The need for modern grids\n\nChapter 1. The need for modern grids\n\nThis chapter sets the scene: it explains why, as electricity demand is rising faster than grids can be expanded, this creates an opportunity to use existing networks better, and how digitalisation, grid-enhancing technologies and artificial intelligence (AI) can be combined to capture it. It introduces the concepts used throughout the report, a shared toolkit and a framework of three layers of grid optimisation.\n\n[5]\nDocument: Modernising Grids in the Age of Electricity\nSection: Chapter 1. The need for modern grids › Making better use of the grid across planning and operational timeframes\nPages: p. 18\nChunk ID: modernisinggridsintheageofelectricity::0027\nTEXT:\nMaking better use of the grid across planning and operational timeframes\n\n||Long-term planning and connection studies|Operational planning (from weeks ahead to day-ahead)|Real-time operation|\n|---|---|---|---|\n|Decisions|What to build, defer or connect, and location (investment focus)|Allocating market capacity between nodes or zones, and developing remedial action plans to manage outages (security focus)|Curative actions to keep the system secure as conditions evolve, including automatic responses faster than any operator can act (operational continuity focus)|\n|Uncertainties|Load growth, generation and grid projects materialising or being delayed, policy shifts, technology maturity, demand flexibility and climate conditions|Forecast error on variable demand and supply, and unplanned outages, against largely known generation schedules|Evolving real-time conditions and instantaneous disturbances|\n|How practice is evolving|From deterministic firm- capacity cases sized to annual minima and maxima, towards finer granularity (some operators already run cases on an hour-by- hour basis) and increasingly probabilistic and stochastic methods that represent variable demand and supply, realistic outages, and the remedial actions and technologies available|From preventive margins held in reserve, towards accounting for the large set of remedial actions already standard in many systems (topology, PST and HVDC setpoints, redispatch and countertrading) to minimise congestion management costs rather than holding conservative headroom in reserve|From fixed seasonal or static limits, towards dynamic limits and pre- planned curative sequences, supported by tools that simulate many events and advise the operator on the best response|\n\nQUESTION: What are the main challenges in modernising electricity grids?\n\nAnswer the question using only the SOURCES above, in the required format: one claim per line, each line ending with the number of the source that states it, in square brackets.<|im_end|>\n<|im_start|>assistant\n",
+    "model": "C:\\Users\\HP\\.cache\\ecorag_models\\Qwen2.5-3B-Instruct",
+    "prompt_version": "v3",
+    "prompt_tokens": 2017,
+    "answer_tokens": 400,
+    "timing": {
+      "retrieval_s": 0.05,
+      "generation_s": 377.7
+    }
+  }
+]

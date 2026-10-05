@@ -1,0 +1,60 @@
+REPRESENTATIVE CHUNKS
+======================================================================
+
+--- Chunk 8 | content | pages [6] | 391 tokens ---
+Source: The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030
+Section: Executive summary
+
+As global demand for food continues to rise, methane emissions from food systems will increase without mitigation. Reducing agricultural methane is not about producing less food – it is about producing food efficiently, more sustainably and with lower emissions.
+
+Improved livestock nutrition and breeding, better animal health, enhanced manure management, reduced use of water and pesticides in rice‑growing practices, and cutting food loss and waste can lower emissions, while increasing productivity and farmers’ incomes. These measures strengthen food security, reduce water depletion and improve rural livelihoods. With targeted finance and agricultural extension services (activities that provide information, guidance and services to develop the knowledge, skills and practices of farmers) to increase capacity and international support – particularly for smallholder farmers – methane reductions can support rural development and economic growth.
+
+Redirecting a small share of harmful agricultural subsidies and improving monitoring, reporting and verification (MRV) systems could unlock progress in methane mitigation and result in development co‑benefits. Modelling shows that low‑cost measures could be implemented at a total annual cost of USD 2.5 billion, while reducing annual methane emissions by 17 million tonnes by 2030 – equivalent to five per cent of global methane emissions from human activities in 2025. This investment amounts to less than three per cent of the subsidies governments allocate to the sector every year.
+
+The waste sector accounts for roughly a fifth of global anthropogenic methane emissions, primarily from landfills and wastewater. Once organic waste is buried, it can emit methane for decades. Diverting organic waste from landfills must be prioritized in every city, region and country. As urbanization accelerates and global waste volumes rise, unmanaged dumpsites and undermanaged landfills risk locking in future emissions while creating serious environmental and public health hazards.
+
+--- Chunk 20 | content | pages [10] | 243 tokens ---
+Source: The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030
+Section: 1. The role of methane in climate change › METHANE AND OVERSHOOT OF 1.5°C
+
+METHANE AND OVERSHOOT OF 1.5°C
+
+As overshoot is now expected to occur in the early 2030s, the question is how far temperatures rise above 1.5°C and how long they remain there. Both dimensions strongly influence climate risks, impacts on ecosystems and societies, and the likelihood of triggering irreversible changes. Every fraction of a degree avoided matters in terms of lives saved, livelihoods protected and economic damage avoided.
+
+In a climate system already warmed by cumulative CO₂ and methane emissions, additional atmospheric methane will have an outsized effect on short‑term temperature trends. Models show that methane emissions strongly influence the level of peak warming, the rate at which temperatures rise and the rate at which temperatures decline once emissions are reduced. Because methane contributes disproportionately to warming over short timescales compared to CO2, delays in its mitigation can have stronger impacts on the scale and pace of near‑term temperature increases and exacerbate overshoot.
+  references: [11] UNEP Emissions Gap Report 2025, IPCC AR6 WG I, 2021; IPCC AR6 WG III, 2022; [12] Shindell et al., 2012; IPCC AR6 WG I, 2021.; [13] Rogelj et al., 2018; Shindell et al., 2019
+
+--- Chunk 31 | content | pages [15] | 237 tokens ---
+Source: The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030
+Section: 5. Three sectors, nine actions by 2030 › Deploy and respond to measurement, monitoring and detection technologies
+
+Full implementation of the Maximum Technically Feasible Reduction (MTFR) scenario, aligned with the GMP target, could reduce emissions by 78 per cent in 2030 compared to 2030 projected emissions under current legislation.
+
+There are multiple established and emerging initiatives. For example, the Methane Alert and Response System (MARS), part of UNEP’s International Methane Emissions Observatory (IMEO), integrates data from 35 satellite instruments to provide rapid alerts on major methane emission events directly to governments and operators. By February 2026, MARS had sent over 5,000 alerts about major events. While the global response rate rose from one per cent in 2024 to 12 per cent in 2025, overall engagement remains low. Only 11 countries have a response rate from operators and governments of over 70 per cent. At the same time, around 60 per cent of alerts without a response occur in just four countries: Algeria, Iran, the United States and Turkmenistan.
+  references: [42] IMEO; [43] An Eye on Methane 2025: From Measurement to Momentum, UNEP 2025
+
+--- Chunk 42 | content | pages [21] | 269 tokens ---
+Source: The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030
+Section: 5. Three sectors, nine actions by 2030 › SUPPORTING REGULATIONS AND POLICIES FOR FOSSIL FUEL ACTIONS
+
+Such legislation is already delivering results. Data from ClimateTRACE suggest that China, Canada, UAE and Qatar reduced or held steady their oil and gas production methane emissions from 2023 to 2024, even as volumes increased. This indicates a reduction in the methane emissions intensity of their oil and gas operations, stressing the opportunity for further gains ahead.
+
+If every country implemented tried‑and‑tested policies, global methane emissions from oil and gas operations would halve. If, in addition, emissions pricing, financing instruments and performance standards were adopted globally, oil and gas emissions could drop by 75 per cent. However, capacity support is required to assist nations as they devise and enforce regulations.
+
+Policies and regulations to address methane from coal operations are lagging, although several jurisdictions, including major coal producers and users such as China and Australia, have recently taken steps to regulate methane emissions in the coal sector. For example, Australia’s Safeguard Mechanism will impact 59 of the largest mines and require emissions either to decrease slowly by 2030, or be offset with carbon credits. There is a need for a major uptick in regulation on coal.
+  references: [65] IEA Global Methane Tracker 2025; [66] Global Energy Monitor, Still Digging 2025: Tracking Global Coal Mine Proposals
+
+--- Chunk 54 | content | pages [26] | 372 tokens ---
+Source: The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030
+Section: 6. Increasing finance
+
+The ClimateWorks Foundation, Pisces Foundation and Sequoia Climate Foundation all provide grants for methane‑reduction work. Private sector actors, including corporations, investors and financial institutions, are emerging as critical drivers of finance.
+
+Sources of grants and highly concessional donor funding, including governments and philanthropy, should scale available funding, cooperate to limit fragmentation of resources and coordinate to fill critical gaps. Financial incentives such as tax credits and concessional finance are important in developing economies, where upfront costs and capacity constraints can delay adoption of the technologies in the fossil fuel sector.
+
+DFIs provide about USD 3 billion annually for methane mitigation – small compared with their USD 2.5 trillion in total yearly investments. Yet methane abatement delivers co‑benefits aligned with development mandates. DFIs have an opportunity to scale up support. Fossil fuel companies should also step up their investment, including increasing donations to the Global Flaring and Methane Reduction Partnership.
+
+Ensuring funding reaches the local level is important, particularly in the waste sector, where local governments need adequate and sustained financing to cover both capital investment and operational costs, where the valorization of methane does not cover all costs. Many lack the necessary creditworthiness and direct access to funding. Climate finance must, therefore, be structured to reach the local level, supported by robust policy frameworks, clear regulations and sustained capacity building to ensure long‑term impact.
+
+Joint funding can support the development and commercialization of new and innovative technologies. In 2023, for example, a group of governments, philanthropies and a private corporation jointly launched the Enteric Fermentation Research and Development Accelerator with more than USD 200 million in funding to support innovation in the livestock sector.
+  references: [96] UNEP Global Methane Status Report 2025; [97] CCAC Low‑Methane Finance Toolkit; [98] Global Methane Hub 2023

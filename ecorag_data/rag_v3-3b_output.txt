@@ -1,0 +1,902 @@
+Chroma collection 'ecorag_knowledge_base': 1242 chunks | query embeddings: BAAI/bge-small-en-v1.5 (384 dims)
+PROMPT_VERSION: v3 | model: C:\Users\HP\.cache\ecorag_models\Qwen2.5-3B-Instruct
+Loading C:\Users\HP\.cache\ecorag_models\Qwen2.5-3B-Instruct on cpu (bfloat16)...
+Loaded in 13s
+================================================================================
+QUESTION: What share of global anthropogenic methane emissions comes from agriculture?
+================================================================================
+
+--- STEP 1-3: RETRIEVAL (top 5, types ['content', 'table']) ---
+[1] gmsr-2025::0038  similarity 0.85 (distance 0.15)
+    GLOBAL METHANE STATUS REPORT 2025 | Executive Summary › The Agricultural Sector | pp. 24–25 | content
+    "The Agricultural Sector The agricultural sector is the largest source of anthropogenic methane emissions. Emissions vary by region, with the G20+ group of countries responsible for 61 per cent of agricultural methane, equivalent to one-quarter of total anthropogenic methane emissions. Agricultural m..."
+[2] gmsr-2025::0163  similarity 0.844 (distance 0.156)
+    GLOBAL METHANE STATUS REPORT 2025 | Global Outlook of Methane Policies and Measures › 3.5.1.1 Agricultural methane emissions: status, trends and mitigation opportunities | pp. 86–87 | content
+    "3.5.1.1 Agricultural methane emissions: status, trends and mitigation opportunities In 2020, agriculture was the largest source of global biogenic methane emissions, responsible for 146 Mt per year or almost 42 per cent of the global total, slightly ahead of the energy sector. Livestock and rice cul..."
+[3] gmsr-2025::0191  similarity 0.831 (distance 0.169)
+    GLOBAL METHANE STATUS REPORT 2025 | Observed Emissions and the Role of Empirical Data › 4.2.1 Global atmospheric methane concentrations | p. 100 | table
+    "|Major anthropogenic source|2030 methane emissions Mt/yr| |---|---| |Livestock and manure|117 [114–124]| |Rice|32 [29–37]| |Landfills and Wastewater|71 [60–84]| |Coal mining|41 [38–43]| |Oil and gas|74 [67–80]| |Biomass and biofuel burning|27 [20–41]|..."
+[4] unsg-call-action-methane-by-2030-epublication::0043  similarity 0.825 (distance 0.175)
+    The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030 | 5. Three sectors, nine actions by 2030 › 5.2 METHANE MITIGATION ACTIONS IN THE AGRICULTURE SECTOR | p. 21 | content
+    "5.2 METHANE MITIGATION ACTIONS IN THE AGRICULTURE SECTOR The agriculture sector is the biggest single contributor to anthropogenic methane emissions, accounting for 42 per cent of the global total. And global food demand continues to rise. Agricultural and fish production is projected to expand by 1..."
+[5] gmsr-2025::0161  similarity 0.816 (distance 0.184)
+    GLOBAL METHANE STATUS REPORT 2025 | Global Outlook of Methane Policies and Measures › 3.5 The agriculture sector / Key messages | p. 85 | content
+    "3.5 The agriculture sector Key messages - ‣ Agriculture is the largest source of global anthropogenic methane emissions, accounting for almost 42 per cent in 2020, with livestock and rice cultivation as the primary drivers. Without additional mitigation, emissions are expected to rise by 8 per cent ..."
+
+--- STEP 4: FINAL PROMPT SENT TO THE LLM (chat template applied) ---
+<|im_start|>system
+You are EcoRAG, an assistant that answers questions about environmental and sustainability reports.
+
+You are given numbered SOURCES, labelled [1], [2], [3], and so on.
+
+Write your answer in this exact format:
+- One factual claim per line. Start each line with "- ".
+- End EVERY line with the number of the source that states that claim, in square brackets: [2]. If two sources state it, write [2][4].
+- Use only the numbers of the SOURCES you were given.
+- If no source states a claim, do not write that claim.
+- No introduction and no concluding summary: only the claim lines.
+
+Example of the format (made-up content):
+- Wind power capacity doubled between 2015 and 2020 [3].
+- Most of the new capacity was built offshore [1][3].
+
+Rules:
+1. Use ONLY information stated in the SOURCES. Do not use your general knowledge, even if you think it is correct.
+2. Cite the source whose text actually states that specific claim. If a number comes from source [4], cite [4]. A source about the same topic is not enough.
+3. Include the specific numbers, thresholds, percentages, dates, or definitions that directly answer the question when those facts are present in the SOURCES.
+4. If the SOURCES do not contain enough information to answer the question, write only this line: "The provided sources do not contain enough information to answer this." If they answer only part of it, add a line: "- The provided sources do not contain enough information about <the missing part>."
+5. If sources disagree, write one line for each side, each with its own citation.
+6. Copy numbers, units, percentages and years exactly as they appear in the SOURCES.
+7. Write at most 8 lines.<|im_end|>
+<|im_start|>user
+SOURCES:
+
+[1]
+Document: GLOBAL METHANE STATUS REPORT 2025
+Section: Executive Summary › The Agricultural Sector
+Pages: pp. 24–25
+Chunk ID: gmsr-2025::0038
+TEXT:
+The Agricultural Sector
+
+The agricultural sector is the largest source of anthropogenic methane emissions. Emissions vary by region, with the G20+ group of countries responsible for 61 per cent of agricultural methane, equivalent to one-quarter of total anthropogenic methane emissions.
+
+Agricultural methane emissions are projected to increase by about 8 per cent by 2030 and around 17 per cent by 2050, compared with 2020 levels. This growth is driven largely by demand for food for a growing global population and the expansion of livestock numbers in Africa and Latin America, and with the non-G20+ regions experiencing the largest increases in emissions. Due to these drivers, even with the implementation of current NDCs and MAPs, emissions from agriculture would still rise by up to 4 per cent by 2030 compared with 2020 levels.
+
+Yet, the agricultural sector has the technical potential to reduce emissions by 24 Mt per year by 2030, 8 per cent below 2020 levels in this decade, and 7 per cent by 2050.
+
+Low-cost measures measures could be implemented at a total annual cost of US$2.5 billion, while reducing annual methane emissions by 17 Mt by 2030. This investment amounts to less than 3 per cent of the subsidies governments currently allocate to the sector every year. Repurposing even a small share of these subsidies could significantly help finance methane mitigation.
+
+There has been a generally positive trend in the development of policies targeting agricultural methane emissions over the past decade, particularly in the areas of animal waste management. This progress has been most notable in Asia-Pacific, Europe and North America, where enabling policy environments and accessible technologies have driven the adoption of measures to reduce emissions from manure. Despite this progress, however, only a small share of GMP participating countries have policies directly addressing key methane sources in the sector.
+
+[2]
+Document: GLOBAL METHANE STATUS REPORT 2025
+Section: Global Outlook of Methane Policies and Measures › 3.5.1.1 Agricultural methane emissions: status, trends and mitigation opportunities
+Pages: pp. 86–87
+Chunk ID: gmsr-2025::0163
+TEXT:
+3.5.1.1 Agricultural methane emissions: status, trends and mitigation opportunities
+
+In 2020, agriculture was the largest source of global biogenic methane emissions, responsible for 146 Mt per year or almost 42 per cent of the global total, slightly ahead of the energy sector. Livestock and rice cultivation dominate these emissions, contributing 76 per cent and 21 per cent respectively, while agricultural waste burning accounts for the remaining 3 per cent.
+
+Emissions vary significantly across regions. The G20+ accounts for more than 60 per cent of global agricultural methane emissions, led by India, China, Brazil, the United States of America, and the European Union. Non-G20+ countries, particularly in Africa and South-East Asia, contribute around 45 per cent of their total methane emissions from agriculture.
+
+Without additional mitigation policies beyond those in place as of December 2024, emissions from agriculture are projected to rise by 7.8 per cent by 2030 and 17 per cent by 2050 compared to 2020 levels. Growth will be primarily driven by expanding livestock herds, especially in Africa and Latin America.
+
+Under NDCs and MAPs, agricultural methane emissions are projected to stabilize at 2020 levels by 2030, due to the expansion of livestock herds outweighing reductions from rice cultivation and waste burning.
+
+The GAINS model estimates that fully deploying low-cost mitigation technologies, those costing less than US$1,000 per tonne of methane or US$36 per tonne CO2eq, could reduce agricultural methane emissions by 15 per cent by 2030 compared to projected emissions for the sector under current legislation in the same year. Despite agriculture’s relatively modest role in global methane mitigation potential, around 24 Mt per year, several interventions offer substantial benefits at low or negative costs.
+
+[3]
+Document: GLOBAL METHANE STATUS REPORT 2025
+Section: Observed Emissions and the Role of Empirical Data › 4.2.1 Global atmospheric methane concentrations
+Pages: p. 100
+Chunk ID: gmsr-2025::0191
+TEXT:
+|Major anthropogenic source|2030 methane emissions Mt/yr|
+|---|---|
+|Livestock and manure|117 [114–124]|
+|Rice|32 [29–37]|
+|Landfills and Wastewater|71 [60–84]|
+|Coal mining|41 [38–43]|
+|Oil and gas|74 [67–80]|
+|Biomass and biofuel burning|27 [20–41]|
+
+[4]
+Document: The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030
+Section: 5. Three sectors, nine actions by 2030 › 5.2 METHANE MITIGATION ACTIONS IN THE AGRICULTURE SECTOR
+Pages: p. 21
+Chunk ID: unsg-call-action-methane-by-2030-epublication::0043
+TEXT:
+5.2 METHANE MITIGATION ACTIONS IN THE AGRICULTURE SECTOR
+
+The agriculture sector is the biggest single contributor to anthropogenic methane emissions, accounting for 42 per cent of the global total. And global food demand continues to rise. Agricultural and fish production is projected to expand by 14 per cent over the next decade. Methane emissions from food systems will increase unless production becomes more efficient. However, the sector has the potential to cut 2030 emissions by eight per cent with simple, low‑cost measures.
+
+Reducing agricultural methane is not about producing less food, it is about producing food efficiently and more sustainably with less organic landfill waste. With targeted finance, extension services (activities that provide information, guidance and services to develop the knowledge, skills and practices of farmers) and international support – particularly for smallholder farmers – agricultural methane reductions can drive rural development. A phased approach prioritizing productivity and optimization until 2030 – particularly in developing countries where reduction potential is highest – can unlock near‑term gains while building the trust and evidence base for deeper structural shifts.
+
+[5]
+Document: GLOBAL METHANE STATUS REPORT 2025
+Section: Global Outlook of Methane Policies and Measures › 3.5 The agriculture sector / Key messages
+Pages: p. 85
+Chunk ID: gmsr-2025::0161
+TEXT:
+3.5 The agriculture sector
+
+Key messages
+
+- ‣ Agriculture is the largest source of global anthropogenic methane emissions, accounting for almost 42 per cent in 2020, with livestock and rice cultivation as the primary drivers. Without additional mitigation, emissions are expected to rise by 8 per cent by 2030 and 17 per cent by 2050, compared to 2020 levels, mainly due to increases in livestock populations in Africa and Latin America.
+
+- ‣ Mitigation ambition in agriculture has increased, but current NDCs and MAPs lack specificity. Only 4 per cent of NDCs include quantified, time-bound agricultural methane reduction targets, and current plans achieve just half of the sector’s full cost-effective mitigation potential.
+
+- ‣ Low-cost mitigation options exist, including improved rice cultivation and bans on agricultural waste burning, especially in Africa and South-East Asia. Livestockrelated options, though costlier, offer significant potential in the Americas and Western Europe.
+
+- ‣ Building climate-resilient livestock systems in smallholder and pastoralist settings can deliver multiple benefits – improving productivity while reducing emissions.
+
+- ‣ Policy coverage remains limited and uneven, with only 2–18 per cent of GMP participating countries having policies directly targeting key sources such as enteric fermentation, rice cultivation, or manure management.
+
+- ‣ Holistic, equity-based policies are needed to avoid unintended consequences, such as shifting emissions to unregulated sources, or increasing food insecurity and rural poverty.
+
+- ‣ Financial, institutional, and technical barriers persist, but redirecting a small share of harmful agricultural subsidies and improving MRV systems could unlock progress and link mitigation to development co-benefits.
+
+QUESTION: What share of global anthropogenic methane emissions comes from agriculture?
+
+Answer the question using only the SOURCES above, in the required format: one claim per line, each line ending with the number of the source that states it, in square brackets.<|im_end|>
+<|im_start|>assistant
+
+--- STEP 5: GENERATED ANSWER (C:\Users\HP\.cache\ecorag_models\Qwen2.5-3B-Instruct, 31 tokens, 344.4s) ---
+- Agriculture is the largest source of global anthropogenic methane emissions, accounting for almost 42 per cent in 2020 [4].
+
+--- STEP 6: CITATIONS ---
+Cited:       ['[4] The Secretary‑General’s call to action on methane, p. 21']
+Not cited:   ['[1] Global Methane Status Report 2025, pp. 24–25', '[2] Global Methane Status Report 2025, pp. 86–87', '[3] Global Methane Status Report 2025, p. 100', '[5] Global Methane Status Report 2025, p. 85']
+
+--- STEP 7: CLAIM-BY-CLAIM VERIFICATION (deterministic, answer unchanged) ---
+[misattributed] Agriculture is the largest source of global anthropogenic methane emissions, accounting for almost 42 per cent
+    problem: '2020' is not in cited source [4] but is in [1, 2, 5]
+Summary: {'factual_claims': 1, 'with_citation': 1, 'supported': 0, 'partially_supported': 0, 'misattributed': 1, 'unsupported_cited': 0, 'uncited': 0, 'uncited_but_matching_source': 0, 'uncited_and_unmatched': 0, 'date_scope_mismatches': 0, 'date_scope_figures': 0, 'non_standard_citation_format': 0, 'vague_attribution': 0, 'abstained': False}
+saved Q1 -> ecorag_data/rag_v3-3b_results_q1_q3.json
+================================================================================
+QUESTION: How many alerts did the Methane Alert and Response System send, and how often do operators respond?
+================================================================================
+
+--- STEP 1-3: RETRIEVAL (top 5, types ['content', 'table']) ---
+[1] unsg-call-action-methane-by-2030-epublication::0031  similarity 0.766 (distance 0.234)
+    The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030 | 5. Three sectors, nine actions by 2030 › Deploy and respond to measurement, monitoring and detection technologies | p. 15 | content
+    "Full implementation of the Maximum Technically Feasible Reduction (MTFR) scenario, aligned with the GMP target, could reduce emissions by 78 per cent in 2030 compared to 2030 projected emissions under current legislation. There are multiple established and emerging initiatives. For example, the Meth..."
+[2] gmsr-2025::0194  similarity 0.741 (distance 0.259)
+    GLOBAL METHANE STATUS REPORT 2025 | Observed Emissions and the Role of Empirical Data › 4.3 Successful implementation of measurement-based monitoring / 4.3.1 The International Methane Emissions Observatory’s Methane Alert and Response System | p. 101 | content
+    "4.3 Successful implementation of measurement-based monitoring 4.3.1 The International Methane Emissions Observatory’s Methane Alert and Response System Satellites provide an important measurement-based source of data on methane emissions. While point mappers quantify only the largest emission source..."
+[3] unsg-call-action-methane-by-2030-epublication::0006  similarity 0.702 (distance 0.298)
+    The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030 | Executive summary | p. 5 | content
+    "Reducing methane from coal mining represents an important and often overlooked opportunity to deliver significant emission reductions in the near term. At the same time, a methane data revolution is transforming transparency and accountability. Advances in satellite monitoring, remote sensing and co..."
+[4] unsg-call-action-methane-by-2030-epublication::0032  similarity 0.688 (distance 0.312)
+    The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030 | 5. Three sectors, nine actions by 2030 › Box 2 Positive impacts of responding to MARS | p. 16 | content
+    "Box 2 Positive impacts of responding to MARS In Algeria and Nigeria, MARS notifications and engagement led to direct action from governments and oil and gas companies. In Algeria, the annual avoided emissions are equivalent to 500,000 cars being taken off the road. In Nigeria, a six‑month leak emitt..."
+[5] unsg-call-action-methane-by-2030-epublication::0011  similarity 0.678 (distance 0.322)
+    The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030 | Executive summary › FOSSIL FUELS: THE IMMEDIATE PRIORITY / ACTION 1: Fix leaks and eliminate routine flaring and cold venting | p. 7 | content
+    "FOSSIL FUELS: THE IMMEDIATE PRIORITY Addressing methane emissions from fossil fuels offers the potential for the largest, fastest and most cost‑effective methane reductions this decade. The industry has the means and the responsibility to deliver them. Lasting progress also requires accelerating the..."
+
+--- STEP 4: FINAL PROMPT SENT TO THE LLM (chat template applied) ---
+<|im_start|>system
+You are EcoRAG, an assistant that answers questions about environmental and sustainability reports.
+
+You are given numbered SOURCES, labelled [1], [2], [3], and so on.
+
+Write your answer in this exact format:
+- One factual claim per line. Start each line with "- ".
+- End EVERY line with the number of the source that states that claim, in square brackets: [2]. If two sources state it, write [2][4].
+- Use only the numbers of the SOURCES you were given.
+- If no source states a claim, do not write that claim.
+- No introduction and no concluding summary: only the claim lines.
+
+Example of the format (made-up content):
+- Wind power capacity doubled between 2015 and 2020 [3].
+- Most of the new capacity was built offshore [1][3].
+
+Rules:
+1. Use ONLY information stated in the SOURCES. Do not use your general knowledge, even if you think it is correct.
+2. Cite the source whose text actually states that specific claim. If a number comes from source [4], cite [4]. A source about the same topic is not enough.
+3. Include the specific numbers, thresholds, percentages, dates, or definitions that directly answer the question when those facts are present in the SOURCES.
+4. If the SOURCES do not contain enough information to answer the question, write only this line: "The provided sources do not contain enough information to answer this." If they answer only part of it, add a line: "- The provided sources do not contain enough information about <the missing part>."
+5. If sources disagree, write one line for each side, each with its own citation.
+6. Copy numbers, units, percentages and years exactly as they appear in the SOURCES.
+7. Write at most 8 lines.<|im_end|>
+<|im_start|>user
+SOURCES:
+
+[1]
+Document: The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030
+Section: 5. Three sectors, nine actions by 2030 › Deploy and respond to measurement, monitoring and detection technologies
+Pages: p. 15
+Chunk ID: unsg-call-action-methane-by-2030-epublication::0031
+TEXT:
+Full implementation of the Maximum Technically Feasible Reduction (MTFR) scenario, aligned with the GMP target, could reduce emissions by 78 per cent in 2030 compared to 2030 projected emissions under current legislation.
+
+There are multiple established and emerging initiatives. For example, the Methane Alert and Response System (MARS), part of UNEP’s International Methane Emissions Observatory (IMEO), integrates data from 35 satellite instruments to provide rapid alerts on major methane emission events directly to governments and operators. By February 2026, MARS had sent over 5,000 alerts about major events. While the global response rate rose from one per cent in 2024 to 12 per cent in 2025, overall engagement remains low. Only 11 countries have a response rate from operators and governments of over 70 per cent. At the same time, around 60 per cent of alerts without a response occur in just four countries: Algeria, Iran, the United States and Turkmenistan.
+
+[2]
+Document: GLOBAL METHANE STATUS REPORT 2025
+Section: Observed Emissions and the Role of Empirical Data › 4.3 Successful implementation of measurement-based monitoring / 4.3.1 The International Methane Emissions Observatory’s Methane Alert and Response System
+Pages: p. 101
+Chunk ID: gmsr-2025::0194
+TEXT:
+4.3 Successful implementation of measurement-based monitoring
+
+4.3.1 The International Methane Emissions Observatory’s Methane Alert and Response System
+
+Satellites provide an important measurement-based source of data on methane emissions. While point mappers quantify only the largest emission sources, these data are valuable for quickly identifying major emitters. This enables stakeholders to prioritize mitigation efforts and track progress in reducing methane emissions from super-emitting facilities. UNEP’s IMEO operates the Methane Alert and Response System (MARS), the first global platform integrating data from more than a dozen satellite sensors and providing actionable information on major methane emission events directly to stakeholders.
+
+The MARS was launched in a pilot phase at the beginning of 2023 and has been fully operational since January 2024. Since its launch, it has detected more than 10,000 methane plumes across various sectors and issued in excess of 2,500 notifications of detections in the oil and gas subsector. To date, 23 countries have designated official focal points to engage directly with IMEO and partners on response, alongside more than 150 members of the OGMP 2.0. The response rates for MARS notifications have grown nearly tenfold since the end of 2024, reflecting growing engagement and action based on satellite data. In 2024, IMEO highlighted a landmark case in Hassi Messaoud, Algeria, where a longstanding methane leak, one of the oldest continuously emitting sources ever recorded, was successfully eliminated. The leak had released an estimated 27,500 tonnes of methane annually, underscoring the transformative potential of satellite-driven climate action.
+
+[3]
+Document: The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030
+Section: Executive summary
+Pages: p. 5
+Chunk ID: unsg-call-action-methane-by-2030-epublication::0006
+TEXT:
+Reducing methane from coal mining represents an important and often overlooked opportunity to deliver significant emission reductions in the near term.
+
+At the same time, a methane data revolution is transforming transparency and accountability. Advances in satellite monitoring, remote sensing and company reporting now make it possible to detect methane emissions in near real time, given available technologies and capabilities. Point‑source imagers in satellites are designed to look at relatively small areas in high detail, with some satellites able to attribute emissions to a specific source within a 50‑metre radius. By February 2026, the UNEP International Methane Emissions Observatory (IMEO) Methane Alert and Response System (MARS) had sent over 5,000 alerts across 33 countries identifying major emissions events. Yet responses remain extremely low. In 2025, the global response rate reached only 12 per cent, leaving the vast majority of detected emission events unresolved. The world can now see methane emissions as they happen. Continued inaction is no longer a matter of uncertainty or lack of information – it is a deliberate choice.
+
+There are some examples of effective action. Norway banned routine flaring in 1971, imposed a tax on CO₂ and methane emissions from petroleum production and transport in 1991, and increased the tax on flaring and methane emissions in 2017. The country now has one of the lowest methane emissions intensities of upstream oil and gas production in the world. If all countries matched Norway’s methane emission intensity standards, global methane emissions from oil and gas operations could fall by roughly 90 per cent.
+
+[4]
+Document: The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030
+Section: 5. Three sectors, nine actions by 2030 › Box 2 Positive impacts of responding to MARS
+Pages: p. 16
+Chunk ID: unsg-call-action-methane-by-2030-epublication::0032
+TEXT:
+Box 2 Positive impacts of responding to MARS
+
+In Algeria and Nigeria, MARS notifications and engagement led to direct action from governments and oil and gas companies. In Algeria, the annual avoided emissions are equivalent to 500,000 cars being taken off the road. In Nigeria, a six‑month leak emitted methane equivalent to 400,000 cars being driven for a year. This leak was fixed in under two weeks simply by replacing faulty equipment.
+
+There is also a growing constellation of point‑source satellites that detect, measure and mitigate methane. Over half the super emitters detected in 2025 were from the oil and gas sector. Waste and other energy sources (coal mines and electricity generation) constituted in equal shares most of the remaining sources.
+
+The world can now see methane emissions and mitigation as they happen. Governments and companies can and should achieve a response rate to alerts from MARS of at least 80 per cent before 2030. Multilateral Development Banks (MDBs) and international partners must support developing countries with capacity limitations to increase response rates and enable mitigation through technical assistance and targeted finance.
+
+Figure 3 Geographic distribution of methane super emitters detected by satellites, with examples of rates of the largest measurements in 2025
+
+Largest Estimated Emissions Rate (tonnes CH₄ per hour). (Source: UNEP)
+
+The boundaries and names shown and the designations used on this map do not imply official endorsement or acceptance by the United Nations.
+
+[5]
+Document: The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030
+Section: Executive summary › FOSSIL FUELS: THE IMMEDIATE PRIORITY / ACTION 1: Fix leaks and eliminate routine flaring and cold venting
+Pages: p. 7
+Chunk ID: unsg-call-action-methane-by-2030-epublication::0011
+TEXT:
+FOSSIL FUELS: THE IMMEDIATE PRIORITY
+
+Addressing methane emissions from fossil fuels offers the potential for the largest, fastest and most cost‑effective methane reductions this decade. The industry has the means and the responsibility to deliver them. Lasting progress also requires accelerating the global transition away from fossil fuels, which will reduce methane emissions alongside CO₂. By 2030, governments, industry and investors must implement the following actions:
+
+ACTION 1: Fix leaks and eliminate routine flaring and cold venting
+
+- Adopt and enforce regulations that ban routine flaring and cold venting and require early leak detection and repair across the entire oil and gas value chain.
+
+- Replace and upgrade high‑emitting equipment.
+
+- Adopt a zero‑tolerance approach to super‑emitter events using satellite monitoring and other detection systems to ensure a rapid response.
+
+- Commit to improving the response rate to methane alerts issued through the UNEP Methane Alert and Response System to at least 80 per cent as a first step towards full response and compliance.
+
+- Make methane mitigation a standard industry practice in coal mining.
+
+QUESTION: How many alerts did the Methane Alert and Response System send, and how often do operators respond?
+
+Answer the question using only the SOURCES above, in the required format: one claim per line, each line ending with the number of the source that states it, in square brackets.<|im_end|>
+<|im_start|>assistant
+
+--- STEP 5: GENERATED ANSWER (C:\Users\HP\.cache\ecorag_models\Qwen2.5-3B-Instruct, 53 tokens, 308.4s) ---
+- The Methane Alert and Response System (MARS) sent over 5,000 alerts by February 2026 [2].
+- The global response rate reached only 12 per cent in 2025 [2].
+
+--- STEP 6: CITATIONS ---
+Cited:       ['[2] Global Methane Status Report 2025, p. 101']
+Not cited:   ['[1] The Secretary‑General’s call to action on methane, p. 15', '[3] The Secretary‑General’s call to action on methane, p. 5', '[4] The Secretary‑General’s call to action on methane, p. 16', '[5] The Secretary‑General’s call to action on methane, p. 7']
+
+--- STEP 7: CLAIM-BY-CLAIM VERIFICATION (deterministic, answer unchanged) ---
+[misattributed] The Methane Alert and Response System (MARS) sent over 5,000 alerts by February 2026 [2].
+    problem: '5000' is not in cited source [2] but is in [1, 3]; '2026' is not in cited source [2] but is in [1, 3]
+[misattributed] The global response rate reached only 12 per cent in 2025 [2].
+    problem: '12' is not in cited source [2] but is in [1, 3]; '2025' is not in cited source [2] but is in [1, 3, 4]
+Summary: {'factual_claims': 2, 'with_citation': 2, 'supported': 0, 'partially_supported': 0, 'misattributed': 2, 'unsupported_cited': 0, 'uncited': 0, 'uncited_but_matching_source': 0, 'uncited_and_unmatched': 0, 'date_scope_mismatches': 0, 'date_scope_figures': 0, 'non_standard_citation_format': 0, 'vague_attribution': 0, 'abstained': False}
+saved Q2 -> ecorag_data/rag_v3-3b_results_q1_q3.json
+================================================================================
+QUESTION: What are the main challenges in modernising electricity grids?
+================================================================================
+
+--- STEP 1-3: RETRIEVAL (top 5, types ['content', 'table']) ---
+[1] modernisinggridsintheageofelectricity::0033  similarity 0.81 (distance 0.19)
+    Modernising Grids in the Age of Electricity | Chapter 1. The need for modern grids › What this report sets out to answer | p. 20 | content
+    "What this report sets out to answer This chapter has set out the challenge and the opportunity: electricity demand is rising rapidly, grid expansion alone cannot keep pace, meaningful untapped capacity exists in the networks that are already in place, and there is a suite of digital tools which coul..."
+[2] modernisinggridsintheageofelectricity::0015  similarity 0.809 (distance 0.191)
+    Modernising Grids in the Age of Electricity | Chapter 1. The need for modern grids › Demand growth and the need for grid expansion to 2035 in the Current Policies Scenario | p. 12 | content
+    "Chapter 1. The need for modern grids Demand growth and the need for grid expansion to 2035 in the Current Policies Scenario Sources: IEA (2026), Electricity; IEA (2025), World Energy Outlook. Where the grid cannot keep pace, the consequences are well documented: lengthening connection queues, new ho..."
+[3] modernisinggridsintheageofelectricity::0014  similarity 0.807 (distance 0.193)
+    Modernising Grids in the Age of Electricity | Chapter 1. The need for modern grids › Grids in the Age of Electricity | pp. 11–12 | content
+    "Grids in the Age of Electricity The grid is the critical enabling infrastructure on which the energy transition depends for security, decarbonisation and affordability, as economies around the world increasingly rely on electricity. Electrification of end uses is a core pillar of the strategy select..."
+[4] modernisinggridsintheageofelectricity::0013  similarity 0.806 (distance 0.194)
+    Modernising Grids in the Age of Electricity | Chapter 1. The need for modern grids | p. 11 | content
+    "Chapter 1. The need for modern grids Chapter 1. The need for modern grids This chapter sets the scene: it explains why, as electricity demand is rising faster than grids can be expanded, this creates an opportunity to use existing networks better, and how digitalisation, grid-enhancing technologies ..."
+[5] modernisinggridsintheageofelectricity::0027  similarity 0.798 (distance 0.202)
+    Modernising Grids in the Age of Electricity | Chapter 1. The need for modern grids › Making better use of the grid across planning and operational timeframes | p. 18 | table
+    "Making better use of the grid across planning and operational timeframes ||Long-term planning and connection studies|Operational planning (from weeks ahead to day-ahead)|Real-time operation| |---|---|---|---| |Decisions|What to build, defer or connect, and location (investment focus)|Allocating mark..."
+
+--- STEP 4: FINAL PROMPT SENT TO THE LLM (chat template applied) ---
+<|im_start|>system
+You are EcoRAG, an assistant that answers questions about environmental and sustainability reports.
+
+You are given numbered SOURCES, labelled [1], [2], [3], and so on.
+
+Write your answer in this exact format:
+- One factual claim per line. Start each line with "- ".
+- End EVERY line with the number of the source that states that claim, in square brackets: [2]. If two sources state it, write [2][4].
+- Use only the numbers of the SOURCES you were given.
+- If no source states a claim, do not write that claim.
+- No introduction and no concluding summary: only the claim lines.
+
+Example of the format (made-up content):
+- Wind power capacity doubled between 2015 and 2020 [3].
+- Most of the new capacity was built offshore [1][3].
+
+Rules:
+1. Use ONLY information stated in the SOURCES. Do not use your general knowledge, even if you think it is correct.
+2. Cite the source whose text actually states that specific claim. If a number comes from source [4], cite [4]. A source about the same topic is not enough.
+3. Include the specific numbers, thresholds, percentages, dates, or definitions that directly answer the question when those facts are present in the SOURCES.
+4. If the SOURCES do not contain enough information to answer the question, write only this line: "The provided sources do not contain enough information to answer this." If they answer only part of it, add a line: "- The provided sources do not contain enough information about <the missing part>."
+5. If sources disagree, write one line for each side, each with its own citation.
+6. Copy numbers, units, percentages and years exactly as they appear in the SOURCES.
+7. Write at most 8 lines.<|im_end|>
+<|im_start|>user
+SOURCES:
+
+[1]
+Document: Modernising Grids in the Age of Electricity
+Section: Chapter 1. The need for modern grids › What this report sets out to answer
+Pages: p. 20
+Chunk ID: modernisinggridsintheageofelectricity::0033
+TEXT:
+What this report sets out to answer
+
+This chapter has set out the challenge and the opportunity: electricity demand is rising rapidly, grid expansion alone cannot keep pace, meaningful untapped capacity exists in the networks that are already in place, and there is a suite of digital tools which could help unlock this capacity. The rest of this report examines how these digital tools might be used. Chapter 2 looks at the state of deployment across the digital grid toolkit, including the fuller technology landscape only introduced briefly here. Chapter 3 provides an estimate of the potential gains at the global level and examines the conditions needed to deploy these tools more widely and scale these gains. Finally, Chapter 4 sets out policy recommendations for operators, regulators and governments.
+
+[2]
+Document: Modernising Grids in the Age of Electricity
+Section: Chapter 1. The need for modern grids › Demand growth and the need for grid expansion to 2035 in the Current Policies Scenario
+Pages: p. 12
+Chunk ID: modernisinggridsintheageofelectricity::0015
+TEXT:
+Chapter 1. The need for modern grids
+
+Demand growth and the need for grid expansion to 2035 in the Current Policies Scenario
+
+Sources: IEA (2026), Electricity; IEA (2025), World Energy Outlook.
+
+Where the grid cannot keep pace, the consequences are well documented: lengthening connection queues, new housing and industrial development competing with data centres and generation projects for scarce grid capacity, and, in the most severe cases, service disruption. Left unaddressed, these circumstances risk slowing electrification plans just as they need to accelerate, with knock-on costs for competitiveness and climate goals.
+
+Stability adds a further dimension to this complexity: operators need to ensure not only that flows stay within the thermal limits, but that the system retains enough strength to ride through disturbances. As converter-connected resources displace synchronous generators, several stabilising properties traditionally provided by synchronous machines, including inertia, voltage support, fault current contribution and damping (collectively known as system strength), come under pressure. Some of these, such as inertia, are inherently linked to rotating mass; others, such as voltage support and damping, can also be delivered by appropriately designed converter-connected resources or dedicated equipment. These variables are faster-moving and harder to observe and model than thermal limits, raising the bar for the quality of data and validation that grid operators need to manage them. This is particularly important as AI-based tools are increasingly used to support grid operations, because their performance depends heavily on the quality of the data and models they rely on.
+
+[3]
+Document: Modernising Grids in the Age of Electricity
+Section: Chapter 1. The need for modern grids › Grids in the Age of Electricity
+Pages: pp. 11–12
+Chunk ID: modernisinggridsintheageofelectricity::0014
+TEXT:
+Grids in the Age of Electricity
+
+The grid is the critical enabling infrastructure on which the energy transition depends for security, decarbonisation and affordability, as economies around the world increasingly rely on electricity. Electrification of end uses is a core pillar of the strategy selected by many jurisdictions to strengthen their energy security and cut emissions, making electricity the backbone of the transition.
+
+Demand for electricity is rising rapidly. Electricity demand has grown at roughly twice the rate of overall energy demand over the past decade, driven in part by electrification, data centres, cooling and industrial growth. This ratio continues to widen, while new renewable generation, often built far from demand centres, is adding further need for transmission. To meet these needs, 25 million kilometres of lines are expected to be added under the IEA’s Current Policy Scenario (CPS), equivalent to boosting grid capacity by 30% by 2035. This is why the current period is termed the Age of Electricity: electricity demand is decoupling from energy demand, and electricity is fast becoming the backbone of the energy system.
+
+This transformation is also changing the conditions the grid has to cope with, not only how much it carries. Distributed energy resources such as rooftop solar, batteries, electric vehicles (EVs) and flexible demand have turned many grids from unidirectional systems into systems with dynamic two-way flows, while large inverter-based power sources and vast data centres represent a new, more concentrated form of generation and demand. Both trends are increasingly evident at the distribution level as much as at the transmission level, creating new challenges for voltage management, transformer loading, feeder capacity and protection settings, and both can produce sharp peaks that grids historically built for steady, predictable conditions are not designed to absorb without being actively managed.
+
+[4]
+Document: Modernising Grids in the Age of Electricity
+Section: Chapter 1. The need for modern grids
+Pages: p. 11
+Chunk ID: modernisinggridsintheageofelectricity::0013
+TEXT:
+Chapter 1. The need for modern grids
+
+Chapter 1. The need for modern grids
+
+This chapter sets the scene: it explains why, as electricity demand is rising faster than grids can be expanded, this creates an opportunity to use existing networks better, and how digitalisation, grid-enhancing technologies and artificial intelligence (AI) can be combined to capture it. It introduces the concepts used throughout the report, a shared toolkit and a framework of three layers of grid optimisation.
+
+[5]
+Document: Modernising Grids in the Age of Electricity
+Section: Chapter 1. The need for modern grids › Making better use of the grid across planning and operational timeframes
+Pages: p. 18
+Chunk ID: modernisinggridsintheageofelectricity::0027
+TEXT:
+Making better use of the grid across planning and operational timeframes
+
+||Long-term planning and connection studies|Operational planning (from weeks ahead to day-ahead)|Real-time operation|
+|---|---|---|---|
+|Decisions|What to build, defer or connect, and location (investment focus)|Allocating market capacity between nodes or zones, and developing remedial action plans to manage outages (security focus)|Curative actions to keep the system secure as conditions evolve, including automatic responses faster than any operator can act (operational continuity focus)|
+|Uncertainties|Load growth, generation and grid projects materialising or being delayed, policy shifts, technology maturity, demand flexibility and climate conditions|Forecast error on variable demand and supply, and unplanned outages, against largely known generation schedules|Evolving real-time conditions and instantaneous disturbances|
+|How practice is evolving|From deterministic firm- capacity cases sized to annual minima and maxima, towards finer granularity (some operators already run cases on an hour-by- hour basis) and increasingly probabilistic and stochastic methods that represent variable demand and supply, realistic outages, and the remedial actions and technologies available|From preventive margins held in reserve, towards accounting for the large set of remedial actions already standard in many systems (topology, PST and HVDC setpoints, redispatch and countertrading) to minimise congestion management costs rather than holding conservative headroom in reserve|From fixed seasonal or static limits, towards dynamic limits and pre- planned curative sequences, supported by tools that simulate many events and advise the operator on the best response|
+
+QUESTION: What are the main challenges in modernising electricity grids?
+
+Answer the question using only the SOURCES above, in the required format: one claim per line, each line ending with the number of the source that states it, in square brackets.<|im_end|>
+<|im_start|>assistant
+
+--- STEP 5: GENERATED ANSWER (C:\Users\HP\.cache\ecorag_models\Qwen2.5-3B-Instruct, 400 tokens, 377.7s) ---
+- The grid cannot keep pace with rising electricity demand, leading to lengthening connection queues and competition for scarce grid capacity [2].
+- New housing and industrial development compete with data centers and generation projects for grid capacity [2].
+- Service disruption may occur if left unaddressed [2].
+- Stability is a concern due to the displacement of synchronous generators by converter-connected resources [2].
+- Converter-connected resources reduce traditional stabilizing properties like inertia, voltage support, fault current contribution, and damping [2].
+- Faster-moving and harder-to-observe variables include stability, voltage support, and damping [2].
+- AI-based tools' performance depends heavily on the quality of data and models they rely on [2].
+- The grid must now cope with distributed energy resources such as rooftop solar, batteries, EVs, and flexible demand [3].
+- Large inverter-based power sources and vast data centers represent a new, more concentrated form of generation and demand [3].
+- Sharp peaks can produce challenges for voltage management, transformer loading, feeder capacity, and protection settings [3].
+- The grid is transforming from unidirectional systems to systems with dynamic two-way flows [3].
+- Voltage management, transformer loading, feeder capacity, and protection settings are new challenges created by these changes [3].
+- The grid must now manage conditions that are faster-moving and harder to observe and model than thermal limits [2].
+- The grid faces new challenges at both the distribution and transmission levels [3].
+- The grid must now manage evolving real-time conditions and instantaneous disturbances [2].
+- Evolving real-time conditions and instantaneous disturbances are uncertainties in operational planning [2].
+- Decisions in long-term planning and connection studies include what to build, defer, or connect, and where to locate (investment focus) [5].
+- Forecast error on variable demand and supply, and unplanned outages, are uncertainties in operational planning [5].
+- From deterministic firm-capacity cases sized to annual minima and maxima,
+
+--- STEP 6: CITATIONS ---
+Cited:       ['[2] Modernising Grids in the Age of Electricity, p. 12', '[3] Modernising Grids in the Age of Electricity, pp. 11–12', '[5] Modernising Grids in the Age of Electricity, p. 18']
+Not cited:   ['[1] Modernising Grids in the Age of Electricity, p. 20', '[4] Modernising Grids in the Age of Electricity, p. 11']
+
+--- STEP 7: CLAIM-BY-CLAIM VERIFICATION (deterministic, answer unchanged) ---
+[supported] The grid cannot keep pace with rising electricity demand, leading to lengthening connection queues and competi
+[supported] New housing and industrial development compete with data centers and generation projects for grid capacity [2]
+[supported] Service disruption may occur if left unaddressed [2].
+[supported] Stability is a concern due to the displacement of synchronous generators by converter-connected resources [2].
+[supported] Converter-connected resources reduce traditional stabilizing properties like inertia, voltage support, fault c
+[supported] Faster-moving and harder-to-observe variables include stability, voltage support, and damping [2].
+[supported] AI-based tools' performance depends heavily on the quality of data and models they rely on [2].
+[supported] The grid must now cope with distributed energy resources such as rooftop solar, batteries, EVs, and flexible d
+[supported] Large inverter-based power sources and vast data centers represent a new, more concentrated form of generation
+[supported] Sharp peaks can produce challenges for voltage management, transformer loading, feeder capacity, and protectio
+[supported] The grid is transforming from unidirectional systems to systems with dynamic two-way flows [3].
+[supported] Voltage management, transformer loading, feeder capacity, and protection settings are new challenges created b
+[supported] The grid must now manage conditions that are faster-moving and harder to observe and model than thermal limits
+[supported] The grid faces new challenges at both the distribution and transmission levels [3].
+[misattributed] The grid must now manage evolving real-time conditions and instantaneous disturbances [2].
+    problem: cited [2] does not match; best matching source is 5
+[misattributed] Evolving real-time conditions and instantaneous disturbances are uncertainties in operational planning [2].
+    problem: cited [2] does not match; best matching source is 5
+[supported] Decisions in long-term planning and connection studies include what to build, defer, or connect, and where to 
+[supported] Forecast error on variable demand and supply, and unplanned outages, are uncertainties in operational planning
+[no_citation] From deterministic firm-capacity cases sized to annual minima and maxima,
+    problem: factual claim has no citation; matching content found in [5]
+Summary: {'factual_claims': 19, 'with_citation': 18, 'supported': 16, 'partially_supported': 0, 'misattributed': 2, 'unsupported_cited': 0, 'uncited': 1, 'uncited_but_matching_source': 1, 'uncited_and_unmatched': 0, 'date_scope_mismatches': 0, 'date_scope_figures': 0, 'non_standard_citation_format': 0, 'vague_attribution': 0, 'abstained': False}
+saved Q3 -> ecorag_data/rag_v3-3b_results_q1_q3.json
+================================================================================
+QUESTION: How can the cost of capital for clean energy projects in emerging and developing economies be reduced?
+================================================================================
+
+--- STEP 1-3: RETRIEVAL (top 5, types ['content', 'table']) ---
+[1] reducingthecostofcapital::0043  similarity 0.835 (distance 0.165)
+    Reducing the Cost of Capital | 1.2 The cost of capital › Box 1.5 ⊳ What difference would a lower cost of capital make for the overall cost of EMDE energy transitions? | pp. 26–27 | content
+    "Box 1.5 ⊳ What difference would a lower cost of capital make for the overall cost of EMDE energy transitions? Efforts to reduce the cost of capital for clean energy projects in EMDE can facilitate the achievement of multiple sustainable development goals. Narrowing the gap of the cost of capital bet..."
+[2] reducingthecostofcapital::0059  similarity 0.829 (distance 0.171)
+    Reducing the Cost of Capital | 2.1 Introduction | p. 34 | content
+    "2.1 Introduction Reducing the cost of capital for clean energy projects in emerging market and developing economies (EMDE) will mean addressing risks across various parts of the energy economy, for projects that are financed with different business models, where the scale of projects varies consider..."
+[3] reducingthecostofcapital::0018  similarity 0.821 (distance 0.179)
+    Reducing the Cost of Capital | 1.1 The clean energy investment gap | p. 13 | content
+    "“Building on the IEA-IFC report to the Summit on “Scaling up Private Finance for Clean Energy in Emerging and Developing Countries”, the IEA should make recommendations on how to bring down the cost of capital for clean energy investments in emerging and developing countries, taking into account the..."
+[4] reducingthecostofcapital::0005  similarity 0.82 (distance 0.18)
+    Reducing the Cost of Capital | Executive summary | p. 7 | content
+    "Executive summary Clean energy investment in most emerging and developing economies has yet to take off: A high cost of capital is a major reason why How emerging market and developing economies (EMDE1 ) meet their rising energy needs is a pivotal question both for their citizens and for the world. ..."
+[5] reducingthecostofcapital::0016  similarity 0.82 (distance 0.18)
+    Reducing the Cost of Capital | Chapter 1: Unlocking clean energy investment › SUMMARY | p. 11 | content
+    "- Mobilising private finance at the scale needed will require at least a tripling in international concessional funds to help improve the risk return profile of clean energy projects across the electricity, end-use and low-emission-fuel sectors. An estimated USD 90 billion to USD 110 billion per yea..."
+
+--- STEP 4: FINAL PROMPT SENT TO THE LLM (chat template applied) ---
+<|im_start|>system
+You are EcoRAG, an assistant that answers questions about environmental and sustainability reports.
+
+You are given numbered SOURCES, labelled [1], [2], [3], and so on.
+
+Write your answer in this exact format:
+- One factual claim per line. Start each line with "- ".
+- End EVERY line with the number of the source that states that claim, in square brackets: [2]. If two sources state it, write [2][4].
+- Use only the numbers of the SOURCES you were given.
+- If no source states a claim, do not write that claim.
+- No introduction and no concluding summary: only the claim lines.
+
+Example of the format (made-up content):
+- Wind power capacity doubled between 2015 and 2020 [3].
+- Most of the new capacity was built offshore [1][3].
+
+Rules:
+1. Use ONLY information stated in the SOURCES. Do not use your general knowledge, even if you think it is correct.
+2. Cite the source whose text actually states that specific claim. If a number comes from source [4], cite [4]. A source about the same topic is not enough.
+3. Include the specific numbers, thresholds, percentages, dates, or definitions that directly answer the question when those facts are present in the SOURCES.
+4. If the SOURCES do not contain enough information to answer the question, write only this line: "The provided sources do not contain enough information to answer this." If they answer only part of it, add a line: "- The provided sources do not contain enough information about <the missing part>."
+5. If sources disagree, write one line for each side, each with its own citation.
+6. Copy numbers, units, percentages and years exactly as they appear in the SOURCES.
+7. Write at most 8 lines.<|im_end|>
+<|im_start|>user
+SOURCES:
+
+[1]
+Document: Reducing the Cost of Capital
+Section: 1.2 The cost of capital › Box 1.5 ⊳ What difference would a lower cost of capital make for the overall cost of EMDE energy transitions?
+Pages: pp. 26–27
+Chunk ID: reducingthecostofcapital::0043
+TEXT:
+Box 1.5 ⊳ What difference would a lower cost of capital make for the overall cost of EMDE energy transitions?
+
+Efforts to reduce the cost of capital for clean energy projects in EMDE can facilitate the achievement of multiple sustainable development goals. Narrowing the gap of the cost of capital between EMDE and advanced economies by energy-sector-specific interventions can also substantially bring down the overall cost of realising sustainable energy at scale. We estimate that a 1 percentage point (or 100 basis point) reduction in the cost of capital in EMDE leads to a reduction of USD 150 billion in average annual financing costs in the NZE Scenario between 2024 and 2050 (Figure 1.9).
+
+Note: bps = basis points; 100 basis points = 1 percentage point.
+
+This reduction requires considerable efforts but is achievable and represents a 10-20% decrease in the cost of capital of the different sectors, compared with current values.
+
+This reduction is obtained in part given i) the large weight that the cost of capital has in the total investment of solar PV and wind; and ii) the fact that these two technologies represent 15% of the investment needs of the NZE Scenario. An even more ambitious lowering by 2 percentage points could almost double this reduction to USD 300 billion per year.
+
+In 2023, USD 35 billion were spent on clean energy in Africa, so a USD 150 billion reduction in clean energy financing costs is equivalent to more than four times the clean energy investments in this region this year. Bringing down the cost of capital therefore represents a huge opportunity to move countries more quickly down the pathway to a safer and more sustainable energy future.
+
+[2]
+Document: Reducing the Cost of Capital
+Section: 2.1 Introduction
+Pages: p. 34
+Chunk ID: reducingthecostofcapital::0059
+TEXT:
+2.1 Introduction
+
+Reducing the cost of capital for clean energy projects in emerging market and developing economies (EMDE) will mean addressing risks across various parts of the energy economy, for projects that are financed with different business models, where the scale of projects varies considerably, and where the most prevalent risks are not always the same. In Chapter 1, we highlighted that two of the largest investment requirements for EMDE in the period to 2035 are utility-scale solar and wind, and energy efficiency in buildings. These are, however, very different sectors for investors. Utility-scale solar and wind are financed largely on a project finance basis, for tens of millions of United States (US) dollars, and the biggest sector-related concerns for investors are off-taker and transmission-related risks. Investments in energy efficiency in buildings are generally financed by households or real estate developers, through their own savings or commercial loans. The biggest challenges are the lack of incentives due to subsidised energy, absence of building codes or weak financing models.
+
+These examples highlight why it is essential to dig into the features of different parts of the energy sector to examine their specific elements, business models and risks. This chapter discusses seven large clean energy sectors that have significant strategic value for secure and affordable energy transitions in EMDE and that are also large in terms of cumulative clean energy investment needs between 2024 and 2035 in the Net Zero Emissions by 2050 (NZE) Scenario (the number in brackets).
+
+- utility-scale solar PV and wind (22%)
+
+- transmission and distribution grids (13%)
+
+- energy efficiency in buildings (14%)
+
+- electric mobility (10%)
+
+- low-emissions fuels (8%)
+
+- utility-scale hydro (7%)
+
+- battery storage (4%).
+
+[3]
+Document: Reducing the Cost of Capital
+Section: 1.1 The clean energy investment gap
+Pages: p. 13
+Chunk ID: reducingthecostofcapital::0018
+TEXT:
+“Building on the IEA-IFC report to the Summit on “Scaling up Private Finance for Clean Energy in Emerging and Developing Countries”, the IEA should make recommendations on how to bring down the cost of capital for clean energy investments in emerging and developing countries, taking into account the transparency and data availability to assess risks”.
+
+Since this analysis was asked of the IEA, its focus is on issues and solutions that lie within the remit of energy decision makers. We do so with reference to IEA scenarios that provide detailed insights on technology and deployment trends in net zero transitions (Box 1.1). However, risks that push up the cost of capital extend well beyond the energy sector, highlighting the need for a broad effort to create the conditions that will allow all countries to benefit from participation in the new clean energy economy.
+
+[4]
+Document: Reducing the Cost of Capital
+Section: Executive summary
+Pages: p. 7
+Chunk ID: reducingthecostofcapital::0005
+TEXT:
+Executive summary
+
+Clean energy investment in most emerging and developing economies has yet to take off: A high cost of capital is a major reason why How emerging market and developing economies (EMDE1 ) meet their rising energy needs is a pivotal question both for their citizens and for the world. Cost-competitive clean energy technologies open the possibility to chart a new, lower-emissions pathway to growth and prosperity, but capital flows to clean energy projects in many EMDE remain worryingly low. Global clean energy investment has risen by 40% since 2020, reaching USD 1.8 trillion in 2023, but almost all the recent growth has been in advanced economies and in China. EMDE account for around 15% of the total, despite accounting for about a third of global gross domestic product and two-thirds of the world’s population. India and Brazil are by a distance the largest EMDE clean energy markets.
+
+All pathways to successful global energy transitions depend on expanding capital flows to clean energy in fast-growing EMDE. With growing international attention to this issue, the International Energy Agency (IEA) was tasked by the Paris Summit on a New Global Financing Pact in June 2023 to make recommendations on how to bring down the cost of capital for clean energy investment in EMDE. This report answers that request, building on previous IEA analysis and on new survey data collected for the IEA’s Cost of Capital Observatory project.
+
+[5]
+Document: Reducing the Cost of Capital
+Section: Chapter 1: Unlocking clean energy investment › SUMMARY
+Pages: p. 11
+Chunk ID: reducingthecostofcapital::0016
+TEXT:
+- Mobilising private finance at the scale needed will require at least a tripling in international concessional funds to help improve the risk return profile of clean energy projects across the electricity, end-use and low-emission-fuel sectors. An estimated USD 90 billion to USD 110 billion per year in concessional funds is needed to get on a 1.5-degree pathway. These funds can help mobilise private capital in countries and sectors that do not have access to commercial finance.
+
+- Lowering the cost of capital can substantially bring down the overall cost of transitions and reduce the costs paid by consumers. A one percentage point reduction in the cost of capital compared with current levels would save around USD 150 billion in annual clean energy financing costs (representing 20% of annual financing costs) for net zero transitions to 2050. Better risk management through strong policy frameworks and regulation as well as enhanced deployment of de-risking instruments are key.
+
+QUESTION: How can the cost of capital for clean energy projects in emerging and developing economies be reduced?
+
+Answer the question using only the SOURCES above, in the required format: one claim per line, each line ending with the number of the source that states it, in square brackets.<|im_end|>
+<|im_start|>assistant
+
+--- STEP 5: GENERATED ANSWER (C:\Users\HP\.cache\ecorag_models\Qwen2.5-3B-Instruct, 291 tokens, 483.7s) ---
+- A 1 percentage point reduction in the cost of capital can lead to a reduction of USD 150 billion in average annual financing costs in the NZE Scenario between 2024 and 2050 [1].
+- A 2 percentage point reduction in the cost of capital could almost double this reduction to USD 300 billion per year [1].
+- Bringing down the cost of capital requires addressing risks across various parts of the energy economy, including different business models, scales of projects, and prevalent risks in different sectors [2].
+- It is essential to dig into the features of different parts of the energy sector to examine their specific elements, business models, and risks [2].
+- Risks that push up the cost of capital extend well beyond the energy sector, highlighting the need for a broad effort to create the conditions that will allow all countries to benefit from participation in the new clean energy economy [3].
+- Mobilising private finance at the scale needed will require at least a tripling in international concessional funds to help improve the risk-return profile of clean energy projects across the electricity, end-use, and low-emission-fuel sectors [5].
+- Lowering the cost of capital can substantially bring down the overall cost of transitions and reduce the costs paid by consumers [1].
+- Better risk management through strong policy frameworks and regulation as well as enhanced deployment of de-risking instruments are key [1].
+
+--- STEP 6: CITATIONS ---
+Cited:       ['[1] Reducing the Cost of Capital, pp. 26–27', '[2] Reducing the Cost of Capital, p. 34', '[3] Reducing the Cost of Capital, p. 13', '[5] Reducing the Cost of Capital, p. 11']
+Not cited:   ['[4] Reducing the Cost of Capital, p. 7']
+
+--- STEP 7: CLAIM-BY-CLAIM VERIFICATION (deterministic, answer unchanged) ---
+[supported] A 1 percentage point reduction in the cost of capital can lead to a reduction of USD 150 billion in average an
+[supported] A 2 percentage point reduction in the cost of capital could almost double this reduction to USD 300 billion pe
+[supported] Bringing down the cost of capital requires addressing risks across various parts of the energy economy, includ
+[supported] It is essential to dig into the features of different parts of the energy sector to examine their specific ele
+[supported] Risks that push up the cost of capital extend well beyond the energy sector, highlighting the need for a broad
+[supported] Mobilising private finance at the scale needed will require at least a tripling in international concessional 
+[supported] Lowering the cost of capital can substantially bring down the overall cost of transitions and reduce the costs
+[misattributed] Better risk management through strong policy frameworks and regulation as well as enhanced deployment of de-ri
+    problem: cited [1] does not match; best matching source is 5
+Summary: {'factual_claims': 8, 'with_citation': 8, 'supported': 7, 'partially_supported': 0, 'misattributed': 1, 'unsupported_cited': 0, 'uncited': 0, 'uncited_but_matching_source': 0, 'uncited_and_unmatched': 0, 'date_scope_mismatches': 0, 'date_scope_figures': 0, 'non_standard_citation_format': 0, 'vague_attribution': 0, 'abstained': False}
+saved Q4 -> ecorag_data/rag_v3-3b_results_q4_q6.json
+================================================================================
+QUESTION: How are near-zero emissions steel and cement defined?
+================================================================================
+
+--- STEP 1-3: RETRIEVAL (top 5, types ['content', 'table']) ---
+[1] definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0016  similarity 0.869 (distance 0.131)
+    Definitions for Near-Zero and Low-Emissions Steel and Cement | 2. Principles for definitions › Principles for near-zero emissions definitions | p. 14 | content
+    "- Globally consistent. The emissions threshold applies regardless of where the steel or cement is produced or consumed. This enables clear communication and a consistent signal across global markets. Notably, this does not imply uniform global policy ambition and speed of progress towards net zero; ..."
+[2] definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0003  similarity 0.862 (distance 0.138)
+    Definitions for Near-Zero and Low-Emissions Steel and Cement | Executive Summary › Definitions can provide a common language to help accelerate the net zero transition in industry | p. 6 | content
+    "Executive Summary Definitions can provide a common language to help accelerate the net zero transition in industry A common global understanding on definitions for near-zero emissions and low-emissions materials is a crucial enabler of the industry transition to net zero. These definitions can under..."
+[3] definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0023  similarity 0.862 (distance 0.138)
+    Definitions for Near-Zero and Low-Emissions Steel and Cement | 3. Emerging common ground on near-zero emissions definitions | pp. 17–18 | content
+    "3. Emerging common ground on near-zero emissions definitions The IEA Secretariat has defined near-zero emissions thresholds with the aforementioned principles as a guide. These were recognised in the 2022 G7 Climate, Energy and Environment Ministers’ Communiqué as “a robust starting point for a comm..."
+[4] definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0005  similarity 0.859 (distance 0.141)
+    Definitions for Near-Zero and Low-Emissions Steel and Cement | Executive Summary › Common understanding is emerging on principles for definitions and near-zero emissions thresholds | p. 7 | content
+    "A strong global common understanding is emerging around near-zero emissions threshold values for steel and cement among major proposals to date. In 2022, the IEA Secretariat derived near-zero emissions definitions based on its net zero scenario analyses. For steel, the threshold ranges from 400-50 k..."
+[5] definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0008  similarity 0.85 (distance 0.15)
+    Definitions for Near-Zero and Low-Emissions Steel and Cement | 1. Definitions: a critical enabler of industrial decarbonisation | p. 9 | content
+    "1. Definitions: a critical enabler of industrial decarbonisation A common understanding of what constitutes near-zero emissions and lowemissions materials is crucial to facilitate markets and enabling mechanisms for industrial decarbonisation and clean energy transitions. Definitions for near-zero a..."
+
+--- STEP 4: FINAL PROMPT SENT TO THE LLM (chat template applied) ---
+<|im_start|>system
+You are EcoRAG, an assistant that answers questions about environmental and sustainability reports.
+
+You are given numbered SOURCES, labelled [1], [2], [3], and so on.
+
+Write your answer in this exact format:
+- One factual claim per line. Start each line with "- ".
+- End EVERY line with the number of the source that states that claim, in square brackets: [2]. If two sources state it, write [2][4].
+- Use only the numbers of the SOURCES you were given.
+- If no source states a claim, do not write that claim.
+- No introduction and no concluding summary: only the claim lines.
+
+Example of the format (made-up content):
+- Wind power capacity doubled between 2015 and 2020 [3].
+- Most of the new capacity was built offshore [1][3].
+
+Rules:
+1. Use ONLY information stated in the SOURCES. Do not use your general knowledge, even if you think it is correct.
+2. Cite the source whose text actually states that specific claim. If a number comes from source [4], cite [4]. A source about the same topic is not enough.
+3. Include the specific numbers, thresholds, percentages, dates, or definitions that directly answer the question when those facts are present in the SOURCES.
+4. If the SOURCES do not contain enough information to answer the question, write only this line: "The provided sources do not contain enough information to answer this." If they answer only part of it, add a line: "- The provided sources do not contain enough information about <the missing part>."
+5. If sources disagree, write one line for each side, each with its own citation.
+6. Copy numbers, units, percentages and years exactly as they appear in the SOURCES.
+7. Write at most 8 lines.<|im_end|>
+<|im_start|>user
+SOURCES:
+
+[1]
+Document: Definitions for Near-Zero and Low-Emissions Steel and Cement
+Section: 2. Principles for definitions › Principles for near-zero emissions definitions
+Pages: p. 14
+Chunk ID: definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0016
+TEXT:
+- Globally consistent. The emissions threshold applies regardless of where the steel or cement is produced or consumed. This enables clear communication and a consistent signal across global markets. Notably, this does not imply uniform global policy ambition and speed of progress towards net zero; rather the same near-zero emissions definition can be applied within policies according to national and regional circumstances (e.g. different countries might choose to procure different shares of near-zero emissions materials over time).
+
+- Physical. To receive recognition for achieving near-zero emissions, technologies need to be deployed that achieve near-zero emissions levels in physical terms – that is, the emissions for the supply chain of one full tonne of steel or cement together fall at or below the near-zero emissions threshold. In other words, offsetting emissions from outside the supply chain or aggregation of emissions reductions credits/certificates across multiple units of production and/or supply chains is not permitted for near-zero emissions recognition. Additionally, primary data with appropriate verification should be used in emissions measurement and reporting for major process steps, to demonstrate actual performance.
+
+- Transparent. The boundaries of emissions included and accounting methods used must be made clear to ensure comparability. Additionally, reporting based on definitions should make clear which input materials are used and provide some indicator of how emissions performance compares to typical vales when using those materials. This is in no way to disincentivise use of certain input materials, but rather to provide an indication of the extent to which there are “additional” emission reductions from production. Including the actual CO2 footprint on a label in addition to a “decarbonisation effort rating” that compares to typical performance would be ideal for full transparency.
+
+[2]
+Document: Definitions for Near-Zero and Low-Emissions Steel and Cement
+Section: Executive Summary › Definitions can provide a common language to help accelerate the net zero transition in industry
+Pages: p. 6
+Chunk ID: definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0003
+TEXT:
+Executive Summary
+
+Definitions can provide a common language to help accelerate the net zero transition in industry
+
+A common global understanding on definitions for near-zero emissions and low-emissions materials is a crucial enabler of the industry transition to net zero. These definitions can underpin multiple enabling policy mechanisms to stimulate demand and accelerate deployment of the technologies needed for steel and cement decarbonisation. Clarity on definitions is needed to provide a higher degree of certainty, which would enable the private sector to move forward with the required investments for the transition.
+
+Globally interoperable definitions can be used by countries in policies in accordance with their own circumstances. A common international understanding on definitions is important given the global nature of industrial markets, in order to reduce reporting burden on the private sector and send a clear market signal on the direction of travel. Definitions are a common language or tool, that can then be employed in policies by different countries in line with their own starting points and targeted paces of transition.
+
+Definitions for near-zero emissions and low-emissions materials have distinct and complementary functions. “Near-zero emissions” is specifically reserved for technologies that are already compatible with an energy system at net zero emissions. Distinctive recognition of such performance already today is critical, particularly given the higher risks and costs that come with development and early deployment of innovative technologies. Incentivising these technologies now can help kick-start market uptake, paving the way to eventual widespread diffusion. Meanwhile, the “low-emissions” designation recognises substantial progress and emissions reductions towards the ultimate near-zero goal while not fully achieving it. Given that it will take time for the full market to transition to nearzero emissions technologies, policies that in parallel incentivise scale-up of increasingly lower-emission technologies are also valuable.
+
+[3]
+Document: Definitions for Near-Zero and Low-Emissions Steel and Cement
+Section: 3. Emerging common ground on near-zero emissions definitions
+Pages: pp. 17–18
+Chunk ID: definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0023
+TEXT:
+3. Emerging common ground on near-zero emissions definitions
+
+The IEA Secretariat has defined near-zero emissions thresholds with the aforementioned principles as a guide. These were recognised in the 2022 G7 Climate, Energy and Environment Ministers’ Communiqué as “a robust starting point for a common understanding of ambitious general definitions for near-zero emissions steel and cement production”. These definitions, which pertain to the production-level emissions boundaries laid out in the IEA report (including direct and indirect combustion and process-related GHG emissions), are as follows:
+
+For steel, progressive according to the scrap share of metallic inputs, falling between the following:
+
+- 100% iron: 400 kg carbon dioxide equivalent (CO2-eq) per tonne of crude steel
+
+- 100% scrap: 50 kg CO2-eq per tonne of crude steel.
+
+For cement, progressive according to the clinker-to-cement ratio, falling between the following:
+
+- 100% clinker: 125 kg CO2-eq per tonne of cement
+
+- no clinker: 40 kg CO2-eq per tonne of cement (noting that cement production without clinker has not been proven at commercial scale).
+
+The IEA Secretariat recommended that these production-level definitions could form the basis for comparable definitions at the product level, that is from crude steel to hot-rolled or finished steel, and from cement to concrete. The IEA definitions were intended as a robust but high-level international proposal, that could be used with various emissions measurement methodologies and reporting/labelling tools (see Section 5). The proposal would need to be taken forward by others to be implemented through accompanying detailed rulebooks, including specifying robust emissions accounting methods that enable comparability and verification of data (as the IEA is neither a standards-setting nor a policy-making body).
+
+[4]
+Document: Definitions for Near-Zero and Low-Emissions Steel and Cement
+Section: Executive Summary › Common understanding is emerging on principles for definitions and near-zero emissions thresholds
+Pages: p. 7
+Chunk ID: definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0005
+TEXT:
+A strong global common understanding is emerging around near-zero emissions threshold values for steel and cement among major proposals to date. In 2022, the IEA Secretariat derived near-zero emissions definitions based on its net zero scenario analyses. For steel, the threshold ranges from 400-50 kg CO2 equivalent (CO2-eq) per tonne of crude steel, depending on the scrap share. For cement, the threshold ranges from 125-40 kg CO2-eq per tonne of cement, depending on the clinker ratio. Proposals and use by industry and multistakeholder processes are converging around very similar values compatible with the net zero endpoint, including from ResponsibleSteel, the Low Emission Steel Standard, the Global Steel Climate Council, the China Iron and Steel Association, the Industrial Deep Decarbonisation Initiative’s pledge, and the First Movers Coalition, among others. The Global Cement and Concrete Association has translated the cement threshold to the concrete level, arriving at values for nearzero emissions concrete of 21-36 kg CO2-eq per metre cubed, depending on the concrete strength. If the international community can continue converging towards existing proposals and using them in a transparent and interoperable manner rather than creating additional new proposals, it would greatly help bring clarity to global markets.
+
+[5]
+Document: Definitions for Near-Zero and Low-Emissions Steel and Cement
+Section: 1. Definitions: a critical enabler of industrial decarbonisation
+Pages: p. 9
+Chunk ID: definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0008
+TEXT:
+1. Definitions: a critical enabler of industrial decarbonisation
+
+A common understanding of what constitutes near-zero emissions and lowemissions materials is crucial to facilitate markets and enabling mechanisms for industrial decarbonisation and clean energy transitions. Definitions for near-zero and low-emissions materials provide a foundation for multiple targeted policies that governments may choose to use, including green public procurement, certification and labelling schemes, minimum market share regulations (quotas), product design standards, finance and funding requirements, policies to address high emissions intensity in production processes, and trade-related policies. Targeted demand and supply policies of this kind can address specific challenges of the industrial transition. They can complement and even strengthen broader policies, such as carbon pricing and measures promoting recycling, circularity and material efficiency.
+
+Several proposals for definitions have emerged, and a common understanding and clarity are needed. In particular, private sector buyers are demanding reliability and clarity concerning goods on the market, while industrial producers need to secure buyers in order to make the business case for scaling up new lower-emissions production. The current uncertainty created by the lack of an international agreement on definitions can lead to non-action in the private sector.
+
+Global alignment on definitions has multiple advantages, including coherence and reduced burden for producers and buyers operating across multiple jurisdictions, facilitating trade of near-zero and low-emissions materials and products, providing a common language for tracking progress (e.g. tracking global deployment of near-zero emissions steel over time in the same way that global deployment of zero-emissions vehicles is tracked), and sending a clear signal to global markets on direction of travel for reaching net zero.
+
+QUESTION: How are near-zero emissions steel and cement defined?
+
+Answer the question using only the SOURCES above, in the required format: one claim per line, each line ending with the number of the source that states it, in square brackets.<|im_end|>
+<|im_start|>assistant
+
+--- STEP 5: GENERATED ANSWER (C:\Users\HP\.cache\ecorag_models\Qwen2.5-3B-Instruct, 83 tokens, 470.7s) ---
+- For steel, the near-zero emissions threshold ranges from 400-50 kg CO2-eq per tonne of crude steel, depending on the scrap share. [3][4]
+- For cement, the near-zero emissions threshold ranges from 125-40 kg CO2-eq per tonne of cement, depending on the clinker ratio. [3][4]
+
+--- STEP 6: CITATIONS ---
+Cited:       ['[3] Definitions for Near-Zero and Low-Emissions Steel and Cement, pp. 17–18', '[4] Definitions for Near-Zero and Low-Emissions Steel and Cement, p. 7']
+Not cited:   ['[1] Definitions for Near-Zero and Low-Emissions Steel and Cement, p. 14', '[2] Definitions for Near-Zero and Low-Emissions Steel and Cement, p. 6', '[5] Definitions for Near-Zero and Low-Emissions Steel and Cement, p. 9']
+
+--- STEP 7: CLAIM-BY-CLAIM VERIFICATION (deterministic, answer unchanged) ---
+[supported] For steel, the near-zero emissions threshold ranges from 400-50 kg CO2-eq per tonne of crude steel, depending 
+[supported] For cement, the near-zero emissions threshold ranges from 125-40 kg CO2-eq per tonne of cement, depending on t
+Summary: {'factual_claims': 2, 'with_citation': 2, 'supported': 2, 'partially_supported': 0, 'misattributed': 0, 'unsupported_cited': 0, 'uncited': 0, 'uncited_but_matching_source': 0, 'uncited_and_unmatched': 0, 'date_scope_mismatches': 0, 'date_scope_figures': 0, 'non_standard_citation_format': 0, 'vague_attribution': 0, 'abstained': False}
+saved Q5 -> ecorag_data/rag_v3-3b_results_q4_q6.json
+================================================================================
+QUESTION: How many electric cars were sold in India in 2023?
+================================================================================
+
+--- STEP 1-3: RETRIEVAL (top 5, types ['content', 'table']) ---
+[1] mappinggreenanddigitalenergyjobs::0057  similarity 0.731 (distance 0.269)
+    Mapping Green and Digital Energy Jobs | Online job postings related to the energy transition › Electric car production and number of EV and battery online job postings | pp. 44–45 | content
+    "Electric car production and number of EV and battery online job postings As emphasised by the Global EV Outlook 2024, EV production and sales increased strongly worldwide. Electric car sales increased by 3.5 million between 2022 and 2023, representing a 35% year-on-year increase. Sales went from 1 m..."
+[2] mappinggreenanddigitalenergyjobs::0083  similarity 0.669 (distance 0.331)
+    Mapping Green and Digital Energy Jobs | Online job postings related to the energy transition › Job demand comparison across key energy sectors in France, 2021-2023 | p. 62 | content
+    "Job demand comparison across key energy sectors in France, 2021-2023 Note: Data for 2023 are available only until the end of the third quarter. The total number of OJPs for 2023 has been estimated by multiplying by 4/3 the count of jobs for 2023. More details in the methodology annex. Source: IEA an..."
+[3] mappinggreenanddigitalenergyjobs::0056  similarity 0.668 (distance 0.332)
+    Mapping Green and Digital Energy Jobs | Online job postings related to the energy transition › Relative count of batteries and electric vehicle online job postings (2021 baseline) in selected countries, 2018-2023 | pp. 43–44 | content
+    "Despite such increasing rates, the share of batteries and EV OJPs remained far below the European average of 0.031% in 2023. The US Bureau of Labor Statistics predicted a 5.3% increase in EV-related jobs between 2021 and 2031. OJPs data seem to go in the same direction as US batteries, and EV OJPs h..."
+[4] criticalmineralsreviewofnorway2026::0073  similarity 0.666 (distance 0.334)
+    Critical Minerals Review of Norway 2026 | Market overview › Norway electric vehicles update, 2010-2024 | pp. 46–47 | content
+    "Norway electric vehicles update, 2010-2024 Note: BEV = battery electric vehicles; PHEV = plug-in hybrid electric vehicles. Source: IEA (2026), Global EV Data Explorer. In its latest budget release, the Norwegian government announced it would begin phasing out the country’s value-added tax exemption ..."
+[5] manufacturingandtrademodeldocumentation2026::0032  similarity 0.664 (distance 0.336)
+    Manufacturing and Trade Model Documentation 2026 | Modelling methodology › Selected industrial strategies and policy packages targeting clean energy technology manufacturing considered in the MaT Model | p. 24 | table
+    "|Country/region|Key Policies| |---|---| |India|• National Steel Policy (2017) (India, Ministry Of Steel, 2017) • Production Linked Incentive scheme (2020) (India, Press Information Bureau, 2025) • National Green Hydrogen Mission (2023) (India, Ministry of New and Renewable Energy, 2023) • E-vehicle ..."
+
+--- STEP 4: FINAL PROMPT SENT TO THE LLM (chat template applied) ---
+<|im_start|>system
+You are EcoRAG, an assistant that answers questions about environmental and sustainability reports.
+
+You are given numbered SOURCES, labelled [1], [2], [3], and so on.
+
+Write your answer in this exact format:
+- One factual claim per line. Start each line with "- ".
+- End EVERY line with the number of the source that states that claim, in square brackets: [2]. If two sources state it, write [2][4].
+- Use only the numbers of the SOURCES you were given.
+- If no source states a claim, do not write that claim.
+- No introduction and no concluding summary: only the claim lines.
+
+Example of the format (made-up content):
+- Wind power capacity doubled between 2015 and 2020 [3].
+- Most of the new capacity was built offshore [1][3].
+
+Rules:
+1. Use ONLY information stated in the SOURCES. Do not use your general knowledge, even if you think it is correct.
+2. Cite the source whose text actually states that specific claim. If a number comes from source [4], cite [4]. A source about the same topic is not enough.
+3. Include the specific numbers, thresholds, percentages, dates, or definitions that directly answer the question when those facts are present in the SOURCES.
+4. If the SOURCES do not contain enough information to answer the question, write only this line: "The provided sources do not contain enough information to answer this." If they answer only part of it, add a line: "- The provided sources do not contain enough information about <the missing part>."
+5. If sources disagree, write one line for each side, each with its own citation.
+6. Copy numbers, units, percentages and years exactly as they appear in the SOURCES.
+7. Write at most 8 lines.<|im_end|>
+<|im_start|>user
+SOURCES:
+
+[1]
+Document: Mapping Green and Digital Energy Jobs
+Section: Online job postings related to the energy transition › Electric car production and number of EV and battery online job postings
+Pages: pp. 44–45
+Chunk ID: mappinggreenanddigitalenergyjobs::0057
+TEXT:
+Electric car production and number of EV and battery online job postings
+
+As emphasised by the Global EV Outlook 2024, EV production and sales increased strongly worldwide. Electric car sales increased by 3.5 million between 2022 and 2023, representing a 35% year-on-year increase. Sales went from 1 million to more than 13 million in only six years, between 2017 and 2023. This fast growth is obviously correlated to trends observed in every analysed country’s job markets. In Europe, EV sales increased by 20% between 2022 and 2023. Previously, they grew by 15% between 2021 and 2022, 65% between 2020 and 2021 and by 40% every year over 2017-2019. This strong increasing trend, especially in 2021, follows the adjusted corporate strategies put in place by European manufacturer to comply with the carbon dioxide emission standards passed in 2019, according to the Global EV Outlook 2023.
+
+Electric car production and number of battery and EV OJPs are positively correlated. In Germany, the OJP yearly count went from 4 092 to 6 886 between 2018 and 2023. In the meantime, electric car production increased from 0.2 million to 1.2 million vehicles. The same trends can be observed in the United Kingdom, in Spain, and even in the United States where the number of online job postings is lower.
+
+Sources: IEA analysis based on data from Lightcast and EV volumes.
+
+[2]
+Document: Mapping Green and Digital Energy Jobs
+Section: Online job postings related to the energy transition › Job demand comparison across key energy sectors in France, 2021-2023
+Pages: p. 62
+Chunk ID: mappinggreenanddigitalenergyjobs::0083
+TEXT:
+Job demand comparison across key energy sectors in France, 2021-2023
+
+Note: Data for 2023 are available only until the end of the third quarter. The total number of OJPs for 2023 has been estimated by multiplying by 4/3 the count of jobs for 2023. More details in the methodology annex. Source: IEA analysis based on data from Lightcast (accessed July 2024).
+
+Battery- and EV-related positions, as well as energy efficiency ones, also experienced an increase, in 2023 reaching between 250% and 300% of their 2021 level. Their share in the total number of French OJPs also increased over the same period, but only slightly.
+
+[3]
+Document: Mapping Green and Digital Energy Jobs
+Section: Online job postings related to the energy transition › Relative count of batteries and electric vehicle online job postings (2021 baseline) in selected countries, 2018-2023
+Pages: pp. 43–44
+Chunk ID: mappinggreenanddigitalenergyjobs::0056
+TEXT:
+Despite such increasing rates, the share of batteries and EV OJPs remained far below the European average of 0.031% in 2023.
+
+The US Bureau of Labor Statistics predicted a 5.3% increase in EV-related jobs between 2021 and 2031. OJPs data seem to go in the same direction as US batteries, and EV OJPs have sharply increased since 2021. This corresponds to some policies implemented at the same time, such as the 2021 Biden-⁠Harris Electric Vehicle Charging Action Plan, planning to build 500 000 chargers across the country to make EVs accessible to everyone, for local and long-distance trips, and the 2022 USD 2.8 billion grant from the Bipartisan Infrastructure Law to Boost Domestic Manufacturing and the American Battery Materials Initiative, which aimed at boosting US battery manufacturing through investments and policies on one side, and on the other hand reducing reliance on foreign supply chains, and creating good-paying jobs in the clean energy sector.
+
+Relative count of batteries and electric vehicle online job postings (2021 baseline) in Canada, Singapore and the United States, 2018-2023 Singapore’s share and absolute number of OJPs increased strongly from 2021 to 2023, reaching 0.011% and almost 2.5 the number of postings compared with 2021.
+
+[4]
+Document: Critical Minerals Review of Norway 2026
+Section: Market overview › Norway electric vehicles update, 2010-2024
+Pages: pp. 46–47
+Chunk ID: criticalmineralsreviewofnorway2026::0073
+TEXT:
+Norway electric vehicles update, 2010-2024
+
+Note: BEV = battery electric vehicles; PHEV = plug-in hybrid electric vehicles. Source: IEA (2026), Global EV Data Explorer.
+
+In its latest budget release, the Norwegian government announced it would begin phasing out the country’s value-added tax exemption for electric vehicles. The exemption will be scaled back in 2026 and completely phased out by 2027, which may not be without impact on future EV sales.
+
+This high uptake also means that Norway has to anticipate vehicles’ end of life and how to deal with recycling and materials recovery as part of its recycling strategy.
+
+[5]
+Document: Manufacturing and Trade Model Documentation 2026
+Section: Modelling methodology › Selected industrial strategies and policy packages targeting clean energy technology manufacturing considered in the MaT Model
+Pages: p. 24
+Chunk ID: manufacturingandtrademodeldocumentation2026::0032
+TEXT:
+|Country/region|Key Policies|
+|---|---|
+|India|• National Steel Policy (2017) (India, Ministry Of Steel, 2017) • Production Linked Incentive scheme (2020) (India, Press Information Bureau, 2025) • National Green Hydrogen Mission (2023) (India, Ministry of New and Renewable Energy, 2023) • E-vehicle policy (2024) (India, Ministry of Heavy Industries, 2024) • Tariffs and non-tariff measures on solar PV modules and cells (2022) (India, Press Information Bureau, 2022a) • Preferential trade agreements `o` South Asian Free Trade Area (SAFTA, 2006) (SAARC, 2025) `o` ASEAN-India FTA (AIFTA, 2010) (ASEAN, 2012) `o` India-Korea Comprehensive Economic Partnership Agreement (2010) (Embassy of India, 2025) `o` India Japan Comprehensive Economic Partnership Agreement (2011) (India, Ministry of Commerce and Industry, 2020) • Local content requirements for wind manufacturing (Reuters, 2025) • Reduction of goods and services tax on renewable energy equipment (2025) (Power Technology, 2025) • Removal of safeguard duty on solar components from all countries (Energetica India, 2025) • Make in India (2014) (India, Press Information Bureau, 2022b)|
+|Indonesia|• Export restrictions on raw materials that can be used for batteries in the electric vehicle (EV) supply chain (IEA, 2024b)|
+|Japan|• 65% domestic procurement ratio by 2040 for offshore wind (2025) (Japan Wind Power Association, 2025) • Green Transformation (GX) Promotion Strategy (Japan, Ministry of Economy, Trade and Industry, 2023)|
+|Kazakhstan|• Third Modernization of Kazakhstan: Global Competitiveness (Nazarbayev N., 2017)|
+
+QUESTION: How many electric cars were sold in India in 2023?
+
+Answer the question using only the SOURCES above, in the required format: one claim per line, each line ending with the number of the source that states it, in square brackets.<|im_end|>
+<|im_start|>assistant
+
+--- STEP 5: GENERATED ANSWER (C:\Users\HP\.cache\ecorag_models\Qwen2.5-3B-Instruct, 26 tokens, 413.6s) ---
+- The provided sources do not contain enough information about electric cars sold in India in 2023. [5]
+
+--- STEP 6: CITATIONS ---
+Cited:       ['[5] Manufacturing and Trade Model Documentation 2026, p. 24']
+Not cited:   ['[1] Mapping Green and Digital Energy Jobs, pp. 44–45', '[2] Mapping Green and Digital Energy Jobs, p. 62', '[3] Mapping Green and Digital Energy Jobs, pp. 43–44', '[4] Critical Minerals Review of Norway 2026, pp. 46–47']
+
+--- STEP 7: CLAIM-BY-CLAIM VERIFICATION (deterministic, answer unchanged) ---
+[abstention] The provided sources do not contain enough information about electric cars sold in India in 2023. [5]
+Summary: {'factual_claims': 0, 'with_citation': 0, 'supported': 0, 'partially_supported': 0, 'misattributed': 0, 'unsupported_cited': 0, 'uncited': 0, 'uncited_but_matching_source': 0, 'uncited_and_unmatched': 0, 'date_scope_mismatches': 0, 'date_scope_figures': 0, 'non_standard_citation_format': 0, 'vague_attribution': 0, 'abstained': True}
+saved Q6 -> ecorag_data/rag_v3-3b_results_q4_q6.json
+ALL QUESTIONS DONE

@@ -1,0 +1,80 @@
+{
+  "created_at": "2026-10-02T11:23:50+00:00",
+  "model": "BAAI/bge-small-en-v1.5",
+  "embedding_dimension": 384,
+  "model_max_tokens": 512,
+  "normalized": true,
+  "embedded_field": "embed_text",
+  "query_instruction": "Represent this sentence for searching relevant passages: ",
+  "num_documents": 9,
+  "num_chunks": 1242,
+  "files": {
+    "embeddings": "embeddings.npy",
+    "records": "records.jsonl"
+  },
+  "documents": [
+    {
+      "document_id": "criticalmineralsreviewofnorway2026",
+      "source_filename": "CriticalMineralsReviewofNorway2026.pdf",
+      "document_title": "Critical Minerals Review of Norway 2026",
+      "chunk_file": "criticalmineralsreviewofnorway2026.json",
+      "num_chunks": 79
+    },
+    {
+      "document_id": "definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies",
+      "source_filename": "Definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies.pdf",
+      "document_title": "Definitions for Near-Zero and Low-Emissions Steel and Cement",
+      "chunk_file": "definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies.json",
+      "num_chunks": 55
+    },
+    {
+      "document_id": "gmsr-2025",
+      "source_filename": "GMSR_2025.pdf",
+      "document_title": "GLOBAL METHANE STATUS REPORT 2025",
+      "chunk_file": "gmsr-2025.json",
+      "num_chunks": 320
+    },
+    {
+      "document_id": "managingtheseasonalvariabilityofelectricitydemandandsupply",
+      "source_filename": "ManagingtheSeasonalVariabilityofElectricityDemandandSupply.pdf",
+      "document_title": "Managing the Seasonal Variability of Electricity Demand and Supply",
+      "chunk_file": "managingtheseasonalvariabilityofelectricitydemandandsupply.json",
+      "num_chunks": 104
+    },
+    {
+      "document_id": "manufacturingandtrademodeldocumentation2026",
+      "source_filename": "ManufacturingandTradeModelDocumentation2026.pdf",
+      "document_title": "Manufacturing and Trade Model Documentation 2026",
+      "chunk_file": "manufacturingandtrademodeldocumentation2026.json",
+      "num_chunks": 73
+    },
+    {
+      "document_id": "mappinggreenanddigitalenergyjobs",
+      "source_filename": "MappingGreenandDigitalEnergyJobs.pdf",
+      "document_title": "Mapping Green and Digital Energy Jobs",
+      "chunk_file": "mappinggreenanddigitalenergyjobs.json",
+      "num_chunks": 193
+    },
+    {
+      "document_id": "modernisinggridsintheageofelectricity",
+      "source_filename": "ModernisingGridsintheAgeofElectricity.pdf",
+      "document_title": "Modernising Grids in the Age of Electricity",
+      "chunk_file": "modernisinggridsintheageofelectricity.json",
+      "num_chunks": 185
+    },
+    {
+      "document_id": "reducingthecostofcapital",
+      "source_filename": "ReducingtheCostofCapital.pdf",
+      "document_title": "Reducing the Cost of Capital",
+      "chunk_file": "reducingthecostofcapital.json",
+      "num_chunks": 166
+    },
+    {
+      "document_id": "unsg-call-action-methane-by-2030-epublication",
+      "source_filename": "unsg_call-action-methane_by-2030-epublication.pdf",
+      "document_title": "The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030",
+      "chunk_file": "unsg-call-action-methane-by-2030-epublication.json",
+      "num_chunks": 67
+    }
+  ]
+}

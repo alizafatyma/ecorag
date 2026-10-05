@@ -1,0 +1,930 @@
+{
+  "scope": "every cited claim in runs v2, v3 (1.5B) and v3-3b (3B); verifier output unchanged",
+  "statuses": [
+    "supported",
+    "supported_minor_distortion",
+    "partially_supported",
+    "misattributed",
+    "abstention"
+  ],
+  "summary": {
+    "v2": {
+      "overall": {
+        "cited_claims": 3,
+        "verifier_misattributed": 1,
+        "manual_misattributed": 1,
+        "manual_supported": 1,
+        "manual_supported_minor_distortion": 1,
+        "manual_partially_supported": 0,
+        "verifier_misattribution_rate": 0.333,
+        "manual_misattribution_rate": 0.333
+      },
+      "excluding_q3": {
+        "cited_claims": 1,
+        "verifier_misattributed": 1,
+        "manual_misattributed": 1,
+        "manual_supported": 0,
+        "manual_supported_minor_distortion": 0,
+        "manual_partially_supported": 0,
+        "verifier_misattribution_rate": 1.0,
+        "manual_misattribution_rate": 1.0
+      },
+      "verifier_disagreements": []
+    },
+    "v3": {
+      "overall": {
+        "cited_claims": 14,
+        "verifier_misattributed": 7,
+        "manual_misattributed": 7,
+        "manual_supported": 5,
+        "manual_supported_minor_distortion": 1,
+        "manual_partially_supported": 1,
+        "verifier_misattribution_rate": 0.5,
+        "manual_misattribution_rate": 0.5
+      },
+      "excluding_q3": {
+        "cited_claims": 10,
+        "verifier_misattributed": 6,
+        "manual_misattributed": 6,
+        "manual_supported": 4,
+        "manual_supported_minor_distortion": 0,
+        "manual_partially_supported": 0,
+        "verifier_misattribution_rate": 0.6,
+        "manual_misattribution_rate": 0.6
+      },
+      "verifier_disagreements": []
+    },
+    "v3-3b": {
+      "overall": {
+        "cited_claims": 31,
+        "verifier_misattributed": 6,
+        "manual_misattributed": 7,
+        "manual_supported": 24,
+        "manual_supported_minor_distortion": 0,
+        "manual_partially_supported": 0,
+        "verifier_misattribution_rate": 0.194,
+        "manual_misattribution_rate": 0.226
+      },
+      "excluding_q3": {
+        "cited_claims": 13,
+        "verifier_misattributed": 4,
+        "manual_misattributed": 5,
+        "manual_supported": 8,
+        "manual_supported_minor_distortion": 0,
+        "manual_partially_supported": 0,
+        "verifier_misattribution_rate": 0.308,
+        "manual_misattribution_rate": 0.385
+      },
+      "verifier_disagreements": [
+        "Q4 c7: verifier supported -> manual misattributed"
+      ]
+    }
+  },
+  "problems": [],
+  "claims": [
+    {
+      "run": "v2",
+      "question": 1,
+      "claim_id": 1,
+      "claim": "According to SOURCE [1], the agricultural sector is the largest source of anthropogenic methane emissions globally, responsible for 146 Mt per year or nearly 42% of the global total in 2020.",
+      "cited": [
+        1
+      ],
+      "verifier_status": "misattributed",
+      "manual_status": "misattributed",
+      "evidence_phrase": "146 Mt",
+      "phrase_found_in": [
+        2
+      ],
+      "verifier_agrees": true,
+      "note": "146 Mt only in [2]; 42% in [2][4][5]; cited 'SOURCE [1]'"
+    },
+    {
+      "run": "v2",
+      "question": 3,
+      "claim_id": 3,
+      "claim": "According to Document [2], where the grid cannot keep pace, the consequences are well documented, including lengthening connection queues, competition among different types of energy sources, and risks of service disruptions.",
+      "cited": [
+        2
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported_minor_distortion",
+      "evidence_phrase": "lengthening connection queues",
+      "phrase_found_in": [
+        2
+      ],
+      "verifier_agrees": true,
+      "note": "queues/service disruption are in [2]; 'competition among different types of energy sources' distorts 'housing and industrial development competing with data centres and generation projects for scarce grid capacity'"
+    },
+    {
+      "run": "v2",
+      "question": 3,
+      "claim_id": 8,
+      "claim": "Document [3] highlights that distributed energy resources, such as rooftop solar, batteries, EVs, and flexible demand, create new challenges for voltage management, transformer loading, feeder capacity, and protection settings.",
+      "cited": [
+        3
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "transformer loading",
+      "phrase_found_in": [
+        3
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3",
+      "question": 1,
+      "claim_id": 1,
+      "claim": "Agriculture is the largest source of global anthropogenic methane emissions, accounting for almost 42 per cent in 2020, with livestock and rice cultivation as the primary drivers. [1]",
+      "cited": [
+        1
+      ],
+      "verifier_status": "misattributed",
+      "manual_status": "misattributed",
+      "evidence_phrase": "with livestock and rice cultivation as the primary drivers",
+      "phrase_found_in": [
+        5
+      ],
+      "verifier_agrees": true,
+      "note": "sentence is verbatim from [5]; 42% also in [2][4]; cited [1]"
+    },
+    {
+      "run": "v3",
+      "question": 2,
+      "claim_id": 1,
+      "claim": "The Methane Alert and Response System (MARS) sent over 5,000 alerts across 33 countries in 2025. [2]",
+      "cited": [
+        2
+      ],
+      "verifier_status": "misattributed",
+      "manual_status": "misattributed",
+      "evidence_phrase": "5,000 alerts",
+      "phrase_found_in": [
+        1,
+        3
+      ],
+      "verifier_agrees": true,
+      "note": "5,000 in [1][3], 33 countries only in [3]; cited [2]; also says 'in 2025' where the source says 'By February 2026'"
+    },
+    {
+      "run": "v3",
+      "question": 2,
+      "claim_id": 2,
+      "claim": "Operators responded to approximately 12% of the alerts received. [2]",
+      "cited": [
+        2
+      ],
+      "verifier_status": "misattributed",
+      "manual_status": "misattributed",
+      "evidence_phrase": "12 per cent",
+      "phrase_found_in": [
+        1,
+        3
+      ],
+      "verifier_agrees": true,
+      "note": "12% in [1][3]; cited [2]; 'of the alerts received' changes the scope"
+    },
+    {
+      "run": "v3",
+      "question": 3,
+      "claim_id": 1,
+      "claim": "The increasing demand for electricity leads to longer connection queues and competition for scarce grid capacity, potentially leading to service disruptions [1].",
+      "cited": [
+        1
+      ],
+      "verifier_status": "misattributed",
+      "manual_status": "misattributed",
+      "evidence_phrase": "lengthening connection queues",
+      "phrase_found_in": [
+        2
+      ],
+      "verifier_agrees": true,
+      "note": "queues / scarce capacity / service disruption are in [2]; cited [1]"
+    },
+    {
+      "run": "v3",
+      "question": 3,
+      "claim_id": 2,
+      "claim": "Stability issues arise due to the need to balance thermal limits and maintain sufficient system strength, especially with the integration of converter-connected resources [2].",
+      "cited": [
+        2
+      ],
+      "verifier_status": "partially_supported",
+      "manual_status": "partially_supported",
+      "evidence_phrase": "within the thermal limits",
+      "phrase_found_in": [
+        2
+      ],
+      "verifier_agrees": true,
+      "note": "paraphrase of [2]; acceptable but loose"
+    },
+    {
+      "run": "v3",
+      "question": 3,
+      "claim_id": 3,
+      "claim": "Diverse distributed energy resources and large inverter-based power sources create new challenges for voltage management, transformer loading, feeder capacity, and protection settings [3].",
+      "cited": [
+        3
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "inverter-based",
+      "phrase_found_in": [
+        3
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3",
+      "question": 3,
+      "claim_id": 4,
+      "claim": "New forms of generation and demand, like rooftop solar, batteries, EVs, and data centres, turn grids from unidirectional systems into dynamic two-way flows, complicating voltage management and other aspects of grid operation [3].",
+      "cited": [
+        3
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported_minor_distortion",
+      "evidence_phrase": "unidirectional",
+      "phrase_found_in": [
+        3
+      ],
+      "verifier_agrees": true,
+      "note": "[3] says rooftop solar, batteries, EVs and flexible demand create two-way flows; data centres are a separate point (concentrated demand)"
+    },
+    {
+      "run": "v3",
+      "question": 4,
+      "claim_id": 1,
+      "claim": "Narrowing the gap of the cost of capital between EMDE and advanced economies by energy-sector-specific interventions can substantially bring down the overall cost of realising sustainable energy at scale [3].",
+      "cited": [
+        3
+      ],
+      "verifier_status": "misattributed",
+      "manual_status": "misattributed",
+      "evidence_phrase": "energy-sector-specific interventions",
+      "phrase_found_in": [
+        1
+      ],
+      "verifier_agrees": true,
+      "note": "verbatim from [1]; cited [3]"
+    },
+    {
+      "run": "v3",
+      "question": 4,
+      "claim_id": 2,
+      "claim": "A 1 percentage point reduction in the cost of capital in EMDE leads to a reduction of USD 150 billion in average annual financing costs in the NZE Scenario between 2024 and 2050 [1].",
+      "cited": [
+        1
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "USD 150 billion",
+      "phrase_found_in": [
+        1,
+        5
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3",
+      "question": 4,
+      "claim_id": 3,
+      "claim": "An even more ambitious lowering by 2 percentage points could almost double this reduction to USD 300 billion per year [1].",
+      "cited": [
+        1
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "USD 300 billion",
+      "phrase_found_in": [
+        1
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3",
+      "question": 4,
+      "claim_id": 4,
+      "claim": "Bringing down the cost of capital therefore represents a huge opportunity to move countries more quickly down the pathway to a safer and more sustainable energy future [1].",
+      "cited": [
+        1
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "huge opportunity",
+      "phrase_found_in": [
+        1
+      ],
+      "verifier_agrees": true,
+      "note": "verbatim from [1]"
+    },
+    {
+      "run": "v3",
+      "question": 5,
+      "claim_id": 3,
+      "claim": "This enables clear communication and a consistent signal across global markets. [3]",
+      "cited": [
+        3
+      ],
+      "verifier_status": "misattributed",
+      "manual_status": "misattributed",
+      "evidence_phrase": "consistent signal across global markets",
+      "phrase_found_in": [
+        1
+      ],
+      "verifier_agrees": true,
+      "note": "verbatim from [1]; cited [3]"
+    },
+    {
+      "run": "v3",
+      "question": 5,
+      "claim_id": 5,
+      "claim": "To receive recognition for achieving near-zero emissions, technologies need to be deployed that achieve near-zero emissions levels in physical terms – that is, the emissions for the supply chain of one full tonne of steel or cement together fall at or below the near-zero emissions threshold. [1][3]",
+      "cited": [
+        1,
+        3
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "one full tonne",
+      "phrase_found_in": [
+        1
+      ],
+      "verifier_agrees": true,
+      "note": "in [1]; [3] is cited as well but does not contain it (over-citation)"
+    },
+    {
+      "run": "v3",
+      "question": 6,
+      "claim_id": 1,
+      "claim": "According to the Indian government's press information bureau, the national green hydrogen mission was launched in 2023 [4].",
+      "cited": [
+        4
+      ],
+      "verifier_status": "misattributed",
+      "manual_status": "misattributed",
+      "evidence_phrase": "Green Hydrogen Mission",
+      "phrase_found_in": [
+        5
+      ],
+      "verifier_agrees": true,
+      "note": "content from the policy table in [5], cited [4]; does not answer the question - should have abstained"
+    },
+    {
+      "run": "v3-3b",
+      "question": 1,
+      "claim_id": 1,
+      "claim": "Agriculture is the largest source of global anthropogenic methane emissions, accounting for almost 42 per cent in 2020 [4].",
+      "cited": [
+        4
+      ],
+      "verifier_status": "misattributed",
+      "manual_status": "misattributed",
+      "evidence_phrase": "almost 42 per cent in 2020",
+      "phrase_found_in": [
+        5
+      ],
+      "verifier_agrees": true,
+      "note": "verbatim from [5]; [4] states only '42 per cent' (no 'almost', no 2020) - a near miss"
+    },
+    {
+      "run": "v3-3b",
+      "question": 2,
+      "claim_id": 1,
+      "claim": "The Methane Alert and Response System (MARS) sent over 5,000 alerts by February 2026 [2].",
+      "cited": [
+        2
+      ],
+      "verifier_status": "misattributed",
+      "manual_status": "misattributed",
+      "evidence_phrase": "5,000 alerts",
+      "phrase_found_in": [
+        1,
+        3
+      ],
+      "verifier_agrees": true,
+      "note": "5,000 in [1][3]; cited [2]; date now correct ('by February 2026')"
+    },
+    {
+      "run": "v3-3b",
+      "question": 2,
+      "claim_id": 2,
+      "claim": "The global response rate reached only 12 per cent in 2025 [2].",
+      "cited": [
+        2
+      ],
+      "verifier_status": "misattributed",
+      "manual_status": "misattributed",
+      "evidence_phrase": "12 per cent in 2025",
+      "phrase_found_in": [
+        1
+      ],
+      "verifier_agrees": true,
+      "note": "in [1][3]; cited [2]; wording now exact"
+    },
+    {
+      "run": "v3-3b",
+      "question": 3,
+      "claim_id": 1,
+      "claim": "The grid cannot keep pace with rising electricity demand, leading to lengthening connection queues and competition for scarce grid capacity [2].",
+      "cited": [
+        2
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "lengthening connection queues",
+      "phrase_found_in": [
+        2
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3-3b",
+      "question": 3,
+      "claim_id": 2,
+      "claim": "New housing and industrial development compete with data centers and generation projects for grid capacity [2].",
+      "cited": [
+        2
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "competing with data centres",
+      "phrase_found_in": [
+        2
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3-3b",
+      "question": 3,
+      "claim_id": 3,
+      "claim": "Service disruption may occur if left unaddressed [2].",
+      "cited": [
+        2
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "service disruption",
+      "phrase_found_in": [
+        2
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3-3b",
+      "question": 3,
+      "claim_id": 4,
+      "claim": "Stability is a concern due to the displacement of synchronous generators by converter-connected resources [2].",
+      "cited": [
+        2
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "displace synchronous generators",
+      "phrase_found_in": [
+        2
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3-3b",
+      "question": 3,
+      "claim_id": 5,
+      "claim": "Converter-connected resources reduce traditional stabilizing properties like inertia, voltage support, fault current contribution, and damping [2].",
+      "cited": [
+        2
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "fault current contribution",
+      "phrase_found_in": [
+        2
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3-3b",
+      "question": 3,
+      "claim_id": 6,
+      "claim": "Faster-moving and harder-to-observe variables include stability, voltage support, and damping [2].",
+      "cited": [
+        2
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "faster-moving and harder to observe",
+      "phrase_found_in": [
+        2
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3-3b",
+      "question": 3,
+      "claim_id": 7,
+      "claim": "AI-based tools' performance depends heavily on the quality of data and models they rely on [2].",
+      "cited": [
+        2
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "AI-based",
+      "phrase_found_in": [
+        2
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3-3b",
+      "question": 3,
+      "claim_id": 8,
+      "claim": "The grid must now cope with distributed energy resources such as rooftop solar, batteries, EVs, and flexible demand [3].",
+      "cited": [
+        3
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "rooftop solar",
+      "phrase_found_in": [
+        3
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3-3b",
+      "question": 3,
+      "claim_id": 9,
+      "claim": "Large inverter-based power sources and vast data centers represent a new, more concentrated form of generation and demand [3].",
+      "cited": [
+        3
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "more concentrated form of generation and demand",
+      "phrase_found_in": [
+        3
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3-3b",
+      "question": 3,
+      "claim_id": 10,
+      "claim": "Sharp peaks can produce challenges for voltage management, transformer loading, feeder capacity, and protection settings [3].",
+      "cited": [
+        3
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "feeder capacity",
+      "phrase_found_in": [
+        3
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3-3b",
+      "question": 3,
+      "claim_id": 11,
+      "claim": "The grid is transforming from unidirectional systems to systems with dynamic two-way flows [3].",
+      "cited": [
+        3
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "unidirectional systems",
+      "phrase_found_in": [
+        3
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3-3b",
+      "question": 3,
+      "claim_id": 12,
+      "claim": "Voltage management, transformer loading, feeder capacity, and protection settings are new challenges created by these changes [3].",
+      "cited": [
+        3
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "protection settings",
+      "phrase_found_in": [
+        3
+      ],
+      "verifier_agrees": true,
+      "note": "near-duplicate of claim 10"
+    },
+    {
+      "run": "v3-3b",
+      "question": 3,
+      "claim_id": 13,
+      "claim": "The grid must now manage conditions that are faster-moving and harder to observe and model than thermal limits [2].",
+      "cited": [
+        2
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "harder to observe and model than thermal limits",
+      "phrase_found_in": [
+        2
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3-3b",
+      "question": 3,
+      "claim_id": 14,
+      "claim": "The grid faces new challenges at both the distribution and transmission levels [3].",
+      "cited": [
+        3
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "at the distribution level as much as at the transmission level",
+      "phrase_found_in": [
+        3
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3-3b",
+      "question": 3,
+      "claim_id": 15,
+      "claim": "The grid must now manage evolving real-time conditions and instantaneous disturbances [2].",
+      "cited": [
+        2
+      ],
+      "verifier_status": "misattributed",
+      "manual_status": "misattributed",
+      "evidence_phrase": "instantaneous disturbances",
+      "phrase_found_in": [
+        5
+      ],
+      "verifier_agrees": true,
+      "note": "only in the table in [5]; cited [2]"
+    },
+    {
+      "run": "v3-3b",
+      "question": 3,
+      "claim_id": 16,
+      "claim": "Evolving real-time conditions and instantaneous disturbances are uncertainties in operational planning [2].",
+      "cited": [
+        2
+      ],
+      "verifier_status": "misattributed",
+      "manual_status": "misattributed",
+      "evidence_phrase": "Evolving real-time conditions",
+      "phrase_found_in": [
+        5
+      ],
+      "verifier_agrees": true,
+      "note": "only in the table in [5]; cited [2]"
+    },
+    {
+      "run": "v3-3b",
+      "question": 3,
+      "claim_id": 17,
+      "claim": "Decisions in long-term planning and connection studies include what to build, defer, or connect, and where to locate (investment focus) [5].",
+      "cited": [
+        5
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "connection studies",
+      "phrase_found_in": [
+        5
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3-3b",
+      "question": 3,
+      "claim_id": 18,
+      "claim": "Forecast error on variable demand and supply, and unplanned outages, are uncertainties in operational planning [5].",
+      "cited": [
+        5
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "unplanned outages",
+      "phrase_found_in": [
+        5
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3-3b",
+      "question": 4,
+      "claim_id": 1,
+      "claim": "A 1 percentage point reduction in the cost of capital can lead to a reduction of USD 150 billion in average annual financing costs in the NZE Scenario between 2024 and 2050 [1].",
+      "cited": [
+        1
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "USD 150 billion",
+      "phrase_found_in": [
+        1,
+        5
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3-3b",
+      "question": 4,
+      "claim_id": 2,
+      "claim": "A 2 percentage point reduction in the cost of capital could almost double this reduction to USD 300 billion per year [1].",
+      "cited": [
+        1
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "USD 300 billion",
+      "phrase_found_in": [
+        1
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3-3b",
+      "question": 4,
+      "claim_id": 3,
+      "claim": "Bringing down the cost of capital requires addressing risks across various parts of the energy economy, including different business models, scales of projects, and prevalent risks in different sectors [2].",
+      "cited": [
+        2
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "different business models",
+      "phrase_found_in": [
+        2
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3-3b",
+      "question": 4,
+      "claim_id": 4,
+      "claim": "It is essential to dig into the features of different parts of the energy sector to examine their specific elements, business models, and risks [2].",
+      "cited": [
+        2
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "dig into the features",
+      "phrase_found_in": [
+        2
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3-3b",
+      "question": 4,
+      "claim_id": 5,
+      "claim": "Risks that push up the cost of capital extend well beyond the energy sector, highlighting the need for a broad effort to create the conditions that will allow all countries to benefit from participation in the new clean energy economy [3].",
+      "cited": [
+        3
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "extend well beyond the energy sector",
+      "phrase_found_in": [
+        3
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3-3b",
+      "question": 4,
+      "claim_id": 6,
+      "claim": "Mobilising private finance at the scale needed will require at least a tripling in international concessional funds to help improve the risk-return profile of clean energy projects across the electricity, end-use, and low-emission-fuel sectors [5].",
+      "cited": [
+        5
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "tripling in international concessional funds",
+      "phrase_found_in": [
+        5
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3-3b",
+      "question": 4,
+      "claim_id": 7,
+      "claim": "Lowering the cost of capital can substantially bring down the overall cost of transitions and reduce the costs paid by consumers [1].",
+      "cited": [
+        1
+      ],
+      "verifier_status": "supported",
+      "manual_status": "misattributed",
+      "evidence_phrase": "costs paid by consumers",
+      "phrase_found_in": [
+        5
+      ],
+      "verifier_agrees": false,
+      "note": "VERIFIER MISSED: verbatim from [5]; [1] only shares topic words (80% word coverage)"
+    },
+    {
+      "run": "v3-3b",
+      "question": 4,
+      "claim_id": 8,
+      "claim": "Better risk management through strong policy frameworks and regulation as well as enhanced deployment of de-risking instruments are key [1].",
+      "cited": [
+        1
+      ],
+      "verifier_status": "misattributed",
+      "manual_status": "misattributed",
+      "evidence_phrase": "de-risking instruments",
+      "phrase_found_in": [
+        5
+      ],
+      "verifier_agrees": true,
+      "note": "verbatim from [5]; cited [1]"
+    },
+    {
+      "run": "v3-3b",
+      "question": 5,
+      "claim_id": 1,
+      "claim": "For steel, the near-zero emissions threshold ranges from 400-50 kg CO2-eq per tonne of crude steel, depending on the scrap share. [3][4]",
+      "cited": [
+        3,
+        4
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "400-50 kg",
+      "phrase_found_in": [
+        4
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3-3b",
+      "question": 5,
+      "claim_id": 2,
+      "claim": "For cement, the near-zero emissions threshold ranges from 125-40 kg CO2-eq per tonne of cement, depending on the clinker ratio. [3][4]",
+      "cited": [
+        3,
+        4
+      ],
+      "verifier_status": "supported",
+      "manual_status": "supported",
+      "evidence_phrase": "125-40 kg",
+      "phrase_found_in": [
+        4
+      ],
+      "verifier_agrees": true,
+      "note": ""
+    },
+    {
+      "run": "v3-3b",
+      "question": 6,
+      "claim_id": 1,
+      "claim": "The provided sources do not contain enough information about electric cars sold in India in 2023. [5]",
+      "cited": [
+        5
+      ],
+      "verifier_status": "abstention",
+      "manual_status": "abstention",
+      "evidence_phrase": "electric",
+      "phrase_found_in": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "verifier_agrees": true,
+      "note": "correct abstention, but the line carries an unnecessary citation [5]"
+    }
+  ]
+}

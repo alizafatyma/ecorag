@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoRAG - Live Version</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-primary: #2d5016;
+            --color-secondary: #52b788;
+            --color-accent: #95d5b2;
+            --color-light: #d8f3dc;
+            --color-lighter: #e8f5e9;
+            --color-text: #1b263b;
+            --color-white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--color-lighter) 0%, var(--color-lighter) 100%);
+            color: var(--color-text);
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: var(--color-white);
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(45, 80, 22, 0.15);
+            border-bottom: 3px solid var(--color-accent);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .card {
+            background: var(--color-white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(45, 80, 22, 0.1);
+            border-left: 4px solid var(--color-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        h1 { font-size: 32px; margin-bottom: 0.5rem; }
+        h2 { color: var(--color-primary); font-size: 18px; margin-bottom: 1rem; }
+
+        .input-area {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        textarea {
+            flex: 1;
+            padding: 12px 16px;
+            border: 2px solid var(--color-light);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 14px;
+            background: var(--color-lighter);
+            min-height: 80px;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: var(--color-secondary);
+            background: var(--color-white);
+        }
+
+        button {
+            padding: 12px 32px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: var(--color-white);
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(45, 80, 22, 0.2);
+            transition: all 0.2s;
+            height: fit-content;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(45, 80, 22, 0.3);
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 3px solid var(--color-light);
+            border-top-color: var(--color-secondary);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-right: 8px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .error {
+            background: #ffebee;
+            border-left-color: #d32f2f;
+            color: #c62828;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .success {
+            background: var(--color-lighter);
+            border-left-color: var(--color-secondary);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .answer-text {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .citations {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--color-secondary);
+        }
+
+        .citation {
+            background: var(--color-lighter);
+            padding: 12px;
+            border-left: 3px solid var(--color-accent);
+            margin-bottom: 10px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .status {
+            font-size: 12px;
+            color: #666;
+            margin-top: 1rem;
+        }
+
+        .info-box {
+            background: var(--color-light);
+            border-left: 4px solid var(--color-secondary);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-size: 13px;
+        }
+
+        footer {
+            background: var(--color-primary);
+            color: var(--color-white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            font-size: 12px;
+        }
+
+        .setup-info {
+            background: #e3f2fd;
+            border-left: 4px solid #1976d2;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .setup-info h3 {
+            color: #1565c0;
+            margin-bottom: 0.5rem;
+        }
+
+        .setup-info p {
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🌿 EcoRAG - Live Version</h1>
+            <p style="font-size: 12px; opacity: 0.9;">Connected to Real AI System</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Setup Instructions -->
+        <div class="setup-info">
+            <h3>⚙️ To Use This Live Version:</h3>
+            <p>
+                1. Install Flask: <code>pip install flask flask-cors</code><br/>
+                2. Run the API: <code>python ecorag_api.py</code><br/>
+                3. The API starts at <code>http://localhost:5000</code><br/>
+                4. Then refresh this page and start asking questions!
+            </p>
+        </div>
+
+        <!-- Query Input -->
+        <div class="card">
+            <h2>💬 Ask Your Question</h2>
+            <div class="input-area">
+                <textarea id="question" placeholder="Ask about environmental topics: methane, green jobs, grid modernization..."></textarea>
+                <button id="askBtn" onclick="askQuestion()">Ask EcoRAG</button>
+            </div>
+            <div class="status" id="status"></div>
+        </div>
+
+        <!-- Results -->
+        <div id="results" class="card" style="display: none;">
+            <h2>📊 Results</h2>
+            <div id="answerContent"></div>
+        </div>
+
+        <!-- Info -->
+        <div class="card">
+            <h2>ℹ️ About This Live Version</h2>
+            <p>This version connects to your real EcoRAG system:</p>
+            <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                <li>Uses your actual knowledge base (1,242 chunks)</li>
+                <li>Runs Qwen2.5-3B model locally</li>
+                <li>Retrieves real citations from source documents</li>
+                <li>Generates live answers (not pre-recorded demos)</li>
+            </ul>
+
+            <div class="info-box" style="margin-top: 1rem;">
+                <strong>API Connection:</strong> Connecting to <code id="apiUrl">http://localhost:5000</code><br/>
+                <strong>Status:</strong> <span id="connectionStatus" style="color: orange;">Checking...</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>🌿 EcoRAG Live | Connected to Real Backend | Experiment C Research</p>
+        <p style="margin-top: 0.5rem;">All answers grounded in environmental sustainability documents</p>
+    </footer>
+
+    <script>
+        const API_URL = 'http://localhost:5000/api/ask';
+
+        // Check API connection on page load
+        window.addEventListener('load', checkConnection);
+
+        function checkConnection() {
+            fetch('http://localhost:5000/api/health')
+                .then(r => r.json())
+                .then(data => {
+                    document.getElementById('connectionStatus').textContent = '✅ Connected';
+                    document.getElementById('connectionStatus').style.color = '#2d5016';
+                })
+                .catch(err => {
+                    document.getElementById('connectionStatus').textContent = '❌ Not Connected - Start API with: python ecorag_api.py';
+                    document.getElementById('connectionStatus').style.color = '#d32f2f';
+                });
+        }
+
+        function askQuestion() {
+            const question = document.getElementById('question').value.trim();
+            if (!question) {
+                alert('Please enter a question');
+                return;
+            }
+
+            const btn = document.getElementById('askBtn');
+            const status = document.getElementById('status');
+
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner"></span>Asking EcoRAG...';
+            status.textContent = 'Retrieving information...';
+            status.style.color = '#666';
+
+            fetch(API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ question: question })
+            })
+            .then(r => r.json())
+            .then(data => {
+                if (data.error) {
+                    showError(data.error);
+                } else {
+                    showResults(data);
+                    status.textContent = 'Got answer from EcoRAG!';
+                    status.style.color = '#2d5016';
+                }
+                btn.disabled = false;
+                btn.innerHTML = 'Ask EcoRAG';
+            })
+            .catch(err => {
+                showError('Could not connect to EcoRAG API. Make sure it\'s running: python ecorag_api.py');
+                btn.disabled = false;
+                btn.innerHTML = 'Ask EcoRAG';
+            });
+        }
+
+        function showError(message) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.style.display = 'block';
+            resultsDiv.innerHTML = `
+                <h2>Error</h2>
+                <div class="error">
+                    <strong>Connection Error:</strong><br/>
+                    ${message}<br/><br/>
+                    <strong>Solution:</strong> Run this command in your terminal:<br/>
+                    <code>python ecorag_api.py</code>
+                </div>
+            `;
+            resultsDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function showResults(result) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.style.display = 'block';
+
+            resultsDiv.innerHTML = `
+                <h2>✅ Answer from EcoRAG</h2>
+                <div class="answer-text">${result.answer}</div>
+
+                <div class="citations">
+                    <h3 style="color: var(--color-primary); margin-bottom: 0.5rem;">📚 Sources & Citations</h3>
+                    ${result.citations.map(c => `
+                        <div class="citation">
+                            <strong>${c.source}</strong><br/>
+                            ${c.text}
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+
+            resultsDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Allow Enter key to submit
+        document.getElementById('question').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && e.ctrlKey) {
+                askQuestion();
+            }
+        });
+    </script>
+</body>
+</html>

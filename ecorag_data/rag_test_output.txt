@@ -1,0 +1,522 @@
+Chroma collection 'ecorag_knowledge_base': 1242 chunks | query embeddings: BAAI/bge-small-en-v1.5 (384 dims)
+================================================================================
+QUESTION: What share of global anthropogenic methane emissions comes from agriculture?
+================================================================================
+
+--- STEP 1-3: RETRIEVAL (top 5, types ['content', 'table']) ---
+[1] gmsr-2025::0038  similarity 0.85 (distance 0.15)
+    GLOBAL METHANE STATUS REPORT 2025 | Executive Summary › The Agricultural Sector | pp. 24–25 | content
+    "The Agricultural Sector The agricultural sector is the largest source of anthropogenic methane emissions. Emissions vary by region, with the G20+ group of countries responsible for 61 per cent of agricultural methane, equivalent to one-quarter of total anthropogenic methane emissions. Agricultural m..."
+[2] gmsr-2025::0163  similarity 0.844 (distance 0.156)
+    GLOBAL METHANE STATUS REPORT 2025 | Global Outlook of Methane Policies and Measures › 3.5.1.1 Agricultural methane emissions: status, trends and mitigation opportunities | pp. 86–87 | content
+    "3.5.1.1 Agricultural methane emissions: status, trends and mitigation opportunities In 2020, agriculture was the largest source of global biogenic methane emissions, responsible for 146 Mt per year or almost 42 per cent of the global total, slightly ahead of the energy sector. Livestock and rice cul..."
+[3] gmsr-2025::0191  similarity 0.831 (distance 0.169)
+    GLOBAL METHANE STATUS REPORT 2025 | Observed Emissions and the Role of Empirical Data › 4.2.1 Global atmospheric methane concentrations | p. 100 | table
+    "|Major anthropogenic source|2030 methane emissions Mt/yr| |---|---| |Livestock and manure|117 [114–124]| |Rice|32 [29–37]| |Landfills and Wastewater|71 [60–84]| |Coal mining|41 [38–43]| |Oil and gas|74 [67–80]| |Biomass and biofuel burning|27 [20–41]|..."
+[4] unsg-call-action-methane-by-2030-epublication::0043  similarity 0.825 (distance 0.175)
+    The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030 | 5. Three sectors, nine actions by 2030 › 5.2 METHANE MITIGATION ACTIONS IN THE AGRICULTURE SECTOR | p. 21 | content
+    "5.2 METHANE MITIGATION ACTIONS IN THE AGRICULTURE SECTOR The agriculture sector is the biggest single contributor to anthropogenic methane emissions, accounting for 42 per cent of the global total. And global food demand continues to rise. Agricultural and fish production is projected to expand by 1..."
+[5] gmsr-2025::0161  similarity 0.816 (distance 0.184)
+    GLOBAL METHANE STATUS REPORT 2025 | Global Outlook of Methane Policies and Measures › 3.5 The agriculture sector / Key messages | p. 85 | content
+    "3.5 The agriculture sector Key messages - ‣ Agriculture is the largest source of global anthropogenic methane emissions, accounting for almost 42 per cent in 2020, with livestock and rice cultivation as the primary drivers. Without additional mitigation, emissions are expected to rise by 8 per cent ..."
+Loading C:/Users/HP/.cache/ecorag_models/Qwen2.5-1.5B-Instruct on cpu (bfloat16)...
+Loaded in 11s
+
+--- STEP 4: FINAL PROMPT SENT TO THE LLM (chat template applied) ---
+<|im_start|>system
+You are EcoRAG, an assistant that answers questions about environmental and sustainability reports.
+
+You are given numbered SOURCES. Follow these rules strictly:
+1. Answer using ONLY information stated in the SOURCES. Do not use your general knowledge, even if you think it is correct.
+2. After each claim, cite the source number(s) that directly support it, like [1] or [2][3]. Only cite a source if its text actually supports that specific claim. A source being provided to you is not a reason to cite it.
+3. If the SOURCES do not contain enough information to answer the question, or part of it, say so explicitly: "The provided sources do not contain enough information to answer this." Do not guess or fill gaps.
+4. If sources disagree, describe the disagreement and cite each side. Do not silently pick one.
+5. Copy numbers, units, percentages and years exactly as they appear in the SOURCES.
+6. Be concise: a short paragraph or a few bullet points.<|im_end|>
+<|im_start|>user
+SOURCES:
+
+[SOURCE 1]
+Document: GLOBAL METHANE STATUS REPORT 2025
+Section: Executive Summary › The Agricultural Sector
+Pages: pp. 24–25
+Chunk ID: gmsr-2025::0038
+TEXT:
+The Agricultural Sector
+
+The agricultural sector is the largest source of anthropogenic methane emissions. Emissions vary by region, with the G20+ group of countries responsible for 61 per cent of agricultural methane, equivalent to one-quarter of total anthropogenic methane emissions.
+
+Agricultural methane emissions are projected to increase by about 8 per cent by 2030 and around 17 per cent by 2050, compared with 2020 levels. This growth is driven largely by demand for food for a growing global population and the expansion of livestock numbers in Africa and Latin America, and with the non-G20+ regions experiencing the largest increases in emissions. Due to these drivers, even with the implementation of current NDCs and MAPs, emissions from agriculture would still rise by up to 4 per cent by 2030 compared with 2020 levels.
+
+Yet, the agricultural sector has the technical potential to reduce emissions by 24 Mt per year by 2030, 8 per cent below 2020 levels in this decade, and 7 per cent by 2050.
+
+Low-cost measures measures could be implemented at a total annual cost of US$2.5 billion, while reducing annual methane emissions by 17 Mt by 2030. This investment amounts to less than 3 per cent of the subsidies governments currently allocate to the sector every year. Repurposing even a small share of these subsidies could significantly help finance methane mitigation.
+
+There has been a generally positive trend in the development of policies targeting agricultural methane emissions over the past decade, particularly in the areas of animal waste management. This progress has been most notable in Asia-Pacific, Europe and North America, where enabling policy environments and accessible technologies have driven the adoption of measures to reduce emissions from manure. Despite this progress, however, only a small share of GMP participating countries have policies directly addressing key methane sources in the sector.
+
+[SOURCE 2]
+Document: GLOBAL METHANE STATUS REPORT 2025
+Section: Global Outlook of Methane Policies and Measures › 3.5.1.1 Agricultural methane emissions: status, trends and mitigation opportunities
+Pages: pp. 86–87
+Chunk ID: gmsr-2025::0163
+TEXT:
+3.5.1.1 Agricultural methane emissions: status, trends and mitigation opportunities
+
+In 2020, agriculture was the largest source of global biogenic methane emissions, responsible for 146 Mt per year or almost 42 per cent of the global total, slightly ahead of the energy sector. Livestock and rice cultivation dominate these emissions, contributing 76 per cent and 21 per cent respectively, while agricultural waste burning accounts for the remaining 3 per cent.
+
+Emissions vary significantly across regions. The G20+ accounts for more than 60 per cent of global agricultural methane emissions, led by India, China, Brazil, the United States of America, and the European Union. Non-G20+ countries, particularly in Africa and South-East Asia, contribute around 45 per cent of their total methane emissions from agriculture.
+
+Without additional mitigation policies beyond those in place as of December 2024, emissions from agriculture are projected to rise by 7.8 per cent by 2030 and 17 per cent by 2050 compared to 2020 levels. Growth will be primarily driven by expanding livestock herds, especially in Africa and Latin America.
+
+Under NDCs and MAPs, agricultural methane emissions are projected to stabilize at 2020 levels by 2030, due to the expansion of livestock herds outweighing reductions from rice cultivation and waste burning.
+
+The GAINS model estimates that fully deploying low-cost mitigation technologies, those costing less than US$1,000 per tonne of methane or US$36 per tonne CO2eq, could reduce agricultural methane emissions by 15 per cent by 2030 compared to projected emissions for the sector under current legislation in the same year. Despite agriculture’s relatively modest role in global methane mitigation potential, around 24 Mt per year, several interventions offer substantial benefits at low or negative costs.
+
+[SOURCE 3]
+Document: GLOBAL METHANE STATUS REPORT 2025
+Section: Observed Emissions and the Role of Empirical Data › 4.2.1 Global atmospheric methane concentrations
+Pages: p. 100
+Chunk ID: gmsr-2025::0191
+TEXT:
+|Major anthropogenic source|2030 methane emissions Mt/yr|
+|---|---|
+|Livestock and manure|117 [114–124]|
+|Rice|32 [29–37]|
+|Landfills and Wastewater|71 [60–84]|
+|Coal mining|41 [38–43]|
+|Oil and gas|74 [67–80]|
+|Biomass and biofuel burning|27 [20–41]|
+
+[SOURCE 4]
+Document: The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030
+Section: 5. Three sectors, nine actions by 2030 › 5.2 METHANE MITIGATION ACTIONS IN THE AGRICULTURE SECTOR
+Pages: p. 21
+Chunk ID: unsg-call-action-methane-by-2030-epublication::0043
+TEXT:
+5.2 METHANE MITIGATION ACTIONS IN THE AGRICULTURE SECTOR
+
+The agriculture sector is the biggest single contributor to anthropogenic methane emissions, accounting for 42 per cent of the global total. And global food demand continues to rise. Agricultural and fish production is projected to expand by 14 per cent over the next decade. Methane emissions from food systems will increase unless production becomes more efficient. However, the sector has the potential to cut 2030 emissions by eight per cent with simple, low‑cost measures.
+
+Reducing agricultural methane is not about producing less food, it is about producing food efficiently and more sustainably with less organic landfill waste. With targeted finance, extension services (activities that provide information, guidance and services to develop the knowledge, skills and practices of farmers) and international support – particularly for smallholder farmers – agricultural methane reductions can drive rural development. A phased approach prioritizing productivity and optimization until 2030 – particularly in developing countries where reduction potential is highest – can unlock near‑term gains while building the trust and evidence base for deeper structural shifts.
+
+[SOURCE 5]
+Document: GLOBAL METHANE STATUS REPORT 2025
+Section: Global Outlook of Methane Policies and Measures › 3.5 The agriculture sector / Key messages
+Pages: p. 85
+Chunk ID: gmsr-2025::0161
+TEXT:
+3.5 The agriculture sector
+
+Key messages
+
+- ‣ Agriculture is the largest source of global anthropogenic methane emissions, accounting for almost 42 per cent in 2020, with livestock and rice cultivation as the primary drivers. Without additional mitigation, emissions are expected to rise by 8 per cent by 2030 and 17 per cent by 2050, compared to 2020 levels, mainly due to increases in livestock populations in Africa and Latin America.
+
+- ‣ Mitigation ambition in agriculture has increased, but current NDCs and MAPs lack specificity. Only 4 per cent of NDCs include quantified, time-bound agricultural methane reduction targets, and current plans achieve just half of the sector’s full cost-effective mitigation potential.
+
+- ‣ Low-cost mitigation options exist, including improved rice cultivation and bans on agricultural waste burning, especially in Africa and South-East Asia. Livestockrelated options, though costlier, offer significant potential in the Americas and Western Europe.
+
+- ‣ Building climate-resilient livestock systems in smallholder and pastoralist settings can deliver multiple benefits – improving productivity while reducing emissions.
+
+- ‣ Policy coverage remains limited and uneven, with only 2–18 per cent of GMP participating countries having policies directly targeting key sources such as enteric fermentation, rice cultivation, or manure management.
+
+- ‣ Holistic, equity-based policies are needed to avoid unintended consequences, such as shifting emissions to unregulated sources, or increasing food insecurity and rural poverty.
+
+- ‣ Financial, institutional, and technical barriers persist, but redirecting a small share of harmful agricultural subsidies and improving MRV systems could unlock progress and link mitigation to development co-benefits.
+
+QUESTION: What share of global anthropogenic methane emissions comes from agriculture?
+
+Answer the question using only the SOURCES above and cite them as [n]. If they do not contain enough information, say so.<|im_end|>
+<|im_start|>assistant
+
+--- STEP 5: GENERATED ANSWER (C:/Users/HP/.cache/ecorag_models/Qwen2.5-1.5B-Instruct, 45 tokens, 296.3s) ---
+According to SOURCE 1, agriculture is the largest source of global anthropogenic methane emissions, responsible for 146 Mt per year or almost 42% of the global total in 2020.
+
+--- STEP 6: CITATIONS ---
+Cited:       none
+Not cited:   ['[1] Global Methane Status Report 2025, pp. 24–25', '[2] Global Methane Status Report 2025, pp. 86–87', '[3] Global Methane Status Report 2025, p. 100', '[4] The Secretary‑General’s call to action on methane, p. 21', '[5] Global Methane Status Report 2025, p. 85']
+================================================================================
+QUESTION: How many alerts did the Methane Alert and Response System send, and how often do operators respond?
+================================================================================
+
+--- STEP 1-3: RETRIEVAL (top 5, types ['content', 'table']) ---
+[1] unsg-call-action-methane-by-2030-epublication::0031  similarity 0.766 (distance 0.234)
+    The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030 | 5. Three sectors, nine actions by 2030 › Deploy and respond to measurement, monitoring and detection technologies | p. 15 | content
+    "Full implementation of the Maximum Technically Feasible Reduction (MTFR) scenario, aligned with the GMP target, could reduce emissions by 78 per cent in 2030 compared to 2030 projected emissions under current legislation. There are multiple established and emerging initiatives. For example, the Meth..."
+[2] gmsr-2025::0194  similarity 0.741 (distance 0.259)
+    GLOBAL METHANE STATUS REPORT 2025 | Observed Emissions and the Role of Empirical Data › 4.3 Successful implementation of measurement-based monitoring / 4.3.1 The International Methane Emissions Observatory’s Methane Alert and Response System | p. 101 | content
+    "4.3 Successful implementation of measurement-based monitoring 4.3.1 The International Methane Emissions Observatory’s Methane Alert and Response System Satellites provide an important measurement-based source of data on methane emissions. While point mappers quantify only the largest emission source..."
+[3] unsg-call-action-methane-by-2030-epublication::0006  similarity 0.702 (distance 0.298)
+    The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030 | Executive summary | p. 5 | content
+    "Reducing methane from coal mining represents an important and often overlooked opportunity to deliver significant emission reductions in the near term. At the same time, a methane data revolution is transforming transparency and accountability. Advances in satellite monitoring, remote sensing and co..."
+[4] unsg-call-action-methane-by-2030-epublication::0032  similarity 0.688 (distance 0.312)
+    The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030 | 5. Three sectors, nine actions by 2030 › Box 2 Positive impacts of responding to MARS | p. 16 | content
+    "Box 2 Positive impacts of responding to MARS In Algeria and Nigeria, MARS notifications and engagement led to direct action from governments and oil and gas companies. In Algeria, the annual avoided emissions are equivalent to 500,000 cars being taken off the road. In Nigeria, a six‑month leak emitt..."
+[5] unsg-call-action-methane-by-2030-epublication::0011  similarity 0.678 (distance 0.322)
+    The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030 | Executive summary › FOSSIL FUELS: THE IMMEDIATE PRIORITY / ACTION 1: Fix leaks and eliminate routine flaring and cold venting | p. 7 | content
+    "FOSSIL FUELS: THE IMMEDIATE PRIORITY Addressing methane emissions from fossil fuels offers the potential for the largest, fastest and most cost‑effective methane reductions this decade. The industry has the means and the responsibility to deliver them. Lasting progress also requires accelerating the..."
+
+--- STEP 4: FINAL PROMPT SENT TO THE LLM (chat template applied) ---
+<|im_start|>system
+You are EcoRAG, an assistant that answers questions about environmental and sustainability reports.
+
+You are given numbered SOURCES. Follow these rules strictly:
+1. Answer using ONLY information stated in the SOURCES. Do not use your general knowledge, even if you think it is correct.
+2. After each claim, cite the source number(s) that directly support it, like [1] or [2][3]. Only cite a source if its text actually supports that specific claim. A source being provided to you is not a reason to cite it.
+3. If the SOURCES do not contain enough information to answer the question, or part of it, say so explicitly: "The provided sources do not contain enough information to answer this." Do not guess or fill gaps.
+4. If sources disagree, describe the disagreement and cite each side. Do not silently pick one.
+5. Copy numbers, units, percentages and years exactly as they appear in the SOURCES.
+6. Be concise: a short paragraph or a few bullet points.<|im_end|>
+<|im_start|>user
+SOURCES:
+
+[SOURCE 1]
+Document: The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030
+Section: 5. Three sectors, nine actions by 2030 › Deploy and respond to measurement, monitoring and detection technologies
+Pages: p. 15
+Chunk ID: unsg-call-action-methane-by-2030-epublication::0031
+TEXT:
+Full implementation of the Maximum Technically Feasible Reduction (MTFR) scenario, aligned with the GMP target, could reduce emissions by 78 per cent in 2030 compared to 2030 projected emissions under current legislation.
+
+There are multiple established and emerging initiatives. For example, the Methane Alert and Response System (MARS), part of UNEP’s International Methane Emissions Observatory (IMEO), integrates data from 35 satellite instruments to provide rapid alerts on major methane emission events directly to governments and operators. By February 2026, MARS had sent over 5,000 alerts about major events. While the global response rate rose from one per cent in 2024 to 12 per cent in 2025, overall engagement remains low. Only 11 countries have a response rate from operators and governments of over 70 per cent. At the same time, around 60 per cent of alerts without a response occur in just four countries: Algeria, Iran, the United States and Turkmenistan.
+
+[SOURCE 2]
+Document: GLOBAL METHANE STATUS REPORT 2025
+Section: Observed Emissions and the Role of Empirical Data › 4.3 Successful implementation of measurement-based monitoring / 4.3.1 The International Methane Emissions Observatory’s Methane Alert and Response System
+Pages: p. 101
+Chunk ID: gmsr-2025::0194
+TEXT:
+4.3 Successful implementation of measurement-based monitoring
+
+4.3.1 The International Methane Emissions Observatory’s Methane Alert and Response System
+
+Satellites provide an important measurement-based source of data on methane emissions. While point mappers quantify only the largest emission sources, these data are valuable for quickly identifying major emitters. This enables stakeholders to prioritize mitigation efforts and track progress in reducing methane emissions from super-emitting facilities. UNEP’s IMEO operates the Methane Alert and Response System (MARS), the first global platform integrating data from more than a dozen satellite sensors and providing actionable information on major methane emission events directly to stakeholders.
+
+The MARS was launched in a pilot phase at the beginning of 2023 and has been fully operational since January 2024. Since its launch, it has detected more than 10,000 methane plumes across various sectors and issued in excess of 2,500 notifications of detections in the oil and gas subsector. To date, 23 countries have designated official focal points to engage directly with IMEO and partners on response, alongside more than 150 members of the OGMP 2.0. The response rates for MARS notifications have grown nearly tenfold since the end of 2024, reflecting growing engagement and action based on satellite data. In 2024, IMEO highlighted a landmark case in Hassi Messaoud, Algeria, where a longstanding methane leak, one of the oldest continuously emitting sources ever recorded, was successfully eliminated. The leak had released an estimated 27,500 tonnes of methane annually, underscoring the transformative potential of satellite-driven climate action.
+
+[SOURCE 3]
+Document: The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030
+Section: Executive summary
+Pages: p. 5
+Chunk ID: unsg-call-action-methane-by-2030-epublication::0006
+TEXT:
+Reducing methane from coal mining represents an important and often overlooked opportunity to deliver significant emission reductions in the near term.
+
+At the same time, a methane data revolution is transforming transparency and accountability. Advances in satellite monitoring, remote sensing and company reporting now make it possible to detect methane emissions in near real time, given available technologies and capabilities. Point‑source imagers in satellites are designed to look at relatively small areas in high detail, with some satellites able to attribute emissions to a specific source within a 50‑metre radius. By February 2026, the UNEP International Methane Emissions Observatory (IMEO) Methane Alert and Response System (MARS) had sent over 5,000 alerts across 33 countries identifying major emissions events. Yet responses remain extremely low. In 2025, the global response rate reached only 12 per cent, leaving the vast majority of detected emission events unresolved. The world can now see methane emissions as they happen. Continued inaction is no longer a matter of uncertainty or lack of information – it is a deliberate choice.
+
+There are some examples of effective action. Norway banned routine flaring in 1971, imposed a tax on CO₂ and methane emissions from petroleum production and transport in 1991, and increased the tax on flaring and methane emissions in 2017. The country now has one of the lowest methane emissions intensities of upstream oil and gas production in the world. If all countries matched Norway’s methane emission intensity standards, global methane emissions from oil and gas operations could fall by roughly 90 per cent.
+
+[SOURCE 4]
+Document: The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030
+Section: 5. Three sectors, nine actions by 2030 › Box 2 Positive impacts of responding to MARS
+Pages: p. 16
+Chunk ID: unsg-call-action-methane-by-2030-epublication::0032
+TEXT:
+Box 2 Positive impacts of responding to MARS
+
+In Algeria and Nigeria, MARS notifications and engagement led to direct action from governments and oil and gas companies. In Algeria, the annual avoided emissions are equivalent to 500,000 cars being taken off the road. In Nigeria, a six‑month leak emitted methane equivalent to 400,000 cars being driven for a year. This leak was fixed in under two weeks simply by replacing faulty equipment.
+
+There is also a growing constellation of point‑source satellites that detect, measure and mitigate methane. Over half the super emitters detected in 2025 were from the oil and gas sector. Waste and other energy sources (coal mines and electricity generation) constituted in equal shares most of the remaining sources.
+
+The world can now see methane emissions and mitigation as they happen. Governments and companies can and should achieve a response rate to alerts from MARS of at least 80 per cent before 2030. Multilateral Development Banks (MDBs) and international partners must support developing countries with capacity limitations to increase response rates and enable mitigation through technical assistance and targeted finance.
+
+Figure 3 Geographic distribution of methane super emitters detected by satellites, with examples of rates of the largest measurements in 2025
+
+Largest Estimated Emissions Rate (tonnes CH₄ per hour). (Source: UNEP)
+
+The boundaries and names shown and the designations used on this map do not imply official endorsement or acceptance by the United Nations.
+
+[SOURCE 5]
+Document: The Secretary‑General’s call to action on methane: Three sectors, nine actions by 2030
+Section: Executive summary › FOSSIL FUELS: THE IMMEDIATE PRIORITY / ACTION 1: Fix leaks and eliminate routine flaring and cold venting
+Pages: p. 7
+Chunk ID: unsg-call-action-methane-by-2030-epublication::0011
+TEXT:
+FOSSIL FUELS: THE IMMEDIATE PRIORITY
+
+Addressing methane emissions from fossil fuels offers the potential for the largest, fastest and most cost‑effective methane reductions this decade. The industry has the means and the responsibility to deliver them. Lasting progress also requires accelerating the global transition away from fossil fuels, which will reduce methane emissions alongside CO₂. By 2030, governments, industry and investors must implement the following actions:
+
+ACTION 1: Fix leaks and eliminate routine flaring and cold venting
+
+- Adopt and enforce regulations that ban routine flaring and cold venting and require early leak detection and repair across the entire oil and gas value chain.
+
+- Replace and upgrade high‑emitting equipment.
+
+- Adopt a zero‑tolerance approach to super‑emitter events using satellite monitoring and other detection systems to ensure a rapid response.
+
+- Commit to improving the response rate to methane alerts issued through the UNEP Methane Alert and Response System to at least 80 per cent as a first step towards full response and compliance.
+
+- Make methane mitigation a standard industry practice in coal mining.
+
+QUESTION: How many alerts did the Methane Alert and Response System send, and how often do operators respond?
+
+Answer the question using only the SOURCES above and cite them as [n]. If they do not contain enough information, say so.<|im_end|>
+<|im_start|>assistant
+
+--- STEP 5: GENERATED ANSWER (C:/Users/HP/.cache/ecorag_models/Qwen2.5-1.5B-Instruct, 124 tokens, 377.9s) ---
+According to SOURCE 1, the Methane Alert and Response System (MARS) integrated data from 35 satellite instruments to provide rapid alerts on major methane emission events directly to governments and operators. As of February 2026, MARS had sent over 5,000 alerts about major events. However, the global response rate remained low; only 11 countries had a response rate from operators and governments of over 70 percent. Additionally, the response rates grew nearly tenfold since the end of 2024, reflecting increasing engagement and action based on satellite data.
+
+--- STEP 6: CITATIONS ---
+Cited:       none
+Not cited:   ['[1] The Secretary‑General’s call to action on methane, p. 15', '[2] Global Methane Status Report 2025, p. 101', '[3] The Secretary‑General’s call to action on methane, p. 5', '[4] The Secretary‑General’s call to action on methane, p. 16', '[5] The Secretary‑General’s call to action on methane, p. 7']
+================================================================================
+QUESTION: What are the main challenges in modernising electricity grids?
+================================================================================
+
+--- STEP 1-3: RETRIEVAL (top 5, types ['content', 'table']) ---
+[1] modernisinggridsintheageofelectricity::0033  similarity 0.81 (distance 0.19)
+    Modernising Grids in the Age of Electricity | Chapter 1. The need for modern grids › What this report sets out to answer | p. 20 | content
+    "What this report sets out to answer This chapter has set out the challenge and the opportunity: electricity demand is rising rapidly, grid expansion alone cannot keep pace, meaningful untapped capacity exists in the networks that are already in place, and there is a suite of digital tools which coul..."
+[2] modernisinggridsintheageofelectricity::0015  similarity 0.809 (distance 0.191)
+    Modernising Grids in the Age of Electricity | Chapter 1. The need for modern grids › Demand growth and the need for grid expansion to 2035 in the Current Policies Scenario | p. 12 | content
+    "Chapter 1. The need for modern grids Demand growth and the need for grid expansion to 2035 in the Current Policies Scenario Sources: IEA (2026), Electricity; IEA (2025), World Energy Outlook. Where the grid cannot keep pace, the consequences are well documented: lengthening connection queues, new ho..."
+[3] modernisinggridsintheageofelectricity::0014  similarity 0.807 (distance 0.193)
+    Modernising Grids in the Age of Electricity | Chapter 1. The need for modern grids › Grids in the Age of Electricity | pp. 11–12 | content
+    "Grids in the Age of Electricity The grid is the critical enabling infrastructure on which the energy transition depends for security, decarbonisation and affordability, as economies around the world increasingly rely on electricity. Electrification of end uses is a core pillar of the strategy select..."
+[4] modernisinggridsintheageofelectricity::0013  similarity 0.806 (distance 0.194)
+    Modernising Grids in the Age of Electricity | Chapter 1. The need for modern grids | p. 11 | content
+    "Chapter 1. The need for modern grids Chapter 1. The need for modern grids This chapter sets the scene: it explains why, as electricity demand is rising faster than grids can be expanded, this creates an opportunity to use existing networks better, and how digitalisation, grid-enhancing technologies ..."
+[5] modernisinggridsintheageofelectricity::0027  similarity 0.798 (distance 0.202)
+    Modernising Grids in the Age of Electricity | Chapter 1. The need for modern grids › Making better use of the grid across planning and operational timeframes | p. 18 | table
+    "Making better use of the grid across planning and operational timeframes ||Long-term planning and connection studies|Operational planning (from weeks ahead to day-ahead)|Real-time operation| |---|---|---|---| |Decisions|What to build, defer or connect, and location (investment focus)|Allocating mark..."
+
+--- STEP 4: FINAL PROMPT SENT TO THE LLM (chat template applied) ---
+<|im_start|>system
+You are EcoRAG, an assistant that answers questions about environmental and sustainability reports.
+
+You are given numbered SOURCES. Follow these rules strictly:
+1. Answer using ONLY information stated in the SOURCES. Do not use your general knowledge, even if you think it is correct.
+2. After each claim, cite the source number(s) that directly support it, like [1] or [2][3]. Only cite a source if its text actually supports that specific claim. A source being provided to you is not a reason to cite it.
+3. If the SOURCES do not contain enough information to answer the question, or part of it, say so explicitly: "The provided sources do not contain enough information to answer this." Do not guess or fill gaps.
+4. If sources disagree, describe the disagreement and cite each side. Do not silently pick one.
+5. Copy numbers, units, percentages and years exactly as they appear in the SOURCES.
+6. Be concise: a short paragraph or a few bullet points.<|im_end|>
+<|im_start|>user
+SOURCES:
+
+[SOURCE 1]
+Document: Modernising Grids in the Age of Electricity
+Section: Chapter 1. The need for modern grids › What this report sets out to answer
+Pages: p. 20
+Chunk ID: modernisinggridsintheageofelectricity::0033
+TEXT:
+What this report sets out to answer
+
+This chapter has set out the challenge and the opportunity: electricity demand is rising rapidly, grid expansion alone cannot keep pace, meaningful untapped capacity exists in the networks that are already in place, and there is a suite of digital tools which could help unlock this capacity. The rest of this report examines how these digital tools might be used. Chapter 2 looks at the state of deployment across the digital grid toolkit, including the fuller technology landscape only introduced briefly here. Chapter 3 provides an estimate of the potential gains at the global level and examines the conditions needed to deploy these tools more widely and scale these gains. Finally, Chapter 4 sets out policy recommendations for operators, regulators and governments.
+
+[SOURCE 2]
+Document: Modernising Grids in the Age of Electricity
+Section: Chapter 1. The need for modern grids › Demand growth and the need for grid expansion to 2035 in the Current Policies Scenario
+Pages: p. 12
+Chunk ID: modernisinggridsintheageofelectricity::0015
+TEXT:
+Chapter 1. The need for modern grids
+
+Demand growth and the need for grid expansion to 2035 in the Current Policies Scenario
+
+Sources: IEA (2026), Electricity; IEA (2025), World Energy Outlook.
+
+Where the grid cannot keep pace, the consequences are well documented: lengthening connection queues, new housing and industrial development competing with data centres and generation projects for scarce grid capacity, and, in the most severe cases, service disruption. Left unaddressed, these circumstances risk slowing electrification plans just as they need to accelerate, with knock-on costs for competitiveness and climate goals.
+
+Stability adds a further dimension to this complexity: operators need to ensure not only that flows stay within the thermal limits, but that the system retains enough strength to ride through disturbances. As converter-connected resources displace synchronous generators, several stabilising properties traditionally provided by synchronous machines, including inertia, voltage support, fault current contribution and damping (collectively known as system strength), come under pressure. Some of these, such as inertia, are inherently linked to rotating mass; others, such as voltage support and damping, can also be delivered by appropriately designed converter-connected resources or dedicated equipment. These variables are faster-moving and harder to observe and model than thermal limits, raising the bar for the quality of data and validation that grid operators need to manage them. This is particularly important as AI-based tools are increasingly used to support grid operations, because their performance depends heavily on the quality of the data and models they rely on.
+
+[SOURCE 3]
+Document: Modernising Grids in the Age of Electricity
+Section: Chapter 1. The need for modern grids › Grids in the Age of Electricity
+Pages: pp. 11–12
+Chunk ID: modernisinggridsintheageofelectricity::0014
+TEXT:
+Grids in the Age of Electricity
+
+The grid is the critical enabling infrastructure on which the energy transition depends for security, decarbonisation and affordability, as economies around the world increasingly rely on electricity. Electrification of end uses is a core pillar of the strategy selected by many jurisdictions to strengthen their energy security and cut emissions, making electricity the backbone of the transition.
+
+Demand for electricity is rising rapidly. Electricity demand has grown at roughly twice the rate of overall energy demand over the past decade, driven in part by electrification, data centres, cooling and industrial growth. This ratio continues to widen, while new renewable generation, often built far from demand centres, is adding further need for transmission. To meet these needs, 25 million kilometres of lines are expected to be added under the IEA’s Current Policy Scenario (CPS), equivalent to boosting grid capacity by 30% by 2035. This is why the current period is termed the Age of Electricity: electricity demand is decoupling from energy demand, and electricity is fast becoming the backbone of the energy system.
+
+This transformation is also changing the conditions the grid has to cope with, not only how much it carries. Distributed energy resources such as rooftop solar, batteries, electric vehicles (EVs) and flexible demand have turned many grids from unidirectional systems into systems with dynamic two-way flows, while large inverter-based power sources and vast data centres represent a new, more concentrated form of generation and demand. Both trends are increasingly evident at the distribution level as much as at the transmission level, creating new challenges for voltage management, transformer loading, feeder capacity and protection settings, and both can produce sharp peaks that grids historically built for steady, predictable conditions are not designed to absorb without being actively managed.
+
+[SOURCE 4]
+Document: Modernising Grids in the Age of Electricity
+Section: Chapter 1. The need for modern grids
+Pages: p. 11
+Chunk ID: modernisinggridsintheageofelectricity::0013
+TEXT:
+Chapter 1. The need for modern grids
+
+Chapter 1. The need for modern grids
+
+This chapter sets the scene: it explains why, as electricity demand is rising faster than grids can be expanded, this creates an opportunity to use existing networks better, and how digitalisation, grid-enhancing technologies and artificial intelligence (AI) can be combined to capture it. It introduces the concepts used throughout the report, a shared toolkit and a framework of three layers of grid optimisation.
+
+[SOURCE 5]
+Document: Modernising Grids in the Age of Electricity
+Section: Chapter 1. The need for modern grids › Making better use of the grid across planning and operational timeframes
+Pages: p. 18
+Chunk ID: modernisinggridsintheageofelectricity::0027
+TEXT:
+Making better use of the grid across planning and operational timeframes
+
+||Long-term planning and connection studies|Operational planning (from weeks ahead to day-ahead)|Real-time operation|
+|---|---|---|---|
+|Decisions|What to build, defer or connect, and location (investment focus)|Allocating market capacity between nodes or zones, and developing remedial action plans to manage outages (security focus)|Curative actions to keep the system secure as conditions evolve, including automatic responses faster than any operator can act (operational continuity focus)|
+|Uncertainties|Load growth, generation and grid projects materialising or being delayed, policy shifts, technology maturity, demand flexibility and climate conditions|Forecast error on variable demand and supply, and unplanned outages, against largely known generation schedules|Evolving real-time conditions and instantaneous disturbances|
+|How practice is evolving|From deterministic firm- capacity cases sized to annual minima and maxima, towards finer granularity (some operators already run cases on an hour-by- hour basis) and increasingly probabilistic and stochastic methods that represent variable demand and supply, realistic outages, and the remedial actions and technologies available|From preventive margins held in reserve, towards accounting for the large set of remedial actions already standard in many systems (topology, PST and HVDC setpoints, redispatch and countertrading) to minimise congestion management costs rather than holding conservative headroom in reserve|From fixed seasonal or static limits, towards dynamic limits and pre- planned curative sequences, supported by tools that simulate many events and advise the operator on the best response|
+
+QUESTION: What are the main challenges in modernising electricity grids?
+
+Answer the question using only the SOURCES above and cite them as [n]. If they do not contain enough information, say so.<|im_end|>
+<|im_start|>assistant
+
+--- STEP 5: GENERATED ANSWER (C:/Users/HP/.cache/ecorag_models/Qwen2.5-1.5B-Instruct, 179 tokens, 390.3s) ---
+The main challenges in modernising electricity grids include:
+
+1. **Electricity Demand Growth**: Rapidly increasing electricity demand outpaces grid expansion capabilities, leading to issues such as longer connection queues, competition among different types of energy sources, and potential service disruptions.
+
+2. **System Stability**: Operators must ensure stable flow of electricity while maintaining sufficient system strength to handle disturbances. Digital tools and AI are increasingly used to support grid operations, requiring high-quality data and robust models to manage complex dynamics.
+
+3. **Distributed Energy Resources**: The rise of distributed energy resources like rooftop solar, batteries, EVs, and flexible demand poses new challenges in managing voltage, transformer loading, feeder capacity, and protection settings due to dynamic two-way flows and concentrated forms of generation and demand.
+
+These challenges highlight the necessity for innovative solutions and technological advancements to effectively modernise and enhance the efficiency and resilience of electricity grids.
+
+--- STEP 6: CITATIONS ---
+Cited:       none
+Not cited:   ['[1] Modernising Grids in the Age of Electricity, p. 20', '[2] Modernising Grids in the Age of Electricity, p. 12', '[3] Modernising Grids in the Age of Electricity, pp. 11–12', '[4] Modernising Grids in the Age of Electricity, p. 11', '[5] Modernising Grids in the Age of Electricity, p. 18']
+================================================================================
+QUESTION: How can the cost of capital for clean energy projects in emerging and developing economies be reduced?
+================================================================================
+
+--- STEP 1-3: RETRIEVAL (top 5, types ['content', 'table']) ---
+[1] reducingthecostofcapital::0043  similarity 0.835 (distance 0.165)
+    Reducing the Cost of Capital | 1.2 The cost of capital › Box 1.5 ⊳ What difference would a lower cost of capital make for the overall cost of EMDE energy transitions? | pp. 26–27 | content
+    "Box 1.5 ⊳ What difference would a lower cost of capital make for the overall cost of EMDE energy transitions? Efforts to reduce the cost of capital for clean energy projects in EMDE can facilitate the achievement of multiple sustainable development goals. Narrowing the gap of the cost of capital bet..."
+[2] reducingthecostofcapital::0059  similarity 0.829 (distance 0.171)
+    Reducing the Cost of Capital | 2.1 Introduction | p. 34 | content
+    "2.1 Introduction Reducing the cost of capital for clean energy projects in emerging market and developing economies (EMDE) will mean addressing risks across various parts of the energy economy, for projects that are financed with different business models, where the scale of projects varies consider..."
+[3] reducingthecostofcapital::0018  similarity 0.821 (distance 0.179)
+    Reducing the Cost of Capital | 1.1 The clean energy investment gap | p. 13 | content
+    "“Building on the IEA-IFC report to the Summit on “Scaling up Private Finance for Clean Energy in Emerging and Developing Countries”, the IEA should make recommendations on how to bring down the cost of capital for clean energy investments in emerging and developing countries, taking into account the..."
+[4] reducingthecostofcapital::0005  similarity 0.82 (distance 0.18)
+    Reducing the Cost of Capital | Executive summary | p. 7 | content
+    "Executive summary Clean energy investment in most emerging and developing economies has yet to take off: A high cost of capital is a major reason why How emerging market and developing economies (EMDE1 ) meet their rising energy needs is a pivotal question both for their citizens and for the world. ..."
+[5] reducingthecostofcapital::0016  similarity 0.82 (distance 0.18)
+    Reducing the Cost of Capital | Chapter 1: Unlocking clean energy investment › SUMMARY | p. 11 | content
+    "- Mobilising private finance at the scale needed will require at least a tripling in international concessional funds to help improve the risk return profile of clean energy projects across the electricity, end-use and low-emission-fuel sectors. An estimated USD 90 billion to USD 110 billion per yea..."
+
+--- STEP 4: FINAL PROMPT SENT TO THE LLM (chat template applied) ---
+<|im_start|>system
+You are EcoRAG, an assistant that answers questions about environmental and sustainability reports.
+
+You are given numbered SOURCES. Follow these rules strictly:
+1. Answer using ONLY information stated in the SOURCES. Do not use your general knowledge, even if you think it is correct.
+2. After each claim, cite the source number(s) that directly support it, like [1] or [2][3]. Only cite a source if its text actually supports that specific claim. A source being provided to you is not a reason to cite it.
+3. If the SOURCES do not contain enough information to answer the question, or part of it, say so explicitly: "The provided sources do not contain enough information to answer this." Do not guess or fill gaps.
+4. If sources disagree, describe the disagreement and cite each side. Do not silently pick one.
+5. Copy numbers, units, percentages and years exactly as they appear in the SOURCES.
+6. Be concise: a short paragraph or a few bullet points.<|im_end|>
+<|im_start|>user
+SOURCES:
+
+[SOURCE 1]
+Document: Reducing the Cost of Capital
+Section: 1.2 The cost of capital › Box 1.5 ⊳ What difference would a lower cost of capital make for the overall cost of EMDE energy transitions?
+Pages: pp. 26–27
+Chunk ID: reducingthecostofcapital::0043
+TEXT:
+Box 1.5 ⊳ What difference would a lower cost of capital make for the overall cost of EMDE energy transitions?
+
+Efforts to reduce the cost of capital for clean energy projects in EMDE can facilitate the achievement of multiple sustainable development goals. Narrowing the gap of the cost of capital between EMDE and advanced economies by energy-sector-specific interventions can also substantially bring down the overall cost of realising sustainable energy at scale. We estimate that a 1 percentage point (or 100 basis point) reduction in the cost of capital in EMDE leads to a reduction of USD 150 billion in average annual financing costs in the NZE Scenario between 2024 and 2050 (Figure 1.9).
+
+Note: bps = basis points; 100 basis points = 1 percentage point.
+
+This reduction requires considerable efforts but is achievable and represents a 10-20% decrease in the cost of capital of the different sectors, compared with current values.
+
+This reduction is obtained in part given i) the large weight that the cost of capital has in the total investment of solar PV and wind; and ii) the fact that these two technologies represent 15% of the investment needs of the NZE Scenario. An even more ambitious lowering by 2 percentage points could almost double this reduction to USD 300 billion per year.
+
+In 2023, USD 35 billion were spent on clean energy in Africa, so a USD 150 billion reduction in clean energy financing costs is equivalent to more than four times the clean energy investments in this region this year. Bringing down the cost of capital therefore represents a huge opportunity to move countries more quickly down the pathway to a safer and more sustainable energy future.
+
+[SOURCE 2]
+Document: Reducing the Cost of Capital
+Section: 2.1 Introduction
+Pages: p. 34
+Chunk ID: reducingthecostofcapital::0059
+TEXT:
+2.1 Introduction
+
+Reducing the cost of capital for clean energy projects in emerging market and developing economies (EMDE) will mean addressing risks across various parts of the energy economy, for projects that are financed with different business models, where the scale of projects varies considerably, and where the most prevalent risks are not always the same. In Chapter 1, we highlighted that two of the largest investment requirements for EMDE in the period to 2035 are utility-scale solar and wind, and energy efficiency in buildings. These are, however, very different sectors for investors. Utility-scale solar and wind are financed largely on a project finance basis, for tens of millions of United States (US) dollars, and the biggest sector-related concerns for investors are off-taker and transmission-related risks. Investments in energy efficiency in buildings are generally financed by households or real estate developers, through their own savings or commercial loans. The biggest challenges are the lack of incentives due to subsidised energy, absence of building codes or weak financing models.
+
+These examples highlight why it is essential to dig into the features of different parts of the energy sector to examine their specific elements, business models and risks. This chapter discusses seven large clean energy sectors that have significant strategic value for secure and affordable energy transitions in EMDE and that are also large in terms of cumulative clean energy investment needs between 2024 and 2035 in the Net Zero Emissions by 2050 (NZE) Scenario (the number in brackets).
+
+- utility-scale solar PV and wind (22%)
+
+- transmission and distribution grids (13%)
+
+- energy efficiency in buildings (14%)
+
+- electric mobility (10%)
+
+- low-emissions fuels (8%)
+
+- utility-scale hydro (7%)
+
+- battery storage (4%).
+
+[SOURCE 3]
+Document: Reducing the Cost of Capital
+Section: 1.1 The clean energy investment gap
+Pages: p. 13
+Chunk ID: reducingthecostofcapital::0018
+TEXT:
+“Building on the IEA-IFC report to the Summit on “Scaling up Private Finance for Clean Energy in Emerging and Developing Countries”, the IEA should make recommendations on how to bring down the cost of capital for clean energy investments in emerging and developing countries, taking into account the transparency and data availability to assess risks”.
+
+Since this analysis was asked of the IEA, its focus is on issues and solutions that lie within the remit of energy decision makers. We do so with reference to IEA scenarios that provide detailed insights on technology and deployment trends in net zero transitions (Box 1.1). However, risks that push up the cost of capital extend well beyond the energy sector, highlighting the need for a broad effort to create the conditions that will allow all countries to benefit from participation in the new clean energy economy.
+
+[SOURCE 4]
+Document: Reducing the Cost of Capital
+Section: Executive summary
+Pages: p. 7
+Chunk ID: reducingthecostofcapital::0005
+TEXT:
+Executive summary
+
+Clean energy investment in most emerging and developing economies has yet to take off: A high cost of capital is a major reason why How emerging market and developing economies (EMDE1 ) meet their rising energy needs is a pivotal question both for their citizens and for the world. Cost-competitive clean energy technologies open the possibility to chart a new, lower-emissions pathway to growth and prosperity, but capital flows to clean energy projects in many EMDE remain worryingly low. Global clean energy investment has risen by 40% since 2020, reaching USD 1.8 trillion in 2023, but almost all the recent growth has been in advanced economies and in China. EMDE account for around 15% of the total, despite accounting for about a third of global gross domestic product and two-thirds of the world’s population. India and Brazil are by a distance the largest EMDE clean energy markets.
+
+All pathways to successful global energy transitions depend on expanding capital flows to clean energy in fast-growing EMDE. With growing international attention to this issue, the International Energy Agency (IEA) was tasked by the Paris Summit on a New Global Financing Pact in June 2023 to make recommendations on how to bring down the cost of capital for clean energy investment in EMDE. This report answers that request, building on previous IEA analysis and on new survey data collected for the IEA’s Cost of Capital Observatory project.
+
+[SOURCE 5]
+Document: Reducing the Cost of Capital
+Section: Chapter 1: Unlocking clean energy investment › SUMMARY
+Pages: p. 11
+Chunk ID: reducingthecostofcapital::0016
+TEXT:
+- Mobilising private finance at the scale needed will require at least a tripling in international concessional funds to help improve the risk return profile of clean energy projects across the electricity, end-use and low-emission-fuel sectors. An estimated USD 90 billion to USD 110 billion per year in concessional funds is needed to get on a 1.5-degree pathway. These funds can help mobilise private capital in countries and sectors that do not have access to commercial finance.
+
+- Lowering the cost of capital can substantially bring down the overall cost of transitions and reduce the costs paid by consumers. A one percentage point reduction in the cost of capital compared with current levels would save around USD 150 billion in annual clean energy financing costs (representing 20% of annual financing costs) for net zero transitions to 2050. Better risk management through strong policy frameworks and regulation as well as enhanced deployment of de-risking instruments are key.
+
+QUESTION: How can the cost of capital for clean energy projects in emerging and developing economies be reduced?
+
+Answer the question using only the SOURCES above and cite them as [n]. If they do not contain enough information, say so.<|im_end|>
+<|im_start|>assistant
+
+--- STEP 5: GENERATED ANSWER (C:/Users/HP/.cache/ecorag_models/Qwen2.5-1.5B-Instruct, 304 tokens, 463.0s) ---
+To reduce the cost of capital for clean energy projects in emerging and developing economies (EMDE), efforts must address risks across various parts of the energy economy, including those related to utility-scale solar and wind, transmission and distribution grids, energy efficiency in buildings, electric mobility, low-emissions fuels, and utility-scale hydro. These sectors vary significantly in terms of investment size and the predominant risks faced by investors. By narrowing the gap in the cost of capital between EMDE and advanced economies, substantial reductions in overall clean energy financing costs can be achieved. Specifically, a 1 percentage point reduction in the cost of capital in EMDE can lead to a reduction of USD 150 billion in average annual financing costs over the period from 2024 to 2050, representing a 10-20% decrease in the cost of capital relative to current values. This reduction is partly attributed to the large weight that the cost of capital has in the total investment of solar PV and wind, which makes up 22% of the investment needs of the Net Zero Emissions by 2050 scenario. Additionally, investments in energy efficiency in buildings, which are generally financed by households or real estate developers, face significant challenges such as the lack of incentives due to subsidies, absence of building codes, or weak financing models. To achieve this goal, it is crucial to understand the unique characteristics of each sector and develop tailored strategies to mitigate risks and enhance the attractiveness of clean energy projects.
+
+--- STEP 6: CITATIONS ---
+Cited:       none
+Not cited:   ['[1] Reducing the Cost of Capital, pp. 26–27', '[2] Reducing the Cost of Capital, p. 34', '[3] Reducing the Cost of Capital, p. 13', '[4] Reducing the Cost of Capital, p. 7', '[5] Reducing the Cost of Capital, p. 11']
+================================================================================
+QUESTION: How are near-zero emissions steel and cement defined?
+================================================================================
+
+--- STEP 1-3: RETRIEVAL (top 5, types ['content', 'table']) ---
+[1] definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0016  similarity 0.869 (distance 0.131)
+    Definitions for Near-Zero and Low-Emissions Steel and Cement | 2. Principles for definitions › Principles for near-zero emissions definitions | p. 14 | content
+    "- Globally consistent. The emissions threshold applies regardless of where the steel or cement is produced or consumed. This enables clear communication and a consistent signal across global markets. Notably, this does not imply uniform global policy ambition and speed of progress towards net zero; ..."
+[2] definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0003  similarity 0.862 (distance 0.138)
+    Definitions for Near-Zero and Low-Emissions Steel and Cement | Executive Summary › Definitions can provide a common language to help accelerate the net zero transition in industry | p. 6 | content
+    "Executive Summary Definitions can provide a common language to help accelerate the net zero transition in industry A common global understanding on definitions for near-zero emissions and low-emissions materials is a crucial enabler of the industry transition to net zero. These definitions can under..."
+[3] definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0023  similarity 0.862 (distance 0.138)
+    Definitions for Near-Zero and Low-Emissions Steel and Cement | 3. Emerging common ground on near-zero emissions definitions | pp. 17–18 | content
+    "3. Emerging common ground on near-zero emissions definitions The IEA Secretariat has defined near-zero emissions thresholds with the aforementioned principles as a guide. These were recognised in the 2022 G7 Climate, Energy and Environment Ministers’ Communiqué as “a robust starting point for a comm..."
+[4] definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0005  similarity 0.859 (distance 0.141)
+    Definitions for Near-Zero and Low-Emissions Steel and Cement | Executive Summary › Common understanding is emerging on principles for definitions and near-zero emissions thresholds | p. 7 | content
+    "A strong global common understanding is emerging around near-zero emissions threshold values for steel and cement among major proposals to date. In 2022, the IEA Secretariat derived near-zero emissions definitions based on its net zero scenario analyses. For steel, the threshold ranges from 400-50 k..."
+[5] definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies::0008  similarity 0.85 (distance 0.15)
+    Definitions for Near-Zero and Low-Emissions Steel and Cement | 1. Definitions: a critical enabler of industrial decarbonisation | p. 9 | content
+    "1. Definitions: a critical enabler of industrial decarbonisation A common understanding of what constitutes near-zero emissions and lowemissions materials is crucial to facilitate markets and enabling mechanisms for industrial decarbonisation and clean energy transitions. Definitions for near-zero a..."

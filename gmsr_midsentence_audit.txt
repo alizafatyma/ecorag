@@ -1,0 +1,282 @@
+#3 p[3] front_matter | lastlen=580 | Acknowledgements › Steering Committee
+   LAST: retariat, UNEP), Aditi Ramola (Waste and Resources Consultant), Drew Shindell (Duke University), Aimable Uwizeye (Food and Agriculture Organization of the United Nations)
+   NEXT: Authors ¶  ¶ Stefania Abakerli (World Bank), Tarek Abichou (IMEO, UNEP), Jonathan Banks (Clean Air Task Force)*, Marci R. Baranski (IMEO, UNEP), Nathan Oliveira Bar
+#5 p[3, 4] front_matter | lastlen=1171 | Acknowledgements › Authors
+   LAST: ited Nations), Jingyi Ye (CCAC Secretariat, UNEP), Daniel Zavala-Araiza (Environmental Defense Fund), Shaohui Zhang (International Institute for Applied Systems Analysis)
+   NEXT: - Coordinating Lead Authors ¶  ¶ Expert Reviewers ¶  ¶ Ilse Aben (Space Research Organisation Netherlands), Olga Brovkina (Global Change Research Institute of the Czech
+#6 p[4] front_matter | lastlen=125 | Acknowledgements › Authors / Expert Reviewers …
+   LAST: Sophie Bonnard (CCAC Secretariat, UNEP), Nathan Borgford-Parnell (CCAC Secretariat, UNEP), Jingyi Ye (CCAC Secretariat, UNEP)
+   NEXT: Editing and Communications ¶  ¶ Bart Ullstein (Banson), Ava Bahrami (CCAC Secretariat, UNEP), Vincent Hughes (CCAC Secretariat, UNEP) ¶  ¶ Design and Layout ¶  ¶ Biyoke Mad
+#8 p[5, 6] content | lastlen=1930 | List of Abbreviations
+   LAST:  Britain and Northern Ireland, and the United States of America, plus remaining 24 European Union countries, 3 Western European countries Norway, Switzerland and Iceland,
+   NEXT: and New Zealand.) All countries not included in the G20+ are categorized as belonging to the non-G20+ regions. GAINS Greenhouse Gas and Air Pollution Interactio
+#9 p[5, 6] content | lastlen=1584 | List of Abbreviations
+   LAST: tion NGER National Greenhouse and Energy Reporting (Australia) NGO non-governmental organization NIR National Inventory Report NMVOC non-methane volatile organic compound
+   NEXT: N2O nitrous oxide NOC national oil company NOX nitrous oxides NOC national oil company O3 ozone O&M operations and maintenance ODA official development assistan
+#10 p[7] content | lastlen=1295 | List of Abbreviations
+   LAST: C United Nations Framework Convention on Climate Change USEPA United States Environmental Protection Agency VAM ventilation air methane vs versus 3-NOP 3-Nitrooxypropanol
+   NEXT: Table of Contents ¶  ¶ |Acknow|ledgements �����������������������������������������������������������������������������������������������������������������3| ¶ |---|-
+#244 p[124] content | lastlen=379 | References › Chapter 2
+   LAST: t-55-delivering-proposals_en FAO. (2018). The future of food and agriculture – Alternative pathways to 2050. Rome: Food and Agriculture Organization of the United Nations
+   NEXT: (2018). The future of food and agriculture – Alternative pathways to 2050. Rome: Food and Agriculture Organization of the United Nations ¶  ¶ GoI MC. (2020). Minist
+#246 p[124, 125] content | lastlen=499 | References › Chapter 2
+   LAST: N., Ahsan, H., Suchyta, H., O'Rourke, P. et al. (2024). CEDS v_2024_07_08 Release Emission Data (v_2024_07_08) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.12803197
+   NEXT: Zenodo. https://doi.org/10.5281/zenodo.12803197 ¶  ¶ Höglund-Isaksson, L. (2012). Global anthropogenic methane emissions 2005–2030: technical mitigation potentials 
+#247 p[124, 125] content | lastlen=378 | References › Chapter 2
+   LAST:  simulations of methane and ethane from global oil and gas systems. Environmental Research Letters. 12, 024007. http://iopscience.iop.org/article/10.1088/1748-9326/aa583e
+   NEXT: Environmental Research Letters. 12, 024007. http://iopscience.iop.org/article/10.1088/1748-9326/aa583e ¶  ¶ Höglund-Isaksson, L., Gómez-Sanabria, A., Klimont, Z., R
+#248 p[125] content | lastlen=779 | References › Chapter 2
+   LAST: n DG-CLIMA. Laxenburg: International Institute for Applied Systems Analysis. https://pure.iiasa.ac.at/id/ eprint/19546/1/GAINS_Methodology_nonCO2_EU27_10oct2023_Final.pdf
+   NEXT: IPCC. (2022). Sixth Assessment Report Working Group III, Climate change 2022: Mitigation of Climate Change. Cambridge: Cambridge University Press. doi: 10.1017/
+#249 p[125] content | lastlen=428 | References › Chapter 2
+   LAST:  B. and Brovkin V. (2021) Atmospheric methane underestimated in future climate projections, Environ. Res. Lett. 16(9): 094006. https://dx.doi.org/10.1088/1748-9326/ac1814
+   NEXT: Res. Lett. 16(9): 094006. https://dx.doi.org/10.1088/1748-9326/ac1814 ¶  ¶ Kotz, M., Levermann, A. and Wenz, L. (2024). The Economic Commitment of Climate Change. N
+#250 p[125] content | lastlen=480 | References › Chapter 2
+   LAST: Raymond, P.A., Regnier, P. et al. (2025). Global Methane Budget 2000–2020. Earth System Science Data. 17.5. 1873-1958. https://essd.copernicus.org/ articles/17/1873/2025/
+   NEXT: (2025). Global Methane Budget 2000–2020. Earth System Science Data. 17.5. 1873-1958. https://essd.copernicus.org/ articles/17/1873/2025/ ¶  ¶ Shen, L., Peng, S., Zh
+#251 p[125, 126] content | lastlen=516 | References › Chapter 2
+   LAST: eyfus, G., Höglund-Isaksson, L. et al. (2024). The methane imperative. Front. Sci. 2 https://www.frontiersin.org/journals/science/articles/10.3389/ fsci.2024.1349770/full
+   NEXT: (2024). The methane imperative. Front. Sci. 2 https://www.frontiersin.org/journals/science/articles/10.3389/ fsci.2024.1349770/full ¶  ¶ Springmann, M., Wiebe, K., 
+#252 p[125, 126] content | lastlen=282 | References › Chapter 2
+   LAST: tensification of different types of livestock production in smallholder crop-livestock systems. Livestock Science. 139:22-29. https://doi.org/10.1016/j.livsci.2011.03.020
+   NEXT: Livestock Science. 139:22-29. https://doi.org/10.1016/j.livsci.2011.03.020 ¶  ¶ UNEP. (2021). Food Waste Index Report 2021. Nairobi: United Nations Environment Prog
+#255 p[126] content | lastlen=770 | References › Chapter 2
+   LAST: ethane Abatement Finance 2023. San Francisco: Climate Policy Initiative. https://www. climatepolicyinitiative.org/publication/landscape-of-methane-abatement-finance-2023/
+   NEXT: Chapter 3 ¶  ¶ Section 3�2 ¶  ¶ CCAC (2025). Transforming Organic Waste with Black Soldier Flies: A Guide for Decision-Makers, Entrepreneurs, and Implementers to Unlock
+#256 p[127] content | lastlen=509 | References › Chapter 3 / Section 3�2
+   LAST:  residue burning have increased by 75% since 2011 across India. Science of the Total Environment. 904. https://www.sciencedirect.com/science/article/pii/S0048969723055699
+   NEXT: Science of the Total Environment. 904. https://www.sciencedirect.com/science/article/pii/S0048969723055699 ¶  ¶ Eskander, S.M.S.U., and Fankhauser, S. (2020). Reduc
+#257 p[127] content | lastlen=518 | References › Section 3�2
+   LAST: olutions with a focus on reducing reactive nitrogen losses. Journal of Environmental Management. 314. https://www. sciencedirect.com/science/article/pii/S0301479722006776
+   NEXT: Journal of Environmental Management. 314. https://www. sciencedirect.com/science/article/pii/S0301479722006776 ¶  ¶ Lucchese-Cheung, T., de Aguiar, L.K., de Lima, L
+#258 p[127] content | lastlen=577 | References › Section 3�2
+   LAST:  from agricultural ponds are underestimated in national greenhouse gas inventories. Communications Earth & Environment. 3, 306. https://doi.org/10.1038/s43247-022-00638-9
+   NEXT: Communications Earth & Environment. 3, 306. https://doi.org/10.1038/s43247-022-00638-9 ¶  ¶ Melvin, A.M., Sarofim, M.C. and Crimmins, A.R. (2016). Climate benefits 
+#259 p[127, 128] content | lastlen=717 | References › Section 3�2
+   LAST: ent Report of the Intergovernmental Panel on Climate Change. Cambridge University Press. https://www.ipcc.ch/report/ ar6/wg3/downloads/report/IPCC_AR6_WGIII_Chapter07.pdf
+   NEXT: Cambridge University Press. https://www.ipcc.ch/report/ ar6/wg3/downloads/report/IPCC_AR6_WGIII_Chapter07.pdf ¶  ¶ Nascimento, L., Kuramochi, T., Iacobuta, G., den 
+#260 p[127, 128] content | lastlen=496 | References › Section 3�2
+   LAST: review of methane policies reveals that only 13% of emissions are covered with unclear effectiveness. One Earth. 6, 519-535. https://doi.org/10.1016/j. oneear.2023.04.009
+   NEXT: One Earth. 6, 519-535. https://doi.org/10.1016/j. oneear.2023.04.009 ¶  ¶ Saunois, M., Stavert, A.R., Poulter, B., Bousquet, P., Canadell, J.G., Jackson, R.B. et al
+#261 p[128] content | lastlen=442 | References › Section 3�2
+   LAST: national climate policies: analyzing 171 country portfolios on climate policy integration. Environ. Sci. Pol. 84, 177–185. http://dx.doi.org/10.1016/j. envsci.2018.03.003
+   NEXT: Environ. Sci. Pol. 84, 177–185. http://dx.doi.org/10.1016/j. envsci.2018.03.003 ¶  ¶ Shyamsundar, P., Springer, N.P., Tallis, H., Polasky, S., Jat, M.L., Sidhu, H.S
+#262 p[128] content | lastlen=556 | References › Section 3�2
+   LAST: ationally Determined Contributions. https://www. ccacoalition.org/sites/default/files/resources/files/Guidance%20on%20Including%20Methane%20in%20 NDC%203.0_17%20Oct_0.pdf
+   NEXT: Zhang, L., Wang, X., Huang, L., Wang, C., Goa, Y., Pang, S. et al. (2024). Inventory of methane and nitrous oxide emissions from freshwater aquaculture in China
+#263 p[128] content | lastlen=510 | References › Section 3�2
+   LAST: hane policies of the United States and China in the context of US-China climate cooperation. Climate Policy. 25(2), 171–189. https://doi.org/10.1080/14693062.2024.2366902
+   NEXT: Section 3�3 ¶  ¶ Agri-PDB Platform. (2023). Working group of the Agricultural Public Development Banks: What tools for financing adaptation to climate change? Rome:
+#264 p[128, 129] content | lastlen=523 | References › Section 3�3
+   LAST: quet, P., et al. (2022). Invited review: current enteric methane mitigation options. Journal of Dairy Science. 105(12), 9297-9326. https://doi. org/10.3168/jds.2022-22091
+   NEXT: Journal of Dairy Science. 105(12), 9297-9326. https://doi. org/10.3168/jds.2022-22091 ¶  ¶ Binietoglou, I., Turitto, J. and Tzompa Sosa, Z. (2023). A guide to monit
+#265 p[128, 129] content | lastlen=585 | References › Section 3�3
+   LAST: lian Open-Cut Coal Mine Using Two Independent Airborne Techniques. Environmental Science & Technology Letters, 12(4). https://pubs.acs.org/doi/10.1021/acs.estlett.4c01063
+   NEXT: Environmental Science & Technology Letters, 12(4). https://pubs.acs.org/doi/10.1021/acs.estlett.4c01063 ¶  ¶ Bufoni, A.L., Oliveira, L.B. and Rosa, L.P. (2016). The
+#266 p[129] content | lastlen=418 | References › Section 3�3
+   LAST: s. Sacramento: California Air Resources Board. https://ww2.arb.ca.gov/our-work/programs/compliance-offset-program/complianceoffset-protocols/mine-methane-capture-projects
+   NEXT: Sacramento: California Air Resources Board. https://ww2.arb.ca.gov/our-work/programs/compliance-offset-program/complianceoffset-protocols/mine-methane-capture-p
+#267 p[129] content | lastlen=364 | References › Section 3�3
+   LAST: CAC. (2025b). Fossil Fuel Regulatory Programme (FFRP). Paris: Climate and Clean Air Coalition. https:// www.ccacoalition.org/content/fossil-fuel-regulatory-programme-ffrp
+   NEXT: (2025b). Fossil Fuel Regulatory Programme (FFRP). Paris: Climate and Clean Air Coalition. https:// www.ccacoalition.org/content/fossil-fuel-regulatory-programme
+#268 p[129, 130] content | lastlen=453 | References › Section 3�3
+   LAST:  Angioni, C., Prosperi, P. (2025). Agrifood systems in Nationally Determined Contributions: Global Analysis. Rome: Food and Agriculture Organization of the United Nations
+   NEXT: (2025). Agrifood systems in Nationally Determined Contributions: Global Analysis. Rome: Food and Agriculture Organization of the United Nations ¶  ¶ Datta, A., Das,
+#269 p[130] content | lastlen=782 | References › Section 3�3
+   LAST: ne Abatement Finance 2023. San Francisco, CA: Climate Policy Initiative. https://www.climatepolicyinitiative. org/publication/landscape-of-methane-abatement-finance-2023/
+   NEXT: San Francisco, CA: Climate Policy Initiative. https://www.climatepolicyinitiative. org/publication/landscape-of-methane-abatement-finance-2023/ ¶  ¶ Estrada, L.A., 
+#270 p[130] content | lastlen=340 | References › Section 3�3
+   LAST: sion. (2024). Methane Emissions. Brussels: European Union. https://energy.ec.europa.eu/ topics/carbon-management-and-fossil-fuels/methane-emissions_en#eu-methane-strategy
+   NEXT: (2024). Methane Emissions. Brussels: European Union. https://energy.ec.europa.eu/ topics/carbon-management-and-fossil-fuels/methane-emissions_en#eu-methane-stra
+#271 p[130] content | lastlen=524 | References › Section 3�3
+   LAST:  emissions. In: Kumar, S. and Meena, R.S. (eds.). Agriculture Toward Net Zero Emissions. Cambridge, MA: Academic Press. https://doi.org/10.1016/B978-0-443-13985-7.00021-X
+   NEXT: (eds.). Agriculture Toward Net Zero Emissions. Cambridge, MA: Academic Press. https://doi.org/10.1016/B978-0-443-13985-7.00021-X ¶  ¶ Galbiati, G.M. and Bernoux, M.
+#272 p[130, 131] content | lastlen=348 | References › Section 3�3
+   LAST:  2024 Global Methane Pledge Ministerial. Paris: Climate and Clean Air Coalition. https://www.globalmethanepledge.org/news/factsheet-2024-global-methane-pledge-ministerial
+   NEXT: Factsheet: 2024 Global Methane Pledge Ministerial. Paris: Climate and Clean Air Coalition. https://www.globalmethanepledge.org/news/factsheet-2024-global-methan
+#273 p[131] content | lastlen=443 | References › Section 3�3
+   LAST: Too good to waste: Initiative to mitigate methane emissions from waste in LAC. Washington, D.C.: Inter-American Development Bank. https://www.iadb.org/en/project/RG-T4317
+   NEXT: Too good to waste: Initiative to mitigate methane emissions from waste in LAC. Washington, D.C.: Inter-American Development Bank. https://www.iadb.org/en/projec
+#274 p[131] content | lastlen=440 | References › Section 3�3
+   LAST: Basis. Contribution of Working Group I to the Sixth Assessment Report of the IPCC. Geneva: Intergovernmental Panel on Climate Change. https://www.ipcc.ch/ report/ar6/wg1/
+   NEXT: Contribution of Working Group I to the Sixth Assessment Report of the IPCC. Geneva: Intergovernmental Panel on Climate Change. https://www.ipcc.ch/ report/ar6/w
+#275 p[131, 132] content | lastlen=556 | References › Section 3�3
+   LAST: missions from irrigated rice cultivation through improved fertilizer and water management. Journal of Environmental Management. 307. doi.org/10.1016/j.jenvman.2022.114520
+   NEXT: Mitigating greenhouse gas emissions from irrigated rice cultivation through improved fertilizer and water management. Journal of Environmental Management. 307. 
+#277 p[132] content | lastlen=248 | References › Section 3�3
+   LAST: ide emissions in rice fields influenced with duration of cultivars and irrigation regimes. Agric Ecosyst Environ. 365, 108923. https://doi. org/10.1016/j.agee.2024.108923
+   NEXT: Agric Ecosyst Environ. 365, 108923. https://doi. org/10.1016/j.agee.2024.108923 ¶  ¶ Kazakhstan. (2021) Environmental Code of the Republic of Kazakhstan (Code ¶  ¶ No. 
+#278 p[132] content | lastlen=526 | References › Section 3�3
+   LAST: from coal mining to continue growing even with declining coal production, Journal of Cleaner Production. Volume 256, 120489. https://doi.org/10.1016/j.jclepro.2020.120489
+   NEXT: Global methane emissions from coal mining to continue growing even with declining coal production, Journal of Cleaner Production. Volume 256, 120489. https://do
+#279 p[132] content | lastlen=540 | References › Section 3�3
+   LAST: M., D’Aspremont, A., Duren, R., Cusworth, D. et al. (2022). Global assessment of oil and gas methane ultra-emitters. Science. 375. https://doi.org/10.1126/science.abj4351
+   NEXT: (2022). Global assessment of oil and gas methane ultra-emitters. Science. 375. https://doi.org/10.1126/science.abj4351 ¶  ¶ Malerba, M.E., de Kluyver, T., Wright, N
+#280 p[132, 133] content | lastlen=505 | References › Section 3�3
+   LAST: understanding the contemporary methane budget. Philosophical Transactions of the Royal Society A. 379(2210), p.20210106. https://pmc.ncbi.nlm.nih.gov/articles/PMC8554821/
+   NEXT: Philosophical Transactions of the Royal Society A. 379(2210), p.20210106. https://pmc.ncbi.nlm.nih.gov/articles/PMC8554821/ ¶  ¶ Pazhanivelan, S., Sudarmanian, N.S.
+#281 p[133] content | lastlen=508 | References › Section 3�3
+   LAST:  anual de adquisiciones, arrendamientos, obras y servicios (PAC). Mexico City: Pemex. https://www.pemex.com/procura/procedimientos-de-contratacion/Paginas/ programas.aspx
+   NEXT: Mexico City: Pemex. https://www.pemex.com/procura/procedimientos-de-contratacion/Paginas/ programas.aspx ¶  ¶ Pérez-Domínguez, I., del Prado, A., Mittenzwei, K., Hr
+#282 p[133] content | lastlen=526 | References › Section 3�3
+   LAST: B., Kuzyakov, Y., Wassmann, R. et al. 2023. Greenhouse gas emissions and mitigation in rice agriculture. Nat Rev Earth Environ. https://doi.org/10.1038/s43017-023-00482-1
+   NEXT: 2023. Greenhouse gas emissions and mitigation in rice agriculture. Nat Rev Earth Environ. https://doi.org/10.1038/s43017-023-00482-1 ¶  ¶ Sadavarte, P., Pandey, S.,
+#283 p[133] content | lastlen=834 | References › Section 3�3
+   LAST: bial methane oxidation processes and technologies for mitigation of landfill gas emissions. Waste Management & Research. 27(5), pp. 409-455. doi: 10.1177/0734242X09339325
+   NEXT: Waste Management & Research. 27(5), pp. 409-455. doi: 10.1177/0734242X09339325 ¶  ¶ Shen, L., Zavala-Araiza, D., Gautam, R., Omara, M., Scarpelli, T., Sheng, J. et 
+#284 p[133] content | lastlen=488 | References › Section 3�3
+   LAST: ts. Nairobi: United Nations Environment Programme. https://www.unep.org/news-andstories/press-release/urgent-action-cut-methane-emissions-fossil-fuel-operations-essential
+   NEXT: Nairobi: United Nations Environment Programme. https://www.unep.org/news-andstories/press-release/urgent-action-cut-methane-emissions-fossil-fuel-operations-ess
+#285 p[133, 134] content | lastlen=509 | References › Section 3�3
+   LAST:  York: United Nations Framework Convention on Climate Change. https://unfccc.int/sites/default/files/NDC/2022-06/ CDN%20r%C3%A9vis%C3%A9e%20CMR%20finale%20sept%202021.pdf
+   NEXT: USEPA. (2019). Status of CMM Ownership and Policy Incentives in Key Countries: Considerations for Decision Makers. Washington, D.C.: United States Environmental
+#286 p[134] content | lastlen=553 | References › Section 3�3
+   LAST: ud-based facility for inferring high-resolution methane emissions from TROPOMI satellite observations. Geosci. Model Dev. 15(14). https://doi.org/10.5194/gmd-15-5787-2022
+   NEXT: Geosci. Model Dev. 15(14). https://doi.org/10.5194/gmd-15-5787-2022 ¶  ¶ Vaughn, T.L., Bell, C.S., Pickering, C.K., Schwietzke, S., Heath, G.A., Pétron, G. et al. (
+#287 p[134] content | lastlen=560 | References › Section 3�3
+   LAST:  (2020). Methane Emission Factors from Vietnamese Rice Production: Pooling Data of 36 Field Sites for Meta-Analysis. Climate. 8(6), 74 https://doi. org/10.3390/cli8060074
+   NEXT: Methane Emission Factors from Vietnamese Rice Production: Pooling Data of 36 Field Sites for Meta-Analysis. Climate. 8(6), 74 https://doi. org/10.3390/cli806007
+#288 p[134] content | lastlen=460 | References › Section 3�3
+   LAST: 62717 World Bank. (2015). Zero Routine Flaring by 2030 (ZRF) Initiative. Washington, D.C.: World Bank. https:// www.worldbank.org/en/programs/zero-routine-flaring-by-2030
+   NEXT: Zero Routine Flaring by 2030 (ZRF) Initiative. Washington, D.C.: World Bank. https:// www.worldbank.org/en/programs/zero-routine-flaring-by-2030 ¶  ¶ World Bank. (2
+#289 p[134, 135] content | lastlen=331 | References › Section 3�3
+   LAST: w regulatory framework for biofuels. London: World Biogas Association. https://www.worldbiogasassociation.org/brazil-advances-with-a-new-regulatoryframework-for-biofuels/
+   NEXT: London: World Biogas Association. https://www.worldbiogasassociation.org/brazil-advances-with-a-new-regulatoryframework-for-biofuels/ ¶  ¶ Yang, P., Tang, K.W., Yan
+#290 p[135] content | lastlen=586 | References › Section 3�3
+   LAST:  of two regions: Methane emissions from oil and gas production in offshore/onshore Mexico. Environmental Research Letters, 16(2). https://doi.org/10.1088/1748-9326/abceeb
+   NEXT: A tale of two regions: Methane emissions from oil and gas production in offshore/onshore Mexico. Environmental Research Letters, 16(2). https://doi.org/10.1088/
+#291 p[135] content | lastlen=503 | References › Section 3�3
+   LAST: . (2024). Inventory of methane and nitrous oxide emissions from freshwater aquaculture in China. Commun Earth Environ. 5, 531. https://doi. org/10.1038/s43247-024-01699-8
+   NEXT: Commun Earth Environ. 5, 531. https://doi. org/10.1038/s43247-024-01699-8 ¶  ¶ Zhu, M., Behrendt, J., Cui, R., Hultman, N., Cheng, X., Li, W., Li, Y. et al. (2024).
+#292 p[135] content | lastlen=598 | References › Section 3�3
+   LAST: , F. (2024). Review of Organic Waste-to-Energy (OWtE) Technologies as a Part of a Sustainable Circular Economy. Energies. 17(15:3797). https://doi.org/10.3390/ en17153797
+   NEXT: Section 3�4 ¶  ¶ Ayandele, E., Frankiewicz, T. and Wu, Y. (2024). A Playbook for Municipal Solid Waste Methane Mitigation: Recommendations Based on Global Waste Man
+#293 p[135] content | lastlen=339 | References › Section 3�4
+   LAST: ts and Costs of Mitigating Methane Emissions. Paris: Climate and Clean Air Coalition. https://www.ccacoalition.org/content/benefits-and-costs-mitigating-methane-emissions
+   NEXT: Benefits and Costs of Mitigating Methane Emissions. Paris: Climate and Clean Air Coalition. https://www.ccacoalition.org/content/benefits-and-costs-mitigating-m
+#294 p[135, 136] content | lastlen=492 | References › Section 3�4
+   LAST: ribution (NDC). Kathmandu: Government of Nepal. http://climate.mohp.gov.np/attachments/article/167/Second%20Nationally%20Determined%20 Contribution%20(NDC)%20-%202020.pdf
+   NEXT: IDB. (2023). Too good to waste: Initiative to mitigate methane emissions from waste in LAC. Washington, D.C.: Inter-American Development Bank. https://www.iadb.
+#295 p[136] content | lastlen=440 | References › Section 3�4
+   LAST: Basis. Contribution of Working Group I to the Sixth Assessment Report of the IPCC. Geneva: Intergovernmental Panel on Climate Change. https://www.ipcc.ch/ report/ar6/wg1/
+   NEXT: Contribution of Working Group I to the Sixth Assessment Report of the IPCC. Geneva: Intergovernmental Panel on Climate Change. https://www.ipcc.ch/ report/ar6/w
+#296 p[136] content | lastlen=548 | References › Section 3�4
+   LAST: hane may affect the cost-effectiveness of mitigation policies and benefits of low-meat diets. Nature Food. pp. 970-980. https://www.nature.com/articles/s43016-021-00385-8
+   NEXT: Nature Food. pp. 970-980. https://www.nature.com/articles/s43016-021-00385-8 ¶  ¶ Scharff, H., Soon, H-Y., Taremwa, S.R., Zegers, D., Dick, B., Villas Bôas Zanon, T
+#297 p[136] content | lastlen=446 | References › Section 3�4
+   LAST: ste. Nairobi: United Nations Environment Programme; Rotterdam: International Solid Waste Association. https://www.unep.org/ resources/global-waste-management-outlook-2024
+   NEXT: Global Waste Management Outlook 2024: Beyond an age of waste. Nairobi: United Nations Environment Programme; Rotterdam: International Solid Waste Association. h
+#298 p[136, 137] content | lastlen=331 | References › Section 3�4
+   LAST: w regulatory framework for biofuels. London: World Biogas Association. https://www.worldbiogasassociation.org/brazil-advances-with-a-new-regulatoryframework-for-biofuels/
+   NEXT: London: World Biogas Association. https://www.worldbiogasassociation.org/brazil-advances-with-a-new-regulatoryframework-for-biofuels/ ¶  ¶ Zueva, S., Ferella, F., C
+#299 p[137] content | lastlen=218 | References › Section 3�4
+   LAST: , F. (2024). Review of Organic Waste-to-Energy (OWtE) Technologies as a Part of a Sustainable Circular Economy. Energies. 17(15:3797). https://doi.org/10.3390/ en17153797
+   NEXT: Section 3�5 ¶  ¶ Climate and Clean Air Coalition (2024). Role of Digital (Extension) Services for Livestock on Tackling Methane Emissions. Paris. https://www.ccacoa
+#300 p[137] content | lastlen=664 | References › Section 3�5
+   LAST:  review of methane policies reveals that only 13% of emissions are covered with unclear effectiveness. One Earth. 6, 519-535. https://doi.org/10.1016/j.oneear.2023.04.009
+   NEXT: One Earth. 6, 519-535. https://doi.org/10.1016/j.oneear.2023.04.009 ¶  ¶ Damania, R., Balseca, E., de Fontaubert, C., Gill, J., Kim, K., Rentschler, J. et al. (2023
+#301 p[137] content | lastlen=689 | References › Section 3�5
+   LAST: d Fankhauser, S. (2020). Reduction in greenhouse gas emissions from national climate legislation. Nat. Clim. Chang. 10, 750–756. https://doi.org/10.1038/s41558-020-0831-z
+   NEXT: Reduction in greenhouse gas emissions from national climate legislation. Nat. Clim. Chang. 10, 750–756. https://doi.org/10.1038/s41558-020-0831-z ¶  ¶ FAO. (2025). 
+#302 p[137] content | lastlen=492 | References › Section 3�5
+   LAST: to agrifood systems, 2024 update. Rome: Food and Agriculture Organization of the United Nations. https://openknowledge.fao.org/ items/64e63441-6646-4bc5-8153-52153677e8b1
+   NEXT: Lucchese-Cheung, T., de Aguiar, L.K., Lima, L.C.d., Spers, E.E., Quevedo-Silva, F., Alves, F.V. et al. (2022). Brazilian carbon neutral beef as an innovative pr
+#303 p[138] content | lastlen=635 | References › Section 3�5
+   LAST: s from agricultural ponds are underestimated in national greenhouse gas inventories. Communications Earth & Environment. 3:306. https://doi.org/10.1038/s43247-022-00638-9
+   NEXT: Communications Earth & Environment. 3:306. https://doi.org/10.1038/s43247-022-00638-9 ¶  ¶ Melvin, A.M., Sarofim, M.C. and Crimmins, A.R. (2016). Climate benefits o
+#304 p[138] content | lastlen=558 | References › Section 3�5
+   LAST: sed by 75 % since 2011 across India. Science of The Total Environment. Volume 904, 166944. https://www.sciencedirect.com/science/article/pii/ S0048969723055699?via%3Dihub
+   NEXT: Volume 904, 166944. https://www.sciencedirect.com/science/article/pii/ S0048969723055699?via%3Dihub ¶  ¶ Lin, M. and Begho, T. (2022). Crop residue burning in South
+#305 p[138] content | lastlen=491 | References › Section 3�5
+   LAST: M., Fekete, H., Weishaupt, M. et al. (2022). Twenty years of climate policy: G20 coverage and gaps. Clim. Pol. 22, 158–174. https://doi.org/10.1080/14693062. 2021.1993776
+   NEXT: Twenty years of climate policy: G20 coverage and gaps. Clim. Pol. 22, 158–174. https://doi.org/10.1080/14693062. 2021.1993776 ¶  ¶ Nabuurs, G-J., Mrabet, R., Abu Ha
+#306 p[138] content | lastlen=725 | References › Section 3�5
+   LAST: s that only 13% of emissions are covered with unclear effectiveness. One Earth. Volume 6, Issue 5, 19 May 2023, Pages 519535. https://doi.org/10.1016/j.oneear.2023.04.009
+   NEXT: One Earth. Volume 6, Issue 5, 19 May 2023, Pages 519535. https://doi.org/10.1016/j.oneear.2023.04.009 ¶  ¶ Schmidt, N.M. and Fleig, A. (2018). Global patterns of na
+#307 p[138] content | lastlen=438 | References › Section 3�5
+   LAST: squet, P., Canadell, J.G., Jackson, R.B. et al. (2020). The global methane budget 2000–2017. Earth Syst. Sci. Data 12, 1561–1623. https://doi.org/10.5194/essd-12-15612020
+   NEXT: (2020). The global methane budget 2000–2017. Earth Syst. Sci. Data 12, 1561–1623. https://doi.org/10.5194/essd-12-15612020 ¶  ¶ Shyamsundar, P., Springer, N.P., Tal
+#308 p[138] content | lastlen=490 | References › Section 3�5
+   LAST: is: Climate and Clean Air Coalition. https://www.ccacoalition.org/sites/default/files/resources/files/Guidance%20 on%20Including%20Methane%20in%20NDC%203.0_17%20Oct_0.pdf
+   NEXT: UNEP-CCAC. (2024b). Guidance on Including Methane in Nationally Determined Contributions. Paris: Climate and Clean Air Coalition. https://www.ccacoalition.org/s
+#309 p[139] content | lastlen=569 | References › Section 3�5
+   LAST:  in 2012. ECE/EB.AIR/WG.5/2022/3. Geneva: United Nations Economic Commission for Europe. https://unece.org/sites/default/files/2022-02/ECE_EB.AIR_WG.5_2022_3-2201159E.pdf
+   NEXT: UNECE. (2022). Hemispheric transport of air pollution. Report prepared by the Co-Chairs of the Task Force on Hemispheric Transport of Air Pollution. ECE/EB.AIR/
+#310 p[139] content | lastlen=500 | References › Section 3�5
+   LAST: .pdf UNECE. (2025). UNECE Air Convention advances Gothenburg Protocol revision. Geneva: United Nations Economic Commission for Europe. https://unece.org/media/news/402715
+   NEXT: Chapter 4 ¶  ¶ Alberto, M.C.R., Wassmann, R., Buresh, R.J., Quilty, J.R., Correa, T.Q., Sandro, J.M. et al. (2014). 'Measuring methane flux from irrigated rice fiel
+#311 p[139] content | lastlen=385 | References › Chapter 4
+   LAST: .B., Bruhwiler, L. et al. (2022). Estimating emissions of methane consistent with atmospheric measurements of methane and δ13C of methane. Atmos. Chem. Phys. 22, 15351-77
+   NEXT: (2022). Estimating emissions of methane consistent with atmospheric measurements of methane and δ13C of methane. Atmos. Chem. Phys. 22, 15351-77 ¶  ¶ Bell, C., Ilon
+#312 p[139, 140] content | lastlen=495 | References › Chapter 4
+   LAST: e Emissions from Abandoned Oil and Gas Wells in Alberta and Saskatchewan, Canada: The Role of Surface Casing Vent Flows. Environmental Science & Technology. 57, 19594-601
+   NEXT: (2023). Methane Emissions from Abandoned Oil and Gas Wells in Alberta and Saskatchewan, Canada: The Role of Surface Casing Vent Flows. Environmental Science & T
+#313 p[139, 140] content | lastlen=548 | References › Chapter 4
+   LAST: , J. et al. (2024). Hybrid bottom-up and top-down framework resolves discrepancies in Canada’s oil and gas methane inventories. Communications Earth & Environment. 5, 566
+   NEXT: (2024). Hybrid bottom-up and top-down framework resolves discrepancies in Canada’s oil and gas methane inventories. Communications Earth & Environment. 5, 566 ¶  ¶ 
+#314 p[140] content | lastlen=491 | References › Chapter 4
+   LAST: inants using respiration chambers, SF6 tracer technique and GreenFeed, to facilitate global integration of published data. Animal Feed Science and Technology. 279, 115018
+   NEXT: A review of technical variations and protocols used to measure methane emissions from ruminants using respiration chambers, SF6 tracer technique and GreenFeed, 
+#315 p[140] content | lastlen=592 | References › Chapter 4
+   LAST: nd CO emissions from coal mining and industrial activities in the Upper Silesian Coal Basin using an aircraft-based mass balance approach. Atmos. Chem. Phys. 20, 12675-95
+   NEXT: (2020). Estimating CH4, CO2 and CO emissions from coal mining and industrial activities in the Upper Silesian Coal Basin using an aircraft-based mass balance ap
+#316 p[140, 141] content | lastlen=420 | References › Chapter 4
+   LAST: te, I., Gorroño, J. et al. (2024). 'Multisatellite Data Depicts a Record-Breaking Methane Leak from a Well Blowout. Environmental Science & Technology Letters. 11, 825-30
+   NEXT: (2024). 'Multisatellite Data Depicts a Record-Breaking Methane Leak from a Well Blowout. Environmental Science & Technology Letters. 11, 825-30 ¶  ¶ Guo, Y., Zhang,
+#317 p[141] content | lastlen=458 | References › Chapter 4
+   LAST:  D. and Aben, I. (2022). Satellites Detect Abatable Super-Emissions in One of the World’s Largest Methane Hotspot Regions. Environmental Science & Technology. 56, 2143-52
+   NEXT: (2022). Satellites Detect Abatable Super-Emissions in One of the World’s Largest Methane Hotspot Regions. Environmental Science & Technology. 56, 2143-52 ¶  ¶ Jacks
+#318 p[141] content | lastlen=457 | References › Chapter 4
+   LAST: and Tyner, D.R. (2023). Creating measurement-based oil and gas sector methane inventories using source-resolved aerial surveys. Communications Earth & Environment. 4, 139
+   NEXT: (2023). Creating measurement-based oil and gas sector methane inventories using source-resolved aerial surveys. Communications Earth & Environment. 4, 139 ¶  ¶ Kang
+#319 p[141] content | lastlen=489 | References › Chapter 4
+   LAST: chanka, V., Ruiz, F., Coté, M. et al. (2020). Global methane emissions from coal mining to continue growing even with declining coal production. J Clean Prod. 256, 120489
+   NEXT: (2020). Global methane emissions from coal mining to continue growing even with declining coal production. J Clean Prod. 256, 120489 ¶  ¶ Krautwurst, S., Fruck, C.,
+#320 p[141, 142] content | lastlen=336 | References › Chapter 4
+   LAST: echnology. 58, 23127-37 Lin, G., Jiang, D., Zhang, W. and Fu, J. (2024). China should be wary of the methane emissions from mine closure. The Innovation Energy. 1, 100024
+   NEXT: 58, 23127-37 Lin, G., Jiang, D., Zhang, W. and Fu, J. (2024). China should be wary of the methane emissions from mine closure. The Innovation Energy. 1, 100024 ¶ 
+#321 p[142] content | lastlen=511 | References › Chapter 4
+   LAST: te, S.J.B., Boesch, H. et al. (2021). Atmospheric observations consistent with reported decline in the UK's methane emissions (2013–2020). Atmos. Chem. Phys. 21, 16257-76
+   NEXT: (2021). Atmospheric observations consistent with reported decline in the UK's methane emissions (2013–2020). Atmos. Chem. Phys. 21, 16257-76 ¶  ¶ Maasakkers, J.D., 
+#322 p[142] content | lastlen=483 | References › Chapter 4
+   LAST:  J.L. et al. (2022). New contributions of measurements in Europe to the global inventory of the stable isotopic composition of methane. Earth Syst. Sci. Data. 14, 4365-86
+   NEXT: (2022). New contributions of measurements in Europe to the global inventory of the stable isotopic composition of methane. Earth Syst. Sci. Data. 14, 4365-86 ¶  ¶ M
+#323 p[142, 143] content | lastlen=523 | References › Chapter 4
+   LAST: azak, N., Korzec, M. et al. (2025). Evaluating Pellistor Sensors for Reporting of Methane Emission in Coal Mine Ventilation: Toward Low-Cost Reporting Solutions. Preprint
+   NEXT: (2025). Evaluating Pellistor Sensors for Reporting of Methane Emission in Coal Mine Ventilation: Toward Low-Cost Reporting Solutions. Preprint ¶  ¶ Nesser, H., Jaco
+#324 p[142, 143] content | lastlen=573 | References › Chapter 4
+   LAST: ethane forunderstanding the contemporary methane budget. Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences. 379, 20210106
+   NEXT: (2021). The added value of satellite observations of methane forunderstanding the contemporary methane budget. Philosophical Transactions of the Royal Society A
+#325 p[143] content | lastlen=468 | References › Chapter 4
+   LAST: ., Emerson, E.W., Cheptonui, F., Houlihan, C. et al. (2024). Methane emissions from abandoned oil and gas wells in Colorado. Science of The Total Environment. 922, 170990
+   NEXT: (2024). Methane emissions from abandoned oil and gas wells in Colorado. Science of The Total Environment. 922, 170990 ¶  ¶ Röckmann, T., Eyer, S., van der Veen, C.,
+#326 p[143] content | lastlen=370 | References › Chapter 4
+   LAST: , R.M., Kim, J., Heckler, J. Asner, G.P. et al. (2024). Investigating Major Sources of Methane Emissions at US Landfills. Environmental Science & Technology. 58, 21545-56
+   NEXT: Asner, G.P. et al. (2024). Investigating Major Sources of Methane Emissions at US Landfills. Environmental Science & Technology. 58, 21545-56 ¶  ¶ Scheutz, C., Knud
+#328 p[144] content | lastlen=436 | References › Chapter 4
+   LAST: .M., Zhang, Z., Chen, Z., Rutherford, J.S. et al. (2024). Single-blind test of nine methane-sensing satellite systems from three continents. Atmos. Meas. Tech. 17, 765-82
+   NEXT: (2024). Single-blind test of nine methane-sensing satellite systems from three continents. Atmos. Meas. Tech. 17, 765-82 ¶  ¶ Thompson, R.L., Montzka, S.A., Vollmer
+#329 p[144] content | lastlen=386 | References › Chapter 4
+   LAST:  and Scheutz, C. (2022). Quantification of methane emissions from cattle farms, using the tracer gas dispersion method. Agriculture, Ecosystems & Environment. 330, 107885
+   NEXT: (2022). Quantification of methane emissions from cattle farms, using the tracer gas dispersion method. Agriculture, Ecosystems & Environment. 330, 107885 ¶  ¶ Vinko
+#331 p[144, 145] content | lastlen=477 | References › Chapter 4
+   LAST: y, S., Aben, I. et al. (2021). A tale of two regions: methane emissions from oil and gas production in offshore/onshore Mexico. Environmental Research Letters. 16, 024019
+   NEXT: (2021). A tale of two regions: methane emissions from oil and gas production in offshore/onshore Mexico. Environmental Research Letters. 16, 024019 ¶  ¶ Zhao, Y., S
+#332 p[145] content | lastlen=205 | References › Chapter 4
+   LAST: E.W., Levin, E., Ilonze, C., Cheptonui, F. et al. (2025). Advancing Development of Emissions Detection: DE-FE0031873 Final Report. Fort Collins, CO: METEC, Colorado State
+   NEXT: Chapter 5 ¶  ¶ Alberti, C. and Naran, B. (2023). How to Start Scaling Methane Abatement Finance. San Francisco, CA: Climate Policy Initiative. https://www.climatepo
+#333 p[145] content | lastlen=466 | References › Chapter 5
+   LAST: ssment. Paris: Climate and Clean Air Coalition; Nairobi: United Nations Environment Programme. https://www.ccacoalition.org/resources/global-methane-assessment-fullreport
+   NEXT: Global Methane Assessment. Paris: Climate and Clean Air Coalition; Nairobi: United Nations Environment Programme. https://www.ccacoalition.org/resources/global-
+#334 p[145] content | lastlen=737 | References › Chapter 5
+   LAST:  M. (2025). Funding trends 2024: Climate change mitigation philanthropy. San Francisco: ClimateWorks Foundation. https://www.climateworks.org/ report/funding-trends-2024/
+   NEXT: (2025). Funding trends 2024: Climate change mitigation philanthropy. San Francisco: ClimateWorks Foundation. https://www.climateworks.org/ report/funding-trends
+#335 p[145, 146] content | lastlen=350 | References › Chapter 5
+   LAST: untry.pdf GCF. (2025). FP269 DaIMA – Dairy Interventions for Mitigation and Adaptation. Incheon: Green Climate Fund. https://www.greenclimate.fund/project/fp269#documents
+   NEXT: (2025). FP269 DaIMA – Dairy Interventions for Mitigation and Adaptation. Incheon: Green Climate Fund. https://www.greenclimate.fund/project/fp269#documents ¶  ¶ Har
+#336 p[146] content | lastlen=373 | References › Chapter 5
+   LAST: obal Methane Tracker 2025. Paris: International Energy Agency. https://iea.blob.core.windows. net/assets/b83c32dd-fc1b-4917-96e9-8cd918801cbf/GlobalMethaneTracker2025.pdf
+   NEXT: Methane Finance Working Group. (2025). Guidance for Including Methane Abatement in Oil and Gas Debt Structuring. New York, NY: Center on Global Energy Policy, C
+#337 p[146] content | lastlen=485 | References › Chapter 5
+   LAST: andscape of Climate Finance 2025. San Francisco: Climate Policy Initiative. https://www. climatepolicyinitiative.org/publication/global-landscape-of-climate-finance-2025/
+   NEXT: [1] See list at: https://unfccc.int/process/parties-non-party-stakeholders/parties-convention-and-observer-states?field_national_communications_ target_id%5B515
