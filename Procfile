@@ -1,1 +1,1 @@
-web: python ecorag_api_production.py
+web: python app.py
