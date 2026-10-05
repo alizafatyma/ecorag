@@ -11,12 +11,22 @@ import os
 
 sys.path.insert(0, os.path.dirname(__file__))
 
-try:
-    from ecorag_ask import ask_ecorag
-    ECORAG_READY = True
-except Exception as e:
-    ECORAG_READY = False
-    print(f"⚠️  Warning: ecorag_ask failed to load: {e}")
+ask_ecorag = None
+ECORAG_READY = False
+
+def _load_ecorag():
+    """Lazy load EcoRAG on first request"""
+    global ask_ecorag, ECORAG_READY
+    if ask_ecorag is not None:
+        return
+    try:
+        from ecorag_ask import ask_ecorag as _ask
+        ask_ecorag = _ask
+        ECORAG_READY = True
+        print("✅ EcoRAG loaded successfully")
+    except Exception as e:
+        ECORAG_READY = False
+        print(f"⚠️  Error loading EcoRAG: {e}")
 
 app = Flask(__name__, static_folder='.')
 CORS(app)
@@ -76,6 +86,9 @@ def ask():
 
         if not question:
             return jsonify({'error': 'No question provided'}), 400
+
+        # Load EcoRAG on first request
+        _load_ecorag()
 
         if not ECORAG_READY:
             return jsonify({
