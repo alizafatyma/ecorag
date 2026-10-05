@@ -14,9 +14,9 @@ sys.path.insert(0, os.path.dirname(__file__))
 try:
     from ecorag_ask import ask_ecorag
     ECORAG_READY = True
-except ImportError:
+except Exception as e:
     ECORAG_READY = False
-    print("⚠️  Warning: ecorag_ask not found - API in demo mode")
+    print(f"⚠️  Warning: ecorag_ask failed to load: {e}")
 
 app = Flask(__name__, static_folder='.')
 CORS(app)
@@ -80,7 +80,7 @@ def ask():
         if not ECORAG_READY:
             return jsonify({
                 'error': 'EcoRAG system not ready',
-                'message': 'Ensure ecorag_ask.py and dependencies are installed'
+                'message': 'Models loading on first request, please try again in 30 seconds'
             }), 503
 
         # Get answer from real EcoRAG system
@@ -102,8 +102,11 @@ def ask():
         })
 
     except Exception as e:
+        import traceback
+        error_msg = f"{type(e).__name__}: {str(e)}"
+        print(f"ERROR in /api/ask: {error_msg}\n{traceback.format_exc()}")
         return jsonify({
-            'error': str(e),
+            'error': error_msg,
             'type': type(e).__name__,
             'status': 'error'
         }), 500
