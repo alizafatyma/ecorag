@@ -185,7 +185,7 @@ if __name__ == '__main__':
     """)
 
     app.run(
-        debug=(environment == 'development'),
+        debug=False,
         port=port,
         host='0.0.0.0',
         threaded=True
