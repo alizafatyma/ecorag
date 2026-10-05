@@ -12,7 +12,7 @@
 # No paid API, no LangChain, no UI.
 
 # --- 0. Install (Colab; most of these are already present) ---
-!pip install -q chromadb sentence-transformers transformers accelerate
+# !pip install -q chromadb sentence-transformers transformers accelerate
 
 import json
 import re

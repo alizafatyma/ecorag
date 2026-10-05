@@ -443,17 +443,19 @@
         <!-- Interactive Query Section -->
         <div class="card input-section">
             <h2><span class="card-icon">💬</span> Ask EcoRAG</h2>
-            <div class="input-area">
-                <textarea id="question" placeholder="Ask about environmental sustainability, climate action, energy, or green jobs..."></textarea>
-            </div>
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                <button id="askBtn" onclick="askQuestion()">
-                    <span>Ask</span>
-                </button>
-                <button style="background: var(--color-accent); color: var(--color-primary);" onclick="showDemoQuestions()">
+            <form id="questionForm" style="display: contents;">
+                <div class="input-area">
+                    <textarea id="question" placeholder="Ask about environmental sustainability, climate action, energy, or green jobs..."></textarea>
+                </div>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <button id="askBtn" type="submit">
+                        <span>Ask</span>
+                    </button>
+                <button type="button" style="background: var(--color-accent); color: var(--color-primary);" onclick="showDemoQuestions()">
                     Try Demo Questions
                 </button>
             </div>
+            </form>
 
             <div id="demoQuestions" style="display: none; margin-top: 1rem;">
                 <p style="font-size: 13px; color: var(--color-text-light); margin-bottom: 1rem;">✨ Click any question to try:</p>
@@ -643,46 +645,42 @@
             }
         }
 
-        function askQuestion() {
+        async function askQuestion(event) {
+            event.preventDefault();
             const question = document.getElementById('question').value.trim();
-            if (!question) {
-                alert('Please enter a question');
-                return;
-            }
+            if (!question) return;
 
             const btn = document.getElementById('askBtn');
+            const status = document.getElementById('status');
             btn.disabled = true;
-            btn.innerHTML = '<span class="spinner"></span>Processing...';
+            btn.innerHTML = '<span class="spinner"></span>Searching sources…';
+            status.textContent = 'Retrieving evidence...';
+            status.style.color = '#52665a';
 
-            // Make REAL API call to backend
-            fetch('/api/ask', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ question: question })
-            })
-            .then(response => {
-                if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                return response.json();
-            })
-            .then(data => {
-                if (data.error) {
-                    alert('Error: ' + data.error);
-                } else {
-                    showResults({
-                        question: data.question,
-                        answer: data.answer,
-                        citations: data.citations || [],
-                        confidence: data.confidence || 0.75
-                    });
-                }
-            })
-            .catch(err => {
-                alert('Backend error: ' + err.message + '\n\nMake sure API is running: python ecorag_api_production.py');
-            })
-            .finally(() => {
-                btn.disabled = false;
+            try {
+                const response = await fetch('/api/ask', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ question })
+                });
+                const data = await response.json();
+                if (!response.ok || data.error) throw new Error(data.error || `Request failed (${response.status})`);
+                showResults({
+                    question: data.question,
+                    answer: data.answer,
+                    citations: data.citations || [],
+                    confidence: data.confidence || 0.75
+                });
+                const citationCount = Array.isArray(data.citations) ? data.citations.length : 0;
+                status.textContent = `Answer returned with ${citationCount} source ${citationCount === 1 ? 'citation' : 'citations'}.`;
+                status.style.color = '#2d5016';
+            } catch (error) {
+                status.textContent = 'The question could not be answered. Make sure the API is running: python ecorag_api_production.py';
+                status.style.color = '#b3261e';
+            } finally {
                 btn.innerHTML = 'Ask';
-            });
+                btn.disabled = !document.getElementById('question').value.trim();
+            }
         }
 
         function loadQuestion(q) {
@@ -792,11 +790,22 @@
             event.target.classList.add('active');
         }
 
-        // Allow Enter key to submit
+        // Attach form submit listener
+        window.addEventListener('load', () => {
+            document.getElementById('questionForm').addEventListener('submit', askQuestion);
+            document.getElementById('askBtn').disabled = true;
+        });
+
+        // Allow Ctrl+Enter to submit
         document.getElementById('question').addEventListener('keydown', (e) => {
             if (e.key === 'Enter' && e.ctrlKey) {
-                askQuestion();
+                document.getElementById('questionForm').dispatchEvent(new Event('submit'));
             }
+        });
+
+        // Enable button only when question has text
+        document.getElementById('question').addEventListener('input', () => {
+            document.getElementById('askBtn').disabled = !document.getElementById('question').value.trim();
         });
     </script>
 </body>

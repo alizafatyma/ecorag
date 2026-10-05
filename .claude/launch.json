@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "EcoRAG API",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["ecorag_api_production.py"],
+      "port": 5000
+    }
+  ]
+}
