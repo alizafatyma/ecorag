@@ -567,26 +567,81 @@
     </footer>
 
     <script>
-        // Demo data (sample results)
+        // Demo data (sample results for different questions)
         const demoResults = {
             "methane": {
                 question: "What is being done to reduce methane emissions by 2030?",
                 answer: "Multiple international initiatives are underway to reduce methane emissions by 2030. The UN Secretary General's call to action on methane emphasizes rapid deployment of proven solutions, including improved oil and gas practices, coal mine methane capture, and agricultural methane reduction. These actions aim to deliver measurable emission reductions within this decade.",
                 citations: [
-                    { source: "UN SG Call-Action Methane by 2030", text: "Actions to be delivered by 2030 include..." },
-                    { source: "GMSR 2025", text: "Methane reduction strategies across sectors..." }
+                    { source: "UN SG Call-Action Methane by 2030", text: "Actions to be delivered by 2030 include rapid deployment of proven solutions" },
+                    { source: "GMSR 2025", text: "Methane reduction strategies across sectors including agriculture and energy" }
                 ],
                 confidence: 0.85
             },
             "jobs": {
                 question: "How many jobs are in renewable energy?",
-                answer: "The renewable energy sector has created substantial employment opportunities globally. According to recent mapping studies, green and digital energy jobs have grown significantly, with particular concentrations in solar installation, wind energy, energy efficiency retrofitting, and grid modernization roles.",
+                answer: "The renewable energy sector has created substantial employment opportunities globally. According to recent mapping studies, green and digital energy jobs have grown significantly, with particular concentrations in solar installation, wind energy, energy efficiency retrofitting, and grid modernization roles. The transition to clean energy is generating millions of new jobs worldwide.",
                 citations: [
-                    { source: "Mapping Green & Digital Energy Jobs", text: "Job statistics and employment trends..." }
+                    { source: "Mapping Green & Digital Energy Jobs", text: "Employment trends show significant growth in renewable energy sectors" },
+                    { source: "GMSR 2025", text: "Job creation through green energy transition initiatives" }
                 ],
                 confidence: 0.72
+            },
+            "steel": {
+                question: "What is steel decarbonization?",
+                answer: "Steel decarbonization refers to processes and technologies that reduce greenhouse gas emissions from steel production. This includes transitioning to electric arc furnaces powered by renewable electricity, using hydrogen-based reduction instead of carbon-based methods, and improving energy efficiency in production processes. The goal is to achieve near-zero emissions steel production by 2050.",
+                citations: [
+                    { source: "Definitions for Low-Emissions Steel/Cement", text: "Near-zero emissions steel production methodologies and measurement standards" },
+                    { source: "GMSR 2025", text: "Steel industry decarbonization pathways and technology adoption" }
+                ],
+                confidence: 0.78
+            },
+            "minerals": {
+                question: "What is the role of critical minerals?",
+                answer: "Critical minerals are essential elements required for clean energy technologies, including lithium, cobalt, and rare earth elements used in batteries, solar panels, and wind turbines. The transition to renewable energy depends heavily on securing stable supply chains for these minerals. Strategic mining and recycling of critical minerals are key to enabling global decarbonization efforts.",
+                citations: [
+                    { source: "Critical Minerals Review of Norway 2026", text: "Role of critical minerals in clean energy infrastructure and supply chain security" },
+                    { source: "GMSR 2025", text: "Mineral requirements for renewable energy deployment at scale" }
+                ],
+                confidence: 0.80
+            },
+            "grid": {
+                question: "How should grids be modernized for electricity?",
+                answer: "Modern grids require smart technologies to manage variable renewable energy sources, including advanced forecasting, real-time demand management, and energy storage systems. Grid modernization involves upgrading infrastructure for bidirectional power flow, integrating distributed generation, and using digital controls to balance supply and demand dynamically. This enables reliable and efficient delivery of clean electricity.",
+                citations: [
+                    { source: "Modernising Grids in the Age of Electricity", text: "Smart grid technologies and infrastructure modernization requirements" },
+                    { source: "Managing Seasonal Variability of Electricity", text: "Solutions for balancing variable renewable energy through grid optimization" }
+                ],
+                confidence: 0.76
             }
         };
+
+        function getMatchingResult(question) {
+            const q = question.toLowerCase();
+
+            // Try to match question to demo results
+            if (q.includes('methane') || q.includes('emissions') || q.includes('2030')) {
+                return demoResults.methane;
+            } else if (q.includes('job') || q.includes('employment') || q.includes('renewable energy')) {
+                return demoResults.jobs;
+            } else if (q.includes('steel') || q.includes('decarbonization') || q.includes('cement')) {
+                return demoResults.steel;
+            } else if (q.includes('mineral') || q.includes('critical') || q.includes('lithium') || q.includes('cobalt')) {
+                return demoResults.minerals;
+            } else if (q.includes('grid') || q.includes('electricity') || q.includes('power')) {
+                return demoResults.grid;
+            } else {
+                // If no match, return a generic response
+                return {
+                    question: question,
+                    answer: "This is a demo of the EcoRAG system. The actual system would connect to your knowledge base and retrieve relevant information. Try asking about: methane emissions, green jobs, steel decarbonization, critical minerals, or grid modernization.",
+                    citations: [
+                        { source: "Demo Mode", text: "This is demonstration content. Connect to a real backend for actual answers." }
+                    ],
+                    confidence: 0.50
+                };
+            }
+        }
 
         function askQuestion() {
             const question = document.getElementById('question').value.trim();
@@ -599,12 +654,35 @@
             btn.disabled = true;
             btn.innerHTML = '<span class="spinner"></span>Processing...';
 
-            // Simulate API call delay
-            setTimeout(() => {
-                showResults(demoResults.methane);
+            // Make REAL API call to backend
+            fetch('/api/ask', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ question: question })
+            })
+            .then(response => {
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                return response.json();
+            })
+            .then(data => {
+                if (data.error) {
+                    alert('Error: ' + data.error);
+                } else {
+                    showResults({
+                        question: data.question,
+                        answer: data.answer,
+                        citations: data.citations || [],
+                        confidence: data.confidence || 0.75
+                    });
+                }
+            })
+            .catch(err => {
+                alert('Backend error: ' + err.message + '\n\nMake sure API is running: python ecorag_api_production.py');
+            })
+            .finally(() => {
                 btn.disabled = false;
                 btn.innerHTML = 'Ask';
-            }, 1500);
+            });
         }
 
         function loadQuestion(q) {
