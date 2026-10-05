@@ -36,18 +36,28 @@ LLM_CPU = "Qwen/Qwen2.5-1.5B-Instruct"      # CPU-only machines: 3B is too slow 
 MAX_NEW_TOKENS = 400                        # maximum length of the generated answer
 
 
-# --- 2. Load the existing retrieval setup (no LLM needed for this part) ---
-manifest = json.loads((DATA_DIR / "embeddings" / "manifest.json").read_text(encoding="utf-8"))
-QUERY_PREFIX = manifest["query_instruction"]   # "Represent this sentence for searching relevant passages: "
+# --- 2. Lazy loading of retrieval setup ---
+manifest = None
+client = None
+collection = None
+embedder = None
 
-client = chromadb.PersistentClient(path=str(DATA_DIR / "chroma"))
-collection = client.get_collection(COLLECTION_NAME)
-if collection.metadata.get("embedding_model") != manifest["model"]:
-    raise ValueError("The Chroma collection was built with a different embedding model than the manifest.")
+def _ensure_loaded():
+    """Load Chroma and embedder on first use (lazy initialization)"""
+    global manifest, client, collection, embedder
+    if collection is not None:
+        return
+    manifest = json.loads((DATA_DIR / "embeddings" / "manifest.json").read_text(encoding="utf-8"))
+    QUERY_PREFIX = manifest["query_instruction"]
+    client = chromadb.PersistentClient(path=str(DATA_DIR / "chroma"))
+    collection = client.get_collection(COLLECTION_NAME)
+    if collection.metadata.get("embedding_model") != manifest["model"]:
+        raise ValueError("The Chroma collection was built with a different embedding model than the manifest.")
+    embedder = SentenceTransformer(manifest["model"])
+    print(f"Chroma collection '{COLLECTION_NAME}': {collection.count()} chunks | "
+          f"query embeddings: {manifest['model']} ({manifest['embedding_dimension']} dims)")
 
-embedder = SentenceTransformer(manifest["model"])   # the SAME model that embedded the chunks
-print(f"Chroma collection '{COLLECTION_NAME}': {collection.count()} chunks | "
-      f"query embeddings: {manifest['model']} ({manifest['embedding_dimension']} dims)")
+QUERY_PREFIX = None  # Will be set by _ensure_loaded()
 
 
 # --- 3. Small helpers for readable source labels ---
@@ -72,6 +82,7 @@ def short_title(title):
 # --- 4. Retrieval: question -> BGE query vector -> top-k content/table chunks ---
 def retrieve(question, top_k=TOP_K, content_types=EVIDENCE_TYPES):
     """Return the top-k chunks for a question as a list of numbered sources."""
+    _ensure_loaded()
     # BGE embeds QUESTIONS with the query prefix (the chunks were embedded without it)
     query_vector = embedder.encode(QUERY_PREFIX + question, normalize_embeddings=True)
     where = {"content_type": {"$in": list(content_types)}} if content_types else None
