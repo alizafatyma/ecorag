@@ -114,6 +114,13 @@ def ask():
             'status': 'success'
         })
 
+    except MemoryError as e:
+        return jsonify({
+            'error': 'Out of memory',
+            'message': 'The LLM model is too large for this deployment. Returning search results only.',
+            'retrieval_only': True,
+            'status': 'error'
+        }), 503
     except Exception as e:
         import traceback
         error_msg = f"{type(e).__name__}: {str(e)}"
