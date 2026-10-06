@@ -145,7 +145,7 @@ def health():
 def info():
     """Get system information"""
     return jsonify({
-        'description': 'Environmental RAG System with Experiment C Evaluation',
+        'description': 'Environmental RAG System',
         'document_count': 9,
         'chunk_count': 1242,
         'model': 'Qwen2.5-3B-Instruct',
