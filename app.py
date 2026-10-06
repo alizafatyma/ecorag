@@ -15,18 +15,19 @@ ask_ecorag = None
 ECORAG_READY = False
 
 def _load_ecorag():
-    """Lazy load EcoRAG on first request"""
+    """Lazy load EcoRAG retrieval (no LLM - too memory intensive)"""
     global ask_ecorag, ECORAG_READY
     if ask_ecorag is not None:
         return
     try:
-        from ecorag_ask import ask_ecorag as _ask
-        ask_ecorag = _ask
+        # Only load retrieval, not the full RAG with LLM
+        from ecorag_ask import retrieve
+        ask_ecorag = retrieve
         ECORAG_READY = True
-        print("✅ EcoRAG loaded successfully")
+        print("Retrieval system loaded successfully")
     except Exception as e:
         ECORAG_READY = False
-        print(f"⚠️  Error loading EcoRAG: {e}")
+        print(f"Error loading retrieval: {e}")
 
 app = Flask(__name__, static_folder='.')
 CORS(app)
@@ -96,49 +97,26 @@ def ask():
                 'message': 'Models loading on first request, please try again in 30 seconds'
             }), 503
 
-        # Get answer from real EcoRAG system
-        result = ask_ecorag(question, debug=False)
+        # Use retrieval-only mode (search results without LLM)
+        sources = ask_ecorag(question, top_k=5)
 
         # Format response
         return jsonify({
             'question': question,
-            'answer': result.get('answer', 'No answer generated'),
+            'answer': f'Found {len(sources)} relevant sources in environmental research.',
             'citations': [
                 {
-                    'source': s.get('chunk_id', 'Unknown'),
-                    'text': s.get('text', '')[:200]
+                    'source': s['document'],
+                    'pages': s['pages'],
+                    'text': s['text'][:300]
                 }
-                for s in result.get('sources', [])[:3]
+                for s in sources[:3]
             ],
-            'confidence': 0.80,
-            'status': 'success'
+            'confidence': 0.70,
+            'status': 'success',
+            'mode': 'retrieval_only',
+            'sources_found': len(sources)
         })
-
-    except (MemoryError, RuntimeError) as e:
-        # Fallback: retrieval-only mode (just search, no LLM generation)
-        try:
-            from ecorag_ask import retrieve
-            sources = retrieve(question, top_k=5)
-            return jsonify({
-                'question': question,
-                'answer': f'Found {len(sources)} relevant sources. (LLM generation unavailable)',
-                'citations': [
-                    {
-                        'source': s['document'],
-                        'pages': s['pages'],
-                        'text': s['text'][:300]
-                    }
-                    for s in sources[:3]
-                ],
-                'confidence': 0.60,
-                'status': 'success',
-                'mode': 'retrieval_only'
-            })
-        except Exception as fallback_error:
-            return jsonify({
-                'error': f'LLM failed ({type(e).__name__}), retrieval failed ({type(fallback_error).__name__})',
-                'status': 'error'
-            }), 503
     except Exception as e:
         import traceback
         error_msg = f"{type(e).__name__}: {str(e)}"
