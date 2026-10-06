@@ -112,20 +112,43 @@ def retrieve(question, top_k=TOP_K, content_types=EVIDENCE_TYPES):
 # --- 5. Evidence block + prompt ---
 # v1: blocks labelled [SOURCE n] | v2: labelled [n] + explicit citation/key-fact rules |
 # v3: same evidence as v2, but a rigid answer format: one claim per line, each ending with its citation
-PROMPT_VERSION = "v3"
+PROMPT_VERSION = "v4"  # v4 includes scope-checking rules to catch dependent source failures
 
 def build_evidence(sources):
-    """The numbered evidence exactly as the LLM sees it (similarity scores are NOT
-    included, so the model judges the text itself rather than our ranking).
+    """Enhanced evidence block that includes scope metadata (dates, geography, document type).
+    This allows the LLM to apply scope-checking rules and catch dependent source failures.
     Blocks are labelled [1], [2], ... so the label is exactly the citation the model should write."""
-    return "\n\n".join(
-        f"[{s['n']}]\n"
-        f"Document: {s['document']}\n"
-        f"Section: {s['section']}\n"
-        f"Pages: {s['pages']}\n"
-        f"Chunk ID: {s['chunk_id']}\n"
-        f"TEXT:\n{s['text']}"
-        for s in sources)
+    evidence = []
+    for s in sources:
+        # Extract scope hints from metadata
+        page_start = s.get('page_start', '?')
+        page_end = s.get('page_end', '?')
+        doc_title = s['document']
+
+        # Infer document type and scope from title/section
+        scope_flags = []
+        if any(word in doc_title.lower() for word in ['norway', 'germany', 'usa', 'china', 'india', 'uk']):
+            scope_flags.append("REGIONAL")
+        if any(word in doc_title.lower() for word in ['global', 'world', 'international']):
+            scope_flags.append("GLOBAL")
+        if any(word in doc_title.lower() for word in ['definition', 'standard', 'framework']):
+            scope_flags.append("NORMATIVE")
+        if any(word in doc_title.lower() for word in ['model', 'projection', 'forecast']):
+            scope_flags.append("MODEL-BASED")
+        if any(year in doc_title for year in ['2025', '2026', '2024', '2023', '2022']):
+            scope_flags.append(f"DATA-YEAR:{[y for y in ['2025', '2026', '2024', '2023', '2022'] if y in doc_title][0]}")
+
+        scope_note = f" [{', '.join(scope_flags)}]" if scope_flags else ""
+
+        evidence.append(
+            f"[{s['n']}]\n"
+            f"Document: {s['document']}{scope_note}\n"
+            f"Section: {s['section']}\n"
+            f"Pages: {s['pages']}\n"
+            f"Chunk ID: {s['chunk_id']}\n"
+            f"TEXT:\n{s['text']}"
+        )
+    return "\n\n".join(evidence)
 
 SYSTEM_PROMPT_V2 = """You are EcoRAG, an assistant that answers questions about environmental and sustainability reports.
 
@@ -172,12 +195,53 @@ Rules:
 6. Copy numbers, units, percentages and years exactly as they appear in the SOURCES.
 7. Write at most 8 lines."""
 
+SYSTEM_PROMPT_V4 = """You are EcoRAG, an assistant that answers questions about environmental and sustainability reports.
+
+You are given numbered SOURCES, labelled [1], [2], [3], and so on.
+
+Write your answer in this exact format:
+- One factual claim per line. Start each line with "- ".
+- End EVERY line with the number of the source that states that claim, in square brackets: [2]. If two sources state it, write [2][4].
+- Use only the numbers of the SOURCES you were given.
+- If no source states a claim, do not write that claim.
+- No introduction and no concluding summary: only the claim lines.
+
+Example of the format (made-up content):
+- Wind power capacity doubled between 2015 and 2020 [3].
+- Most of the new capacity was built offshore [1][3].
+
+Core Rules:
+1. Use ONLY information stated in the SOURCES. Do not use your general knowledge, even if you think it is correct.
+2. Cite the source whose text actually states that specific claim. If a number comes from source [4], cite [4]. A source about the same topic is not enough.
+3. Include the specific numbers, thresholds, percentages, dates, or definitions that directly answer the question when those facts are present in the SOURCES.
+4. If the SOURCES do not contain enough information to answer the question, write only this line: "The provided sources do not contain enough information to answer this." If they answer only part of it, add a line: "- The provided sources do not contain enough information about <the missing part>."
+5. If sources disagree, write one line for each side, each with its own citation.
+6. Copy numbers, units, percentages and years exactly as they appear in the SOURCES.
+7. Write at most 8 lines.
+
+Evidence Sufficiency Rules (NEW - catches dependent source failures):
+8. SCOPE MATCHING: If the question asks about "global" trends but sources only cover specific regions/countries, write: "- The provided sources do not contain information about <other regions>, only <region where data exists> [n]."
+9. TEMPORAL APPROPRIATENESS: If the question asks about current/future status but sources are dated (e.g., 2024 data for 2026 question), write: "- Available data is from <year> [n], so current 2026 status is not available."
+10. DOCUMENT TYPE AWARENESS: Distinguish between definitions and empirical measurements. If asked "how much steel uses near-zero emissions" but sources only DEFINE near-zero (not measure adoption), say: "- The provided sources define near-zero emissions but do not provide adoption rate data [n]."
+11. MODEL VS EMPIRICAL: When sources are models/projections (not empirical data), clarify: "- This is a model projection based on <specific assumptions> [n], not observed data."
+12. SOURCE DEPENDENCY: If all retrieved passages depend heavily on one incomplete data source (e.g., all cite same limited survey), flag: "- All information comes from <limited source> [n], which may not represent <full scope>."
+13. REFUSAL RULE: If evidence is insufficient to justify the question's scope, refuse clearly. Do not make unsupported leaps even with valid citations."""
+
+USER_INSTRUCTION_V3 = (
+    "Answer the question using only the SOURCES above, in the required format: one claim per line, "
+    "each line ending with the number of the source that states it, in square brackets.")
+
+USER_INSTRUCTION_V4 = (
+    "Answer using ONLY the SOURCES, following the format and ALL rules (including evidence sufficiency rules 8-13). "
+    "If evidence doesn't match question scope, say so explicitly. Do not make unsupported leaps even if you can cite passages.")
+
 USER_INSTRUCTION_V3 = (
     "Answer the question using only the SOURCES above, in the required format: one claim per line, "
     "each line ending with the number of the source that states it, in square brackets.")
 
 PROMPTS = {"v2": (SYSTEM_PROMPT_V2, USER_INSTRUCTION_V2),
-           "v3": (SYSTEM_PROMPT_V3, USER_INSTRUCTION_V3)}
+           "v3": (SYSTEM_PROMPT_V3, USER_INSTRUCTION_V3),
+           "v4": (SYSTEM_PROMPT_V4, USER_INSTRUCTION_V4)}
 
 def build_messages(question, sources, prompt_version=None):
     system_prompt, instruction = PROMPTS[prompt_version or PROMPT_VERSION]
