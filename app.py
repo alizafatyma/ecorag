@@ -143,9 +143,10 @@ def health():
 
 @app.route('/api/info', methods=['GET'])
 def info():
-    """Get system information"""
+    """Get system information with community-driven improvements"""
     return jsonify({
         'description': 'Environmental RAG System',
+        'version': '2.0',
         'document_count': 9,
         'chunk_count': 1242,
         'model': 'Qwen2.5-3B-Instruct',
@@ -154,18 +155,72 @@ def info():
         'embedding_model': 'BAAI/bge-small-en-v1.5',
         'embedding_dimension': 384,
         'database': 'Chroma',
+        'improvements': {
+            'v1': 'Citation accuracy, no hallucinations',
+            'v2': 'Scope-checking rules (V4 prompt)',
+            'community_feedback': 'Krzysztof Śliwka & Mason Perry identified dependent-source failure mode',
+            'v2_solutions': [
+                'Rule 8: Scope matching (regional vs global)',
+                'Rule 9: Temporal appropriateness (date checks)',
+                'Rule 10: Document type awareness (definition vs empirical)',
+                'Rule 11: Model vs empirical data distinction',
+                'Rule 12: Source dependency flagging',
+                'Rule 13: Refusal on insufficient evidence'
+            ],
+            'enhanced_metadata': 'Evidence blocks now include scope flags [REGIONAL/GLOBAL/NORMATIVE/MODEL-BASED/DATA-YEAR]'
+        },
         'documents': [
-            {'title': 'Global Methane Status Report 2025', 'source_filename': 'gmsr_2025.pdf', 'chunk_count': 156},
-            {'title': 'Critical Minerals for Clean Energy', 'source_filename': 'critical_minerals.pdf', 'chunk_count': 142},
-            {'title': 'Modernising Grids in the Age of Electricity', 'source_filename': 'grid_modernization.pdf', 'chunk_count': 189},
-            {'title': 'Jobs in the Clean Energy Transition', 'source_filename': 'clean_energy_jobs.pdf', 'chunk_count': 178},
-            {'title': 'Steel and Cement Decarbonization', 'source_filename': 'steel_cement.pdf', 'chunk_count': 195},
-            {'title': 'Managing Seasonal Variability of Electricity', 'source_filename': 'electricity_variability.pdf', 'chunk_count': 167},
-            {'title': 'Renewable Energy Integration', 'source_filename': 'renewable_integration.pdf', 'chunk_count': 144},
-            {'title': 'Climate Action Framework 2030', 'source_filename': 'climate_2030.pdf', 'chunk_count': 151},
-            {'title': 'Energy Transition Economics', 'source_filename': 'energy_economics.pdf', 'chunk_count': 120}
+            {'title': 'Global Methane Status Report 2025', 'source_filename': 'GMSR_2025.pdf', 'chunk_count': 320, 'scope': 'GLOBAL'},
+            {'title': 'Critical Minerals Review of Norway 2026', 'source_filename': 'CriticalMineralsReviewofNorway2026.pdf', 'chunk_count': 79, 'scope': 'REGIONAL'},
+            {'title': 'Modernising Grids in the Age of Electricity', 'source_filename': 'ModernisingGridsintheAgeofElectricity.pdf', 'chunk_count': 189, 'scope': 'GLOBAL'},
+            {'title': 'Mapping Green and Digital Energy Jobs', 'source_filename': 'MappingGreenandDigitalEnergyJobs.pdf', 'chunk_count': 193, 'scope': 'GLOBAL'},
+            {'title': 'Definitions for Near-Zero Emissions Steel and Cement', 'source_filename': 'Definitionsfornear-zeroandlow-emissionssteelandcementandunderlyingemissionsmeasurementmethodologies.pdf', 'chunk_count': 55, 'scope': 'NORMATIVE'},
+            {'title': 'Managing Seasonal Variability of Electricity Demand and Supply', 'source_filename': 'ManagingtheSeasonalVariabilityofElectricityDemandandSupply.pdf', 'chunk_count': 104, 'scope': 'TECHNICAL'},
+            {'title': 'Manufacturing and Trade Model Documentation 2026', 'source_filename': 'ManufacturingandTradeModelDocumentation2026.pdf', 'chunk_count': 73, 'scope': 'MODEL-BASED'},
+            {'title': 'Reducing the Cost of Capital', 'source_filename': 'ReducingtheCostofCapital.pdf', 'chunk_count': 143, 'scope': 'GLOBAL'},
+            {'title': 'Methane by 2030 Call to Action', 'source_filename': 'unsg_call-action-methane_by-2030-epublication.pdf', 'chunk_count': 87, 'scope': 'GLOBAL'}
         ]
     })
+
+# ============================================================================
+# FEEDBACK - Community feedback collection
+# ============================================================================
+
+@app.route('/api/feedback', methods=['POST'])
+def submit_feedback():
+    """Collect user feedback on RAG system quality"""
+    try:
+        data = request.json or {}
+        feedback_type = data.get('type')  # 'citation', 'scope', 'completeness', 'other'
+        question = data.get('question', '')
+        feedback_text = data.get('feedback', '')
+        rating = data.get('rating', 5)  # 1-5 scale
+
+        if not feedback_text:
+            return jsonify({'error': 'Feedback text required'}), 400
+
+        # Log feedback (in production, write to database)
+        log_entry = {
+            'timestamp': os.environ.get('TIMESTAMP', 'unknown'),
+            'type': feedback_type,
+            'question': question,
+            'feedback': feedback_text,
+            'rating': rating
+        }
+
+        print(f"FEEDBACK RECEIVED: {log_entry}")
+
+        return jsonify({
+            'status': 'success',
+            'message': 'Thank you for your feedback! It helps improve EcoRAG.',
+            'feedback_logged': log_entry
+        }), 201
+
+    except Exception as e:
+        return jsonify({
+            'error': str(e),
+            'status': 'error'
+        }), 500
 
 # ============================================================================
 # ERROR HANDLERS
