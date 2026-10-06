@@ -146,9 +146,9 @@ def info():
     """Get system information with community-driven improvements"""
     return jsonify({
         'description': 'Environmental RAG System',
-        'version': '2.0',
-        'document_count': 9,
-        'chunk_count': 1242,
+        'version': '2.1',
+        'document_count': 13,
+        'chunk_count': 1770,
         'model': 'Qwen2.5-3B-Instruct',
         'model_loaded': ECORAG_READY,
         'device': 'cuda' if ECORAG_READY else 'cpu',
