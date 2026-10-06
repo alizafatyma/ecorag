@@ -199,11 +199,20 @@ def load_llm(model_name=None):
     from transformers import AutoModelForCausalLM, AutoTokenizer
     device = "cuda" if torch.cuda.is_available() else "cpu"
     name = model_name or (LLM_GPU if device == "cuda" else LLM_CPU)
-    dtype = torch.float16 if device == "cuda" else torch.bfloat16   # bf16 halves CPU memory
-    print(f"Loading {name} on {device} ({str(dtype).replace('torch.', '')})...")
+    print(f"Loading {name} on {device}...")
     start = time.time()
     tokenizer = AutoTokenizer.from_pretrained(name)
-    model = AutoModelForCausalLM.from_pretrained(name, dtype=dtype).to(device).eval()
+
+    # Use 8-bit quantization on CPU to reduce memory from 3GB to ~1.5GB
+    if device == "cpu":
+        try:
+            model = AutoModelForCausalLM.from_pretrained(name, load_in_8bit=True, device_map="cpu").eval()
+        except Exception as e:
+            print(f"8-bit loading failed ({e}), trying bfloat16...")
+            model = AutoModelForCausalLM.from_pretrained(name, torch_dtype=torch.bfloat16).to(device).eval()
+    else:
+        model = AutoModelForCausalLM.from_pretrained(name, torch_dtype=torch.float16).to(device).eval()
+
     LLM.update(model=model, tokenizer=tokenizer, name=name, device=device)
     print(f"Loaded in {time.time() - start:.0f}s")
 
