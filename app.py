@@ -114,13 +114,31 @@ def ask():
             'status': 'success'
         })
 
-    except MemoryError as e:
-        return jsonify({
-            'error': 'Out of memory',
-            'message': 'The LLM model is too large for this deployment. Returning search results only.',
-            'retrieval_only': True,
-            'status': 'error'
-        }), 503
+    except (MemoryError, RuntimeError) as e:
+        # Fallback: retrieval-only mode (just search, no LLM generation)
+        try:
+            from ecorag_ask import retrieve
+            sources = retrieve(question, top_k=5)
+            return jsonify({
+                'question': question,
+                'answer': f'Found {len(sources)} relevant sources. (LLM generation unavailable)',
+                'citations': [
+                    {
+                        'source': s['document'],
+                        'pages': s['pages'],
+                        'text': s['text'][:300]
+                    }
+                    for s in sources[:3]
+                ],
+                'confidence': 0.60,
+                'status': 'success',
+                'mode': 'retrieval_only'
+            })
+        except Exception as fallback_error:
+            return jsonify({
+                'error': f'LLM failed ({type(e).__name__}), retrieval failed ({type(fallback_error).__name__})',
+                'status': 'error'
+            }), 503
     except Exception as e:
         import traceback
         error_msg = f"{type(e).__name__}: {str(e)}"
